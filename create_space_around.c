@@ -22,16 +22,24 @@ static int get_size(char *str)
     return (j * 2);
 }
 
-static void     replace(char **line)
+static int     replace(char **line, int j, char c, int len)
 {
     int i;
 
     i = 0;
-    while (*line[i])
+    while (i < len)
     {
-
+        if (i == 0 || i == len - 1)
+        {
+            line[0][j + i] = ' ';
+        }
+        else
+        {
+            line[0][j + i] = c;
+        }
         i++;
     }
+    return (len);
 }
 
 char *create_space_around(char *str)
@@ -44,31 +52,18 @@ char *create_space_around(char *str)
     i = 0;
     j = 0;
     size = get_size(str) + ft_strlen(str);
-    printf("size : %d\n", size);
     dest = malloc(size + 1);
     if (!dest)
         return (NULL);
     dest[size] = '\0';
     while (str[i])
     {
-        if (str[i] == '>' && str[i + 1] == '>')
-        {
-            dest[j] = ' ';
-            dest[j + 1] = '>';
-            dest[j + 2] = '>';
-            dest[j + 3] = ' ';
-            j += 4;
-        } else if (str[i] == '|' || str[i] == '<' || (str[i] == '>' && str[i + 1] != '>'))
-        {
-            dest[j] = ' ';
-            dest[j + 1] = '|';
-            dest[j + 2] = ' ';
-            j += 3;
-        } else
-        {
-            dest[j] = str[i];
-            j++;
-        }
+        if (str[i] == '>' && str[i + 1] == '>' && i++)
+            j += replace(&dest, j, str[i - 1], 4);
+        else if (str[i] == '|' || str[i] == '<' || (str[i] == '>' && str[i + 1] != '>'))
+            j += replace(&dest, j, str[i], 3);
+        else
+            dest[j++] = str[i];
         i++;
     }
     free(str);

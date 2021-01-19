@@ -14,7 +14,8 @@ int		main(int i, char **av, char **envp)
 		i = 0;
 		while (av[i])
 		{
-			parsing_line(av[i], envp);
+			if (parsing_line(av[i], envp) == -1)
+			    return (free_parsing_line(av, prompt));
 			i++;
 		}
 		free(prompt);

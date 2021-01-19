@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/oem/parsing/free_parsing_line.c
+minishell.h
+/home/oem/parsing/minishell.h
+
 /home/oem/parsing/minishell.h
 stdio.h
 -
