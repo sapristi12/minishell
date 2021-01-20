@@ -22,7 +22,7 @@ int     parsing_line(char *command, char **envp)
         return (-1);
     if (!(command = create_space_around(command)))
         return (-1);
-    printf("%s\n", command);
+    printf("command : %s\n", command);
     if (!(cmd.cmds = new_split(command, ' ')))
         return (-1);
     if (!parsing_pipe(&cmd))

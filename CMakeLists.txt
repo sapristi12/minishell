@@ -11,4 +11,4 @@ add_executable(parsing
         new_split.c
         get_next_line_utils.c
         main.c
-        minishell.h parsing.c create_space_around.c ft_strcmp.c free_parsing_line.c display.c)
+        minishell.h parsing.c create_space_around.c ft_strcmp.c free_parsing_line.c display.c parsing_pipe.c init_struct.c init_pipe.c args_package.c ft_strdup.c several_string.c parsing_quote.c parsing_redir.c count_string.c)

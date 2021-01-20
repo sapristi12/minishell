@@ -143,6 +143,60 @@ parsing/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/build
 .PHONY : parsing/fast
 
+args_package.o: args_package.c.o
+
+.PHONY : args_package.o
+
+# target to build an object file
+args_package.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/args_package.c.o
+.PHONY : args_package.c.o
+
+args_package.i: args_package.c.i
+
+.PHONY : args_package.i
+
+# target to preprocess a source file
+args_package.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/args_package.c.i
+.PHONY : args_package.c.i
+
+args_package.s: args_package.c.s
+
+.PHONY : args_package.s
+
+# target to generate assembly for a file
+args_package.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/args_package.c.s
+.PHONY : args_package.c.s
+
+count_string.o: count_string.c.o
+
+.PHONY : count_string.o
+
+# target to build an object file
+count_string.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/count_string.c.o
+.PHONY : count_string.c.o
+
+count_string.i: count_string.c.i
+
+.PHONY : count_string.i
+
+# target to preprocess a source file
+count_string.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/count_string.c.i
+.PHONY : count_string.c.i
+
+count_string.s: count_string.c.s
+
+.PHONY : count_string.s
+
+# target to generate assembly for a file
+count_string.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/count_string.c.s
+.PHONY : count_string.c.s
+
 create_space_around.o: create_space_around.c.o
 
 .PHONY : create_space_around.o
@@ -251,6 +305,33 @@ ft_strcmp.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/ft_strcmp.c.s
 .PHONY : ft_strcmp.c.s
 
+ft_strdup.o: ft_strdup.c.o
+
+.PHONY : ft_strdup.o
+
+# target to build an object file
+ft_strdup.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/ft_strdup.c.o
+.PHONY : ft_strdup.c.o
+
+ft_strdup.i: ft_strdup.c.i
+
+.PHONY : ft_strdup.i
+
+# target to preprocess a source file
+ft_strdup.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/ft_strdup.c.i
+.PHONY : ft_strdup.c.i
+
+ft_strdup.s: ft_strdup.c.s
+
+.PHONY : ft_strdup.s
+
+# target to generate assembly for a file
+ft_strdup.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/ft_strdup.c.s
+.PHONY : ft_strdup.c.s
+
 get_next_line.o: get_next_line.c.o
 
 .PHONY : get_next_line.o
@@ -304,6 +385,60 @@ get_next_line_utils.s: get_next_line_utils.c.s
 get_next_line_utils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/get_next_line_utils.c.s
 .PHONY : get_next_line_utils.c.s
+
+init_pipe.o: init_pipe.c.o
+
+.PHONY : init_pipe.o
+
+# target to build an object file
+init_pipe.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/init_pipe.c.o
+.PHONY : init_pipe.c.o
+
+init_pipe.i: init_pipe.c.i
+
+.PHONY : init_pipe.i
+
+# target to preprocess a source file
+init_pipe.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/init_pipe.c.i
+.PHONY : init_pipe.c.i
+
+init_pipe.s: init_pipe.c.s
+
+.PHONY : init_pipe.s
+
+# target to generate assembly for a file
+init_pipe.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/init_pipe.c.s
+.PHONY : init_pipe.c.s
+
+init_struct.o: init_struct.c.o
+
+.PHONY : init_struct.o
+
+# target to build an object file
+init_struct.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/init_struct.c.o
+.PHONY : init_struct.c.o
+
+init_struct.i: init_struct.c.i
+
+.PHONY : init_struct.i
+
+# target to preprocess a source file
+init_struct.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/init_struct.c.i
+.PHONY : init_struct.c.i
+
+init_struct.s: init_struct.c.s
+
+.PHONY : init_struct.s
+
+# target to generate assembly for a file
+init_struct.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/init_struct.c.s
+.PHONY : init_struct.c.s
 
 main.o: main.c.o
 
@@ -386,6 +521,114 @@ parsing.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/parsing.c.s
 .PHONY : parsing.c.s
 
+parsing_pipe.o: parsing_pipe.c.o
+
+.PHONY : parsing_pipe.o
+
+# target to build an object file
+parsing_pipe.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/parsing_pipe.c.o
+.PHONY : parsing_pipe.c.o
+
+parsing_pipe.i: parsing_pipe.c.i
+
+.PHONY : parsing_pipe.i
+
+# target to preprocess a source file
+parsing_pipe.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/parsing_pipe.c.i
+.PHONY : parsing_pipe.c.i
+
+parsing_pipe.s: parsing_pipe.c.s
+
+.PHONY : parsing_pipe.s
+
+# target to generate assembly for a file
+parsing_pipe.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/parsing_pipe.c.s
+.PHONY : parsing_pipe.c.s
+
+parsing_quote.o: parsing_quote.c.o
+
+.PHONY : parsing_quote.o
+
+# target to build an object file
+parsing_quote.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/parsing_quote.c.o
+.PHONY : parsing_quote.c.o
+
+parsing_quote.i: parsing_quote.c.i
+
+.PHONY : parsing_quote.i
+
+# target to preprocess a source file
+parsing_quote.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/parsing_quote.c.i
+.PHONY : parsing_quote.c.i
+
+parsing_quote.s: parsing_quote.c.s
+
+.PHONY : parsing_quote.s
+
+# target to generate assembly for a file
+parsing_quote.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/parsing_quote.c.s
+.PHONY : parsing_quote.c.s
+
+parsing_redir.o: parsing_redir.c.o
+
+.PHONY : parsing_redir.o
+
+# target to build an object file
+parsing_redir.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/parsing_redir.c.o
+.PHONY : parsing_redir.c.o
+
+parsing_redir.i: parsing_redir.c.i
+
+.PHONY : parsing_redir.i
+
+# target to preprocess a source file
+parsing_redir.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/parsing_redir.c.i
+.PHONY : parsing_redir.c.i
+
+parsing_redir.s: parsing_redir.c.s
+
+.PHONY : parsing_redir.s
+
+# target to generate assembly for a file
+parsing_redir.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/parsing_redir.c.s
+.PHONY : parsing_redir.c.s
+
+several_string.o: several_string.c.o
+
+.PHONY : several_string.o
+
+# target to build an object file
+several_string.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/several_string.c.o
+.PHONY : several_string.c.o
+
+several_string.i: several_string.c.i
+
+.PHONY : several_string.i
+
+# target to preprocess a source file
+several_string.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/several_string.c.i
+.PHONY : several_string.c.i
+
+several_string.s: several_string.c.s
+
+.PHONY : several_string.s
+
+# target to generate assembly for a file
+several_string.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/several_string.c.s
+.PHONY : several_string.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -395,6 +638,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... parsing"
+	@echo "... args_package.o"
+	@echo "... args_package.i"
+	@echo "... args_package.s"
+	@echo "... count_string.o"
+	@echo "... count_string.i"
+	@echo "... count_string.s"
 	@echo "... create_space_around.o"
 	@echo "... create_space_around.i"
 	@echo "... create_space_around.s"
@@ -407,12 +656,21 @@ help:
 	@echo "... ft_strcmp.o"
 	@echo "... ft_strcmp.i"
 	@echo "... ft_strcmp.s"
+	@echo "... ft_strdup.o"
+	@echo "... ft_strdup.i"
+	@echo "... ft_strdup.s"
 	@echo "... get_next_line.o"
 	@echo "... get_next_line.i"
 	@echo "... get_next_line.s"
 	@echo "... get_next_line_utils.o"
 	@echo "... get_next_line_utils.i"
 	@echo "... get_next_line_utils.s"
+	@echo "... init_pipe.o"
+	@echo "... init_pipe.i"
+	@echo "... init_pipe.s"
+	@echo "... init_struct.o"
+	@echo "... init_struct.i"
+	@echo "... init_struct.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -422,6 +680,18 @@ help:
 	@echo "... parsing.o"
 	@echo "... parsing.i"
 	@echo "... parsing.s"
+	@echo "... parsing_pipe.o"
+	@echo "... parsing_pipe.i"
+	@echo "... parsing_pipe.s"
+	@echo "... parsing_quote.o"
+	@echo "... parsing_quote.i"
+	@echo "... parsing_quote.s"
+	@echo "... parsing_redir.o"
+	@echo "... parsing_redir.i"
+	@echo "... parsing_redir.s"
+	@echo "... several_string.o"
+	@echo "... several_string.i"
+	@echo "... several_string.s"
 .PHONY : help
 
 

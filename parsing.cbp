@@ -78,6 +78,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/oem/new_shell/args_package.c">
+			<Option target="parsing"/>
+		</Unit>
+		<Unit filename="/home/oem/new_shell/count_string.c">
+			<Option target="parsing"/>
+		</Unit>
 		<Unit filename="/home/oem/new_shell/create_space_around.c">
 			<Option target="parsing"/>
 		</Unit>
@@ -90,6 +96,9 @@
 		<Unit filename="/home/oem/new_shell/ft_strcmp.c">
 			<Option target="parsing"/>
 		</Unit>
+		<Unit filename="/home/oem/new_shell/ft_strdup.c">
+			<Option target="parsing"/>
+		</Unit>
 		<Unit filename="/home/oem/new_shell/get_next_line.c">
 			<Option target="parsing"/>
 		</Unit>
@@ -97,6 +106,12 @@
 			<Option target="parsing"/>
 		</Unit>
 		<Unit filename="/home/oem/new_shell/get_next_line_utils.c">
+			<Option target="parsing"/>
+		</Unit>
+		<Unit filename="/home/oem/new_shell/init_pipe.c">
+			<Option target="parsing"/>
+		</Unit>
+		<Unit filename="/home/oem/new_shell/init_struct.c">
 			<Option target="parsing"/>
 		</Unit>
 		<Unit filename="/home/oem/new_shell/main.c">
@@ -109,6 +124,18 @@
 			<Option target="parsing"/>
 		</Unit>
 		<Unit filename="/home/oem/new_shell/parsing.c">
+			<Option target="parsing"/>
+		</Unit>
+		<Unit filename="/home/oem/new_shell/parsing_pipe.c">
+			<Option target="parsing"/>
+		</Unit>
+		<Unit filename="/home/oem/new_shell/parsing_quote.c">
+			<Option target="parsing"/>
+		</Unit>
+		<Unit filename="/home/oem/new_shell/parsing_redir.c">
+			<Option target="parsing"/>
+		</Unit>
+		<Unit filename="/home/oem/new_shell/several_string.c">
 			<Option target="parsing"/>
 		</Unit>
 		<Unit filename="/home/oem/new_shell/CMakeLists.txt">

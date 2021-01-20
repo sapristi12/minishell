@@ -26,11 +26,31 @@ static int get_size(char *str)
     return (j * 2);
 }
 
+static int      get_len(char **str, char c)
+{
+    int len;
+
+    len = 0;
+    if (c == '>')
+    {
+        len = 1;
+        while (str[0][len] && str[0][len] == '>')
+            len++;
+        len++;
+    }
+    else
+    {
+        len = 3;
+    }
+    return (len);
+}
+
 static int     replace(char **line, int j, char c, int len)
 {
     int i;
 
     i = 0;
+    printf("len : %d carac : %c\n", len, c);
     while (i < len)
     {
         if (i == 0 || i == len - 1)
@@ -41,6 +61,7 @@ static int     replace(char **line, int j, char c, int len)
         {
             line[0][j + i] = c;
         }
+        printf("LINELOOP : %s\n", *line);
         i++;
     }
     return (len);
@@ -66,10 +87,10 @@ char *create_space_around(char *str)
     {
         if (str[i] == 34)
             in_quote = -in_quote;
-        if (str[i] == '>' && str[i + 1] == '>' && str[i + 2] != '>' && in_quote == -1 && i++)
-            j += replace(&dest, j, str[i - 1], 4);
-        else if ((str[i] == '|' || str[i] == '<' || (str[i] == '>' && str[i + 1] != '>')) && in_quote == -1)
-            j += replace(&dest, j, str[i], 3);
+        if (str[i] == '>' && in_quote == -1 && i++)
+            j += replace(&dest, j, str[i - 1], get_len(str[i], &str));
+        else if (str[i] == '|' || str[i] == '<' && in_quote == -1)
+            j += replace(&dest, j, str[i], get_len(str[i], &str));
         else
             dest[j++] = str[i];
         i++;
