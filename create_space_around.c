@@ -13,34 +13,51 @@ static int get_size(char *str)
     {
         if (str[i] == 34)
             in_quote = -in_quote;
-        if (str[i] == '>' && str[i + 1] == '>' && in_quote == -1)
-            j++;
         else if (str[i] == '>' && in_quote == -1)
+        {
             j++;
+            while (str[i] == '>')
+                i++;
+        }
         else if (str[i] == '|' && in_quote == -1)
+        {
             j++;
+            while (str[i] == '|')
+                i++;
+        }
         else if (str[i] == '<' && in_quote == -1)
+        {
             j++;
+            while (str[i] == '<')
+                i++;
+        }
         i++;
     }
     return (j * 2);
 }
 
-static int      get_len(char **str, char c)
+static int      get_len(char **str, char c, int i)
 {
     int len;
+    int save;
 
     len = 0;
     if (c == '>')
     {
-        len = 1;
+        len = 0;
         while (str[0][len] && str[0][len] == '>')
             len++;
-        len++;
+        len += 2;
     }
     else
     {
         len = 3;
+    }
+    save = len - i - 3; //maybe - 2
+    if (c == '>')
+    {
+        while (save-- > 0)
+            str[0]++;
     }
     return (len);
 }
@@ -50,7 +67,6 @@ static int     replace(char **line, int j, char c, int len)
     int i;
 
     i = 0;
-    printf("len : %d carac : %c\n", len, c);
     while (i < len)
     {
         if (i == 0 || i == len - 1)
@@ -61,7 +77,6 @@ static int     replace(char **line, int j, char c, int len)
         {
             line[0][j + i] = c;
         }
-        printf("LINELOOP : %s\n", *line);
         i++;
     }
     return (len);
@@ -83,17 +98,17 @@ char *create_space_around(char *str)
     if (!dest)
         return (NULL);
     dest[size] = '\0';
-    while (str[i])
+    while (*str)
     {
-        if (str[i] == 34)
+        if (*str == 34)
             in_quote = -in_quote;
-        if (str[i] == '>' && in_quote == -1 && i++)
-            j += replace(&dest, j, str[i - 1], get_len(str[i], &str));
-        else if (str[i] == '|' || str[i] == '<' && in_quote == -1)
-            j += replace(&dest, j, str[i], get_len(str[i], &str));
+        if (*str == '>' && in_quote == -1)
+            j += replace(&dest, j, '>', get_len(&str, *str, i));
+        else if (*str == '|' || *str == '<' && in_quote == -1)
+            j += replace(&dest, j, *str, get_len(&str, *str, i));
         else
-            dest[j++] = str[i];
-        i++;
+            dest[j++] = *str;
+        str++;
     }
     return (dest);
 }

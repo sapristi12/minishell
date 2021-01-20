@@ -63,10 +63,10 @@ RM = /snap/clion/138/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oem/new_shell
+CMAKE_SOURCE_DIR = /home/oem/minishell
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oem/new_shell
+CMAKE_BINARY_DIR = /home/oem/minishell
 
 # Include any dependencies generated for this target.
 include CMakeFiles/parsing.dir/depend.make
@@ -79,237 +79,237 @@ include CMakeFiles/parsing.dir/flags.make
 
 CMakeFiles/parsing.dir/get_next_line.c.o: CMakeFiles/parsing.dir/flags.make
 CMakeFiles/parsing.dir/get_next_line.c.o: get_next_line.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/new_shell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/parsing.dir/get_next_line.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/get_next_line.c.o   -c /home/oem/new_shell/get_next_line.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/minishell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/parsing.dir/get_next_line.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/get_next_line.c.o   -c /home/oem/minishell/get_next_line.c
 
 CMakeFiles/parsing.dir/get_next_line.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/parsing.dir/get_next_line.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/new_shell/get_next_line.c > CMakeFiles/parsing.dir/get_next_line.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/minishell/get_next_line.c > CMakeFiles/parsing.dir/get_next_line.c.i
 
 CMakeFiles/parsing.dir/get_next_line.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/parsing.dir/get_next_line.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/new_shell/get_next_line.c -o CMakeFiles/parsing.dir/get_next_line.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/minishell/get_next_line.c -o CMakeFiles/parsing.dir/get_next_line.c.s
 
 CMakeFiles/parsing.dir/new_split.c.o: CMakeFiles/parsing.dir/flags.make
 CMakeFiles/parsing.dir/new_split.c.o: new_split.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/new_shell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/parsing.dir/new_split.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/new_split.c.o   -c /home/oem/new_shell/new_split.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/minishell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/parsing.dir/new_split.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/new_split.c.o   -c /home/oem/minishell/new_split.c
 
 CMakeFiles/parsing.dir/new_split.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/parsing.dir/new_split.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/new_shell/new_split.c > CMakeFiles/parsing.dir/new_split.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/minishell/new_split.c > CMakeFiles/parsing.dir/new_split.c.i
 
 CMakeFiles/parsing.dir/new_split.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/parsing.dir/new_split.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/new_shell/new_split.c -o CMakeFiles/parsing.dir/new_split.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/minishell/new_split.c -o CMakeFiles/parsing.dir/new_split.c.s
 
 CMakeFiles/parsing.dir/get_next_line_utils.c.o: CMakeFiles/parsing.dir/flags.make
 CMakeFiles/parsing.dir/get_next_line_utils.c.o: get_next_line_utils.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/new_shell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/parsing.dir/get_next_line_utils.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/get_next_line_utils.c.o   -c /home/oem/new_shell/get_next_line_utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/minishell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/parsing.dir/get_next_line_utils.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/get_next_line_utils.c.o   -c /home/oem/minishell/get_next_line_utils.c
 
 CMakeFiles/parsing.dir/get_next_line_utils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/parsing.dir/get_next_line_utils.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/new_shell/get_next_line_utils.c > CMakeFiles/parsing.dir/get_next_line_utils.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/minishell/get_next_line_utils.c > CMakeFiles/parsing.dir/get_next_line_utils.c.i
 
 CMakeFiles/parsing.dir/get_next_line_utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/parsing.dir/get_next_line_utils.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/new_shell/get_next_line_utils.c -o CMakeFiles/parsing.dir/get_next_line_utils.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/minishell/get_next_line_utils.c -o CMakeFiles/parsing.dir/get_next_line_utils.c.s
 
 CMakeFiles/parsing.dir/main.c.o: CMakeFiles/parsing.dir/flags.make
 CMakeFiles/parsing.dir/main.c.o: main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/new_shell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/parsing.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/main.c.o   -c /home/oem/new_shell/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/minishell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/parsing.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/main.c.o   -c /home/oem/minishell/main.c
 
 CMakeFiles/parsing.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/parsing.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/new_shell/main.c > CMakeFiles/parsing.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/minishell/main.c > CMakeFiles/parsing.dir/main.c.i
 
 CMakeFiles/parsing.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/parsing.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/new_shell/main.c -o CMakeFiles/parsing.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/minishell/main.c -o CMakeFiles/parsing.dir/main.c.s
 
 CMakeFiles/parsing.dir/parsing.c.o: CMakeFiles/parsing.dir/flags.make
 CMakeFiles/parsing.dir/parsing.c.o: parsing.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/new_shell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/parsing.dir/parsing.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/parsing.c.o   -c /home/oem/new_shell/parsing.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/minishell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/parsing.dir/parsing.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/parsing.c.o   -c /home/oem/minishell/parsing.c
 
 CMakeFiles/parsing.dir/parsing.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/parsing.dir/parsing.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/new_shell/parsing.c > CMakeFiles/parsing.dir/parsing.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/minishell/parsing.c > CMakeFiles/parsing.dir/parsing.c.i
 
 CMakeFiles/parsing.dir/parsing.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/parsing.dir/parsing.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/new_shell/parsing.c -o CMakeFiles/parsing.dir/parsing.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/minishell/parsing.c -o CMakeFiles/parsing.dir/parsing.c.s
 
 CMakeFiles/parsing.dir/create_space_around.c.o: CMakeFiles/parsing.dir/flags.make
 CMakeFiles/parsing.dir/create_space_around.c.o: create_space_around.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/new_shell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/parsing.dir/create_space_around.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/create_space_around.c.o   -c /home/oem/new_shell/create_space_around.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/minishell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/parsing.dir/create_space_around.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/create_space_around.c.o   -c /home/oem/minishell/create_space_around.c
 
 CMakeFiles/parsing.dir/create_space_around.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/parsing.dir/create_space_around.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/new_shell/create_space_around.c > CMakeFiles/parsing.dir/create_space_around.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/minishell/create_space_around.c > CMakeFiles/parsing.dir/create_space_around.c.i
 
 CMakeFiles/parsing.dir/create_space_around.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/parsing.dir/create_space_around.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/new_shell/create_space_around.c -o CMakeFiles/parsing.dir/create_space_around.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/minishell/create_space_around.c -o CMakeFiles/parsing.dir/create_space_around.c.s
 
 CMakeFiles/parsing.dir/ft_strcmp.c.o: CMakeFiles/parsing.dir/flags.make
 CMakeFiles/parsing.dir/ft_strcmp.c.o: ft_strcmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/new_shell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/parsing.dir/ft_strcmp.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/ft_strcmp.c.o   -c /home/oem/new_shell/ft_strcmp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/minishell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/parsing.dir/ft_strcmp.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/ft_strcmp.c.o   -c /home/oem/minishell/ft_strcmp.c
 
 CMakeFiles/parsing.dir/ft_strcmp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/parsing.dir/ft_strcmp.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/new_shell/ft_strcmp.c > CMakeFiles/parsing.dir/ft_strcmp.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/minishell/ft_strcmp.c > CMakeFiles/parsing.dir/ft_strcmp.c.i
 
 CMakeFiles/parsing.dir/ft_strcmp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/parsing.dir/ft_strcmp.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/new_shell/ft_strcmp.c -o CMakeFiles/parsing.dir/ft_strcmp.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/minishell/ft_strcmp.c -o CMakeFiles/parsing.dir/ft_strcmp.c.s
 
 CMakeFiles/parsing.dir/free_parsing_line.c.o: CMakeFiles/parsing.dir/flags.make
 CMakeFiles/parsing.dir/free_parsing_line.c.o: free_parsing_line.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/new_shell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/parsing.dir/free_parsing_line.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/free_parsing_line.c.o   -c /home/oem/new_shell/free_parsing_line.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/minishell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/parsing.dir/free_parsing_line.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/free_parsing_line.c.o   -c /home/oem/minishell/free_parsing_line.c
 
 CMakeFiles/parsing.dir/free_parsing_line.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/parsing.dir/free_parsing_line.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/new_shell/free_parsing_line.c > CMakeFiles/parsing.dir/free_parsing_line.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/minishell/free_parsing_line.c > CMakeFiles/parsing.dir/free_parsing_line.c.i
 
 CMakeFiles/parsing.dir/free_parsing_line.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/parsing.dir/free_parsing_line.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/new_shell/free_parsing_line.c -o CMakeFiles/parsing.dir/free_parsing_line.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/minishell/free_parsing_line.c -o CMakeFiles/parsing.dir/free_parsing_line.c.s
 
 CMakeFiles/parsing.dir/display.c.o: CMakeFiles/parsing.dir/flags.make
 CMakeFiles/parsing.dir/display.c.o: display.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/new_shell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/parsing.dir/display.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/display.c.o   -c /home/oem/new_shell/display.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/minishell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/parsing.dir/display.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/display.c.o   -c /home/oem/minishell/display.c
 
 CMakeFiles/parsing.dir/display.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/parsing.dir/display.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/new_shell/display.c > CMakeFiles/parsing.dir/display.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/minishell/display.c > CMakeFiles/parsing.dir/display.c.i
 
 CMakeFiles/parsing.dir/display.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/parsing.dir/display.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/new_shell/display.c -o CMakeFiles/parsing.dir/display.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/minishell/display.c -o CMakeFiles/parsing.dir/display.c.s
 
 CMakeFiles/parsing.dir/parsing_pipe.c.o: CMakeFiles/parsing.dir/flags.make
 CMakeFiles/parsing.dir/parsing_pipe.c.o: parsing_pipe.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/new_shell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/parsing.dir/parsing_pipe.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/parsing_pipe.c.o   -c /home/oem/new_shell/parsing_pipe.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/minishell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/parsing.dir/parsing_pipe.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/parsing_pipe.c.o   -c /home/oem/minishell/parsing_pipe.c
 
 CMakeFiles/parsing.dir/parsing_pipe.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/parsing.dir/parsing_pipe.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/new_shell/parsing_pipe.c > CMakeFiles/parsing.dir/parsing_pipe.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/minishell/parsing_pipe.c > CMakeFiles/parsing.dir/parsing_pipe.c.i
 
 CMakeFiles/parsing.dir/parsing_pipe.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/parsing.dir/parsing_pipe.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/new_shell/parsing_pipe.c -o CMakeFiles/parsing.dir/parsing_pipe.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/minishell/parsing_pipe.c -o CMakeFiles/parsing.dir/parsing_pipe.c.s
 
 CMakeFiles/parsing.dir/init_struct.c.o: CMakeFiles/parsing.dir/flags.make
 CMakeFiles/parsing.dir/init_struct.c.o: init_struct.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/new_shell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/parsing.dir/init_struct.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/init_struct.c.o   -c /home/oem/new_shell/init_struct.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/minishell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/parsing.dir/init_struct.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/init_struct.c.o   -c /home/oem/minishell/init_struct.c
 
 CMakeFiles/parsing.dir/init_struct.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/parsing.dir/init_struct.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/new_shell/init_struct.c > CMakeFiles/parsing.dir/init_struct.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/minishell/init_struct.c > CMakeFiles/parsing.dir/init_struct.c.i
 
 CMakeFiles/parsing.dir/init_struct.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/parsing.dir/init_struct.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/new_shell/init_struct.c -o CMakeFiles/parsing.dir/init_struct.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/minishell/init_struct.c -o CMakeFiles/parsing.dir/init_struct.c.s
 
 CMakeFiles/parsing.dir/init_pipe.c.o: CMakeFiles/parsing.dir/flags.make
 CMakeFiles/parsing.dir/init_pipe.c.o: init_pipe.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/new_shell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/parsing.dir/init_pipe.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/init_pipe.c.o   -c /home/oem/new_shell/init_pipe.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/minishell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/parsing.dir/init_pipe.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/init_pipe.c.o   -c /home/oem/minishell/init_pipe.c
 
 CMakeFiles/parsing.dir/init_pipe.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/parsing.dir/init_pipe.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/new_shell/init_pipe.c > CMakeFiles/parsing.dir/init_pipe.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/minishell/init_pipe.c > CMakeFiles/parsing.dir/init_pipe.c.i
 
 CMakeFiles/parsing.dir/init_pipe.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/parsing.dir/init_pipe.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/new_shell/init_pipe.c -o CMakeFiles/parsing.dir/init_pipe.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/minishell/init_pipe.c -o CMakeFiles/parsing.dir/init_pipe.c.s
 
 CMakeFiles/parsing.dir/args_package.c.o: CMakeFiles/parsing.dir/flags.make
 CMakeFiles/parsing.dir/args_package.c.o: args_package.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/new_shell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/parsing.dir/args_package.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/args_package.c.o   -c /home/oem/new_shell/args_package.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/minishell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/parsing.dir/args_package.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/args_package.c.o   -c /home/oem/minishell/args_package.c
 
 CMakeFiles/parsing.dir/args_package.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/parsing.dir/args_package.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/new_shell/args_package.c > CMakeFiles/parsing.dir/args_package.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/minishell/args_package.c > CMakeFiles/parsing.dir/args_package.c.i
 
 CMakeFiles/parsing.dir/args_package.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/parsing.dir/args_package.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/new_shell/args_package.c -o CMakeFiles/parsing.dir/args_package.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/minishell/args_package.c -o CMakeFiles/parsing.dir/args_package.c.s
 
 CMakeFiles/parsing.dir/ft_strdup.c.o: CMakeFiles/parsing.dir/flags.make
 CMakeFiles/parsing.dir/ft_strdup.c.o: ft_strdup.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/new_shell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/parsing.dir/ft_strdup.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/ft_strdup.c.o   -c /home/oem/new_shell/ft_strdup.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/minishell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/parsing.dir/ft_strdup.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/ft_strdup.c.o   -c /home/oem/minishell/ft_strdup.c
 
 CMakeFiles/parsing.dir/ft_strdup.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/parsing.dir/ft_strdup.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/new_shell/ft_strdup.c > CMakeFiles/parsing.dir/ft_strdup.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/minishell/ft_strdup.c > CMakeFiles/parsing.dir/ft_strdup.c.i
 
 CMakeFiles/parsing.dir/ft_strdup.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/parsing.dir/ft_strdup.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/new_shell/ft_strdup.c -o CMakeFiles/parsing.dir/ft_strdup.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/minishell/ft_strdup.c -o CMakeFiles/parsing.dir/ft_strdup.c.s
 
 CMakeFiles/parsing.dir/several_string.c.o: CMakeFiles/parsing.dir/flags.make
 CMakeFiles/parsing.dir/several_string.c.o: several_string.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/new_shell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/parsing.dir/several_string.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/several_string.c.o   -c /home/oem/new_shell/several_string.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/minishell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/parsing.dir/several_string.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/several_string.c.o   -c /home/oem/minishell/several_string.c
 
 CMakeFiles/parsing.dir/several_string.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/parsing.dir/several_string.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/new_shell/several_string.c > CMakeFiles/parsing.dir/several_string.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/minishell/several_string.c > CMakeFiles/parsing.dir/several_string.c.i
 
 CMakeFiles/parsing.dir/several_string.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/parsing.dir/several_string.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/new_shell/several_string.c -o CMakeFiles/parsing.dir/several_string.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/minishell/several_string.c -o CMakeFiles/parsing.dir/several_string.c.s
 
 CMakeFiles/parsing.dir/parsing_quote.c.o: CMakeFiles/parsing.dir/flags.make
 CMakeFiles/parsing.dir/parsing_quote.c.o: parsing_quote.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/new_shell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/parsing.dir/parsing_quote.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/parsing_quote.c.o   -c /home/oem/new_shell/parsing_quote.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/minishell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/parsing.dir/parsing_quote.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/parsing_quote.c.o   -c /home/oem/minishell/parsing_quote.c
 
 CMakeFiles/parsing.dir/parsing_quote.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/parsing.dir/parsing_quote.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/new_shell/parsing_quote.c > CMakeFiles/parsing.dir/parsing_quote.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/minishell/parsing_quote.c > CMakeFiles/parsing.dir/parsing_quote.c.i
 
 CMakeFiles/parsing.dir/parsing_quote.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/parsing.dir/parsing_quote.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/new_shell/parsing_quote.c -o CMakeFiles/parsing.dir/parsing_quote.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/minishell/parsing_quote.c -o CMakeFiles/parsing.dir/parsing_quote.c.s
 
 CMakeFiles/parsing.dir/parsing_redir.c.o: CMakeFiles/parsing.dir/flags.make
 CMakeFiles/parsing.dir/parsing_redir.c.o: parsing_redir.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/new_shell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/parsing.dir/parsing_redir.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/parsing_redir.c.o   -c /home/oem/new_shell/parsing_redir.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/minishell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/parsing.dir/parsing_redir.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/parsing_redir.c.o   -c /home/oem/minishell/parsing_redir.c
 
 CMakeFiles/parsing.dir/parsing_redir.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/parsing.dir/parsing_redir.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/new_shell/parsing_redir.c > CMakeFiles/parsing.dir/parsing_redir.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/minishell/parsing_redir.c > CMakeFiles/parsing.dir/parsing_redir.c.i
 
 CMakeFiles/parsing.dir/parsing_redir.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/parsing.dir/parsing_redir.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/new_shell/parsing_redir.c -o CMakeFiles/parsing.dir/parsing_redir.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/minishell/parsing_redir.c -o CMakeFiles/parsing.dir/parsing_redir.c.s
 
 CMakeFiles/parsing.dir/count_string.c.o: CMakeFiles/parsing.dir/flags.make
 CMakeFiles/parsing.dir/count_string.c.o: count_string.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/new_shell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/parsing.dir/count_string.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/count_string.c.o   -c /home/oem/new_shell/count_string.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oem/minishell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/parsing.dir/count_string.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/parsing.dir/count_string.c.o   -c /home/oem/minishell/count_string.c
 
 CMakeFiles/parsing.dir/count_string.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/parsing.dir/count_string.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/new_shell/count_string.c > CMakeFiles/parsing.dir/count_string.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oem/minishell/count_string.c > CMakeFiles/parsing.dir/count_string.c.i
 
 CMakeFiles/parsing.dir/count_string.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/parsing.dir/count_string.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/new_shell/count_string.c -o CMakeFiles/parsing.dir/count_string.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oem/minishell/count_string.c -o CMakeFiles/parsing.dir/count_string.c.s
 
 # Object files for target parsing
 parsing_OBJECTS = \
@@ -355,7 +355,7 @@ parsing: CMakeFiles/parsing.dir/parsing_redir.c.o
 parsing: CMakeFiles/parsing.dir/count_string.c.o
 parsing: CMakeFiles/parsing.dir/build.make
 parsing: CMakeFiles/parsing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oem/new_shell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking C executable parsing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oem/minishell/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking C executable parsing"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/parsing.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -368,6 +368,6 @@ CMakeFiles/parsing.dir/clean:
 .PHONY : CMakeFiles/parsing.dir/clean
 
 CMakeFiles/parsing.dir/depend:
-	cd /home/oem/new_shell && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oem/new_shell /home/oem/new_shell /home/oem/new_shell /home/oem/new_shell /home/oem/new_shell/CMakeFiles/parsing.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/oem/minishell && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oem/minishell /home/oem/minishell /home/oem/minishell /home/oem/minishell /home/oem/minishell/CMakeFiles/parsing.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/parsing.dir/depend
 

@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/oem/new_shell/create_space_around.c
+/home/oem/minishell/create_space_around.c
 minishell.h
-/home/oem/new_shell/minishell.h
+/home/oem/minishell/minishell.h
 
-/home/oem/new_shell/minishell.h
+/home/oem/minishell/minishell.h
 stdio.h
 -
 stdlib.h

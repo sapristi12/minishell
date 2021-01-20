@@ -1,4 +1,0 @@
-/snap/clion/138/bin/cmake/linux/bin/cmake -G "CodeBlocks - Unix Makefiles" /home/oem/new_shell
--- Configuring done
--- Generating done
--- Build files have been written to: /home/oem/new_shell
