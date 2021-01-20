@@ -17,6 +17,7 @@ int     main_loop(char *prompt, char **envp)
     }
     free(prompt);
     free_char_double_array(cmds);
+    return (0);
 }
 
 int		main(int i, char **av, char **envp)

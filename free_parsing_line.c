@@ -18,7 +18,7 @@ int    free_parsing_line(char **av, char *line)
     int i;
 
     i = 0;
-    printf("GONNA FUCKING QUIT\n");
+    printf("Free from main loop?\n");
    /* while (av[i])
     {
         printf("will free this\n");

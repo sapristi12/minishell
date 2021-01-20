@@ -33,7 +33,7 @@ static char  **get_arg(char **cmds)
     return (args);
 }
 
-static int  create_args(t_cmd *cmd)
+int  create_args(t_cmd *cmd)
 {
     int i;
 

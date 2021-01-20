@@ -66,7 +66,7 @@ char *create_space_around(char *str)
     {
         if (str[i] == 34)
             in_quote = -in_quote;
-        if (str[i] == '>' && str[i + 1] == '>' && in_quote == -1 && i++)
+        if (str[i] == '>' && str[i + 1] == '>' && str[i + 2] != '>' && in_quote == -1 && i++)
             j += replace(&dest, j, str[i - 1], 4);
         else if ((str[i] == '|' || str[i] == '<' || (str[i] == '>' && str[i + 1] != '>')) && in_quote == -1)
             j += replace(&dest, j, str[i], 3);
