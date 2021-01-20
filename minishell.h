@@ -49,5 +49,9 @@ int		ft_strcmp(char *s1, char *s2);
 int     free_parsing_line(char **av, char *line);
 void    free_char_double_array(char **av);
 void    display_prompt(void);
+int     parsing_pipe(t_cmd *cmd);
+void    init_struct_cmd(t_cmd *cmd);
+static int  create_args(t_cmd *cmd);
+char	*ft_strdup(char *src);
 
 #endif

@@ -73,7 +73,6 @@ char    **new_split(char *str, char c)
     in_quote = -1;
     i = 0;
     int countword = cw(str, c);
-    printf("j'ai alloc %d mots odnt le null\n", countword + 1);
     if (!(dest = (char **)malloc(sizeof(char *) * (countword + 1))))
         return (NULL);
     while (*str)

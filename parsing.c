@@ -1,22 +1,18 @@
 #include "minishell.h"
 
-int     parsing_line(char *cmd, char **envp)
+int     parsing_line(char *command, char **envp)
 {
     char **cmds;
-    char *save;
-    int i = 0;
+    t_cmd   cmd;
 
-    if (!(cmd = create_space_around(cmd)))
+    init_struct_cmd(&cmd);
+    if (!(command = create_space_around(command)))
         return (-1);
-    if (!(cmds = new_split(cmd, ' ')))
+    if (!(cmd.cmds = new_split(command, ' ')))
         return (-1);
-
-    /*while (cmds[i])
-    {
-        printf(">%s\n", cmds[i]);
-        i++;
-    }*/
-    free(cmd);
-    free_char_double_array(cmds);
+    parsing_pipe(&cmd);
+    //parsing_redir(&cmd);
+    free(command);
+    free_char_double_array(cmd.cmds);
     return (0);
 }
