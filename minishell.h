@@ -1,7 +1,7 @@
 #ifndef MINISHELL_H
 # define MINISHELL_H
 
-struct					s_parse
+struct					s_pipe
 {
 	int		nb_pipe;
 	char	***all;
@@ -10,7 +10,22 @@ struct					s_parse
 	int		save;
 	int		fd_saved;
 };
-typedef struct s_parse	t_parse;
+typedef struct s_pipe	t_pipe;
+
+struct                  s_redir
+{
+    int left;
+    int right;
+};
+typedef struct s_redir  t_redir;
+
+struct                  s_cmd
+{
+    t_pipe  pipe;
+    t_redir redir;
+    char    **cmds;
+};
+typedef struct s_cmd    t_cmd;
 
 # include <stdio.h>
 # include <stdlib.h>

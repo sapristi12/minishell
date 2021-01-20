@@ -10,11 +10,12 @@ int     parsing_line(char *cmd, char **envp)
         return (-1);
     if (!(cmds = new_split(cmd, ' ')))
         return (-1);
-    while (cmds[i])
+
+    /*while (cmds[i])
     {
         printf(">%s\n", cmds[i]);
         i++;
-    }
+    }*/
     free(cmd);
     free_char_double_array(cmds);
     return (0);
