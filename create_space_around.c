@@ -66,6 +66,5 @@ char *create_space_around(char *str)
             dest[j++] = str[i];
         i++;
     }
-    free(str);
     return (dest);
 }

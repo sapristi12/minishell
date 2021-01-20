@@ -6,11 +6,49 @@
 
 #IncludeRegexTransform: 
 
-/home/oem/parsing/free_parsing_line.c
+/home/oem/new_shell/create_space_around.c
 minishell.h
-/home/oem/parsing/minishell.h
+/home/oem/new_shell/minishell.h
 
-/home/oem/parsing/minishell.h
+/home/oem/new_shell/display.c
+minishell.h
+/home/oem/new_shell/minishell.h
+
+/home/oem/new_shell/free_parsing_line.c
+minishell.h
+/home/oem/new_shell/minishell.h
+
+/home/oem/new_shell/ft_strcmp.c
+minishell.h
+/home/oem/new_shell/minishell.h
+
+/home/oem/new_shell/get_next_line.c
+get_next_line.h
+/home/oem/new_shell/get_next_line.h
+
+/home/oem/new_shell/get_next_line.h
+stdlib.h
+-
+unistd.h
+-
+stdio.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+
+/home/oem/new_shell/get_next_line_utils.c
+get_next_line.h
+/home/oem/new_shell/get_next_line.h
+
+/home/oem/new_shell/main.c
+minishell.h
+/home/oem/new_shell/minishell.h
+
+/home/oem/new_shell/minishell.h
 stdio.h
 -
 stdlib.h
@@ -36,7 +74,11 @@ signal.h
 dirent.h
 -
 
-/home/oem/parsing/parsing.c
+/home/oem/new_shell/new_split.c
 minishell.h
-/home/oem/parsing/minishell.h
+/home/oem/new_shell/minishell.h
+
+/home/oem/new_shell/parsing.c
+minishell.h
+/home/oem/new_shell/minishell.h
 

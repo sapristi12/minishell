@@ -5,7 +5,7 @@ void    free_char_double_array(char **av)
     int i;
 
     i = 0;
-    while(av[i])
+    while (av[i])
     {
         free(av[i]);
         i++;
@@ -19,12 +19,13 @@ int    free_parsing_line(char **av, char *line)
 
     i = 0;
     printf("GONNA FUCKING QUIT\n");
-    /*while (av[i])
+   /* while (av[i])
     {
-        //free(av[i]);
+        printf("will free this\n");
+        free(av[i]);
         i++;
-    }*/
-    //free(av);
-    //get_next_line(1, NULL, 0);
+    }
+    free(av);
+    //get_next_line(1, NULL, 0);*/
     return (0);
 }

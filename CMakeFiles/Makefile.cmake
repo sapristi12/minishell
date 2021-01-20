@@ -22,7 +22,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeDetermineCompilerABI.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeDetermineCompilerId.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeDetermineSystem.cmake"
+  "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeFindBinUtils.cmake"
+  "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeFindCodeBlocks.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeGenericSystem.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeInitializeConfigs.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeLanguageInformation.cmake"
@@ -77,6 +79,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/Platform/UnixPaths.cmake"
+  "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/ProcessorCount.cmake"
   )
 
 # The corresponding makefile is:

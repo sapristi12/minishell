@@ -4,6 +4,9 @@
 CMakeFiles/parsing.dir/create_space_around.c.o: create_space_around.c
 CMakeFiles/parsing.dir/create_space_around.c.o: minishell.h
 
+CMakeFiles/parsing.dir/display.c.o: display.c
+CMakeFiles/parsing.dir/display.c.o: minishell.h
+
 CMakeFiles/parsing.dir/free_parsing_line.c.o: free_parsing_line.c
 CMakeFiles/parsing.dir/free_parsing_line.c.o: minishell.h
 

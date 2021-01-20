@@ -32,5 +32,7 @@ char    **new_split(char *str, char c);
 char    *create_space_around(char *str);
 int		ft_strcmp(char *s1, char *s2);
 int     free_parsing_line(char **av, char *line);
+void    free_char_double_array(char **av);
+void    display_prompt(void);
 
 #endif

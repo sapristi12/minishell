@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/parsing.dir/create_space_around.c.o"
+  "CMakeFiles/parsing.dir/display.c.o"
   "CMakeFiles/parsing.dir/free_parsing_line.c.o"
   "CMakeFiles/parsing.dir/ft_strcmp.c.o"
   "CMakeFiles/parsing.dir/get_next_line.c.o"

@@ -68,10 +68,10 @@ RM = /snap/clion/138/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oem/parsing
+CMAKE_SOURCE_DIR = /home/oem/new_shell
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oem/parsing
+CMAKE_BINARY_DIR = /home/oem/new_shell
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/oem/parsing/CMakeFiles /home/oem/parsing/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/oem/new_shell/CMakeFiles /home/oem/new_shell/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/oem/parsing/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/oem/new_shell/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -169,6 +169,33 @@ create_space_around.s: create_space_around.c.s
 create_space_around.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/create_space_around.c.s
 .PHONY : create_space_around.c.s
+
+display.o: display.c.o
+
+.PHONY : display.o
+
+# target to build an object file
+display.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/display.c.o
+.PHONY : display.c.o
+
+display.i: display.c.i
+
+.PHONY : display.i
+
+# target to preprocess a source file
+display.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/display.c.i
+.PHONY : display.c.i
+
+display.s: display.c.s
+
+.PHONY : display.s
+
+# target to generate assembly for a file
+display.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/display.c.s
+.PHONY : display.c.s
 
 free_parsing_line.o: free_parsing_line.c.o
 
@@ -371,6 +398,9 @@ help:
 	@echo "... create_space_around.o"
 	@echo "... create_space_around.i"
 	@echo "... create_space_around.s"
+	@echo "... display.o"
+	@echo "... display.i"
+	@echo "... display.s"
 	@echo "... free_parsing_line.o"
 	@echo "... free_parsing_line.i"
 	@echo "... free_parsing_line.s"

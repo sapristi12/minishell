@@ -8,99 +8,110 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/oem/parsing"/>
+				<Option working_dir="/home/oem/new_shell"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/oem/parsing"/>
+				<Option working_dir="/home/oem/new_shell"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/oem/parsing"/>
+				<Option working_dir="/home/oem/new_shell"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="parsing">
-				<Option output="/home/oem/parsing/parsing" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/oem/parsing"/>
+				<Option output="/home/oem/new_shell/parsing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/oem/new_shell"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/oem/parsing/."/>
+					<Add directory="/home/oem/new_shell/."/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 parsing"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 parsing"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="parsing/fast">
-				<Option output="/home/oem/parsing/parsing" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/oem/parsing"/>
+				<Option output="/home/oem/new_shell/parsing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/oem/new_shell"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/oem/parsing/."/>
+					<Add directory="/home/oem/new_shell/."/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 parsing/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/oem/parsing/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 parsing/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/oem/new_shell/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/oem/parsing/create_space_around.c">
+		<Unit filename="/home/oem/new_shell/create_space_around.c">
 			<Option target="parsing"/>
 		</Unit>
-		<Unit filename="/home/oem/parsing/free_parsing_line.c">
+		<Unit filename="/home/oem/new_shell/display.c">
 			<Option target="parsing"/>
 		</Unit>
-		<Unit filename="/home/oem/parsing/ft_strcmp.c">
+		<Unit filename="/home/oem/new_shell/free_parsing_line.c">
 			<Option target="parsing"/>
 		</Unit>
-		<Unit filename="/home/oem/parsing/get_next_line.c">
+		<Unit filename="/home/oem/new_shell/ft_strcmp.c">
 			<Option target="parsing"/>
 		</Unit>
-		<Unit filename="/home/oem/parsing/get_next_line.h">
+		<Unit filename="/home/oem/new_shell/get_next_line.c">
 			<Option target="parsing"/>
 		</Unit>
-		<Unit filename="/home/oem/parsing/get_next_line_utils.c">
+		<Unit filename="/home/oem/new_shell/get_next_line.h">
 			<Option target="parsing"/>
 		</Unit>
-		<Unit filename="/home/oem/parsing/main.c">
+		<Unit filename="/home/oem/new_shell/get_next_line_utils.c">
 			<Option target="parsing"/>
 		</Unit>
-		<Unit filename="/home/oem/parsing/minishell.h">
+		<Unit filename="/home/oem/new_shell/main.c">
 			<Option target="parsing"/>
 		</Unit>
-		<Unit filename="/home/oem/parsing/new_split.c">
+		<Unit filename="/home/oem/new_shell/minishell.h">
 			<Option target="parsing"/>
 		</Unit>
-		<Unit filename="/home/oem/parsing/parsing.c">
+		<Unit filename="/home/oem/new_shell/new_split.c">
 			<Option target="parsing"/>
 		</Unit>
-		<Unit filename="/home/oem/parsing/CMakeLists.txt">
+		<Unit filename="/home/oem/new_shell/parsing.c">
+			<Option target="parsing"/>
+		</Unit>
+		<Unit filename="/home/oem/new_shell/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
