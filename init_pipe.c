@@ -33,8 +33,8 @@ int     init_pipe(t_cmd *cmd)
         return (-1);
     if (create_pipe(cmd) == -1)
         return (-1);
-    if (!create_args(cmd))
-        return (-1);
+//    if (!create_args(cmd))
+  //      return (-1);
     dup2(cmd->pipe.fd_saved, STDIN_FILENO);
     return (1);
 }

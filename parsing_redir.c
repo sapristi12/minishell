@@ -11,7 +11,7 @@ static int  is_several_redir(t_cmd *cmd)
     strs[2] = "<";
     while (i < 3)
     {
-        if (!several_string(cmd->cmds, strs[i]))
+        if (!several_string(cmd->cmds))
             return (0);
         i++;
     }
@@ -22,6 +22,4 @@ int     parsing_redir(t_cmd *cmd)
 {
     cmd->redir.left = count_string(cmd->cmds, "<");
     cmd->redir.right = count_string(cmd->cmds, ">") + count_string(cmd->cmds, ">>");
-    if (!is_several_redir(cmd))
-        return (-1);
 }

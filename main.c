@@ -30,8 +30,7 @@ int		main(int i, char **av, char **envp)
 	display_prompt();
 	while (get_next_line(0, &prompt, 0))
 	{
-	    if (main_loop(prompt, envp) == -1)
-	        return (-1); //let's see later
+	    main_loop(prompt, envp);
         display_prompt();
 	}
 	free(prompt);

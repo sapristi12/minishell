@@ -68,24 +68,13 @@ RM = /snap/clion/138/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oem/parsing
+CMAKE_SOURCE_DIR = /home/oem/new_shell
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oem/parsing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/oem/new_shell/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/138/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -98,11 +87,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/snap/clion/138/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/oem/parsing/cmake-build-debug/CMakeFiles /home/oem/parsing/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/oem/new_shell/cmake-build-debug/CMakeFiles /home/oem/new_shell/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/oem/parsing/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/oem/new_shell/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -131,17 +131,125 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named parsing
+# Target rules for targets named new_shell
 
 # Build rule for target.
-parsing: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 parsing
-.PHONY : parsing
+new_shell: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 new_shell
+.PHONY : new_shell
 
 # fast build rule for target.
-parsing/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/build
-.PHONY : parsing/fast
+new_shell/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/build
+.PHONY : new_shell/fast
+
+args_package.o: args_package.c.o
+
+.PHONY : args_package.o
+
+# target to build an object file
+args_package.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/args_package.c.o
+.PHONY : args_package.c.o
+
+args_package.i: args_package.c.i
+
+.PHONY : args_package.i
+
+# target to preprocess a source file
+args_package.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/args_package.c.i
+.PHONY : args_package.c.i
+
+args_package.s: args_package.c.s
+
+.PHONY : args_package.s
+
+# target to generate assembly for a file
+args_package.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/args_package.c.s
+.PHONY : args_package.c.s
+
+check_first_command.o: check_first_command.c.o
+
+.PHONY : check_first_command.o
+
+# target to build an object file
+check_first_command.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/check_first_command.c.o
+.PHONY : check_first_command.c.o
+
+check_first_command.i: check_first_command.c.i
+
+.PHONY : check_first_command.i
+
+# target to preprocess a source file
+check_first_command.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/check_first_command.c.i
+.PHONY : check_first_command.c.i
+
+check_first_command.s: check_first_command.c.s
+
+.PHONY : check_first_command.s
+
+# target to generate assembly for a file
+check_first_command.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/check_first_command.c.s
+.PHONY : check_first_command.c.s
+
+count_string.o: count_string.c.o
+
+.PHONY : count_string.o
+
+# target to build an object file
+count_string.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/count_string.c.o
+.PHONY : count_string.c.o
+
+count_string.i: count_string.c.i
+
+.PHONY : count_string.i
+
+# target to preprocess a source file
+count_string.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/count_string.c.i
+.PHONY : count_string.c.i
+
+count_string.s: count_string.c.s
+
+.PHONY : count_string.s
+
+# target to generate assembly for a file
+count_string.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/count_string.c.s
+.PHONY : count_string.c.s
+
+create_args.o: create_args.c.o
+
+.PHONY : create_args.o
+
+# target to build an object file
+create_args.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/create_args.c.o
+.PHONY : create_args.c.o
+
+create_args.i: create_args.c.i
+
+.PHONY : create_args.i
+
+# target to preprocess a source file
+create_args.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/create_args.c.i
+.PHONY : create_args.c.i
+
+create_args.s: create_args.c.s
+
+.PHONY : create_args.s
+
+# target to generate assembly for a file
+create_args.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/create_args.c.s
+.PHONY : create_args.c.s
 
 create_space_around.o: create_space_around.c.o
 
@@ -149,7 +257,7 @@ create_space_around.o: create_space_around.c.o
 
 # target to build an object file
 create_space_around.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/create_space_around.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/create_space_around.c.o
 .PHONY : create_space_around.c.o
 
 create_space_around.i: create_space_around.c.i
@@ -158,7 +266,7 @@ create_space_around.i: create_space_around.c.i
 
 # target to preprocess a source file
 create_space_around.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/create_space_around.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/create_space_around.c.i
 .PHONY : create_space_around.c.i
 
 create_space_around.s: create_space_around.c.s
@@ -167,8 +275,143 @@ create_space_around.s: create_space_around.c.s
 
 # target to generate assembly for a file
 create_space_around.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/create_space_around.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/create_space_around.c.s
 .PHONY : create_space_around.c.s
+
+display.o: display.c.o
+
+.PHONY : display.o
+
+# target to build an object file
+display.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/display.c.o
+.PHONY : display.c.o
+
+display.i: display.c.i
+
+.PHONY : display.i
+
+# target to preprocess a source file
+display.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/display.c.i
+.PHONY : display.c.i
+
+display.s: display.c.s
+
+.PHONY : display.s
+
+# target to generate assembly for a file
+display.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/display.c.s
+.PHONY : display.c.s
+
+free_parsing_line.o: free_parsing_line.c.o
+
+.PHONY : free_parsing_line.o
+
+# target to build an object file
+free_parsing_line.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_parsing_line.c.o
+.PHONY : free_parsing_line.c.o
+
+free_parsing_line.i: free_parsing_line.c.i
+
+.PHONY : free_parsing_line.i
+
+# target to preprocess a source file
+free_parsing_line.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_parsing_line.c.i
+.PHONY : free_parsing_line.c.i
+
+free_parsing_line.s: free_parsing_line.c.s
+
+.PHONY : free_parsing_line.s
+
+# target to generate assembly for a file
+free_parsing_line.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_parsing_line.c.s
+.PHONY : free_parsing_line.c.s
+
+ft_errno.o: ft_errno.c.o
+
+.PHONY : ft_errno.o
+
+# target to build an object file
+ft_errno.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_errno.c.o
+.PHONY : ft_errno.c.o
+
+ft_errno.i: ft_errno.c.i
+
+.PHONY : ft_errno.i
+
+# target to preprocess a source file
+ft_errno.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_errno.c.i
+.PHONY : ft_errno.c.i
+
+ft_errno.s: ft_errno.c.s
+
+.PHONY : ft_errno.s
+
+# target to generate assembly for a file
+ft_errno.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_errno.c.s
+.PHONY : ft_errno.c.s
+
+ft_list.o: ft_list.c.o
+
+.PHONY : ft_list.o
+
+# target to build an object file
+ft_list.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_list.c.o
+.PHONY : ft_list.c.o
+
+ft_list.i: ft_list.c.i
+
+.PHONY : ft_list.i
+
+# target to preprocess a source file
+ft_list.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_list.c.i
+.PHONY : ft_list.c.i
+
+ft_list.s: ft_list.c.s
+
+.PHONY : ft_list.s
+
+# target to generate assembly for a file
+ft_list.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_list.c.s
+.PHONY : ft_list.c.s
+
+ft_stradd.o: ft_stradd.c.o
+
+.PHONY : ft_stradd.o
+
+# target to build an object file
+ft_stradd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_stradd.c.o
+.PHONY : ft_stradd.c.o
+
+ft_stradd.i: ft_stradd.c.i
+
+.PHONY : ft_stradd.i
+
+# target to preprocess a source file
+ft_stradd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_stradd.c.i
+.PHONY : ft_stradd.c.i
+
+ft_stradd.s: ft_stradd.c.s
+
+.PHONY : ft_stradd.s
+
+# target to generate assembly for a file
+ft_stradd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_stradd.c.s
+.PHONY : ft_stradd.c.s
 
 ft_strcmp.o: ft_strcmp.c.o
 
@@ -176,7 +419,7 @@ ft_strcmp.o: ft_strcmp.c.o
 
 # target to build an object file
 ft_strcmp.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/ft_strcmp.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strcmp.c.o
 .PHONY : ft_strcmp.c.o
 
 ft_strcmp.i: ft_strcmp.c.i
@@ -185,7 +428,7 @@ ft_strcmp.i: ft_strcmp.c.i
 
 # target to preprocess a source file
 ft_strcmp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/ft_strcmp.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strcmp.c.i
 .PHONY : ft_strcmp.c.i
 
 ft_strcmp.s: ft_strcmp.c.s
@@ -194,8 +437,62 @@ ft_strcmp.s: ft_strcmp.c.s
 
 # target to generate assembly for a file
 ft_strcmp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/ft_strcmp.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strcmp.c.s
 .PHONY : ft_strcmp.c.s
+
+ft_strdup.o: ft_strdup.c.o
+
+.PHONY : ft_strdup.o
+
+# target to build an object file
+ft_strdup.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strdup.c.o
+.PHONY : ft_strdup.c.o
+
+ft_strdup.i: ft_strdup.c.i
+
+.PHONY : ft_strdup.i
+
+# target to preprocess a source file
+ft_strdup.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strdup.c.i
+.PHONY : ft_strdup.c.i
+
+ft_strdup.s: ft_strdup.c.s
+
+.PHONY : ft_strdup.s
+
+# target to generate assembly for a file
+ft_strdup.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strdup.c.s
+.PHONY : ft_strdup.c.s
+
+get_env.o: get_env.c.o
+
+.PHONY : get_env.o
+
+# target to build an object file
+get_env.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_env.c.o
+.PHONY : get_env.c.o
+
+get_env.i: get_env.c.i
+
+.PHONY : get_env.i
+
+# target to preprocess a source file
+get_env.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_env.c.i
+.PHONY : get_env.c.i
+
+get_env.s: get_env.c.s
+
+.PHONY : get_env.s
+
+# target to generate assembly for a file
+get_env.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_env.c.s
+.PHONY : get_env.c.s
 
 get_next_line.o: get_next_line.c.o
 
@@ -203,7 +500,7 @@ get_next_line.o: get_next_line.c.o
 
 # target to build an object file
 get_next_line.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/get_next_line.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_next_line.c.o
 .PHONY : get_next_line.c.o
 
 get_next_line.i: get_next_line.c.i
@@ -212,7 +509,7 @@ get_next_line.i: get_next_line.c.i
 
 # target to preprocess a source file
 get_next_line.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/get_next_line.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_next_line.c.i
 .PHONY : get_next_line.c.i
 
 get_next_line.s: get_next_line.c.s
@@ -221,7 +518,7 @@ get_next_line.s: get_next_line.c.s
 
 # target to generate assembly for a file
 get_next_line.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/get_next_line.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_next_line.c.s
 .PHONY : get_next_line.c.s
 
 get_next_line_utils.o: get_next_line_utils.c.o
@@ -230,7 +527,7 @@ get_next_line_utils.o: get_next_line_utils.c.o
 
 # target to build an object file
 get_next_line_utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/get_next_line_utils.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_next_line_utils.c.o
 .PHONY : get_next_line_utils.c.o
 
 get_next_line_utils.i: get_next_line_utils.c.i
@@ -239,7 +536,7 @@ get_next_line_utils.i: get_next_line_utils.c.i
 
 # target to preprocess a source file
 get_next_line_utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/get_next_line_utils.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_next_line_utils.c.i
 .PHONY : get_next_line_utils.c.i
 
 get_next_line_utils.s: get_next_line_utils.c.s
@@ -248,8 +545,143 @@ get_next_line_utils.s: get_next_line_utils.c.s
 
 # target to generate assembly for a file
 get_next_line_utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/get_next_line_utils.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_next_line_utils.c.s
 .PHONY : get_next_line_utils.c.s
+
+get_path_command.o: get_path_command.c.o
+
+.PHONY : get_path_command.o
+
+# target to build an object file
+get_path_command.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_path_command.c.o
+.PHONY : get_path_command.c.o
+
+get_path_command.i: get_path_command.c.i
+
+.PHONY : get_path_command.i
+
+# target to preprocess a source file
+get_path_command.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_path_command.c.i
+.PHONY : get_path_command.c.i
+
+get_path_command.s: get_path_command.c.s
+
+.PHONY : get_path_command.s
+
+# target to generate assembly for a file
+get_path_command.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_path_command.c.s
+.PHONY : get_path_command.c.s
+
+init_list_env.o: init_list_env.c.o
+
+.PHONY : init_list_env.o
+
+# target to build an object file
+init_list_env.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/init_list_env.c.o
+.PHONY : init_list_env.c.o
+
+init_list_env.i: init_list_env.c.i
+
+.PHONY : init_list_env.i
+
+# target to preprocess a source file
+init_list_env.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/init_list_env.c.i
+.PHONY : init_list_env.c.i
+
+init_list_env.s: init_list_env.c.s
+
+.PHONY : init_list_env.s
+
+# target to generate assembly for a file
+init_list_env.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/init_list_env.c.s
+.PHONY : init_list_env.c.s
+
+init_pipe.o: init_pipe.c.o
+
+.PHONY : init_pipe.o
+
+# target to build an object file
+init_pipe.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/init_pipe.c.o
+.PHONY : init_pipe.c.o
+
+init_pipe.i: init_pipe.c.i
+
+.PHONY : init_pipe.i
+
+# target to preprocess a source file
+init_pipe.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/init_pipe.c.i
+.PHONY : init_pipe.c.i
+
+init_pipe.s: init_pipe.c.s
+
+.PHONY : init_pipe.s
+
+# target to generate assembly for a file
+init_pipe.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/init_pipe.c.s
+.PHONY : init_pipe.c.s
+
+init_struct.o: init_struct.c.o
+
+.PHONY : init_struct.o
+
+# target to build an object file
+init_struct.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/init_struct.c.o
+.PHONY : init_struct.c.o
+
+init_struct.i: init_struct.c.i
+
+.PHONY : init_struct.i
+
+# target to preprocess a source file
+init_struct.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/init_struct.c.i
+.PHONY : init_struct.c.i
+
+init_struct.s: init_struct.c.s
+
+.PHONY : init_struct.s
+
+# target to generate assembly for a file
+init_struct.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/init_struct.c.s
+.PHONY : init_struct.c.s
+
+is_builtin.o: is_builtin.c.o
+
+.PHONY : is_builtin.o
+
+# target to build an object file
+is_builtin.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_builtin.c.o
+.PHONY : is_builtin.c.o
+
+is_builtin.i: is_builtin.c.i
+
+.PHONY : is_builtin.i
+
+# target to preprocess a source file
+is_builtin.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_builtin.c.i
+.PHONY : is_builtin.c.i
+
+is_builtin.s: is_builtin.c.s
+
+.PHONY : is_builtin.s
+
+# target to generate assembly for a file
+is_builtin.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_builtin.c.s
+.PHONY : is_builtin.c.s
 
 main.o: main.c.o
 
@@ -257,7 +689,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -266,7 +698,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -275,7 +707,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/main.c.s
 .PHONY : main.c.s
 
 new_split.o: new_split.c.o
@@ -284,7 +716,7 @@ new_split.o: new_split.c.o
 
 # target to build an object file
 new_split.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/new_split.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/new_split.c.o
 .PHONY : new_split.c.o
 
 new_split.i: new_split.c.i
@@ -293,7 +725,7 @@ new_split.i: new_split.c.i
 
 # target to preprocess a source file
 new_split.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/new_split.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/new_split.c.i
 .PHONY : new_split.c.i
 
 new_split.s: new_split.c.s
@@ -302,7 +734,7 @@ new_split.s: new_split.c.s
 
 # target to generate assembly for a file
 new_split.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/new_split.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/new_split.c.s
 .PHONY : new_split.c.s
 
 parsing.o: parsing.c.o
@@ -311,7 +743,7 @@ parsing.o: parsing.c.o
 
 # target to build an object file
 parsing.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/parsing.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing.c.o
 .PHONY : parsing.c.o
 
 parsing.i: parsing.c.i
@@ -320,7 +752,7 @@ parsing.i: parsing.c.i
 
 # target to preprocess a source file
 parsing.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/parsing.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing.c.i
 .PHONY : parsing.c.i
 
 parsing.s: parsing.c.s
@@ -329,8 +761,116 @@ parsing.s: parsing.c.s
 
 # target to generate assembly for a file
 parsing.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/parsing.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing.c.s
 .PHONY : parsing.c.s
+
+parsing_pipe.o: parsing_pipe.c.o
+
+.PHONY : parsing_pipe.o
+
+# target to build an object file
+parsing_pipe.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_pipe.c.o
+.PHONY : parsing_pipe.c.o
+
+parsing_pipe.i: parsing_pipe.c.i
+
+.PHONY : parsing_pipe.i
+
+# target to preprocess a source file
+parsing_pipe.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_pipe.c.i
+.PHONY : parsing_pipe.c.i
+
+parsing_pipe.s: parsing_pipe.c.s
+
+.PHONY : parsing_pipe.s
+
+# target to generate assembly for a file
+parsing_pipe.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_pipe.c.s
+.PHONY : parsing_pipe.c.s
+
+parsing_quote.o: parsing_quote.c.o
+
+.PHONY : parsing_quote.o
+
+# target to build an object file
+parsing_quote.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_quote.c.o
+.PHONY : parsing_quote.c.o
+
+parsing_quote.i: parsing_quote.c.i
+
+.PHONY : parsing_quote.i
+
+# target to preprocess a source file
+parsing_quote.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_quote.c.i
+.PHONY : parsing_quote.c.i
+
+parsing_quote.s: parsing_quote.c.s
+
+.PHONY : parsing_quote.s
+
+# target to generate assembly for a file
+parsing_quote.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_quote.c.s
+.PHONY : parsing_quote.c.s
+
+parsing_redir.o: parsing_redir.c.o
+
+.PHONY : parsing_redir.o
+
+# target to build an object file
+parsing_redir.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_redir.c.o
+.PHONY : parsing_redir.c.o
+
+parsing_redir.i: parsing_redir.c.i
+
+.PHONY : parsing_redir.i
+
+# target to preprocess a source file
+parsing_redir.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_redir.c.i
+.PHONY : parsing_redir.c.i
+
+parsing_redir.s: parsing_redir.c.s
+
+.PHONY : parsing_redir.s
+
+# target to generate assembly for a file
+parsing_redir.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_redir.c.s
+.PHONY : parsing_redir.c.s
+
+several_string.o: several_string.c.o
+
+.PHONY : several_string.o
+
+# target to build an object file
+several_string.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/several_string.c.o
+.PHONY : several_string.c.o
+
+several_string.i: several_string.c.i
+
+.PHONY : several_string.i
+
+# target to preprocess a source file
+several_string.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/several_string.c.i
+.PHONY : several_string.c.i
+
+several_string.s: several_string.c.s
+
+.PHONY : several_string.s
+
+# target to generate assembly for a file
+several_string.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/several_string.c.s
+.PHONY : several_string.c.s
 
 # Help Target
 help:
@@ -340,19 +880,67 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... parsing"
+	@echo "... new_shell"
+	@echo "... args_package.o"
+	@echo "... args_package.i"
+	@echo "... args_package.s"
+	@echo "... check_first_command.o"
+	@echo "... check_first_command.i"
+	@echo "... check_first_command.s"
+	@echo "... count_string.o"
+	@echo "... count_string.i"
+	@echo "... count_string.s"
+	@echo "... create_args.o"
+	@echo "... create_args.i"
+	@echo "... create_args.s"
 	@echo "... create_space_around.o"
 	@echo "... create_space_around.i"
 	@echo "... create_space_around.s"
+	@echo "... display.o"
+	@echo "... display.i"
+	@echo "... display.s"
+	@echo "... free_parsing_line.o"
+	@echo "... free_parsing_line.i"
+	@echo "... free_parsing_line.s"
+	@echo "... ft_errno.o"
+	@echo "... ft_errno.i"
+	@echo "... ft_errno.s"
+	@echo "... ft_list.o"
+	@echo "... ft_list.i"
+	@echo "... ft_list.s"
+	@echo "... ft_stradd.o"
+	@echo "... ft_stradd.i"
+	@echo "... ft_stradd.s"
 	@echo "... ft_strcmp.o"
 	@echo "... ft_strcmp.i"
 	@echo "... ft_strcmp.s"
+	@echo "... ft_strdup.o"
+	@echo "... ft_strdup.i"
+	@echo "... ft_strdup.s"
+	@echo "... get_env.o"
+	@echo "... get_env.i"
+	@echo "... get_env.s"
 	@echo "... get_next_line.o"
 	@echo "... get_next_line.i"
 	@echo "... get_next_line.s"
 	@echo "... get_next_line_utils.o"
 	@echo "... get_next_line_utils.i"
 	@echo "... get_next_line_utils.s"
+	@echo "... get_path_command.o"
+	@echo "... get_path_command.i"
+	@echo "... get_path_command.s"
+	@echo "... init_list_env.o"
+	@echo "... init_list_env.i"
+	@echo "... init_list_env.s"
+	@echo "... init_pipe.o"
+	@echo "... init_pipe.i"
+	@echo "... init_pipe.s"
+	@echo "... init_struct.o"
+	@echo "... init_struct.i"
+	@echo "... init_struct.s"
+	@echo "... is_builtin.o"
+	@echo "... is_builtin.i"
+	@echo "... is_builtin.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -362,6 +950,18 @@ help:
 	@echo "... parsing.o"
 	@echo "... parsing.i"
 	@echo "... parsing.s"
+	@echo "... parsing_pipe.o"
+	@echo "... parsing_pipe.i"
+	@echo "... parsing_pipe.s"
+	@echo "... parsing_quote.o"
+	@echo "... parsing_quote.i"
+	@echo "... parsing_quote.s"
+	@echo "... parsing_redir.o"
+	@echo "... parsing_redir.i"
+	@echo "... parsing_redir.s"
+	@echo "... several_string.o"
+	@echo "... several_string.i"
+	@echo "... several_string.s"
 .PHONY : help
 
 

@@ -64,16 +64,16 @@ RM = /snap/clion/138/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oem/parsing
+CMAKE_SOURCE_DIR = /home/oem/new_shell
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oem/parsing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/oem/new_shell/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/parsing.dir/all
+all: CMakeFiles/new_shell.dir/all
 
 .PHONY : all
 
@@ -83,36 +83,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/parsing.dir/clean
+clean: CMakeFiles/new_shell.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/parsing.dir
+# Target rules for target CMakeFiles/new_shell.dir
 
 # All Build rule for target.
-CMakeFiles/parsing.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/oem/parsing/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target parsing"
-.PHONY : CMakeFiles/parsing.dir/all
+CMakeFiles/new_shell.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/oem/new_shell/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28 "Built target new_shell"
+.PHONY : CMakeFiles/new_shell.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/parsing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/oem/parsing/cmake-build-debug/CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/parsing.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/oem/parsing/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/parsing.dir/rule
+CMakeFiles/new_shell.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/oem/new_shell/cmake-build-debug/CMakeFiles 28
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/new_shell.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/oem/new_shell/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/new_shell.dir/rule
 
 # Convenience name for target.
-parsing: CMakeFiles/parsing.dir/rule
+new_shell: CMakeFiles/new_shell.dir/rule
 
-.PHONY : parsing
+.PHONY : new_shell
 
 # clean rule for target.
-CMakeFiles/parsing.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parsing.dir/build.make CMakeFiles/parsing.dir/clean
-.PHONY : CMakeFiles/parsing.dir/clean
+CMakeFiles/new_shell.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/clean
+.PHONY : CMakeFiles/new_shell.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

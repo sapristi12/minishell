@@ -1,5 +1,11 @@
 #include "minishell.h"
 
+char	*remove_quote(t_cmd *cmd)
+{
+	cmd = cmd;
+	return (NULL);
+}
+
 int     number_quote_is_even(char *str)
 {
     int i;

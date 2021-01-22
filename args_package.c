@@ -33,7 +33,7 @@ static char  **get_arg(char **cmds)
     return (args);
 }
 
-int  create_args(t_cmd *cmd)
+/*int  create_args(t_cmd *cmd)
 {
     int i;
 
@@ -46,4 +46,4 @@ int  create_args(t_cmd *cmd)
         i++;
     }
     cmd->pipe.all[i] = NULL;
-}
+}*/

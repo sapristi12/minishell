@@ -8,7 +8,7 @@ char	*ft_strcpyt(char *str, char c, int in_quote)
 
     i = 0;
     size = 0;
-    while (str[i] && (str[i] != c || in_quote == 1))
+    while (str[i] && (str[i] != c && in_quote == -1) || in_quote == 1)
     {
         i++;
         if (str[i] == 34)
@@ -45,15 +45,13 @@ int		cw(char *str, char c)
         }
         if (in_quote == -1)
         {
-            while (*str && (*str != 34 && in_quote == 1))
-                str++;
             if (*str == 34)
                 in_quote = -in_quote;
         }
         if (*str && (*str != c || in_quote == 1))
         {
             i++;
-            while (*str && (*str != c || in_quote == 1))
+            while (*str && (*str != c && in_quote == -1) || in_quote == 1)
             {
                 str++;
                 if (*str == 34)
@@ -72,8 +70,7 @@ char    **new_split(char *str, char c)
 
     in_quote = -1;
     i = 0;
-    int countword = cw(str, c);
-    if (!(dest = (char **)malloc(sizeof(char *) * (countword + 1))))
+    if (!(dest = (char **)malloc(sizeof(char *) * (cw(str, c) + 1))))
         return (NULL);
     while (*str)
     {
@@ -85,8 +82,6 @@ char    **new_split(char *str, char c)
         }
         if (in_quote == -1)
         {
-            while (*str && (*str != 34 && in_quote == 1))
-                str++;
             if (*str == 34)
                 in_quote = -in_quote;
         }
@@ -94,7 +89,8 @@ char    **new_split(char *str, char c)
         {
             dest[i] = ft_strcpyt(str, c, in_quote);
             i++;
-            while (*str && (*str != c || in_quote == 1)) {
+            while (*str && (*str != c && in_quote == -1) || in_quote == 1)
+            {
                 str++;
                 if (*str == 34)
                     in_quote = -in_quote;

@@ -18,14 +18,6 @@ int    free_parsing_line(char **av, char *line)
     int i;
 
     i = 0;
-    printf("Free from main loop?\n");
-   /* while (av[i])
-    {
-        printf("will free this\n");
-        free(av[i]);
-        i++;
-    }
-    free(av);
-    //get_next_line(1, NULL, 0);*/
-    return (0);
+    ft_putstr_fd("Main loop free\n", 1);
+    return (1);
 }
