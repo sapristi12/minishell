@@ -25,6 +25,7 @@ static int      basic_first_command(char **cmds, t_list *envs)
 		{
 			ft_putstr_fd(args[0], 1);
 			ft_putstr_fd(": command not found\n", 1);
+			free_char_double_array(args);
 			return (0);
 		}
 	}

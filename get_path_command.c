@@ -22,10 +22,10 @@ int		ft_dir(char *path, char *exec)
 
 char 	*get_path_command(char *command, t_list *envs)
 {
-	char **path;
-	char *whole_path;
-	int i;
-	int useless;
+	char	**path;
+	char	*whole_path;
+	char	*tmp;
+	int		i;
 
 	i = 0;
 	if (!(whole_path = get_env(envs, "PATH")))
@@ -38,7 +38,10 @@ char 	*get_path_command(char *command, t_list *envs)
 	{
 		path[i] = ft_stradd(path[i], "/");
 		path[i] = ft_stradd(path[i], command);
-		return (path[i]);
+		tmp = ft_strdup(path[i]);
+		free_char_double_array(path);
+		return (tmp);
 	}
-	return (command); //free path
+	free_char_double_array(path);
+	return (command);
 }

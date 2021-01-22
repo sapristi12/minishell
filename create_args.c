@@ -26,14 +26,14 @@ char 			**create_package(char **cmds, t_list *envs)
 	size = 0;
 	while (cmds[size] && !is_symbol(cmds[size]))
 		size++;
-	dest = malloc(sizeof(char *) * size + 1);
+	dest = malloc(sizeof(char *) * (size + 1));
 	if (!dest)
 		return (NULL);
 	dest[size] = NULL;
 	while (i < size)
 	{
 		if (i == 0 && cmds[i][0] != '/')
-			dest[i] = get_path_command(cmds[i], envs);
+			dest[i] = ft_strdup(get_path_command(cmds[i], envs));
 		else
 			dest[i] = ft_strdup(cmds[i]);
 		i++;

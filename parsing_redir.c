@@ -22,4 +22,5 @@ int     parsing_redir(t_cmd *cmd)
 {
     cmd->redir.left = count_string(cmd->cmds, "<");
     cmd->redir.right = count_string(cmd->cmds, ">") + count_string(cmd->cmds, ">>");
+    return (1);
 }

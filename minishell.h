@@ -52,7 +52,7 @@ int     	parsing_line(char *cmd, char **envp);
 char    	**new_split(char *str, char c);
 char    	*create_space_around(char *str);
 int	 		ft_strcmp(char *s1, char *s2);
-int     	free_parsing_line(char **av, char *line);
+int     	free_parsing_line(char **av, char *line, int status);
 void    	free_char_double_array(char **av);
 void    	display_prompt(void);
 int     	parsing_pipe(t_cmd *cmd);
@@ -63,7 +63,7 @@ int     	number_quote_is_even(char *str);
 int     	parsing_redir(t_cmd *cmd);
 int     	count_string(char **cmds, char *str);
 void    	ft_putstr_fd(char *str, int fd);
-int     	ft_errno(int index);
+int     	errno_parsing_line(int index);
 int     	check_first_command(t_cmd *cmd, t_list *envs);
 t_list		*ft_lstnew(void *content);
 void		ft_lstadd_back(t_list **alst, t_list *new);
@@ -75,5 +75,8 @@ char	 	*get_path_command(char *command, t_list *envs);
 char	 	*get_env(t_list *list, char *str);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 char 		**create_package(char **cmds, t_list *envs);
+void		ft_lstclear(t_list **lst, void (*del)(void *));
+int 		free_8(char *str, t_list *envs, t_cmd *cmd);
+int		 	free_i(t_cmd *cmd, int index);
 
 #endif

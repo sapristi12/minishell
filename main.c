@@ -3,16 +3,18 @@
 int     main_loop(char *prompt, char **envp)
 {
     int     i;
+    int 	status;
     char    **cmds;
 
     i = 0;
-    cmds = new_split(prompt, ';');
+	cmds = new_split(prompt, ';');
     if (!cmds)
         return (-1);
     while (cmds[i])
     {
-        if (parsing_line(cmds[i], envp) == -1)
-            return (free_parsing_line(cmds, prompt));
+		status = parsing_line(cmds[i], envp);
+        if (status < 0)
+        	free_parsing_line(cmds, prompt, status);
         i++;
     }
     free(prompt);
@@ -30,7 +32,7 @@ int		main(int i, char **av, char **envp)
 	display_prompt();
 	while (get_next_line(0, &prompt, 0))
 	{
-	    main_loop(prompt, envp);
+		main_loop(prompt, envp);
         display_prompt();
 	}
 	free(prompt);

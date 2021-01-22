@@ -12,7 +12,10 @@ t_list      *init_list_env(char **envp)
     while (envp[i])
     {
         if (!(tmp = ft_lstnew(envp[i])))
-            return (NULL);
+		{
+        	ft_lstclear(&envs, free);
+			return (NULL);
+		}
         ft_lstadd_back(&envs, tmp);
         i++;
     }

@@ -8,7 +8,7 @@ char	*ft_strcpyt(char *str, char c, int in_quote)
 
     i = 0;
     size = 0;
-    while (str[i] && (str[i] != c && in_quote == -1) || in_quote == 1)
+    while (str[i] && ((str[i] != c && in_quote == -1) || in_quote == 1))
     {
         i++;
         if (str[i] == 34)
@@ -51,7 +51,7 @@ int		cw(char *str, char c)
         if (*str && (*str != c || in_quote == 1))
         {
             i++;
-            while (*str && (*str != c && in_quote == -1) || in_quote == 1)
+            while (*str && ((*str != c && in_quote == -1) || in_quote == 1))
             {
                 str++;
                 if (*str == 34)
@@ -89,7 +89,7 @@ char    **new_split(char *str, char c)
         {
             dest[i] = ft_strcpyt(str, c, in_quote);
             i++;
-            while (*str && (*str != c && in_quote == -1) || in_quote == 1)
+            while (*str && ((*str != c && in_quote == -1) || in_quote == 1))
             {
                 str++;
                 if (*str == 34)

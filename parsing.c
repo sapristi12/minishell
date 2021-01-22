@@ -27,23 +27,24 @@ int     parsing_line(char *command, char **envp)
 
     init_struct_cmd(&cmd);
     if (!(number_quote_is_even(command)))
-        return (ft_errno(-1));
+        return (errno_parsing_line(-1));
     if (!(command = create_space_around(command)))
-        return (ft_errno(-2));
+        return (errno_parsing_line(-2));
     if (!(cmd.cmds = new_split(command, ' ')))
-        return (ft_errno(-3));
+        return (errno_parsing_line(-3));
     if (!several_string(cmd.cmds))
-        return (ft_errno(-4));
-    if (!parsing_pipe(&cmd))
-        return (ft_errno(-5));
-    if (!(parsing_redir(&cmd)))
-        return (ft_errno(-6));
-    if (!(envs = init_list_env(envp)))
-        return (ft_errno(-7));
+        return (errno_parsing_line(free_i(&cmd, -4)));
+	if (!parsing_pipe(&cmd))
+        return (errno_parsing_line(free_i(&cmd, -5)));
+	if (!(parsing_redir(&cmd)))
+        return (errno_parsing_line(free_i(&cmd, -6)));
+	if (!(envs = init_list_env(envp)))
+        return (errno_parsing_line(free_i(&cmd, -7)));
     //show_packages(&cmd);
     if (!(parsing_command(&cmd, envs)))
-        return (-1);
+		return (free_8(command, envs, &cmd));
     printf("All good\n");
+    ft_lstclear(&envs, free);
     free(command);
     free_char_double_array(cmd.cmds);
     return (0);
