@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="new_shell"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="new_shell">
+				<Option output="/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/new_shell" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/33652/Documents/Coding/new_shell/."/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 new_shell"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="new_shell/fast">
+				<Option output="/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/new_shell" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/33652/Documents/Coding/new_shell/."/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 new_shell/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/args_package.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/check_first_command.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/close.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/count_string.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/create_args.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/create_space_around.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/display.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/exec_cmd.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/forking.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/free_parsing_line.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_errno.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_list.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_stradd.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_strcmp.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_strdup.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/get_env.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/get_next_line.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/get_next_line.h">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/get_next_line_utils.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/get_path_command.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/init_list_env.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/init_pipe.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/init_struct.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/is_builtin.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/main.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/new_split.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/package_pipe.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/parse_redir_fd.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/parsing.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/parsing_pipe.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/parsing_quote.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/parsing_redir.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/redir_save.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/several_string.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

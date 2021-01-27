@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.17)
+cmake_minimum_required(VERSION 3.10)
 project(new_shell C)
 
 set(CMAKE_C_STANDARD 11)
@@ -28,4 +28,4 @@ add_executable(new_shell
     parsing_pipe.c
     parsing_quote.c
     parsing_redir.c
-    several_string.c get_next_line.c is_builtin.c get_path_command.c ft_stradd.c get_env.c create_args.c)
+    several_string.c get_next_line.c is_builtin.c get_path_command.c ft_stradd.c get_env.c create_args.c redir_save.c parse_redir_fd.c exec_cmd.c forking.c close.c)

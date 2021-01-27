@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/tmp/tmp.oW0mAVAZp8/main.c
+minishell.h
+/tmp/tmp.oW0mAVAZp8/minishell.h
+
+/tmp/tmp.oW0mAVAZp8/minishell.h
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+string.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+sys/wait.h
+-
+fcntl.h
+-
+errno.h
+-
+limits.h
+-
+signal.h
+-
+dirent.h
+-
+

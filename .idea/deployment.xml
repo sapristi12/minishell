@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="Remote Host (1d3bc3d2-766c-41c9-9b2f-a950cc44f3db)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/tmp.ygoqpshYoY" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-remote-host" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="Remote Host (4f397bf7-99ad-4a42-9407-e020c656aa10)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/tmp.GzFUyxFjKy" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-good" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-good" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-wsl" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-wsl" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="Remote Host (8d10c654-f9a8-4b49-974b-34011e07bcc0)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/tmp.oW0mAVAZp8" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-remote-host" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="WSL (2970156e-b45f-4289-aaa6-779b500e153d)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="WSL (33f9f886-f5d4-4924-a4bf-6df2baf16d99)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="WSL (7667b70f-2887-4184-967f-fac04f4c38df)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

@@ -43,5 +43,5 @@ char 	*get_path_command(char *command, t_list *envs)
 		return (tmp);
 	}
 	free_char_double_array(path);
-	return (command);
+	return (NULL);
 }

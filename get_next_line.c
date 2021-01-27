@@ -75,8 +75,8 @@ static int		ft_rest(t_gnl *s, char **buffer, int fd, char **line)
     }
     else
     {
-        s->nb_bytes = read(fd, *buffer, BUFFER_SIZE);
-        if (s->nb_bytes <= 0)
+		s->nb_bytes = read(fd, *buffer, BUFFER_SIZE);
+		if (s->nb_bytes <= 0)
         {
             if (s->nb_bytes == 0)
                 return (0);

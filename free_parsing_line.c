@@ -35,6 +35,5 @@ int    free_parsing_line(char **av, char *line, int status)
     i = 0;
     if (status == -2)
     	free_char_double_array(av);
-    ft_putstr_fd("free main\n", 1);
     return (1);
 }

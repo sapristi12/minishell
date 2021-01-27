@@ -33,9 +33,15 @@ char 			**create_package(char **cmds, t_list *envs)
 	while (i < size)
 	{
 		if (i == 0 && cmds[i][0] != '/')
+		{
+			if (!get_path_command(cmds[i], envs))
+				return (NULL);
 			dest[i] = ft_strdup(get_path_command(cmds[i], envs));
+		}
 		else
+		{
 			dest[i] = ft_strdup(cmds[i]);
+		}
 		i++;
 	}
 	return (dest);

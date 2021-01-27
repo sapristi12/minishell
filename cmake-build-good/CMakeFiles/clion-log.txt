@@ -1,0 +1,4 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /mnt/c/Users/33652/Documents/Coding/new_shell
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good

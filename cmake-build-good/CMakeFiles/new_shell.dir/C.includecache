@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/33652/Documents/Coding/new_shell/exec_cmd.c
+minishell.h
+/mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+
+/mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+string.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+sys/wait.h
+-
+fcntl.h
+-
+errno.h
+-
+limits.h
+-
+signal.h
+-
+dirent.h
+-
+
