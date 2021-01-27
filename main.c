@@ -33,7 +33,7 @@ int		main(int i, char **av, char **envp)
 	while (get_next_line(0, &prompt, 0))
 	{
 		main_loop(prompt, envp);
-        display_prompt();
+		display_prompt();
 	}
 	free(prompt);
 	return (0);
