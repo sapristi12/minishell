@@ -27,7 +27,7 @@ int		main(int i, char **av, char **envp)
 	char	*prompt;
 	char    **cmds;
 
-    (void)av;
+	(void)av;
 	i = 0;
 	display_prompt();
 	while (get_next_line(0, &prompt, 0))
