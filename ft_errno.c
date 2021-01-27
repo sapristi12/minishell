@@ -21,8 +21,6 @@ static int  errno_index(int index)
 
 static int  errno_parsing_command(int index)
 {
-    /*if (index == -1)
-        ft_putstr_fd("Error: not command found\n", 1);*/
     return (-1);
 }
 

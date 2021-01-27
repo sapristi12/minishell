@@ -39,7 +39,7 @@ int             check_first_command(t_cmd *cmd, t_list *envs)
 {
     if (cmd->pipe.nb_pipe == 0)
     {
-		if (!(basic_first_command(cmd->cmds, envs)))
+    	if (!(basic_first_command(cmd->cmds, envs)))
 			return (0);
     }
     else

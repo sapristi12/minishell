@@ -23,7 +23,6 @@ void    free_char_double_array(char **strs)
 
 int 	free_i(t_cmd *cmd, int index)
 {
-	printf("go free\n");
 	free_char_double_array(cmd->cmds);
 	return (index);
 }
