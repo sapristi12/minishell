@@ -7,12 +7,12 @@ int     main_loop(char *prompt, char **envp)
     char    **cmds;
 
     i = 0;
-	cmds = new_split(prompt, ';');
+    cmds = new_split(prompt, ';');
     if (!cmds)
         return (-1);
     while (cmds[i])
     {
-		status = parsing_line(cmds[i], envp);
+    	status = parsing_line(cmds[i], envp);
         if (status < 0)
         	free_parsing_line(cmds, prompt, status);
         i++;
