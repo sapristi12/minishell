@@ -1,6 +1,9 @@
 #ifndef MINISHELL_H
 # define MINISHELL_H
 
+# define S_QUOTE 39
+# define D_QUOTE 34
+
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -95,5 +98,11 @@ void		close_first(int index, int n, int (*fd)[2]);
 void		close_all(int index, int n, int (*fd)[2]);
 int			init_pipe(t_cmd *cmd);
 int			init_all_package(t_cmd *cmd, t_list *envs);
+int 		parsing_quotes(t_cmd *cmd, t_list *envs);
+char		*ft_strjoin(char const *s1, char const *s2);
+char		*char_strjoin(char *str, char c);
+char 		*double_quote(char *str, t_list *envs);
+char 		*simple_quote(char *str);
+char	 	*get_var_dollar(char *str, t_list *envs);
 
 #endif

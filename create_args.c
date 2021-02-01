@@ -1,9 +1,9 @@
 #include "minishell.h"
 
-static int 		is_symbol(char *str)
+static int		is_symbol(char *str)
 {
 	int		i;
-	char 	**symbols;
+	char	**symbols;
 
 	symbols = (char *[4]){">>", ">", "<", "|"};
 	i = 0;
@@ -16,11 +16,11 @@ static int 		is_symbol(char *str)
 	return (0);
 }
 
-char 			**create_package(char **cmds, t_list *envs)
+char			**create_package(char **cmds, t_list *envs)
 {
 	char	**dest;
-	int 	size;
-	int 	i;
+	int		size;
+	int		i;
 
 	i = 0;
 	size = 0;

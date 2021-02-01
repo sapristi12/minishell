@@ -117,10 +117,16 @@
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_stradd.c">
 			<Option target="new_shell"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_strcat.c">
+			<Option target="new_shell"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_strcmp.c">
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_strdup.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_strjoin.c">
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/get_env.c">
@@ -159,9 +165,6 @@
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/new_split.c">
 			<Option target="new_shell"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/package_pipe.c">
-			<Option target="new_shell"/>
-		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/parse_redir_fd.c">
 			<Option target="new_shell"/>
 		</Unit>
@@ -171,10 +174,13 @@
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/parsing_pipe.c">
 			<Option target="new_shell"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/parsing_quote.c">
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/parsing_quotes.c">
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/parsing_redir.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/quotes.c">
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/redir_save.c">

@@ -7,6 +7,9 @@ CMakeFiles/new_shell.dir/args_package.c.o
 CMakeFiles/new_shell.dir/check_first_command.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/check_first_command.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/close.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/close.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/count_string.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/count_string.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
@@ -22,6 +25,9 @@ CMakeFiles/new_shell.dir/display.c.o
 CMakeFiles/new_shell.dir/exec_cmd.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/exec_cmd.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/forking.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/forking.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/free_parsing_line.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/free_parsing_line.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
@@ -34,11 +40,17 @@ CMakeFiles/new_shell.dir/ft_list.c.o
 CMakeFiles/new_shell.dir/ft_stradd.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/ft_stradd.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/ft_strcat.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/ft_strcat.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/ft_strcmp.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/ft_strcmp.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/ft_strdup.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/ft_strdup.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/ft_strjoin.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/ft_strjoin.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/get_env.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/get_env.c
@@ -70,9 +82,6 @@ CMakeFiles/new_shell.dir/main.c.o
 CMakeFiles/new_shell.dir/new_split.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
  /mnt/c/Users/33652/Documents/Coding/new_shell/new_split.c
-CMakeFiles/new_shell.dir/package_pipe.c.o
- /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
- /mnt/c/Users/33652/Documents/Coding/new_shell/package_pipe.c
 CMakeFiles/new_shell.dir/parse_redir_fd.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
  /mnt/c/Users/33652/Documents/Coding/new_shell/parse_redir_fd.c
@@ -82,12 +91,15 @@ CMakeFiles/new_shell.dir/parsing.c.o
 CMakeFiles/new_shell.dir/parsing_pipe.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
  /mnt/c/Users/33652/Documents/Coding/new_shell/parsing_pipe.c
-CMakeFiles/new_shell.dir/parsing_quote.c.o
+CMakeFiles/new_shell.dir/parsing_quotes.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
- /mnt/c/Users/33652/Documents/Coding/new_shell/parsing_quote.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/parsing_quotes.c
 CMakeFiles/new_shell.dir/parsing_redir.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
  /mnt/c/Users/33652/Documents/Coding/new_shell/parsing_redir.c
+CMakeFiles/new_shell.dir/quotes.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+ /mnt/c/Users/33652/Documents/Coding/new_shell/quotes.c
 CMakeFiles/new_shell.dir/redir_save.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
  /mnt/c/Users/33652/Documents/Coding/new_shell/redir_save.c

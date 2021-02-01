@@ -75,6 +75,7 @@ char *create_space_around(char *str)
     int     j;
     int     in_quote;
     char    *dest;
+    char 	tmp;
 
     j = 0;
     in_quote = -1;
@@ -85,8 +86,16 @@ char *create_space_around(char *str)
     dest[size] = '\0';
     while (*str)
     {
-        if (*str == 34)
-            in_quote = -in_quote;
+    	if (in_quote == -1 && (*str == D_QUOTE || *str == S_QUOTE))
+		{
+			tmp = *str;
+			in_quote = 1;
+		}
+        else if (in_quote == 1)
+		{
+        	if (*str == tmp)
+				in_quote = -in_quote;
+		}
         if (*str == '>' && in_quote == -1)
             j += replace(&dest, j, '>', get_len(&str, *str));
         else if (*str == '|' || *str == '<' && in_quote == -1)

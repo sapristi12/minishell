@@ -474,6 +474,33 @@ ft_stradd.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_stradd.c.s
 .PHONY : ft_stradd.c.s
 
+ft_strcat.o: ft_strcat.c.o
+
+.PHONY : ft_strcat.o
+
+# target to build an object file
+ft_strcat.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strcat.c.o
+.PHONY : ft_strcat.c.o
+
+ft_strcat.i: ft_strcat.c.i
+
+.PHONY : ft_strcat.i
+
+# target to preprocess a source file
+ft_strcat.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strcat.c.i
+.PHONY : ft_strcat.c.i
+
+ft_strcat.s: ft_strcat.c.s
+
+.PHONY : ft_strcat.s
+
+# target to generate assembly for a file
+ft_strcat.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strcat.c.s
+.PHONY : ft_strcat.c.s
+
 ft_strcmp.o: ft_strcmp.c.o
 
 .PHONY : ft_strcmp.o
@@ -527,6 +554,33 @@ ft_strdup.s: ft_strdup.c.s
 ft_strdup.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strdup.c.s
 .PHONY : ft_strdup.c.s
+
+ft_strjoin.o: ft_strjoin.c.o
+
+.PHONY : ft_strjoin.o
+
+# target to build an object file
+ft_strjoin.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strjoin.c.o
+.PHONY : ft_strjoin.c.o
+
+ft_strjoin.i: ft_strjoin.c.i
+
+.PHONY : ft_strjoin.i
+
+# target to preprocess a source file
+ft_strjoin.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strjoin.c.i
+.PHONY : ft_strjoin.c.i
+
+ft_strjoin.s: ft_strjoin.c.s
+
+.PHONY : ft_strjoin.s
+
+# target to generate assembly for a file
+ft_strjoin.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strjoin.c.s
+.PHONY : ft_strjoin.c.s
 
 get_env.o: get_env.c.o
 
@@ -879,32 +933,32 @@ parsing_pipe.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_pipe.c.s
 .PHONY : parsing_pipe.c.s
 
-parsing_quote.o: parsing_quote.c.o
+parsing_quotes.o: parsing_quotes.c.o
 
-.PHONY : parsing_quote.o
+.PHONY : parsing_quotes.o
 
 # target to build an object file
-parsing_quote.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_quote.c.o
-.PHONY : parsing_quote.c.o
+parsing_quotes.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_quotes.c.o
+.PHONY : parsing_quotes.c.o
 
-parsing_quote.i: parsing_quote.c.i
+parsing_quotes.i: parsing_quotes.c.i
 
-.PHONY : parsing_quote.i
+.PHONY : parsing_quotes.i
 
 # target to preprocess a source file
-parsing_quote.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_quote.c.i
-.PHONY : parsing_quote.c.i
+parsing_quotes.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_quotes.c.i
+.PHONY : parsing_quotes.c.i
 
-parsing_quote.s: parsing_quote.c.s
+parsing_quotes.s: parsing_quotes.c.s
 
-.PHONY : parsing_quote.s
+.PHONY : parsing_quotes.s
 
 # target to generate assembly for a file
-parsing_quote.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_quote.c.s
-.PHONY : parsing_quote.c.s
+parsing_quotes.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_quotes.c.s
+.PHONY : parsing_quotes.c.s
 
 parsing_redir.o: parsing_redir.c.o
 
@@ -932,6 +986,33 @@ parsing_redir.s: parsing_redir.c.s
 parsing_redir.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_redir.c.s
 .PHONY : parsing_redir.c.s
+
+quotes.o: quotes.c.o
+
+.PHONY : quotes.o
+
+# target to build an object file
+quotes.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/quotes.c.o
+.PHONY : quotes.c.o
+
+quotes.i: quotes.c.i
+
+.PHONY : quotes.i
+
+# target to preprocess a source file
+quotes.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/quotes.c.i
+.PHONY : quotes.c.i
+
+quotes.s: quotes.c.s
+
+.PHONY : quotes.s
+
+# target to generate assembly for a file
+quotes.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/quotes.c.s
+.PHONY : quotes.c.s
 
 redir_save.o: redir_save.c.o
 
@@ -1035,12 +1116,18 @@ help:
 	@echo "... ft_stradd.o"
 	@echo "... ft_stradd.i"
 	@echo "... ft_stradd.s"
+	@echo "... ft_strcat.o"
+	@echo "... ft_strcat.i"
+	@echo "... ft_strcat.s"
 	@echo "... ft_strcmp.o"
 	@echo "... ft_strcmp.i"
 	@echo "... ft_strcmp.s"
 	@echo "... ft_strdup.o"
 	@echo "... ft_strdup.i"
 	@echo "... ft_strdup.s"
+	@echo "... ft_strjoin.o"
+	@echo "... ft_strjoin.i"
+	@echo "... ft_strjoin.s"
 	@echo "... get_env.o"
 	@echo "... get_env.i"
 	@echo "... get_env.s"
@@ -1080,12 +1167,15 @@ help:
 	@echo "... parsing_pipe.o"
 	@echo "... parsing_pipe.i"
 	@echo "... parsing_pipe.s"
-	@echo "... parsing_quote.o"
-	@echo "... parsing_quote.i"
-	@echo "... parsing_quote.s"
+	@echo "... parsing_quotes.o"
+	@echo "... parsing_quotes.i"
+	@echo "... parsing_quotes.s"
 	@echo "... parsing_redir.o"
 	@echo "... parsing_redir.i"
 	@echo "... parsing_redir.s"
+	@echo "... quotes.o"
+	@echo "... quotes.i"
+	@echo "... quotes.s"
 	@echo "... redir_save.o"
 	@echo "... redir_save.i"
 	@echo "... redir_save.s"

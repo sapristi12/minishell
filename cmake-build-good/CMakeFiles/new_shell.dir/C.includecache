@@ -6,7 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/33652/Documents/Coding/new_shell/exec_cmd.c
+/mnt/c/Users/33652/Documents/Coding/new_shell/check_first_command.c
+minishell.h
+/mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+
+/mnt/c/Users/33652/Documents/Coding/new_shell/free_parsing_line.c
+minishell.h
+/mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+
+/mnt/c/Users/33652/Documents/Coding/new_shell/ft_errno.c
+minishell.h
+/mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+
+/mnt/c/Users/33652/Documents/Coding/new_shell/main.c
 minishell.h
 /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 
@@ -35,4 +47,8 @@ signal.h
 -
 dirent.h
 -
+
+/mnt/c/Users/33652/Documents/Coding/new_shell/parsing_redir.c
+minishell.h
+/mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 

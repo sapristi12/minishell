@@ -80,18 +80,21 @@ int     parsing_line(char *command, char **envp)
     t_cmd   cmd;
 
     init_struct_cmd(&cmd);
-    if (!(number_quote_is_even(command)))
-        return (errno_parsing_line(-1));
+	// if (!(number_quote_is_even(command)))
+   //     return (errno_parsing_line(-1));
     if (!(command = create_space_around(command)))
         return (errno_parsing_line(-2));
     if (!(cmd.cmds = new_split(command, ' ')))
         return (errno_parsing_line(-3));
+	//show_packages(&cmd);
     if (!several_string(cmd.cmds))
         return (errno_parsing_line(free_i(&cmd, -4)));
 	if (!parsing_pipe(&cmd))
         return (errno_parsing_line(free_i(&cmd, -5)));
 	if (!(envs = init_list_env(envp)))
         return (errno_parsing_line(free_i(&cmd, -7)));
+	if (!(parsing_quotes(&cmd, envs))) //do the return
+		return (0);
     if (!(parsing_command(&cmd, envs)))
 		return (free_8(command, envs, &cmd));
     ft_lstclear(&envs, free);

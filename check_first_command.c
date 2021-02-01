@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-static int      basic_first_command(char **cmds, t_list *envs)
+static int		basic_first_command(char **cmds, t_list *envs)
 {
 	char		**args;
 
@@ -10,40 +10,39 @@ static int      basic_first_command(char **cmds, t_list *envs)
 	{
 		ft_putstr_fd(cmds[0], STDOUT_FILENO);
 		ft_putstr_fd(": command not found\n", STDOUT_FILENO);
-		//free_char_double_array(args);
 		return (0);
 	}
 	return (1);
 }
 
-static int      pipe_first_command(t_cmd *cmd, t_list *envs)
+static int		pipe_first_command(t_cmd *cmd, t_list *envs)
 {
-    int     i;
+	int i;
 
-    i = 1;
+	i = 1;
 	if (!(basic_first_command(cmd->cmds, envs)))
 		return (0);
 	while (cmd->cmds[i + 1])
-    {
-        if (!ft_strcmp(cmd->cmds[i], "|"))
+	{
+		if (!ft_strcmp(cmd->cmds[i], "|"))
 		{
 			if (!(basic_first_command(&(cmd->cmds[i + 1]), envs)))
 				return (0);
 		}
-        i++;
-    }
-    return (1);
+		i++;
+	}
+	return (1);
 }
 
-int             check_first_command(t_cmd *cmd, t_list *envs)
+int				check_first_command(t_cmd *cmd, t_list *envs)
 {
-    if (cmd->pipe.nb_pipe == 0)
-    {
-    	if (!(basic_first_command(cmd->cmds, envs)))
+	if (cmd->pipe.nb_pipe == 0)
+	{
+		if (!(basic_first_command(cmd->cmds, envs)))
 			return (0);
-    }
-    else
-    {
+	}
+	else
+	{
 		if (!(pipe_first_command(cmd, envs)))
 			return (0);
 	}
