@@ -22,6 +22,9 @@ CMakeFiles/new_shell.dir/create_space_around.c.o: ../minishell.h
 CMakeFiles/new_shell.dir/display.c.o: ../display.c
 CMakeFiles/new_shell.dir/display.c.o: ../minishell.h
 
+CMakeFiles/new_shell.dir/env.c.o: ../env.c
+CMakeFiles/new_shell.dir/env.c.o: ../minishell.h
+
 CMakeFiles/new_shell.dir/exec_cmd.c.o: ../exec_cmd.c
 CMakeFiles/new_shell.dir/exec_cmd.c.o: ../minishell.h
 
@@ -30,6 +33,15 @@ CMakeFiles/new_shell.dir/forking.c.o: ../minishell.h
 
 CMakeFiles/new_shell.dir/free_parsing_line.c.o: ../free_parsing_line.c
 CMakeFiles/new_shell.dir/free_parsing_line.c.o: ../minishell.h
+
+CMakeFiles/new_shell.dir/free_return.c.o: ../free_return.c
+CMakeFiles/new_shell.dir/free_return.c.o: ../minishell.h
+
+CMakeFiles/new_shell.dir/ft_cd.c.o: ../ft_cd.c
+CMakeFiles/new_shell.dir/ft_cd.c.o: ../minishell.h
+
+CMakeFiles/new_shell.dir/ft_env.c.o: ../ft_env.c
+CMakeFiles/new_shell.dir/ft_env.c.o: ../minishell.h
 
 CMakeFiles/new_shell.dir/ft_errno.c.o: ../ft_errno.c
 CMakeFiles/new_shell.dir/ft_errno.c.o: ../minishell.h
@@ -40,11 +52,20 @@ CMakeFiles/new_shell.dir/ft_list.c.o: ../minishell.h
 CMakeFiles/new_shell.dir/ft_stradd.c.o: ../ft_stradd.c
 CMakeFiles/new_shell.dir/ft_stradd.c.o: ../minishell.h
 
+CMakeFiles/new_shell.dir/ft_strcat.c.o: ../ft_strcat.c
+CMakeFiles/new_shell.dir/ft_strcat.c.o: ../minishell.h
+
 CMakeFiles/new_shell.dir/ft_strcmp.c.o: ../ft_strcmp.c
 CMakeFiles/new_shell.dir/ft_strcmp.c.o: ../minishell.h
 
 CMakeFiles/new_shell.dir/ft_strdup.c.o: ../ft_strdup.c
 CMakeFiles/new_shell.dir/ft_strdup.c.o: ../minishell.h
+
+CMakeFiles/new_shell.dir/ft_strjoin.c.o: ../ft_strjoin.c
+CMakeFiles/new_shell.dir/ft_strjoin.c.o: ../minishell.h
+
+CMakeFiles/new_shell.dir/ft_unset.c.o: ../ft_unset.c
+CMakeFiles/new_shell.dir/ft_unset.c.o: ../minishell.h
 
 CMakeFiles/new_shell.dir/get_env.c.o: ../get_env.c
 CMakeFiles/new_shell.dir/get_env.c.o: ../minishell.h
@@ -85,15 +106,24 @@ CMakeFiles/new_shell.dir/parsing.c.o: ../parsing.c
 CMakeFiles/new_shell.dir/parsing_pipe.c.o: ../minishell.h
 CMakeFiles/new_shell.dir/parsing_pipe.c.o: ../parsing_pipe.c
 
-CMakeFiles/new_shell.dir/parsing_quote.c.o: ../minishell.h
-CMakeFiles/new_shell.dir/parsing_quote.c.o: ../parsing_quote.c
+CMakeFiles/new_shell.dir/parsing_quotes.c.o: ../minishell.h
+CMakeFiles/new_shell.dir/parsing_quotes.c.o: ../parsing_quotes.c
 
 CMakeFiles/new_shell.dir/parsing_redir.c.o: ../minishell.h
 CMakeFiles/new_shell.dir/parsing_redir.c.o: ../parsing_redir.c
+
+CMakeFiles/new_shell.dir/pwd.c.o: ../minishell.h
+CMakeFiles/new_shell.dir/pwd.c.o: ../pwd.c
+
+CMakeFiles/new_shell.dir/quotes.c.o: ../minishell.h
+CMakeFiles/new_shell.dir/quotes.c.o: ../quotes.c
 
 CMakeFiles/new_shell.dir/redir_save.c.o: ../minishell.h
 CMakeFiles/new_shell.dir/redir_save.c.o: ../redir_save.c
 
 CMakeFiles/new_shell.dir/several_string.c.o: ../minishell.h
 CMakeFiles/new_shell.dir/several_string.c.o: ../several_string.c
+
+CMakeFiles/new_shell.dir/sort_builtin.c.o: ../minishell.h
+CMakeFiles/new_shell.dir/sort_builtin.c.o: ../sort_builtin.c
 

@@ -27,4 +27,4 @@ add_executable(new_shell
     parsing.c
     parsing_pipe.c
         parsing_redir.c
-    several_string.c get_next_line.c is_builtin.c get_path_command.c ft_stradd.c get_env.c create_args.c redir_save.c parse_redir_fd.c exec_cmd.c forking.c close.c parsing_quotes.c ft_strcat.c ft_strjoin.c quotes.c)
+    several_string.c get_next_line.c is_builtin.c get_path_command.c ft_stradd.c get_env.c create_args.c redir_save.c parse_redir_fd.c exec_cmd.c forking.c close.c parsing_quotes.c ft_strcat.c ft_strjoin.c quotes.c free_return.c sort_builtin.c pwd.c ft_cd.c env.c ft_env.c ft_unset.c)

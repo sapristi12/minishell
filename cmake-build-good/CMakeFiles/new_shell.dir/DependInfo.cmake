@@ -11,9 +11,13 @@ set(CMAKE_DEPENDS_CHECK_C
   "/mnt/c/Users/33652/Documents/Coding/new_shell/create_args.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/create_args.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/create_space_around.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/create_space_around.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/display.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/display.c.o"
+  "/mnt/c/Users/33652/Documents/Coding/new_shell/env.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/env.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/exec_cmd.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/exec_cmd.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/forking.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/forking.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/free_parsing_line.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/free_parsing_line.c.o"
+  "/mnt/c/Users/33652/Documents/Coding/new_shell/free_return.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/free_return.c.o"
+  "/mnt/c/Users/33652/Documents/Coding/new_shell/ft_cd.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/ft_cd.c.o"
+  "/mnt/c/Users/33652/Documents/Coding/new_shell/ft_env.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/ft_env.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/ft_errno.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/ft_errno.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/ft_list.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/ft_list.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/ft_stradd.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/ft_stradd.c.o"
@@ -21,6 +25,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/mnt/c/Users/33652/Documents/Coding/new_shell/ft_strcmp.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/ft_strcmp.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/ft_strdup.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/ft_strdup.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/ft_strjoin.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/ft_strjoin.c.o"
+  "/mnt/c/Users/33652/Documents/Coding/new_shell/ft_unset.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/ft_unset.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/get_env.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/get_env.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/get_next_line.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/get_next_line.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/get_next_line_utils.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/get_next_line_utils.c.o"
@@ -36,9 +41,11 @@ set(CMAKE_DEPENDS_CHECK_C
   "/mnt/c/Users/33652/Documents/Coding/new_shell/parsing_pipe.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/parsing_pipe.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/parsing_quotes.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/parsing_quotes.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/parsing_redir.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/parsing_redir.c.o"
+  "/mnt/c/Users/33652/Documents/Coding/new_shell/pwd.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/pwd.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/quotes.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/quotes.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/redir_save.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/redir_save.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/several_string.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/several_string.c.o"
+  "/mnt/c/Users/33652/Documents/Coding/new_shell/sort_builtin.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir/sort_builtin.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

@@ -6,27 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/33652/Documents/Coding/new_shell/args_package.c
-minishell.h
-/mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
-
-/mnt/c/Users/33652/Documents/Coding/new_shell/check_first_command.c
-minishell.h
-/mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
-
-/mnt/c/Users/33652/Documents/Coding/new_shell/close.c
-minishell.h
-/mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
-
-/mnt/c/Users/33652/Documents/Coding/new_shell/count_string.c
-minishell.h
-/mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
-
-/mnt/c/Users/33652/Documents/Coding/new_shell/create_args.c
-minishell.h
-/mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
-
-/mnt/c/Users/33652/Documents/Coding/new_shell/main.c
+/mnt/c/Users/33652/Documents/Coding/new_shell/ft_unset.c
 minishell.h
 /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 
@@ -55,8 +35,4 @@ signal.h
 -
 dirent.h
 -
-
-/mnt/c/Users/33652/Documents/Coding/new_shell/parsing_quotes.c
-minishell.h
-/mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 

@@ -312,6 +312,33 @@ display.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/display.c.s
 .PHONY : display.c.s
 
+env.o: env.c.o
+
+.PHONY : env.o
+
+# target to build an object file
+env.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/env.c.o
+.PHONY : env.c.o
+
+env.i: env.c.i
+
+.PHONY : env.i
+
+# target to preprocess a source file
+env.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/env.c.i
+.PHONY : env.c.i
+
+env.s: env.c.s
+
+.PHONY : env.s
+
+# target to generate assembly for a file
+env.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/env.c.s
+.PHONY : env.c.s
+
 exec_cmd.o: exec_cmd.c.o
 
 .PHONY : exec_cmd.o
@@ -392,6 +419,87 @@ free_parsing_line.s: free_parsing_line.c.s
 free_parsing_line.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_parsing_line.c.s
 .PHONY : free_parsing_line.c.s
+
+free_return.o: free_return.c.o
+
+.PHONY : free_return.o
+
+# target to build an object file
+free_return.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_return.c.o
+.PHONY : free_return.c.o
+
+free_return.i: free_return.c.i
+
+.PHONY : free_return.i
+
+# target to preprocess a source file
+free_return.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_return.c.i
+.PHONY : free_return.c.i
+
+free_return.s: free_return.c.s
+
+.PHONY : free_return.s
+
+# target to generate assembly for a file
+free_return.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_return.c.s
+.PHONY : free_return.c.s
+
+ft_cd.o: ft_cd.c.o
+
+.PHONY : ft_cd.o
+
+# target to build an object file
+ft_cd.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_cd.c.o
+.PHONY : ft_cd.c.o
+
+ft_cd.i: ft_cd.c.i
+
+.PHONY : ft_cd.i
+
+# target to preprocess a source file
+ft_cd.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_cd.c.i
+.PHONY : ft_cd.c.i
+
+ft_cd.s: ft_cd.c.s
+
+.PHONY : ft_cd.s
+
+# target to generate assembly for a file
+ft_cd.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_cd.c.s
+.PHONY : ft_cd.c.s
+
+ft_env.o: ft_env.c.o
+
+.PHONY : ft_env.o
+
+# target to build an object file
+ft_env.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_env.c.o
+.PHONY : ft_env.c.o
+
+ft_env.i: ft_env.c.i
+
+.PHONY : ft_env.i
+
+# target to preprocess a source file
+ft_env.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_env.c.i
+.PHONY : ft_env.c.i
+
+ft_env.s: ft_env.c.s
+
+.PHONY : ft_env.s
+
+# target to generate assembly for a file
+ft_env.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_env.c.s
+.PHONY : ft_env.c.s
 
 ft_errno.o: ft_errno.c.o
 
@@ -581,6 +689,33 @@ ft_strjoin.s: ft_strjoin.c.s
 ft_strjoin.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strjoin.c.s
 .PHONY : ft_strjoin.c.s
+
+ft_unset.o: ft_unset.c.o
+
+.PHONY : ft_unset.o
+
+# target to build an object file
+ft_unset.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_unset.c.o
+.PHONY : ft_unset.c.o
+
+ft_unset.i: ft_unset.c.i
+
+.PHONY : ft_unset.i
+
+# target to preprocess a source file
+ft_unset.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_unset.c.i
+.PHONY : ft_unset.c.i
+
+ft_unset.s: ft_unset.c.s
+
+.PHONY : ft_unset.s
+
+# target to generate assembly for a file
+ft_unset.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_unset.c.s
+.PHONY : ft_unset.c.s
 
 get_env.o: get_env.c.o
 
@@ -987,6 +1122,33 @@ parsing_redir.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_redir.c.s
 .PHONY : parsing_redir.c.s
 
+pwd.o: pwd.c.o
+
+.PHONY : pwd.o
+
+# target to build an object file
+pwd.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/pwd.c.o
+.PHONY : pwd.c.o
+
+pwd.i: pwd.c.i
+
+.PHONY : pwd.i
+
+# target to preprocess a source file
+pwd.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/pwd.c.i
+.PHONY : pwd.c.i
+
+pwd.s: pwd.c.s
+
+.PHONY : pwd.s
+
+# target to generate assembly for a file
+pwd.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/pwd.c.s
+.PHONY : pwd.c.s
+
 quotes.o: quotes.c.o
 
 .PHONY : quotes.o
@@ -1068,6 +1230,33 @@ several_string.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/several_string.c.s
 .PHONY : several_string.c.s
 
+sort_builtin.o: sort_builtin.c.o
+
+.PHONY : sort_builtin.o
+
+# target to build an object file
+sort_builtin.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/sort_builtin.c.o
+.PHONY : sort_builtin.c.o
+
+sort_builtin.i: sort_builtin.c.i
+
+.PHONY : sort_builtin.i
+
+# target to preprocess a source file
+sort_builtin.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/sort_builtin.c.i
+.PHONY : sort_builtin.c.i
+
+sort_builtin.s: sort_builtin.c.s
+
+.PHONY : sort_builtin.s
+
+# target to generate assembly for a file
+sort_builtin.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/sort_builtin.c.s
+.PHONY : sort_builtin.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1098,6 +1287,9 @@ help:
 	@echo "... display.o"
 	@echo "... display.i"
 	@echo "... display.s"
+	@echo "... env.o"
+	@echo "... env.i"
+	@echo "... env.s"
 	@echo "... exec_cmd.o"
 	@echo "... exec_cmd.i"
 	@echo "... exec_cmd.s"
@@ -1107,6 +1299,15 @@ help:
 	@echo "... free_parsing_line.o"
 	@echo "... free_parsing_line.i"
 	@echo "... free_parsing_line.s"
+	@echo "... free_return.o"
+	@echo "... free_return.i"
+	@echo "... free_return.s"
+	@echo "... ft_cd.o"
+	@echo "... ft_cd.i"
+	@echo "... ft_cd.s"
+	@echo "... ft_env.o"
+	@echo "... ft_env.i"
+	@echo "... ft_env.s"
 	@echo "... ft_errno.o"
 	@echo "... ft_errno.i"
 	@echo "... ft_errno.s"
@@ -1128,6 +1329,9 @@ help:
 	@echo "... ft_strjoin.o"
 	@echo "... ft_strjoin.i"
 	@echo "... ft_strjoin.s"
+	@echo "... ft_unset.o"
+	@echo "... ft_unset.i"
+	@echo "... ft_unset.s"
 	@echo "... get_env.o"
 	@echo "... get_env.i"
 	@echo "... get_env.s"
@@ -1173,6 +1377,9 @@ help:
 	@echo "... parsing_redir.o"
 	@echo "... parsing_redir.i"
 	@echo "... parsing_redir.s"
+	@echo "... pwd.o"
+	@echo "... pwd.i"
+	@echo "... pwd.s"
 	@echo "... quotes.o"
 	@echo "... quotes.i"
 	@echo "... quotes.s"
@@ -1182,6 +1389,9 @@ help:
 	@echo "... several_string.o"
 	@echo "... several_string.i"
 	@echo "... several_string.s"
+	@echo "... sort_builtin.o"
+	@echo "... sort_builtin.i"
+	@echo "... sort_builtin.s"
 .PHONY : help
 
 

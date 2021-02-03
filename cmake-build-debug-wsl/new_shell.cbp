@@ -99,6 +99,9 @@
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/display.c">
 			<Option target="new_shell"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/env.c">
+			<Option target="new_shell"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/exec_cmd.c">
 			<Option target="new_shell"/>
 		</Unit>
@@ -106,6 +109,15 @@
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/free_parsing_line.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/free_return.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_cd.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_env.c">
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_errno.c">
@@ -127,6 +139,9 @@
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_strjoin.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_unset.c">
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/get_env.c">
@@ -180,6 +195,9 @@
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/parsing_redir.c">
 			<Option target="new_shell"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/pwd.c">
+			<Option target="new_shell"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/quotes.c">
 			<Option target="new_shell"/>
 		</Unit>
@@ -187,6 +205,9 @@
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/several_string.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/sort_builtin.c">
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/CMakeLists.txt">
