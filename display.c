@@ -1,11 +1,11 @@
 #include "minishell.h"
 
-void    ft_putstr_fd(char *str, int fd)
+void	ft_putstr_fd(char *str, int fd)
 {
-   write(fd, str, ft_strlen(str));
+	write(fd, str, ft_strlen(str));
 }
 
-void    display_prompt(void)
+void	display_prompt(void)
 {
-    ft_putstr_fd("minishell $>", 1);
+	ft_putstr_fd("minishell $>", 1);
 }

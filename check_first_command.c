@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-static int		basic_first_command(char **cmds, t_list *envs)
+static int		basic_first_command(char **cmds, t_list **envs)
 {
 	char		**args;
 
@@ -15,7 +15,7 @@ static int		basic_first_command(char **cmds, t_list *envs)
 	return (1);
 }
 
-static int		pipe_first_command(t_cmd *cmd, t_list *envs)
+static int		pipe_first_command(t_cmd *cmd, t_list **envs)
 {
 	int i;
 
@@ -34,7 +34,7 @@ static int		pipe_first_command(t_cmd *cmd, t_list *envs)
 	return (1);
 }
 
-int				check_first_command(t_cmd *cmd, t_list *envs)
+int				check_first_command(t_cmd *cmd, t_list **envs)
 {
 	if (cmd->pipe.nb_pipe == 0)
 	{

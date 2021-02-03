@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-int		main_loop(char *prompt, char **envp)
+int		main_loop(char *prompt, t_list **envs)
 {
 	int		i;
 	int		status;
@@ -12,7 +12,7 @@ int		main_loop(char *prompt, char **envp)
 		return (-1);
 	while (cmds[i])
 	{
-		status = parsing_line(cmds[i], envp);
+		status = parsing_line(cmds[i], envs);
 		if (status < 0)
 			free_parsing_line(cmds, prompt, status);
 		i++;
@@ -25,16 +25,20 @@ int		main_loop(char *prompt, char **envp)
 int		main(int i, char **av, char **envp)
 {
 	char	*prompt;
-	char	**cmds;
+	t_list	*envs;
 
 	(void)av;
 	i = 0;
+	if (!(envs = init_list_env(envp)))
+		return (-1);
 	display_prompt();
 	while (get_next_line(0, &prompt, 0))
 	{
-		main_loop(prompt, envp);
+		main_loop(prompt, &envs);
 		display_prompt();
 	}
+	printf("sortie\n");
 	free(prompt);
+	ft_lstclear(&envs, free);
 	return (0);
 }

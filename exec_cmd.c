@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-static int 		move_pointer(char 	**cmds)
+static int			move_pointer(char **cmds)
 {
 	int i;
 
@@ -10,7 +10,7 @@ static int 		move_pointer(char 	**cmds)
 	return (i + 1);
 }
 
-int		init_all_package(t_cmd *cmd, t_list *envs)
+int					init_all_package(t_cmd *cmd, t_list **envs)
 {
 	int len;
 	int pointer;
@@ -32,13 +32,14 @@ int		init_all_package(t_cmd *cmd, t_list *envs)
 	return (1);
 }
 
-int 	exec_cmd(t_cmd *cmd, t_list *envs, int i)
+int					exec_cmd(t_cmd *cmd, t_list **envs, int i)
 {
 	int ret;
 
 	if (is_builtin(cmd->pipe.all[0][0]))
 	{
-		printf("BUITIN\n");
+		if (!(sort_builtin(cmd, envs)))
+			return (0);
 		return (1);
 	}
 	else

@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-char 	*get_env(t_list *envs, char *str)
+char	*get_env(t_list *envs, char *str)
 {
 	while (envs)
 	{

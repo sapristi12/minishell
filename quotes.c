@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-char 	*double_quote(char *str, t_list *envs)
+char 	*double_quote(char *str, t_list **envs)
 {
 	char 	*new;
 	int 	i;

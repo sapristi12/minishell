@@ -12,7 +12,7 @@ void    show_packages(t_cmd *cmd)
     }
 }
 
-int 	loop_command_pipe(t_cmd *cmd, t_list *envs)
+int 	loop_command_pipe(t_cmd *cmd, t_list **envs)
 {
 	int i;
 
@@ -43,10 +43,10 @@ int 	loop_command_pipe(t_cmd *cmd, t_list *envs)
 	return (1);
 }
 
-int     parsing_command(t_cmd *cmd, t_list *envs)
+int     parsing_command(t_cmd *cmd, t_list **envs)
 {
 	if (!(check_first_command(cmd, envs)))
-        return (0);
+		return (0);
 	init_all_package(cmd, envs);
 	if (cmd->pipe.nb_pipe == 0)
 	{
@@ -60,6 +60,9 @@ int     parsing_command(t_cmd *cmd, t_list *envs)
 			if (!(exec_cmd(cmd, envs, 0)))
 				return (0);
 		}
+		free_package(cmd);
+		dup2(cmd->mystdout, STDOUT_FILENO);
+		dup2(cmd->mystdin, STDIN_FILENO);
 		wait(&cmd->pid);
 		return (1);
 	}
@@ -74,31 +77,24 @@ int     parsing_command(t_cmd *cmd, t_list *envs)
 	}
 }
 
-int     parsing_line(char *command, char **envp)
+int     parsing_line(char *command, t_list **envs)
 {
-    t_list  *envs;
     t_cmd   cmd;
 
     init_struct_cmd(&cmd);
-	// if (!(number_quote_is_even(command)))
-   //     return (errno_parsing_line(-1));
-    if (!(command = create_space_around(command)))
+	if (!(command = create_space_around(command)))
         return (errno_parsing_line(-2));
     if (!(cmd.cmds = new_split(command, ' ')))
         return (errno_parsing_line(-3));
-	//show_packages(&cmd);
     if (!several_string(cmd.cmds))
         return (errno_parsing_line(free_i(&cmd, -4)));
 	if (!parsing_pipe(&cmd))
         return (errno_parsing_line(free_i(&cmd, -5)));
-	if (!(envs = init_list_env(envp)))
-        return (errno_parsing_line(free_i(&cmd, -7)));
 	if (!(parsing_quotes(&cmd, envs))) //do the return
 		return (0);
-    if (!(parsing_command(&cmd, envs)))
+	if (!(parsing_command(&cmd, envs)))
 		return (free_8(command, envs, &cmd));
-    ft_lstclear(&envs, free);
-    free(command);
+	free(command);
     free_char_double_array(cmd.cmds);
     return (0);
 }

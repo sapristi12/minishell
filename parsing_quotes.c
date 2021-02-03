@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-char 	*get_var_dollar(char *str, t_list *envs)
+char 	*get_var_dollar(char *str, t_list **envs)
 {
 	int		i;
 	char	*name;
@@ -88,15 +88,15 @@ static int 	move_pointer(char *str, char tmp)
 	return (i + 1); //+1 car on faisait str++ apres le strjoin dans la fonction qui appelle celle ci
 }
 
-char 	*create_new_str(char *str, t_list *envs)
+char 	*create_new_str(char *str, t_list **envs)
 {
-	int		i;
 	int		in_quote;
 	char	*new;
 	char 	*copy;
 	char 	tmp;
+	char	*save_pointer;
 
-	i = 0;
+	save_pointer = str;
 	in_quote = -1;
 	new = malloc(1);
 	if (!new)
@@ -131,10 +131,11 @@ char 	*create_new_str(char *str, t_list *envs)
 			str++;
 		}
 	}
+	free(save_pointer);
 	return (new);
 }
 
-int 	parsing_quotes(t_cmd *cmd, t_list *envs)
+int 	parsing_quotes(t_cmd *cmd, t_list **envs)
 {
 	int		i;
 	char 	**new;
