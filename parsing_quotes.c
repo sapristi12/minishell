@@ -83,10 +83,14 @@ static int 	move_pointer(char *str, char tmp)
 	len = 0;
 	while (str[i])
 	{
-		if ((str[i] == tmp && tmp == S_QUOTE) || (str[i - 1] != '\\' && tmp == D_QUOTE && str[i] == tmp))
+		if (i > 0 && (str[i - 1] != '\\' && tmp == D_QUOTE && str[i] == tmp))
+			break;
+		if (str[i] == tmp && tmp == S_QUOTE)
 			break;
 		i++;
 	}
+	if (tmp == 'E')
+		return (i);
 	return (i + 1); //+1 car on faisait str++ apres le strjoin dans la fonction qui appelle celle ci
 }
 
@@ -130,8 +134,10 @@ char 	*create_new_str(char *str, t_list **envs)
 		}
 		else
 		{
-			new = char_strjoin(new, *str);
-			str++;
+			copy = double_quote(str, envs);
+			str += move_pointer(str, 'E');
+			new = ft_strjoin(new, copy);
+			free(copy);
 		}
 	}
 	free(save_pointer);
