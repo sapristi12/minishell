@@ -13,14 +13,14 @@ void		free_package(t_cmd *cmd)
 	free(cmd->pipe.all);
 }
 
-int			free_8(char *str, t_list **envs, t_cmd *cmd)
+int			free_8(char *str, t_list **envs, t_cmd *cmd, int ret)
 {
 	int i;
 
 	i = 0;
 	free(str);
 	free_char_double_array(cmd->cmds);
-	return (-1);
+	return (ret);
 }
 
 void		free_char_double_array(char **strs)

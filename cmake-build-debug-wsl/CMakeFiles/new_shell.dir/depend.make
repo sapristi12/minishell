@@ -91,6 +91,9 @@ CMakeFiles/new_shell.dir/init_struct.c.o: ../minishell.h
 CMakeFiles/new_shell.dir/is_builtin.c.o: ../is_builtin.c
 CMakeFiles/new_shell.dir/is_builtin.c.o: ../minishell.h
 
+CMakeFiles/new_shell.dir/list_to_array.c.o: ../list_to_array.c
+CMakeFiles/new_shell.dir/list_to_array.c.o: ../minishell.h
+
 CMakeFiles/new_shell.dir/main.c.o: ../main.c
 CMakeFiles/new_shell.dir/main.c.o: ../minishell.h
 

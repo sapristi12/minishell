@@ -25,7 +25,7 @@ int					init_all_package(t_cmd *cmd, t_list **envs)
 	cmd->pipe.all[len + 1] = NULL;
 	while (i < len + 1)
 	{
-		cmd->pipe.all[i] = create_package(&(cmd->cmds[pointer]), envs);
+		cmd->pipe.all[i] = create_package(&(cmd->cmds[pointer]), envs, 0);
 		pointer += move_pointer(&(cmd->cmds[pointer]));
 		i++;
 	}
@@ -34,7 +34,7 @@ int					init_all_package(t_cmd *cmd, t_list **envs)
 
 int					exec_cmd(t_cmd *cmd, t_list **envs, int i)
 {
-	int ret;
+	char 	**envp;
 
 	if (is_builtin(cmd->pipe.all[0][0]))
 	{
@@ -44,12 +44,21 @@ int					exec_cmd(t_cmd *cmd, t_list **envs, int i)
 	}
 	else
 	{
-		ret = execve(cmd->pipe.all[i][0], cmd->pipe.all[i], NULL);
-		if (ret == -1)
+		cmd->pid = fork();
+		if (cmd->pid == -1)
+			perror("Fork");
+		if (cmd->pid == 0)
 		{
-			perror("Error:");
-			return (0);
+			if (cmd->pipe.all[0][0] != NULL)
+			{
+				envp = list_to_array(*envs);
+				ft_lstclear(envs, free);
+				execve(cmd->pipe.all[i][0], cmd->pipe.all[i], envp);
+				free_char_double_array(envp); //a rajouter secu du ret == -1 surement
+			}
+			return(-1);
 		}
+		wait(&cmd->pid);
 	}
 	return (1);
 }

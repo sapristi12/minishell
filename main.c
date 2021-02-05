@@ -13,8 +13,13 @@ int		main_loop(char *prompt, t_list **envs)
 	while (cmds[i])
 	{
 		status = parsing_line(cmds[i], envs);
-		if (status < 0)
+		if (status == -1)
 			free_parsing_line(cmds, prompt, status);
+		if (status == -2)
+		{
+			free_char_double_array(cmds);
+			return (-1);
+		}
 		i++;
 	}
 	free(prompt);
@@ -34,10 +39,13 @@ int		main(int i, char **av, char **envp)
 	display_prompt();
 	while (get_next_line(0, &prompt, 0))
 	{
-		main_loop(prompt, &envs);
+		if (main_loop(prompt, &envs) == -1)
+		{
+			get_next_line(666, NULL, 1);
+			break;
+		}
 		display_prompt();
 	}
-	printf("sortie\n");
 	free(prompt);
 	ft_lstclear(&envs, free);
 	return (0);

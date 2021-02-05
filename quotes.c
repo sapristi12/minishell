@@ -3,6 +3,7 @@
 char 	*double_quote(char *str, t_list **envs)
 {
 	char 	*new;
+	char 	*tmp;
 	int 	i;
 
 	i = 0;
@@ -10,7 +11,7 @@ char 	*double_quote(char *str, t_list **envs)
 	if (!new)
 		return (NULL);
 	new[0] = '\0';
-	while (str[i] && ((str[i - 2] != '\\' && str[i - 1] == '\\') || str[i] != D_QUOTE))
+	while (str[i] && (i > 1 && (str[i - 2] != '\\' && str[i - 1] == '\\')) || str[i] != D_QUOTE)
 	{
 		if (str[i] == '\\' && str[i + 1] == '\\')
 		{
@@ -26,7 +27,9 @@ char 	*double_quote(char *str, t_list **envs)
 		{
 			if (str[i - 1] != '\\' && (str[i + 1] != S_QUOTE && str[i + 1] != D_QUOTE))
 			{
-				new = ft_strjoin(new, get_var_dollar(&str[i + 1], envs));
+				tmp = get_var_dollar(&str[i + 1], envs);
+				new = ft_strjoin(new, tmp);
+				free(tmp);
 				while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE)
 					i++;
 			}
@@ -63,6 +66,5 @@ char 	*simple_quote(char *str)
 		i++;
 	}
 	new[i] = '\0';
-	//free(str);
 	return (new);
 }

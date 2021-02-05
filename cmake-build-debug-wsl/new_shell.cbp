@@ -171,6 +171,9 @@
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/is_builtin.c">
 			<Option target="new_shell"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/list_to_array.c">
+			<Option target="new_shell"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/main.c">
 			<Option target="new_shell"/>
 		</Unit>

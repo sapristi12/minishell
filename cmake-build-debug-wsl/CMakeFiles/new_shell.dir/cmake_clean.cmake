@@ -29,6 +29,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/new_shell.dir/init_pipe.c.o"
   "CMakeFiles/new_shell.dir/init_struct.c.o"
   "CMakeFiles/new_shell.dir/is_builtin.c.o"
+  "CMakeFiles/new_shell.dir/list_to_array.c.o"
   "CMakeFiles/new_shell.dir/main.c.o"
   "CMakeFiles/new_shell.dir/new_split.c.o"
   "CMakeFiles/new_shell.dir/parse_redir_fd.c.o"

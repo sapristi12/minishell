@@ -16,7 +16,7 @@ int				is_symbol(char *str)
 	return (0);
 }
 
-char			**create_package(char **cmds, t_list **envs)
+char			**create_package(char **cmds, t_list **envs, int option)
 {
 	char	**dest;
 	int		size;
@@ -34,7 +34,7 @@ char			**create_package(char **cmds, t_list **envs)
 	{
 		if (i == 0 && cmds[i][0] != '/' && !is_builtin(cmds[i]))
 		{
-			if (!(dest[i] = get_path_command(cmds[i], envs)))
+			if (!(dest[i] = get_path_command(cmds[i], envs, 1)) && option != 0)
 			{
 				free(dest);
 				return (NULL);

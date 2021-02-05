@@ -91,6 +91,9 @@ CMakeFiles/new_shell.dir/init_struct.c.o
 CMakeFiles/new_shell.dir/is_builtin.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/is_builtin.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/list_to_array.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/list_to_array.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/main.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/main.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h

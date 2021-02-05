@@ -35,7 +35,6 @@ int 	ft_unset(t_cmd *cmd, t_list **envs)
 	i = 1;
 	while (cmd->cmds[i] && !is_symbol(cmd->cmds[i]))
 	{
-		printf("going to unset %s\n", cmd->cmds[i]);
 		ft_delone(envs, cmd->cmds[i]);
 		i++;
 	}

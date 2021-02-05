@@ -933,6 +933,33 @@ is_builtin.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_builtin.c.s
 .PHONY : is_builtin.c.s
 
+list_to_array.o: list_to_array.c.o
+
+.PHONY : list_to_array.o
+
+# target to build an object file
+list_to_array.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/list_to_array.c.o
+.PHONY : list_to_array.c.o
+
+list_to_array.i: list_to_array.c.i
+
+.PHONY : list_to_array.i
+
+# target to preprocess a source file
+list_to_array.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/list_to_array.c.i
+.PHONY : list_to_array.c.i
+
+list_to_array.s: list_to_array.c.s
+
+.PHONY : list_to_array.s
+
+# target to generate assembly for a file
+list_to_array.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/list_to_array.c.s
+.PHONY : list_to_array.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -1356,6 +1383,9 @@ help:
 	@echo "... is_builtin.o"
 	@echo "... is_builtin.i"
 	@echo "... is_builtin.s"
+	@echo "... list_to_array.o"
+	@echo "... list_to_array.i"
+	@echo "... list_to_array.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

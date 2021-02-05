@@ -34,6 +34,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/mnt/c/Users/33652/Documents/Coding/new_shell/init_pipe.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/new_shell.dir/init_pipe.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/init_struct.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/new_shell.dir/init_struct.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/is_builtin.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/new_shell.dir/is_builtin.c.o"
+  "/mnt/c/Users/33652/Documents/Coding/new_shell/list_to_array.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/new_shell.dir/list_to_array.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/main.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/new_shell.dir/main.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/new_split.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/new_shell.dir/new_split.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/parse_redir_fd.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/new_shell.dir/parse_redir_fd.c.o"

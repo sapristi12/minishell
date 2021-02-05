@@ -19,7 +19,7 @@ char 	*get_var_dollar(char *str, t_list **envs)
 		name[i] = str[i];
 		i++;
 	}
-	tmp = get_env(envs, name);
+	tmp = get_env(*envs, name);
 	free(name);
 	if (tmp)
 		return (ft_strdup(tmp));
@@ -47,10 +47,13 @@ int 	is_even_quote(char *str)
 		}
 		else if (in_quote == -1)
 		{
-			if ((str[i] == 34 && str[i - 1] != '\\') || str[i] == '\'')
+			if (str[i] == '\'')
 			{
-				tmp = str[i];
-				in_quote = -in_quote;
+				if (i > 0 && (str[i] == D_QUOTE && str[i - 1] != '\\'))
+				{
+					tmp = str[i];
+					in_quote = -in_quote;
+				}
 			}
 		}
 		i++;
@@ -60,7 +63,7 @@ int 	is_even_quote(char *str)
 	return (0);
 }
 
-char 	*manage(char **str, char tmp, t_list *envs)
+char 	*manage(char **str, char tmp, t_list **envs)
 {
 	char	*new;
 	char 	*copy;
@@ -123,6 +126,7 @@ char 	*create_new_str(char *str, t_list **envs)
 			copy = manage(&str, tmp, envs);
 			str += move_pointer(str, tmp);
 			new = ft_strjoin(new, copy);
+			free(copy);
 			in_quote = -in_quote;
 		}
 		else
@@ -138,7 +142,6 @@ char 	*create_new_str(char *str, t_list **envs)
 int 	parsing_quotes(t_cmd *cmd, t_list **envs)
 {
 	int		i;
-	char 	**new;
 
 	i = 0;
 	while (cmd->cmds[i])

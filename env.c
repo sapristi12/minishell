@@ -19,7 +19,13 @@ void	set_env(t_list **envs, char *env, char *value)
 	new = char_strjoin(new, '=');
 	new = ft_strjoin(new, value);
 	if (used == NULL)
+	{
 		ft_lstadd_back(begin, ft_lstnew(new));
+		free(new);
+	}
 	else
+	{
+		free(used->content);
 		used->content = new;
+	}
 }

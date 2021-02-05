@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/33652/Documents/Coding/new_shell/ft_unset.c
+/mnt/c/Users/33652/Documents/Coding/new_shell/is_builtin.c
 minishell.h
 /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 
@@ -35,4 +35,8 @@ signal.h
 -
 dirent.h
 -
+
+/mnt/c/Users/33652/Documents/Coding/new_shell/sort_builtin.c
+minishell.h
+/mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 

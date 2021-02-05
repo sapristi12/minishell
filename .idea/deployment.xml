@@ -12,19 +12,6 @@
           </excludedPaths>
         </serverdata>
       </paths>
-      <paths name="Remote Host (4f397bf7-99ad-4a42-9407-e020c656aa10)">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/tmp/tmp.GzFUyxFjKy" local="$PROJECT_DIR$" />
-          </mappings>
-          <excludedPaths>
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-good" />
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-good" />
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-wsl" />
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-wsl" />
-          </excludedPaths>
-        </serverdata>
-      </paths>
       <paths name="Remote Host (8d10c654-f9a8-4b49-974b-34011e07bcc0)">
         <serverdata>
           <mappings>

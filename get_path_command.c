@@ -19,7 +19,7 @@ int		ft_dir(char *path, char *exec)
 	return (0);
 }
 
-char 	*get_path_command(char *command, t_list **envs)
+char 	*get_path_command(char *command, t_list **envs, int option)
 {
 	char	**path;
 	char	*whole_path;
@@ -43,5 +43,7 @@ char 	*get_path_command(char *command, t_list **envs)
 		return (tmp2);
 	}
 	free_char_double_array(path);
+	if (option == 0)
+		return (ft_strdup(command));
 	return (NULL);
 }
