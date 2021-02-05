@@ -42,14 +42,14 @@ int 	is_even_quote(char *str)
 		}
 		if (in_quote == 1)
 		{
-			if ((str[i] == tmp && tmp == S_QUOTE) || ((str[i - 1] != '\\' || str[i - 2] == '\\') && tmp == D_QUOTE && str[i] == tmp))
+			if ((str[i] == tmp && tmp == S_QUOTE) || (((str[i - 1] != '\\') || (str[i - 1] == '\\' && str[i - 2] == '\\')) && (tmp == D_QUOTE && str[i] == tmp)))
 				in_quote = -in_quote;
 		}
 		else if (in_quote == -1)
 		{
-			if (str[i] == '\'')
+			if (str[i] == S_QUOTE || str[i] == D_QUOTE)
 			{
-				if (i > 0 && (str[i] == D_QUOTE && str[i - 1] != '\\'))
+				if (str[i] == S_QUOTE || (i > 0 && (str[i] == D_QUOTE && str[i - 1] != '\\') || (i == 0 && str[i] == D_QUOTE)))
 				{
 					tmp = str[i];
 					in_quote = -in_quote;
@@ -65,7 +65,6 @@ int 	is_even_quote(char *str)
 
 char 	*manage(char **str, char tmp, t_list **envs)
 {
-	char	*new;
 	char 	*copy;
 
 	if (tmp == D_QUOTE)

@@ -23,6 +23,11 @@ char 	*double_quote(char *str, t_list **envs)
 			new = char_strjoin(new, D_QUOTE);
 			i += 2;
 		}
+		else if (str[i] == '\\' && str[i + 1] == '$')
+		{
+			new = char_strjoin(new, '$');
+			i += 2;
+		}
 		else if (str[i] == '$')
 		{
 			if (str[i - 1] != '\\' && (str[i + 1] != S_QUOTE && str[i + 1] != D_QUOTE))
@@ -32,11 +37,6 @@ char 	*double_quote(char *str, t_list **envs)
 				free(tmp);
 				while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE)
 					i++;
-			}
-			else
-			{
-				new = char_strjoin(new, '$');
-				i += 2;
 			}
 		}
 		else
