@@ -78,9 +78,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/args_package.c">
-			<Option target="new_shell"/>
-		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/check_first_command.c">
 			<Option target="new_shell"/>
 		</Unit>
@@ -106,6 +103,9 @@
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/forking.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/free_error.c">
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/free_parsing_line.c">

@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/c/Users/33652/Documents/Coding/new_shell/args_package.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/new_shell.dir/args_package.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/check_first_command.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/new_shell.dir/check_first_command.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/close.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/new_shell.dir/close.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/count_string.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/new_shell.dir/count_string.c.o"
@@ -14,6 +13,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/mnt/c/Users/33652/Documents/Coding/new_shell/env.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/new_shell.dir/env.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/exec_cmd.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/new_shell.dir/exec_cmd.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/forking.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/new_shell.dir/forking.c.o"
+  "/mnt/c/Users/33652/Documents/Coding/new_shell/free_error.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/new_shell.dir/free_error.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/free_parsing_line.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/new_shell.dir/free_parsing_line.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/free_return.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/new_shell.dir/free_return.c.o"
   "/mnt/c/Users/33652/Documents/Coding/new_shell/ft_cd.c" "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/new_shell.dir/ft_cd.c.o"

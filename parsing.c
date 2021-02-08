@@ -19,7 +19,7 @@ int 	loop_command_pipe(t_cmd *cmd, t_list **envs)
 
 	i = 0;
 	if (!(parsing_redir(cmd)))
-		return (-1);
+		return (-2);
 	while (i < cmd->pipe.nb_pipe + 1)
 	{
 		ret = 0;
@@ -58,7 +58,7 @@ int     parsing_command(t_cmd *cmd, t_list **envs)
 	if (cmd->pipe.nb_pipe == 0)
 	{
 		if (!(parsing_redir(cmd)))
-			return (errno_parsing_line(free_i(cmd, -7)));
+			return (free_error_redir(cmd, envs, 0));
 		ret = exec_cmd(cmd, envs, 0);
 		free_package(cmd);
 		dup2(cmd->mystdout, STDOUT_FILENO);

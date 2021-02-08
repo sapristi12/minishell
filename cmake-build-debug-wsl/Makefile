@@ -123,33 +123,6 @@ new_shell/fast:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/build
 .PHONY : new_shell/fast
 
-args_package.o: args_package.c.o
-
-.PHONY : args_package.o
-
-# target to build an object file
-args_package.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/args_package.c.o
-.PHONY : args_package.c.o
-
-args_package.i: args_package.c.i
-
-.PHONY : args_package.i
-
-# target to preprocess a source file
-args_package.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/args_package.c.i
-.PHONY : args_package.c.i
-
-args_package.s: args_package.c.s
-
-.PHONY : args_package.s
-
-# target to generate assembly for a file
-args_package.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/args_package.c.s
-.PHONY : args_package.c.s
-
 check_first_command.o: check_first_command.c.o
 
 .PHONY : check_first_command.o
@@ -392,6 +365,33 @@ forking.s: forking.c.s
 forking.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/forking.c.s
 .PHONY : forking.c.s
+
+free_error.o: free_error.c.o
+
+.PHONY : free_error.o
+
+# target to build an object file
+free_error.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_error.c.o
+.PHONY : free_error.c.o
+
+free_error.i: free_error.c.i
+
+.PHONY : free_error.i
+
+# target to preprocess a source file
+free_error.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_error.c.i
+.PHONY : free_error.c.i
+
+free_error.s: free_error.c.s
+
+.PHONY : free_error.s
+
+# target to generate assembly for a file
+free_error.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_error.c.s
+.PHONY : free_error.c.s
 
 free_parsing_line.o: free_parsing_line.c.o
 
@@ -1293,9 +1293,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... new_shell"
-	@echo "... args_package.o"
-	@echo "... args_package.i"
-	@echo "... args_package.s"
 	@echo "... check_first_command.o"
 	@echo "... check_first_command.i"
 	@echo "... check_first_command.s"
@@ -1323,6 +1320,9 @@ help:
 	@echo "... forking.o"
 	@echo "... forking.i"
 	@echo "... forking.s"
+	@echo "... free_error.o"
+	@echo "... free_error.i"
+	@echo "... free_error.s"
 	@echo "... free_parsing_line.o"
 	@echo "... free_parsing_line.i"
 	@echo "... free_parsing_line.s"

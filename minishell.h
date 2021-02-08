@@ -128,5 +128,7 @@ int			ft_unset(t_cmd *cmd, t_list **envs);
 char		**list_to_array(t_list *envs);
 int			free_end_pipe(t_cmd *cmd, int ret);
 int			pipe_first_command(t_cmd *cmd, t_list **envs);
+char		*normal_quote(char *str, t_list **envs);
+int			free_error_redir(t_cmd *cmd, t_list **envs, int ret);
 
 #endif

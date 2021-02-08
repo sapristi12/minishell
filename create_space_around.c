@@ -87,9 +87,9 @@ char			*create_space_around(char *str)
 			if (*str == s.tmp)
 				s.in_quote = -(s.in_quote);
 		}
-		if (*str == '>' && s.in_quote == -1)
+		if ((*str == '>') && s.in_quote == -1)
 			s.j += replace(&(s.dest), s.j, '>', get_len(&str, *str));
-		else if (*str == '|' || *str == '<' && s.in_quote == -1)
+		else if ((*str == '|' || *str == '<') && s.in_quote == -1)
 			s.j += replace(&(s.dest), s.j, *str, get_len(&str, *str));
 		else
 			s.dest[s.j++] = *str;

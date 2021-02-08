@@ -39,7 +39,7 @@ int		main(int i, char **av, char **envp)
 	display_prompt();
 	while (get_next_line(0, &prompt, 0))
 	{
-		if (main_loop(prompt, &envs) == -1)
+		if (prompt[0] != '\0' && main_loop(prompt, &envs) == -1)
 		{
 			get_next_line(666, NULL, 1);
 			break;

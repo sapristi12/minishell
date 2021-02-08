@@ -3,12 +3,18 @@
 char    *get_left(t_cmd *cmd)
 {
 	int i;
+	int j;
 
+	j = 0;
 	i = 0;
 	while (cmd->cmds[i + 1] && ft_strcmp(cmd->cmds[i + 1], "|"))
 	{
 		if (!ft_strcmp(cmd->cmds[i], "<"))
-			return (cmd->cmds[i + 1]);
+		{
+			j++;
+			if (j == cmd->redir.left)
+				return (cmd->cmds[i + 1]);
+		}
 		i++;
 	}
 	return (NULL);

@@ -27,8 +27,10 @@ int		cd_old(t_list **envs)
 	int		ret;
 
 	ret = 0;
+	printf("gonna sup OLD\n");
 	if (!(old = ft_strdup(get_env(*envs, "OLDPWD"))))
 		return (-1);
+	printf("END gonna sup OLD\n");
 	getcwd(buffer, PATH_MAX);
 	ret = chdir(old);
 	if (ret != -1)
@@ -47,8 +49,10 @@ int		cd_basic(char **words, t_list **envs)
 	char	buffer[PATH_MAX];
 
 	ret = 0;
+	printf("before dup basic\n");
 	if (!(pwd = ft_strdup(get_env(*envs, "PWD"))))
 		return (-1);
+	printf("after dup basic\n");
 	ret = chdir(words[1]);
 	if (ret != -1)
 	{
@@ -101,4 +105,5 @@ int 	ft_cd(t_cmd *cmd, t_list **envs)
 		fprintf(stderr, "error : %s\n", strerror(errno));
 		return (1);
 	}
+	return (1);
 }

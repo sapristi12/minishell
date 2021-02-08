@@ -36,7 +36,7 @@ int 	is_even_quote(char *str)
 	in_quote = -1;
 	while (str[i])
 	{
-		if (str[i] == '\\' && str[i + 1] == '\\')
+		if (str[i] == '\\' && (str[i + 1] == '\\' || str[i + 1] == S_QUOTE))
 		{
 			i += 2;
 		}
@@ -74,6 +74,24 @@ char 	*manage(char **str, char tmp, t_list **envs)
 	return (copy);
 }
 
+static int 	move_normal_pointer(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == S_QUOTE)
+			break;
+		else if (str[i] == D_QUOTE && (i > 1 && (str[i - 1] == '\\' && str[i - 2] == '\\')))
+			break;
+		else if (str[i] == D_QUOTE && (i == 0 || (i > 0 && str[i - 1] != '\\')))
+			break;
+		i++;
+	}
+	return (i);
+}
+
 static int 	move_pointer(char *str, char tmp)
 {
 	int len;
@@ -83,7 +101,7 @@ static int 	move_pointer(char *str, char tmp)
 	len = 0;
 	while (str[i])
 	{
-		if (i > 0 && (str[i - 1] != '\\' && tmp == D_QUOTE && str[i] == tmp))
+		if (i > 0 && (str[i - 1] != '\\' && str[i] == D_QUOTE))
 			break;
 		if (str[i] == tmp && tmp == S_QUOTE)
 			break;
@@ -134,8 +152,8 @@ char 	*create_new_str(char *str, t_list **envs)
 		}
 		else
 		{
-			copy = double_quote(str, envs);
-			str += move_pointer(str, 'E');
+			copy = normal_quote(str, envs);
+			str += move_normal_pointer(str);
 			new = ft_strjoin(new, copy);
 			free(copy);
 		}

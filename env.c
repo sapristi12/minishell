@@ -17,7 +17,8 @@ void	set_env(t_list **envs, char *env, char *value)
 		used = used->next;
 	new = ft_strjoin(tmp, env);
 	new = char_strjoin(new, '=');
-	new = ft_strjoin(new, value);
+	if (value != NULL)
+		new = ft_strjoin(new, value);
 	if (used == NULL)
 	{
 		ft_lstadd_back(begin, ft_lstnew(new));

@@ -57,22 +57,9 @@ include CMakeFiles/new_shell.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/new_shell.dir/flags.make
 
-CMakeFiles/new_shell.dir/args_package.c.o: CMakeFiles/new_shell.dir/flags.make
-CMakeFiles/new_shell.dir/args_package.c.o: ../args_package.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/new_shell.dir/args_package.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/args_package.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/args_package.c
-
-CMakeFiles/new_shell.dir/args_package.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_shell.dir/args_package.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/33652/Documents/Coding/new_shell/args_package.c > CMakeFiles/new_shell.dir/args_package.c.i
-
-CMakeFiles/new_shell.dir/args_package.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_shell.dir/args_package.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/new_shell/args_package.c -o CMakeFiles/new_shell.dir/args_package.c.s
-
 CMakeFiles/new_shell.dir/check_first_command.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/check_first_command.c.o: ../check_first_command.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/new_shell.dir/check_first_command.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/new_shell.dir/check_first_command.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/check_first_command.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/check_first_command.c
 
 CMakeFiles/new_shell.dir/check_first_command.c.i: cmake_force
@@ -85,7 +72,7 @@ CMakeFiles/new_shell.dir/check_first_command.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/count_string.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/count_string.c.o: ../count_string.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/new_shell.dir/count_string.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/new_shell.dir/count_string.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/count_string.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/count_string.c
 
 CMakeFiles/new_shell.dir/count_string.c.i: cmake_force
@@ -98,7 +85,7 @@ CMakeFiles/new_shell.dir/count_string.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/create_space_around.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/create_space_around.c.o: ../create_space_around.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/new_shell.dir/create_space_around.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/new_shell.dir/create_space_around.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/create_space_around.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/create_space_around.c
 
 CMakeFiles/new_shell.dir/create_space_around.c.i: cmake_force
@@ -111,7 +98,7 @@ CMakeFiles/new_shell.dir/create_space_around.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/display.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/display.c.o: ../display.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/new_shell.dir/display.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/new_shell.dir/display.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/display.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/display.c
 
 CMakeFiles/new_shell.dir/display.c.i: cmake_force
@@ -124,7 +111,7 @@ CMakeFiles/new_shell.dir/display.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/free_parsing_line.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/free_parsing_line.c.o: ../free_parsing_line.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/new_shell.dir/free_parsing_line.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/new_shell.dir/free_parsing_line.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/free_parsing_line.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/free_parsing_line.c
 
 CMakeFiles/new_shell.dir/free_parsing_line.c.i: cmake_force
@@ -137,7 +124,7 @@ CMakeFiles/new_shell.dir/free_parsing_line.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/ft_errno.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/ft_errno.c.o: ../ft_errno.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/new_shell.dir/ft_errno.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/new_shell.dir/ft_errno.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/ft_errno.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/ft_errno.c
 
 CMakeFiles/new_shell.dir/ft_errno.c.i: cmake_force
@@ -150,7 +137,7 @@ CMakeFiles/new_shell.dir/ft_errno.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/ft_list.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/ft_list.c.o: ../ft_list.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/new_shell.dir/ft_list.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/new_shell.dir/ft_list.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/ft_list.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/ft_list.c
 
 CMakeFiles/new_shell.dir/ft_list.c.i: cmake_force
@@ -163,7 +150,7 @@ CMakeFiles/new_shell.dir/ft_list.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/ft_strcmp.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/ft_strcmp.c.o: ../ft_strcmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/new_shell.dir/ft_strcmp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/new_shell.dir/ft_strcmp.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/ft_strcmp.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/ft_strcmp.c
 
 CMakeFiles/new_shell.dir/ft_strcmp.c.i: cmake_force
@@ -176,7 +163,7 @@ CMakeFiles/new_shell.dir/ft_strcmp.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/ft_strdup.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/ft_strdup.c.o: ../ft_strdup.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/new_shell.dir/ft_strdup.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/new_shell.dir/ft_strdup.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/ft_strdup.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/ft_strdup.c
 
 CMakeFiles/new_shell.dir/ft_strdup.c.i: cmake_force
@@ -189,7 +176,7 @@ CMakeFiles/new_shell.dir/ft_strdup.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/get_next_line_utils.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/get_next_line_utils.c.o: ../get_next_line_utils.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/new_shell.dir/get_next_line_utils.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/new_shell.dir/get_next_line_utils.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/get_next_line_utils.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/get_next_line_utils.c
 
 CMakeFiles/new_shell.dir/get_next_line_utils.c.i: cmake_force
@@ -202,7 +189,7 @@ CMakeFiles/new_shell.dir/get_next_line_utils.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/init_list_env.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/init_list_env.c.o: ../init_list_env.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/new_shell.dir/init_list_env.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/new_shell.dir/init_list_env.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/init_list_env.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/init_list_env.c
 
 CMakeFiles/new_shell.dir/init_list_env.c.i: cmake_force
@@ -215,7 +202,7 @@ CMakeFiles/new_shell.dir/init_list_env.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/init_pipe.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/init_pipe.c.o: ../init_pipe.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/new_shell.dir/init_pipe.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/new_shell.dir/init_pipe.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/init_pipe.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/init_pipe.c
 
 CMakeFiles/new_shell.dir/init_pipe.c.i: cmake_force
@@ -228,7 +215,7 @@ CMakeFiles/new_shell.dir/init_pipe.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/init_struct.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/init_struct.c.o: ../init_struct.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/new_shell.dir/init_struct.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/new_shell.dir/init_struct.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/init_struct.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/init_struct.c
 
 CMakeFiles/new_shell.dir/init_struct.c.i: cmake_force
@@ -241,7 +228,7 @@ CMakeFiles/new_shell.dir/init_struct.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/main.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/new_shell.dir/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/new_shell.dir/main.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/main.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/main.c
 
 CMakeFiles/new_shell.dir/main.c.i: cmake_force
@@ -254,7 +241,7 @@ CMakeFiles/new_shell.dir/main.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/new_split.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/new_split.c.o: ../new_split.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/new_shell.dir/new_split.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/new_shell.dir/new_split.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/new_split.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/new_split.c
 
 CMakeFiles/new_shell.dir/new_split.c.i: cmake_force
@@ -267,7 +254,7 @@ CMakeFiles/new_shell.dir/new_split.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/parsing.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/parsing.c.o: ../parsing.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/new_shell.dir/parsing.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/new_shell.dir/parsing.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/parsing.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/parsing.c
 
 CMakeFiles/new_shell.dir/parsing.c.i: cmake_force
@@ -280,7 +267,7 @@ CMakeFiles/new_shell.dir/parsing.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/parsing_pipe.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/parsing_pipe.c.o: ../parsing_pipe.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/new_shell.dir/parsing_pipe.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/new_shell.dir/parsing_pipe.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/parsing_pipe.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/parsing_pipe.c
 
 CMakeFiles/new_shell.dir/parsing_pipe.c.i: cmake_force
@@ -293,7 +280,7 @@ CMakeFiles/new_shell.dir/parsing_pipe.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/parsing_redir.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/parsing_redir.c.o: ../parsing_redir.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/new_shell.dir/parsing_redir.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/new_shell.dir/parsing_redir.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/parsing_redir.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/parsing_redir.c
 
 CMakeFiles/new_shell.dir/parsing_redir.c.i: cmake_force
@@ -306,7 +293,7 @@ CMakeFiles/new_shell.dir/parsing_redir.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/several_string.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/several_string.c.o: ../several_string.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/new_shell.dir/several_string.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/new_shell.dir/several_string.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/several_string.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/several_string.c
 
 CMakeFiles/new_shell.dir/several_string.c.i: cmake_force
@@ -319,7 +306,7 @@ CMakeFiles/new_shell.dir/several_string.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/get_next_line.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/get_next_line.c.o: ../get_next_line.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/new_shell.dir/get_next_line.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/new_shell.dir/get_next_line.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/get_next_line.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/get_next_line.c
 
 CMakeFiles/new_shell.dir/get_next_line.c.i: cmake_force
@@ -332,7 +319,7 @@ CMakeFiles/new_shell.dir/get_next_line.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/is_builtin.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/is_builtin.c.o: ../is_builtin.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/new_shell.dir/is_builtin.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/new_shell.dir/is_builtin.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/is_builtin.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/is_builtin.c
 
 CMakeFiles/new_shell.dir/is_builtin.c.i: cmake_force
@@ -345,7 +332,7 @@ CMakeFiles/new_shell.dir/is_builtin.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/get_path_command.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/get_path_command.c.o: ../get_path_command.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/new_shell.dir/get_path_command.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/new_shell.dir/get_path_command.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/get_path_command.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/get_path_command.c
 
 CMakeFiles/new_shell.dir/get_path_command.c.i: cmake_force
@@ -358,7 +345,7 @@ CMakeFiles/new_shell.dir/get_path_command.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/ft_stradd.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/ft_stradd.c.o: ../ft_stradd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/new_shell.dir/ft_stradd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/new_shell.dir/ft_stradd.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/ft_stradd.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/ft_stradd.c
 
 CMakeFiles/new_shell.dir/ft_stradd.c.i: cmake_force
@@ -371,7 +358,7 @@ CMakeFiles/new_shell.dir/ft_stradd.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/get_env.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/get_env.c.o: ../get_env.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/new_shell.dir/get_env.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/new_shell.dir/get_env.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/get_env.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/get_env.c
 
 CMakeFiles/new_shell.dir/get_env.c.i: cmake_force
@@ -384,7 +371,7 @@ CMakeFiles/new_shell.dir/get_env.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/create_args.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/create_args.c.o: ../create_args.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/new_shell.dir/create_args.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/new_shell.dir/create_args.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/create_args.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/create_args.c
 
 CMakeFiles/new_shell.dir/create_args.c.i: cmake_force
@@ -397,7 +384,7 @@ CMakeFiles/new_shell.dir/create_args.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/redir_save.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/redir_save.c.o: ../redir_save.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/new_shell.dir/redir_save.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/new_shell.dir/redir_save.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/redir_save.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/redir_save.c
 
 CMakeFiles/new_shell.dir/redir_save.c.i: cmake_force
@@ -410,7 +397,7 @@ CMakeFiles/new_shell.dir/redir_save.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/parse_redir_fd.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/parse_redir_fd.c.o: ../parse_redir_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/new_shell.dir/parse_redir_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/new_shell.dir/parse_redir_fd.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/parse_redir_fd.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/parse_redir_fd.c
 
 CMakeFiles/new_shell.dir/parse_redir_fd.c.i: cmake_force
@@ -423,7 +410,7 @@ CMakeFiles/new_shell.dir/parse_redir_fd.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/exec_cmd.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/exec_cmd.c.o: ../exec_cmd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/new_shell.dir/exec_cmd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/new_shell.dir/exec_cmd.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/exec_cmd.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/exec_cmd.c
 
 CMakeFiles/new_shell.dir/exec_cmd.c.i: cmake_force
@@ -436,7 +423,7 @@ CMakeFiles/new_shell.dir/exec_cmd.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/forking.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/forking.c.o: ../forking.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/new_shell.dir/forking.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/new_shell.dir/forking.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/forking.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/forking.c
 
 CMakeFiles/new_shell.dir/forking.c.i: cmake_force
@@ -449,7 +436,7 @@ CMakeFiles/new_shell.dir/forking.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/close.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/close.c.o: ../close.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/new_shell.dir/close.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/new_shell.dir/close.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/close.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/close.c
 
 CMakeFiles/new_shell.dir/close.c.i: cmake_force
@@ -462,7 +449,7 @@ CMakeFiles/new_shell.dir/close.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/parsing_quotes.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/parsing_quotes.c.o: ../parsing_quotes.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/new_shell.dir/parsing_quotes.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/new_shell.dir/parsing_quotes.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/parsing_quotes.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/parsing_quotes.c
 
 CMakeFiles/new_shell.dir/parsing_quotes.c.i: cmake_force
@@ -475,7 +462,7 @@ CMakeFiles/new_shell.dir/parsing_quotes.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/ft_strcat.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/ft_strcat.c.o: ../ft_strcat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/new_shell.dir/ft_strcat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/new_shell.dir/ft_strcat.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/ft_strcat.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/ft_strcat.c
 
 CMakeFiles/new_shell.dir/ft_strcat.c.i: cmake_force
@@ -488,7 +475,7 @@ CMakeFiles/new_shell.dir/ft_strcat.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/ft_strjoin.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/ft_strjoin.c.o: ../ft_strjoin.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/new_shell.dir/ft_strjoin.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/new_shell.dir/ft_strjoin.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/ft_strjoin.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/ft_strjoin.c
 
 CMakeFiles/new_shell.dir/ft_strjoin.c.i: cmake_force
@@ -501,7 +488,7 @@ CMakeFiles/new_shell.dir/ft_strjoin.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/quotes.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/quotes.c.o: ../quotes.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/new_shell.dir/quotes.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/new_shell.dir/quotes.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/quotes.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/quotes.c
 
 CMakeFiles/new_shell.dir/quotes.c.i: cmake_force
@@ -514,7 +501,7 @@ CMakeFiles/new_shell.dir/quotes.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/free_return.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/free_return.c.o: ../free_return.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/new_shell.dir/free_return.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/new_shell.dir/free_return.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/free_return.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/free_return.c
 
 CMakeFiles/new_shell.dir/free_return.c.i: cmake_force
@@ -527,7 +514,7 @@ CMakeFiles/new_shell.dir/free_return.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/sort_builtin.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/sort_builtin.c.o: ../sort_builtin.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/new_shell.dir/sort_builtin.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/new_shell.dir/sort_builtin.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/sort_builtin.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/sort_builtin.c
 
 CMakeFiles/new_shell.dir/sort_builtin.c.i: cmake_force
@@ -540,7 +527,7 @@ CMakeFiles/new_shell.dir/sort_builtin.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/pwd.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/pwd.c.o: ../pwd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/new_shell.dir/pwd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/new_shell.dir/pwd.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/pwd.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/pwd.c
 
 CMakeFiles/new_shell.dir/pwd.c.i: cmake_force
@@ -553,7 +540,7 @@ CMakeFiles/new_shell.dir/pwd.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/ft_cd.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/ft_cd.c.o: ../ft_cd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/new_shell.dir/ft_cd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/new_shell.dir/ft_cd.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/ft_cd.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/ft_cd.c
 
 CMakeFiles/new_shell.dir/ft_cd.c.i: cmake_force
@@ -566,7 +553,7 @@ CMakeFiles/new_shell.dir/ft_cd.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/env.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/env.c.o: ../env.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/new_shell.dir/env.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/new_shell.dir/env.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/env.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/env.c
 
 CMakeFiles/new_shell.dir/env.c.i: cmake_force
@@ -579,7 +566,7 @@ CMakeFiles/new_shell.dir/env.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/ft_env.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/ft_env.c.o: ../ft_env.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/new_shell.dir/ft_env.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/new_shell.dir/ft_env.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/ft_env.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/ft_env.c
 
 CMakeFiles/new_shell.dir/ft_env.c.i: cmake_force
@@ -592,7 +579,7 @@ CMakeFiles/new_shell.dir/ft_env.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/ft_unset.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/ft_unset.c.o: ../ft_unset.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/new_shell.dir/ft_unset.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/new_shell.dir/ft_unset.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/ft_unset.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/ft_unset.c
 
 CMakeFiles/new_shell.dir/ft_unset.c.i: cmake_force
@@ -605,7 +592,7 @@ CMakeFiles/new_shell.dir/ft_unset.c.s: cmake_force
 
 CMakeFiles/new_shell.dir/list_to_array.c.o: CMakeFiles/new_shell.dir/flags.make
 CMakeFiles/new_shell.dir/list_to_array.c.o: ../list_to_array.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/new_shell.dir/list_to_array.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/new_shell.dir/list_to_array.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/list_to_array.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/list_to_array.c
 
 CMakeFiles/new_shell.dir/list_to_array.c.i: cmake_force
@@ -616,9 +603,21 @@ CMakeFiles/new_shell.dir/list_to_array.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_shell.dir/list_to_array.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/new_shell/list_to_array.c -o CMakeFiles/new_shell.dir/list_to_array.c.s
 
+CMakeFiles/new_shell.dir/free_error.c.o: CMakeFiles/new_shell.dir/flags.make
+CMakeFiles/new_shell.dir/free_error.c.o: ../free_error.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/new_shell.dir/free_error.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/free_error.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/free_error.c
+
+CMakeFiles/new_shell.dir/free_error.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_shell.dir/free_error.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/33652/Documents/Coding/new_shell/free_error.c > CMakeFiles/new_shell.dir/free_error.c.i
+
+CMakeFiles/new_shell.dir/free_error.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_shell.dir/free_error.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/new_shell/free_error.c -o CMakeFiles/new_shell.dir/free_error.c.s
+
 # Object files for target new_shell
 new_shell_OBJECTS = \
-"CMakeFiles/new_shell.dir/args_package.c.o" \
 "CMakeFiles/new_shell.dir/check_first_command.c.o" \
 "CMakeFiles/new_shell.dir/count_string.c.o" \
 "CMakeFiles/new_shell.dir/create_space_around.c.o" \
@@ -660,12 +659,12 @@ new_shell_OBJECTS = \
 "CMakeFiles/new_shell.dir/env.c.o" \
 "CMakeFiles/new_shell.dir/ft_env.c.o" \
 "CMakeFiles/new_shell.dir/ft_unset.c.o" \
-"CMakeFiles/new_shell.dir/list_to_array.c.o"
+"CMakeFiles/new_shell.dir/list_to_array.c.o" \
+"CMakeFiles/new_shell.dir/free_error.c.o"
 
 # External object files for target new_shell
 new_shell_EXTERNAL_OBJECTS =
 
-new_shell: CMakeFiles/new_shell.dir/args_package.c.o
 new_shell: CMakeFiles/new_shell.dir/check_first_command.c.o
 new_shell: CMakeFiles/new_shell.dir/count_string.c.o
 new_shell: CMakeFiles/new_shell.dir/create_space_around.c.o
@@ -708,6 +707,7 @@ new_shell: CMakeFiles/new_shell.dir/env.c.o
 new_shell: CMakeFiles/new_shell.dir/ft_env.c.o
 new_shell: CMakeFiles/new_shell.dir/ft_unset.c.o
 new_shell: CMakeFiles/new_shell.dir/list_to_array.c.o
+new_shell: CMakeFiles/new_shell.dir/free_error.c.o
 new_shell: CMakeFiles/new_shell.dir/build.make
 new_shell: CMakeFiles/new_shell.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Linking C executable new_shell"

@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/new_shell.dir/args_package.c.o"
   "CMakeFiles/new_shell.dir/check_first_command.c.o"
   "CMakeFiles/new_shell.dir/close.c.o"
   "CMakeFiles/new_shell.dir/count_string.c.o"
@@ -9,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/new_shell.dir/env.c.o"
   "CMakeFiles/new_shell.dir/exec_cmd.c.o"
   "CMakeFiles/new_shell.dir/forking.c.o"
+  "CMakeFiles/new_shell.dir/free_error.c.o"
   "CMakeFiles/new_shell.dir/free_parsing_line.c.o"
   "CMakeFiles/new_shell.dir/free_return.c.o"
   "CMakeFiles/new_shell.dir/ft_cd.c.o"
