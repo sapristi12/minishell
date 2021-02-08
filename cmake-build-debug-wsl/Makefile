@@ -285,6 +285,33 @@ display.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/display.c.s
 .PHONY : display.c.s
 
+double_quote.o: double_quote.c.o
+
+.PHONY : double_quote.o
+
+# target to build an object file
+double_quote.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/double_quote.c.o
+.PHONY : double_quote.c.o
+
+double_quote.i: double_quote.c.i
+
+.PHONY : double_quote.i
+
+# target to preprocess a source file
+double_quote.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/double_quote.c.i
+.PHONY : double_quote.c.i
+
+double_quote.s: double_quote.c.s
+
+.PHONY : double_quote.s
+
+# target to generate assembly for a file
+double_quote.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/double_quote.c.s
+.PHONY : double_quote.c.s
+
 env.o: env.c.o
 
 .PHONY : env.o
@@ -825,6 +852,33 @@ get_path_command.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_path_command.c.s
 .PHONY : get_path_command.c.s
 
+get_tilde_path.o: get_tilde_path.c.o
+
+.PHONY : get_tilde_path.o
+
+# target to build an object file
+get_tilde_path.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_tilde_path.c.o
+.PHONY : get_tilde_path.c.o
+
+get_tilde_path.i: get_tilde_path.c.i
+
+.PHONY : get_tilde_path.i
+
+# target to preprocess a source file
+get_tilde_path.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_tilde_path.c.i
+.PHONY : get_tilde_path.c.i
+
+get_tilde_path.s: get_tilde_path.c.s
+
+.PHONY : get_tilde_path.s
+
+# target to generate assembly for a file
+get_tilde_path.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_tilde_path.c.s
+.PHONY : get_tilde_path.c.s
+
 init_list_env.o: init_list_env.c.o
 
 .PHONY : init_list_env.o
@@ -1311,6 +1365,9 @@ help:
 	@echo "... display.o"
 	@echo "... display.i"
 	@echo "... display.s"
+	@echo "... double_quote.o"
+	@echo "... double_quote.i"
+	@echo "... double_quote.s"
 	@echo "... env.o"
 	@echo "... env.i"
 	@echo "... env.s"
@@ -1371,6 +1428,9 @@ help:
 	@echo "... get_path_command.o"
 	@echo "... get_path_command.i"
 	@echo "... get_path_command.s"
+	@echo "... get_tilde_path.o"
+	@echo "... get_tilde_path.i"
+	@echo "... get_tilde_path.s"
 	@echo "... init_list_env.o"
 	@echo "... init_list_env.i"
 	@echo "... init_list_env.s"

@@ -19,6 +19,9 @@ CMakeFiles/new_shell.dir/create_space_around.c.o
 CMakeFiles/new_shell.dir/display.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/display.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/double_quote.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/double_quote.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/env.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/env.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
@@ -78,6 +81,9 @@ CMakeFiles/new_shell.dir/get_next_line_utils.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/get_next_line_utils.c
 CMakeFiles/new_shell.dir/get_path_command.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/get_path_command.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/get_tilde_path.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/get_tilde_path.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/init_list_env.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/init_list_env.c

@@ -19,6 +19,9 @@ CMakeFiles/new_shell.dir/create_space_around.c.o: ../minishell.h
 CMakeFiles/new_shell.dir/display.c.o: ../display.c
 CMakeFiles/new_shell.dir/display.c.o: ../minishell.h
 
+CMakeFiles/new_shell.dir/double_quote.c.o: ../double_quote.c
+CMakeFiles/new_shell.dir/double_quote.c.o: ../minishell.h
+
 CMakeFiles/new_shell.dir/env.c.o: ../env.c
 CMakeFiles/new_shell.dir/env.c.o: ../minishell.h
 
@@ -78,6 +81,9 @@ CMakeFiles/new_shell.dir/get_next_line_utils.c.o: ../get_next_line_utils.c
 
 CMakeFiles/new_shell.dir/get_path_command.c.o: ../get_path_command.c
 CMakeFiles/new_shell.dir/get_path_command.c.o: ../minishell.h
+
+CMakeFiles/new_shell.dir/get_tilde_path.c.o: ../get_tilde_path.c
+CMakeFiles/new_shell.dir/get_tilde_path.c.o: ../minishell.h
 
 CMakeFiles/new_shell.dir/init_list_env.c.o: ../init_list_env.c
 CMakeFiles/new_shell.dir/init_list_env.c.o: ../minishell.h

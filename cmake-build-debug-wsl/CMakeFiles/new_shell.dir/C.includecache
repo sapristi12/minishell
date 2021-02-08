@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/33652/Documents/Coding/new_shell/create_space_around.c
-minishell.h
-/mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
-
 /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 stdio.h
 -
@@ -35,4 +31,8 @@ signal.h
 -
 dirent.h
 -
+
+/mnt/c/Users/33652/Documents/Coding/new_shell/parsing_quotes.c
+minishell.h
+/mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 

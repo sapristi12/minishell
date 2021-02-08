@@ -3,6 +3,7 @@
 
 # define S_QUOTE 39
 # define D_QUOTE 34
+# define SLASH 92
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -130,5 +131,6 @@ int			free_end_pipe(t_cmd *cmd, int ret);
 int			pipe_first_command(t_cmd *cmd, t_list **envs);
 char		*normal_quote(char *str, t_list **envs);
 int			free_error_redir(t_cmd *cmd, t_list **envs, int ret);
+char		*get_tilde_path(char *str, t_list **envs);
 
 #endif

@@ -86,9 +86,8 @@ int     parsing_command(t_cmd *cmd, t_list **envs)
 int     parsing_line(char *command, t_list **envs)
 {
     t_cmd   cmd;
-	int 	ret;
+    int 	ret;
 
-	ret = 0;
     init_struct_cmd(&cmd);
 	if (!(command = create_space_around(command)))
         return (errno_parsing_line(-2));
@@ -98,7 +97,7 @@ int     parsing_line(char *command, t_list **envs)
         return (errno_parsing_line(free_i(&cmd, -4)));
 	if (!parsing_pipe(&cmd))
         return (errno_parsing_line(free_i(&cmd, -5)));
-	if (!(parsing_quotes(&cmd, envs))) //do the return
+	if (!(parsing_quotes(&cmd, envs)))
 		return (0);
 	if ((ret = parsing_command(&cmd, envs)) <= 0)
 		return (free_8(command, envs, &cmd, ret));

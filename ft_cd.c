@@ -1,7 +1,5 @@
 #include "minishell.h"
 
-#include "minishell.h"
-
 int		cd_home(t_list **envs)
 {
 	char	*home;
@@ -27,10 +25,8 @@ int		cd_old(t_list **envs)
 	int		ret;
 
 	ret = 0;
-	printf("gonna sup OLD\n");
 	if (!(old = ft_strdup(get_env(*envs, "OLDPWD"))))
 		return (-1);
-	printf("END gonna sup OLD\n");
 	getcwd(buffer, PATH_MAX);
 	ret = chdir(old);
 	if (ret != -1)
@@ -48,11 +44,8 @@ int		cd_basic(char **words, t_list **envs)
 	char	*pwd;
 	char	buffer[PATH_MAX];
 
-	ret = 0;
-	printf("before dup basic\n");
 	if (!(pwd = ft_strdup(get_env(*envs, "PWD"))))
 		return (-1);
-	printf("after dup basic\n");
 	ret = chdir(words[1]);
 	if (ret != -1)
 	{
@@ -87,13 +80,10 @@ int 	ft_cd(t_cmd *cmd, t_list **envs)
 	int 	i;
 
 	i = 0;
-	ret = 0;
 	while (cmd->cmds[i] && !is_symbol(cmd->cmds[i]))
 		i++;
 	if (i != 2)
 		return (0);
-	if (!ft_strcmp(cmd->cmds[1], "~"))
-		ret = cd_home(envs);
 	else if (!ft_strcmp(cmd->cmds[1], "-"))
 		ret = cd_old(envs);
 	else if (!ft_strcmp(cmd->cmds[1], ".."))

@@ -81,7 +81,9 @@ static int 	move_normal_pointer(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] == S_QUOTE)
+		if ((i == 0) || (i > 0 &&  str[i] == SLASH && str[i + 1]))
+			i++;
+		else if (str[i] == S_QUOTE)
 			break;
 		else if (str[i] == D_QUOTE && (i > 1 && (str[i - 1] == '\\' && str[i - 2] == '\\')))
 			break;
@@ -109,7 +111,7 @@ static int 	move_pointer(char *str, char tmp)
 	}
 	if (tmp == 'E')
 		return (i);
-	return (i + 1); //+1 car on faisait str++ apres le strjoin dans la fonction qui appelle celle ci
+	return (i + 1);
 }
 
 char 	*create_new_str(char *str, t_list **envs)
@@ -179,6 +181,7 @@ int 	parsing_quotes(t_cmd *cmd, t_list **envs)
 			ft_putstr_fd("ERROR IN NEW STRING \n", 1);
 			return (0);
 		}
+		printf("[%s]\n", cmd->cmds[i]);
 		i++;
 	}
 	return (1);

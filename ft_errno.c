@@ -9,7 +9,7 @@ static int		errno_index(int index)
 	if (index == -3)
 		ft_putstr_fd("Error: parsing line malloc split failed\n", 1);
 	if (index == -4)
-		ft_putstr_fd("Error: parsing line separators detected\n", 1);
+		ft_putstr_fd("Error: tokens invalid\n", 1);
 	if (index == -5)
 		ft_putstr_fd("Error: parsing line error pipes\n", 1);
 	if (index == -6)
