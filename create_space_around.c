@@ -23,6 +23,8 @@ int		get_size(char *str)
 	{
 		if (*str == 34)
 			in_quote = -in_quote;
+		if (*str == SLASH && (*(str + 1) == '|'))
+			str++;
 		else if (*str == '>' && in_quote == -1)
 			j += move_pointer(&str, '>');
 		else if (*str == '|' && in_quote == -1)
@@ -69,6 +71,15 @@ static int		replace(char **line, int j, char c, int len)
 	return (len);
 }
 
+int 			escape_token(char **line, int j, char c, char **str)
+{
+	line[0][j] = SLASH;
+	line[0][j + 1] = c;
+	str[0]++;
+	str[0]++;
+	return (2);
+}
+
 char			*create_space_around(char *str)
 {
 	t_space s;
@@ -77,23 +88,27 @@ char			*create_space_around(char *str)
 		return (NULL);
 	while (*str)
 	{
-		if (s.in_quote == -1 && (*str == D_QUOTE || *str == S_QUOTE))
-		{
-			s.tmp = *str;
-			s.in_quote = 1;
-		}
-		else if (s.in_quote == 1)
-		{
-			if (*str == s.tmp)
-				s.in_quote = -(s.in_quote);
-		}
-		if ((*str == '>') && s.in_quote == -1)
-			s.j += replace(&(s.dest), s.j, '>', get_len(&str, *str));
-		else if ((*str == '|' || *str == '<') && s.in_quote == -1)
-			s.j += replace(&(s.dest), s.j, *str, get_len(&str, *str));
+		if (*str == SLASH && (is_token_char(*(str + 1))))
+			s.j += escape_token(&(s.dest), s.j, *(str + 1), &str);
 		else
-			s.dest[s.j++] = *str;
-		str++;
+		{
+			if (s.in_quote == -1 && (*str == D_QUOTE || *str == S_QUOTE))
+			{
+				s.tmp = *str;
+				s.in_quote = 1;
+			} else if (s.in_quote == 1)
+			{
+				if (*str == s.tmp)
+					s.in_quote = -(s.in_quote);
+			}
+			if ((*str == '>') && s.in_quote == -1)
+				s.j += replace(&(s.dest), s.j, '>', get_len(&str, *str));
+			else if ((*str == '|' || *str == '<') && s.in_quote == -1)
+				s.j += replace(&(s.dest), s.j, *str, get_len(&str, *str));
+			else
+				s.dest[s.j++] = *str;
+			str++;
+		}
 	}
 	return (s.dest);
 }

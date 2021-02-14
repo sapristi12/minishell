@@ -28,6 +28,9 @@ CMakeFiles/new_shell.dir/env.c.o: ../minishell.h
 CMakeFiles/new_shell.dir/exec_cmd.c.o: ../exec_cmd.c
 CMakeFiles/new_shell.dir/exec_cmd.c.o: ../minishell.h
 
+CMakeFiles/new_shell.dir/export_create_env.c.o: ../export_create_env.c
+CMakeFiles/new_shell.dir/export_create_env.c.o: ../minishell.h
+
 CMakeFiles/new_shell.dir/forking.c.o: ../forking.c
 CMakeFiles/new_shell.dir/forking.c.o: ../minishell.h
 
@@ -40,14 +43,26 @@ CMakeFiles/new_shell.dir/free_parsing_line.c.o: ../minishell.h
 CMakeFiles/new_shell.dir/free_return.c.o: ../free_return.c
 CMakeFiles/new_shell.dir/free_return.c.o: ../minishell.h
 
+CMakeFiles/new_shell.dir/ft_atoi.c.o: ../ft_atoi.c
+CMakeFiles/new_shell.dir/ft_atoi.c.o: ../minishell.h
+
 CMakeFiles/new_shell.dir/ft_cd.c.o: ../ft_cd.c
 CMakeFiles/new_shell.dir/ft_cd.c.o: ../minishell.h
+
+CMakeFiles/new_shell.dir/ft_echo.c.o: ../ft_echo.c
+CMakeFiles/new_shell.dir/ft_echo.c.o: ../minishell.h
 
 CMakeFiles/new_shell.dir/ft_env.c.o: ../ft_env.c
 CMakeFiles/new_shell.dir/ft_env.c.o: ../minishell.h
 
 CMakeFiles/new_shell.dir/ft_errno.c.o: ../ft_errno.c
 CMakeFiles/new_shell.dir/ft_errno.c.o: ../minishell.h
+
+CMakeFiles/new_shell.dir/ft_exit.c.o: ../ft_exit.c
+CMakeFiles/new_shell.dir/ft_exit.c.o: ../minishell.h
+
+CMakeFiles/new_shell.dir/ft_export.c.o: ../ft_export.c
+CMakeFiles/new_shell.dir/ft_export.c.o: ../minishell.h
 
 CMakeFiles/new_shell.dir/ft_list.c.o: ../ft_list.c
 CMakeFiles/new_shell.dir/ft_list.c.o: ../minishell.h
@@ -97,6 +112,12 @@ CMakeFiles/new_shell.dir/init_struct.c.o: ../minishell.h
 CMakeFiles/new_shell.dir/is_builtin.c.o: ../is_builtin.c
 CMakeFiles/new_shell.dir/is_builtin.c.o: ../minishell.h
 
+CMakeFiles/new_shell.dir/is_there_char.c.o: ../is_there_char.c
+CMakeFiles/new_shell.dir/is_there_char.c.o: ../minishell.h
+
+CMakeFiles/new_shell.dir/is_token.c.o: ../is_token.c
+CMakeFiles/new_shell.dir/is_token.c.o: ../minishell.h
+
 CMakeFiles/new_shell.dir/list_to_array.c.o: ../list_to_array.c
 CMakeFiles/new_shell.dir/list_to_array.c.o: ../minishell.h
 
@@ -133,6 +154,12 @@ CMakeFiles/new_shell.dir/redir_save.c.o: ../redir_save.c
 CMakeFiles/new_shell.dir/several_string.c.o: ../minishell.h
 CMakeFiles/new_shell.dir/several_string.c.o: ../several_string.c
 
+CMakeFiles/new_shell.dir/signal_handle.c.o: ../minishell.h
+CMakeFiles/new_shell.dir/signal_handle.c.o: ../signal_handle.c
+
 CMakeFiles/new_shell.dir/sort_builtin.c.o: ../minishell.h
 CMakeFiles/new_shell.dir/sort_builtin.c.o: ../sort_builtin.c
+
+CMakeFiles/new_shell.dir/sort_list.c.o: ../minishell.h
+CMakeFiles/new_shell.dir/sort_list.c.o: ../sort_list.c
 

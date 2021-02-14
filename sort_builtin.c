@@ -10,5 +10,11 @@ int 	sort_builtin(t_cmd *cmd, t_list **envs)
 		ft_env(cmd, envs);
 	if (!(ft_strcmp(cmd->cmds[0], "unset")))
 		ft_unset(cmd, envs);
+	if (!(ft_strcmp(cmd->cmds[0], "echo")))
+		ft_echo(cmd);
+	if (!(ft_strcmp(cmd->cmds[0], "exit")))
+		ft_exit(cmd, envs);
+	if (!(ft_strcmp(cmd->cmds[0], "export")))
+		ft_export(cmd, *envs);
 	return (1);
 }

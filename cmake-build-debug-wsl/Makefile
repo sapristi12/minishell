@@ -366,6 +366,33 @@ exec_cmd.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/exec_cmd.c.s
 .PHONY : exec_cmd.c.s
 
+export_create_env.o: export_create_env.c.o
+
+.PHONY : export_create_env.o
+
+# target to build an object file
+export_create_env.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/export_create_env.c.o
+.PHONY : export_create_env.c.o
+
+export_create_env.i: export_create_env.c.i
+
+.PHONY : export_create_env.i
+
+# target to preprocess a source file
+export_create_env.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/export_create_env.c.i
+.PHONY : export_create_env.c.i
+
+export_create_env.s: export_create_env.c.s
+
+.PHONY : export_create_env.s
+
+# target to generate assembly for a file
+export_create_env.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/export_create_env.c.s
+.PHONY : export_create_env.c.s
+
 forking.o: forking.c.o
 
 .PHONY : forking.o
@@ -474,6 +501,33 @@ free_return.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_return.c.s
 .PHONY : free_return.c.s
 
+ft_atoi.o: ft_atoi.c.o
+
+.PHONY : ft_atoi.o
+
+# target to build an object file
+ft_atoi.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_atoi.c.o
+.PHONY : ft_atoi.c.o
+
+ft_atoi.i: ft_atoi.c.i
+
+.PHONY : ft_atoi.i
+
+# target to preprocess a source file
+ft_atoi.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_atoi.c.i
+.PHONY : ft_atoi.c.i
+
+ft_atoi.s: ft_atoi.c.s
+
+.PHONY : ft_atoi.s
+
+# target to generate assembly for a file
+ft_atoi.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_atoi.c.s
+.PHONY : ft_atoi.c.s
+
 ft_cd.o: ft_cd.c.o
 
 .PHONY : ft_cd.o
@@ -500,6 +554,33 @@ ft_cd.s: ft_cd.c.s
 ft_cd.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_cd.c.s
 .PHONY : ft_cd.c.s
+
+ft_echo.o: ft_echo.c.o
+
+.PHONY : ft_echo.o
+
+# target to build an object file
+ft_echo.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_echo.c.o
+.PHONY : ft_echo.c.o
+
+ft_echo.i: ft_echo.c.i
+
+.PHONY : ft_echo.i
+
+# target to preprocess a source file
+ft_echo.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_echo.c.i
+.PHONY : ft_echo.c.i
+
+ft_echo.s: ft_echo.c.s
+
+.PHONY : ft_echo.s
+
+# target to generate assembly for a file
+ft_echo.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_echo.c.s
+.PHONY : ft_echo.c.s
 
 ft_env.o: ft_env.c.o
 
@@ -554,6 +635,60 @@ ft_errno.s: ft_errno.c.s
 ft_errno.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_errno.c.s
 .PHONY : ft_errno.c.s
+
+ft_exit.o: ft_exit.c.o
+
+.PHONY : ft_exit.o
+
+# target to build an object file
+ft_exit.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_exit.c.o
+.PHONY : ft_exit.c.o
+
+ft_exit.i: ft_exit.c.i
+
+.PHONY : ft_exit.i
+
+# target to preprocess a source file
+ft_exit.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_exit.c.i
+.PHONY : ft_exit.c.i
+
+ft_exit.s: ft_exit.c.s
+
+.PHONY : ft_exit.s
+
+# target to generate assembly for a file
+ft_exit.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_exit.c.s
+.PHONY : ft_exit.c.s
+
+ft_export.o: ft_export.c.o
+
+.PHONY : ft_export.o
+
+# target to build an object file
+ft_export.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_export.c.o
+.PHONY : ft_export.c.o
+
+ft_export.i: ft_export.c.i
+
+.PHONY : ft_export.i
+
+# target to preprocess a source file
+ft_export.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_export.c.i
+.PHONY : ft_export.c.i
+
+ft_export.s: ft_export.c.s
+
+.PHONY : ft_export.s
+
+# target to generate assembly for a file
+ft_export.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_export.c.s
+.PHONY : ft_export.c.s
 
 ft_list.o: ft_list.c.o
 
@@ -987,6 +1122,60 @@ is_builtin.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_builtin.c.s
 .PHONY : is_builtin.c.s
 
+is_there_char.o: is_there_char.c.o
+
+.PHONY : is_there_char.o
+
+# target to build an object file
+is_there_char.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_there_char.c.o
+.PHONY : is_there_char.c.o
+
+is_there_char.i: is_there_char.c.i
+
+.PHONY : is_there_char.i
+
+# target to preprocess a source file
+is_there_char.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_there_char.c.i
+.PHONY : is_there_char.c.i
+
+is_there_char.s: is_there_char.c.s
+
+.PHONY : is_there_char.s
+
+# target to generate assembly for a file
+is_there_char.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_there_char.c.s
+.PHONY : is_there_char.c.s
+
+is_token.o: is_token.c.o
+
+.PHONY : is_token.o
+
+# target to build an object file
+is_token.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_token.c.o
+.PHONY : is_token.c.o
+
+is_token.i: is_token.c.i
+
+.PHONY : is_token.i
+
+# target to preprocess a source file
+is_token.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_token.c.i
+.PHONY : is_token.c.i
+
+is_token.s: is_token.c.s
+
+.PHONY : is_token.s
+
+# target to generate assembly for a file
+is_token.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_token.c.s
+.PHONY : is_token.c.s
+
 list_to_array.o: list_to_array.c.o
 
 .PHONY : list_to_array.o
@@ -1311,6 +1500,33 @@ several_string.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/several_string.c.s
 .PHONY : several_string.c.s
 
+signal_handle.o: signal_handle.c.o
+
+.PHONY : signal_handle.o
+
+# target to build an object file
+signal_handle.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/signal_handle.c.o
+.PHONY : signal_handle.c.o
+
+signal_handle.i: signal_handle.c.i
+
+.PHONY : signal_handle.i
+
+# target to preprocess a source file
+signal_handle.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/signal_handle.c.i
+.PHONY : signal_handle.c.i
+
+signal_handle.s: signal_handle.c.s
+
+.PHONY : signal_handle.s
+
+# target to generate assembly for a file
+signal_handle.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/signal_handle.c.s
+.PHONY : signal_handle.c.s
+
 sort_builtin.o: sort_builtin.c.o
 
 .PHONY : sort_builtin.o
@@ -1337,6 +1553,33 @@ sort_builtin.s: sort_builtin.c.s
 sort_builtin.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/sort_builtin.c.s
 .PHONY : sort_builtin.c.s
+
+sort_list.o: sort_list.c.o
+
+.PHONY : sort_list.o
+
+# target to build an object file
+sort_list.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/sort_list.c.o
+.PHONY : sort_list.c.o
+
+sort_list.i: sort_list.c.i
+
+.PHONY : sort_list.i
+
+# target to preprocess a source file
+sort_list.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/sort_list.c.i
+.PHONY : sort_list.c.i
+
+sort_list.s: sort_list.c.s
+
+.PHONY : sort_list.s
+
+# target to generate assembly for a file
+sort_list.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/sort_list.c.s
+.PHONY : sort_list.c.s
 
 # Help Target
 help:
@@ -1374,6 +1617,9 @@ help:
 	@echo "... exec_cmd.o"
 	@echo "... exec_cmd.i"
 	@echo "... exec_cmd.s"
+	@echo "... export_create_env.o"
+	@echo "... export_create_env.i"
+	@echo "... export_create_env.s"
 	@echo "... forking.o"
 	@echo "... forking.i"
 	@echo "... forking.s"
@@ -1386,15 +1632,27 @@ help:
 	@echo "... free_return.o"
 	@echo "... free_return.i"
 	@echo "... free_return.s"
+	@echo "... ft_atoi.o"
+	@echo "... ft_atoi.i"
+	@echo "... ft_atoi.s"
 	@echo "... ft_cd.o"
 	@echo "... ft_cd.i"
 	@echo "... ft_cd.s"
+	@echo "... ft_echo.o"
+	@echo "... ft_echo.i"
+	@echo "... ft_echo.s"
 	@echo "... ft_env.o"
 	@echo "... ft_env.i"
 	@echo "... ft_env.s"
 	@echo "... ft_errno.o"
 	@echo "... ft_errno.i"
 	@echo "... ft_errno.s"
+	@echo "... ft_exit.o"
+	@echo "... ft_exit.i"
+	@echo "... ft_exit.s"
+	@echo "... ft_export.o"
+	@echo "... ft_export.i"
+	@echo "... ft_export.s"
 	@echo "... ft_list.o"
 	@echo "... ft_list.i"
 	@echo "... ft_list.s"
@@ -1443,6 +1701,12 @@ help:
 	@echo "... is_builtin.o"
 	@echo "... is_builtin.i"
 	@echo "... is_builtin.s"
+	@echo "... is_there_char.o"
+	@echo "... is_there_char.i"
+	@echo "... is_there_char.s"
+	@echo "... is_token.o"
+	@echo "... is_token.i"
+	@echo "... is_token.s"
 	@echo "... list_to_array.o"
 	@echo "... list_to_array.i"
 	@echo "... list_to_array.s"
@@ -1479,9 +1743,15 @@ help:
 	@echo "... several_string.o"
 	@echo "... several_string.i"
 	@echo "... several_string.s"
+	@echo "... signal_handle.o"
+	@echo "... signal_handle.i"
+	@echo "... signal_handle.s"
 	@echo "... sort_builtin.o"
 	@echo "... sort_builtin.i"
 	@echo "... sort_builtin.s"
+	@echo "... sort_list.o"
+	@echo "... sort_list.i"
+	@echo "... sort_list.s"
 .PHONY : help
 
 

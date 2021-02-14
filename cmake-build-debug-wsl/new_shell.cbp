@@ -105,6 +105,9 @@
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/exec_cmd.c">
 			<Option target="new_shell"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/export_create_env.c">
+			<Option target="new_shell"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/forking.c">
 			<Option target="new_shell"/>
 		</Unit>
@@ -117,13 +120,25 @@
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/free_return.c">
 			<Option target="new_shell"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_atoi.c">
+			<Option target="new_shell"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_cd.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_echo.c">
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_env.c">
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_errno.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_exit.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_export.c">
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/ft_list.c">
@@ -177,6 +192,12 @@
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/is_builtin.c">
 			<Option target="new_shell"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/is_there_char.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/is_token.c">
+			<Option target="new_shell"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/list_to_array.c">
 			<Option target="new_shell"/>
 		</Unit>
@@ -216,7 +237,13 @@
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/several_string.c">
 			<Option target="new_shell"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/signal_handle.c">
+			<Option target="new_shell"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/sort_builtin.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/sort_list.c">
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/CMakeLists.txt">

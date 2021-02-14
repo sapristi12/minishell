@@ -53,6 +53,7 @@ struct                  s_cmd
     char    **cmds;
     int 	mystdout;
     int 	mystdin;
+    int 	exit_status[2];
 };
 typedef struct s_cmd    t_cmd;
 
@@ -68,7 +69,7 @@ typedef struct s_space	t_space;
 
 int     	get_next_line(int fd, char **line, int option);
 int     	ft_strlen(char *str);
-int     	parsing_line(char *cmd, t_list **envs);
+int     	parsing_line(char *prompt, t_list **envs, t_cmd *cmd);
 char    	**new_split(char *str, char c);
 char    	*create_space_around(char *str);
 int	 		ft_strcmp(char *s1, char *s2);
@@ -132,5 +133,16 @@ int			pipe_first_command(t_cmd *cmd, t_list **envs);
 char		*normal_quote(char *str, t_list **envs);
 int			free_error_redir(t_cmd *cmd, t_list **envs, int ret);
 char		*get_tilde_path(char *str, t_list **envs);
+int			ft_echo(t_cmd *cmd);
+int 		ft_exit(t_cmd *cmd, t_list **envs);
+int			is_token_string(char *str);
+int			is_token_char(char c);
+void		signal_handle(void);
+int			ft_atoi(char *str);
+t_list		*sort_list(t_list *lst, int (*cmp)(char *, char *));
+int			ft_export(t_cmd *cmd, t_list *envs);
+void		ft_affexport(t_list **lst);
+char 		*create_env(char *str);
+int		 	is_there_char(char *str, char c);
 
 #endif

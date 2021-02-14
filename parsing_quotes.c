@@ -36,20 +36,20 @@ int 	is_even_quote(char *str)
 	in_quote = -1;
 	while (str[i])
 	{
-		if (str[i] == '\\' && (str[i + 1] == '\\' || str[i + 1] == S_QUOTE))
+		if (str[i] == SLASH && (str[i + 1] == SLASH || str[i + 1] == S_QUOTE))
 		{
 			i += 2;
 		}
 		if (in_quote == 1)
 		{
-			if ((str[i] == tmp && tmp == S_QUOTE) || (((str[i - 1] != '\\') || (str[i - 1] == '\\' && str[i - 2] == '\\')) && (tmp == D_QUOTE && str[i] == tmp)))
+			if ((str[i] == tmp && tmp == S_QUOTE) || (((str[i - 1] != SLASH) || (str[i - 1] == SLASH && str[i - 2] == SLASH)) && (tmp == D_QUOTE && str[i] == tmp)))
 				in_quote = -in_quote;
 		}
 		else if (in_quote == -1)
 		{
 			if (str[i] == S_QUOTE || str[i] == D_QUOTE)
 			{
-				if (str[i] == S_QUOTE || (i > 0 && (str[i] == D_QUOTE && str[i - 1] != '\\') || (i == 0 && str[i] == D_QUOTE)))
+				if (str[i] == S_QUOTE || (i > 0 && (str[i] == D_QUOTE && str[i - 1] != SLASH) || (i == 0 && str[i] == D_QUOTE)))
 				{
 					tmp = str[i];
 					in_quote = -in_quote;
@@ -85,9 +85,9 @@ static int 	move_normal_pointer(char *str)
 			i++;
 		else if (str[i] == S_QUOTE)
 			break;
-		else if (str[i] == D_QUOTE && (i > 1 && (str[i - 1] == '\\' && str[i - 2] == '\\')))
+		else if (str[i] == D_QUOTE && (i > 1 && (str[i - 1] == SLASH && str[i - 2] == SLASH)))
 			break;
-		else if (str[i] == D_QUOTE && (i == 0 || (i > 0 && str[i - 1] != '\\')))
+		else if (str[i] == D_QUOTE && (i == 0 || (i > 0 && str[i - 1] != SLASH)))
 			break;
 		i++;
 	}
@@ -103,7 +103,7 @@ static int 	move_pointer(char *str, char tmp)
 	len = 0;
 	while (str[i])
 	{
-		if (i > 0 && (str[i - 1] != '\\' && str[i] == D_QUOTE))
+		if (i > 0 && (str[i - 1] != SLASH && str[i] == D_QUOTE))
 			break;
 		if (str[i] == tmp && tmp == S_QUOTE)
 			break;
@@ -181,8 +181,15 @@ int 	parsing_quotes(t_cmd *cmd, t_list **envs)
 			ft_putstr_fd("ERROR IN NEW STRING \n", 1);
 			return (0);
 		}
-		printf("[%s]\n", cmd->cmds[i]);
 		i++;
+	}
+	i = 0;
+	while (cmd->cmds[i + 1])
+		i++;
+	if (is_token_string(cmd->cmds[i]))
+	{
+		ft_putstr_fd("ERROR PARSING TOKEN\n", 1);
+		return (0);
 	}
 	return (1);
 }

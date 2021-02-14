@@ -1,5 +1,19 @@
 #include "minishell.h"
 
+void			ft_affexport(t_list **lst)
+{
+	t_list *tmp;
+
+	tmp = *lst;
+	while (tmp != NULL)
+	{
+		ft_putstr_fd("declare -x ", 1);
+		ft_putstr_fd(tmp->content, 1);
+		ft_putstr_fd("\n", 1);
+		tmp = tmp->next;
+	}
+}
+
 void			ft_afflist(t_list **lst)
 {
 	t_list *tmp;

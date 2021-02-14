@@ -28,6 +28,9 @@ CMakeFiles/new_shell.dir/env.c.o
 CMakeFiles/new_shell.dir/exec_cmd.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/exec_cmd.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/export_create_env.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/export_create_env.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/forking.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/forking.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
@@ -40,14 +43,26 @@ CMakeFiles/new_shell.dir/free_parsing_line.c.o
 CMakeFiles/new_shell.dir/free_return.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/free_return.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/ft_atoi.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/ft_atoi.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/ft_cd.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/ft_cd.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/ft_echo.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/ft_echo.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/ft_env.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/ft_env.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/ft_errno.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/ft_errno.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/ft_exit.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/ft_exit.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/ft_export.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/ft_export.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/ft_list.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/ft_list.c
@@ -97,6 +112,12 @@ CMakeFiles/new_shell.dir/init_struct.c.o
 CMakeFiles/new_shell.dir/is_builtin.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/is_builtin.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/is_there_char.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/is_there_char.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/is_token.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/is_token.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/list_to_array.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/list_to_array.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
@@ -133,6 +154,12 @@ CMakeFiles/new_shell.dir/redir_save.c.o
 CMakeFiles/new_shell.dir/several_string.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
  /mnt/c/Users/33652/Documents/Coding/new_shell/several_string.c
+CMakeFiles/new_shell.dir/signal_handle.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+ /mnt/c/Users/33652/Documents/Coding/new_shell/signal_handle.c
 CMakeFiles/new_shell.dir/sort_builtin.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
  /mnt/c/Users/33652/Documents/Coding/new_shell/sort_builtin.c
+CMakeFiles/new_shell.dir/sort_list.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+ /mnt/c/Users/33652/Documents/Coding/new_shell/sort_list.c

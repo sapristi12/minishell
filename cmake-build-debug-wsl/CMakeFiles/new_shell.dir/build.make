@@ -642,6 +642,123 @@ CMakeFiles/new_shell.dir/get_tilde_path.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_shell.dir/get_tilde_path.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/new_shell/get_tilde_path.c -o CMakeFiles/new_shell.dir/get_tilde_path.c.s
 
+CMakeFiles/new_shell.dir/ft_echo.c.o: CMakeFiles/new_shell.dir/flags.make
+CMakeFiles/new_shell.dir/ft_echo.c.o: ../ft_echo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/new_shell.dir/ft_echo.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/ft_echo.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/ft_echo.c
+
+CMakeFiles/new_shell.dir/ft_echo.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_shell.dir/ft_echo.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/33652/Documents/Coding/new_shell/ft_echo.c > CMakeFiles/new_shell.dir/ft_echo.c.i
+
+CMakeFiles/new_shell.dir/ft_echo.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_shell.dir/ft_echo.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/new_shell/ft_echo.c -o CMakeFiles/new_shell.dir/ft_echo.c.s
+
+CMakeFiles/new_shell.dir/ft_exit.c.o: CMakeFiles/new_shell.dir/flags.make
+CMakeFiles/new_shell.dir/ft_exit.c.o: ../ft_exit.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/new_shell.dir/ft_exit.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/ft_exit.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/ft_exit.c
+
+CMakeFiles/new_shell.dir/ft_exit.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_shell.dir/ft_exit.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/33652/Documents/Coding/new_shell/ft_exit.c > CMakeFiles/new_shell.dir/ft_exit.c.i
+
+CMakeFiles/new_shell.dir/ft_exit.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_shell.dir/ft_exit.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/new_shell/ft_exit.c -o CMakeFiles/new_shell.dir/ft_exit.c.s
+
+CMakeFiles/new_shell.dir/is_token.c.o: CMakeFiles/new_shell.dir/flags.make
+CMakeFiles/new_shell.dir/is_token.c.o: ../is_token.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/new_shell.dir/is_token.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/is_token.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/is_token.c
+
+CMakeFiles/new_shell.dir/is_token.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_shell.dir/is_token.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/33652/Documents/Coding/new_shell/is_token.c > CMakeFiles/new_shell.dir/is_token.c.i
+
+CMakeFiles/new_shell.dir/is_token.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_shell.dir/is_token.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/new_shell/is_token.c -o CMakeFiles/new_shell.dir/is_token.c.s
+
+CMakeFiles/new_shell.dir/signal_handle.c.o: CMakeFiles/new_shell.dir/flags.make
+CMakeFiles/new_shell.dir/signal_handle.c.o: ../signal_handle.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/new_shell.dir/signal_handle.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/signal_handle.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/signal_handle.c
+
+CMakeFiles/new_shell.dir/signal_handle.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_shell.dir/signal_handle.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/33652/Documents/Coding/new_shell/signal_handle.c > CMakeFiles/new_shell.dir/signal_handle.c.i
+
+CMakeFiles/new_shell.dir/signal_handle.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_shell.dir/signal_handle.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/new_shell/signal_handle.c -o CMakeFiles/new_shell.dir/signal_handle.c.s
+
+CMakeFiles/new_shell.dir/ft_atoi.c.o: CMakeFiles/new_shell.dir/flags.make
+CMakeFiles/new_shell.dir/ft_atoi.c.o: ../ft_atoi.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/new_shell.dir/ft_atoi.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/ft_atoi.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/ft_atoi.c
+
+CMakeFiles/new_shell.dir/ft_atoi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_shell.dir/ft_atoi.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/33652/Documents/Coding/new_shell/ft_atoi.c > CMakeFiles/new_shell.dir/ft_atoi.c.i
+
+CMakeFiles/new_shell.dir/ft_atoi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_shell.dir/ft_atoi.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/new_shell/ft_atoi.c -o CMakeFiles/new_shell.dir/ft_atoi.c.s
+
+CMakeFiles/new_shell.dir/sort_list.c.o: CMakeFiles/new_shell.dir/flags.make
+CMakeFiles/new_shell.dir/sort_list.c.o: ../sort_list.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/new_shell.dir/sort_list.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/sort_list.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/sort_list.c
+
+CMakeFiles/new_shell.dir/sort_list.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_shell.dir/sort_list.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/33652/Documents/Coding/new_shell/sort_list.c > CMakeFiles/new_shell.dir/sort_list.c.i
+
+CMakeFiles/new_shell.dir/sort_list.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_shell.dir/sort_list.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/new_shell/sort_list.c -o CMakeFiles/new_shell.dir/sort_list.c.s
+
+CMakeFiles/new_shell.dir/ft_export.c.o: CMakeFiles/new_shell.dir/flags.make
+CMakeFiles/new_shell.dir/ft_export.c.o: ../ft_export.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/new_shell.dir/ft_export.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/ft_export.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/ft_export.c
+
+CMakeFiles/new_shell.dir/ft_export.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_shell.dir/ft_export.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/33652/Documents/Coding/new_shell/ft_export.c > CMakeFiles/new_shell.dir/ft_export.c.i
+
+CMakeFiles/new_shell.dir/ft_export.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_shell.dir/ft_export.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/new_shell/ft_export.c -o CMakeFiles/new_shell.dir/ft_export.c.s
+
+CMakeFiles/new_shell.dir/export_create_env.c.o: CMakeFiles/new_shell.dir/flags.make
+CMakeFiles/new_shell.dir/export_create_env.c.o: ../export_create_env.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/new_shell.dir/export_create_env.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/export_create_env.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/export_create_env.c
+
+CMakeFiles/new_shell.dir/export_create_env.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_shell.dir/export_create_env.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/33652/Documents/Coding/new_shell/export_create_env.c > CMakeFiles/new_shell.dir/export_create_env.c.i
+
+CMakeFiles/new_shell.dir/export_create_env.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_shell.dir/export_create_env.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/new_shell/export_create_env.c -o CMakeFiles/new_shell.dir/export_create_env.c.s
+
+CMakeFiles/new_shell.dir/is_there_char.c.o: CMakeFiles/new_shell.dir/flags.make
+CMakeFiles/new_shell.dir/is_there_char.c.o: ../is_there_char.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/new_shell.dir/is_there_char.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/is_there_char.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/is_there_char.c
+
+CMakeFiles/new_shell.dir/is_there_char.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_shell.dir/is_there_char.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/33652/Documents/Coding/new_shell/is_there_char.c > CMakeFiles/new_shell.dir/is_there_char.c.i
+
+CMakeFiles/new_shell.dir/is_there_char.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_shell.dir/is_there_char.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/new_shell/is_there_char.c -o CMakeFiles/new_shell.dir/is_there_char.c.s
+
 # Object files for target new_shell
 new_shell_OBJECTS = \
 "CMakeFiles/new_shell.dir/check_first_command.c.o" \
@@ -688,7 +805,16 @@ new_shell_OBJECTS = \
 "CMakeFiles/new_shell.dir/list_to_array.c.o" \
 "CMakeFiles/new_shell.dir/free_error.c.o" \
 "CMakeFiles/new_shell.dir/double_quote.c.o" \
-"CMakeFiles/new_shell.dir/get_tilde_path.c.o"
+"CMakeFiles/new_shell.dir/get_tilde_path.c.o" \
+"CMakeFiles/new_shell.dir/ft_echo.c.o" \
+"CMakeFiles/new_shell.dir/ft_exit.c.o" \
+"CMakeFiles/new_shell.dir/is_token.c.o" \
+"CMakeFiles/new_shell.dir/signal_handle.c.o" \
+"CMakeFiles/new_shell.dir/ft_atoi.c.o" \
+"CMakeFiles/new_shell.dir/sort_list.c.o" \
+"CMakeFiles/new_shell.dir/ft_export.c.o" \
+"CMakeFiles/new_shell.dir/export_create_env.c.o" \
+"CMakeFiles/new_shell.dir/is_there_char.c.o"
 
 # External object files for target new_shell
 new_shell_EXTERNAL_OBJECTS =
@@ -738,9 +864,18 @@ new_shell: CMakeFiles/new_shell.dir/list_to_array.c.o
 new_shell: CMakeFiles/new_shell.dir/free_error.c.o
 new_shell: CMakeFiles/new_shell.dir/double_quote.c.o
 new_shell: CMakeFiles/new_shell.dir/get_tilde_path.c.o
+new_shell: CMakeFiles/new_shell.dir/ft_echo.c.o
+new_shell: CMakeFiles/new_shell.dir/ft_exit.c.o
+new_shell: CMakeFiles/new_shell.dir/is_token.c.o
+new_shell: CMakeFiles/new_shell.dir/signal_handle.c.o
+new_shell: CMakeFiles/new_shell.dir/ft_atoi.c.o
+new_shell: CMakeFiles/new_shell.dir/sort_list.c.o
+new_shell: CMakeFiles/new_shell.dir/ft_export.c.o
+new_shell: CMakeFiles/new_shell.dir/export_create_env.c.o
+new_shell: CMakeFiles/new_shell.dir/is_there_char.c.o
 new_shell: CMakeFiles/new_shell.dir/build.make
 new_shell: CMakeFiles/new_shell.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Linking C executable new_shell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Linking C executable new_shell"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/new_shell.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

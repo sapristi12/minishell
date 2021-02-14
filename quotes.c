@@ -23,7 +23,7 @@ char 	*normal_quote(char *str, t_list **envs)
 			while (str[i] && str[i] != D_QUOTE && str[i] != S_QUOTE)
 				i++;
 		}
-		else if (i < max && (str[i] == '\\' && str[i + 1]))
+		else if (i < max && (str[i] == SLASH && str[i + 1] && !is_token_char(str[i + 1])))
 		{
 			new = char_strjoin(new, str[i + 1]);
 			i += 2;
