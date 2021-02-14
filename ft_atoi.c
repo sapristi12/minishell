@@ -1,10 +1,10 @@
 #include "minishell.h"
 
-int 	ft_atoi(char *str)
+long long 	ft_llatoi(char *str)
 {
-	int i;
-	int ret;
-	int sign;
+	long long 	i;
+	long long 	ret;
+	long long	sign;
 
 	sign = 1;
 	i = 0;

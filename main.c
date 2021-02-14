@@ -37,7 +37,7 @@ int		main(int i, char **av, char **envp)
 	i = 0;
 	if (!(envs = init_list_env(envp)))
 		return (-1);
-	signal_handle();
+	//signal_handle();
 	display_prompt();
 	while (get_next_line(0, &prompt, 0))
 	{

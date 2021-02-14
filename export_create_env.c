@@ -6,6 +6,9 @@ int 	is_alpha(char c)
 		return (1);
 	if (c >= 'A' && c <= 'Z')
 		return (1);
+	if (c == '_')
+		return (1);
+	return (0);
 }
 
 int 	is_alnum(char c)
@@ -24,12 +27,9 @@ int 	is_valid_before(char *str)
 	i = 0;
 	while (str[i] && str[i] != '=')
 	{
-		if (i == 0 && is_alpha(str[i]))
-			i++;
-		else if (is_alnum(str[i]))
-			i++;
-		else
+		if (!((i == 0 && is_alpha(str[i])) || (is_alnum(str[i]))))
 			return (0);
+		i++;
 	}
 	return (1);
 }

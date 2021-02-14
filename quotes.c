@@ -15,7 +15,7 @@ char 	*normal_quote(char *str, t_list **envs)
 	new[0] = '\0';
 	while (str[i] && str[i] != D_QUOTE && str[i] != S_QUOTE)
 	{
-		if (str[i] == '/' || str[i] == '~')
+		if ((i > 0 && str[i] == '/' && str[i + 1] == '~') || str[i] == '~')
 		{
 			tmp = get_tilde_path(&str[i], envs);
 			new = ft_strjoin(new, tmp);
@@ -23,19 +23,18 @@ char 	*normal_quote(char *str, t_list **envs)
 			while (str[i] && str[i] != D_QUOTE && str[i] != S_QUOTE)
 				i++;
 		}
-		else if (i < max && (str[i] == SLASH && str[i + 1] && !is_token_char(str[i + 1])))
+		else if ((str[i] == SLASH && !is_token_char(str[i + 1])))
 		{
 			new = char_strjoin(new, str[i + 1]);
 			i += 2;
 		}
-		else if (str[i] == '$' && max > 0)
+		else if ((str[i] == '$' && max > 0) && (i < max && (str[i + 1])))
 		{
 			tmp = get_var_dollar(&str[i + 1], envs);
 			new = ft_strjoin(new, tmp);
 			free(tmp);
-			while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE)
+			while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE && str[i] != SLASH)
 				i++;
-			return (new);
 		}
 		else
 		{

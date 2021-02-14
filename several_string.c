@@ -5,17 +5,14 @@ int     several_string(char **cmds)
     int i;
     int j;
     int k;
-    char *strs[4];
+    char **strs;
 
-    strs[0] = ">";
-    strs[1] = ">>";
-    strs[2] = "<";
-    strs[3] = "|";
+    strs = (char *[5]){">", ">>", "<", "|", NULL};
     i = 0;
     while (cmds[i + 1])
     {
-        j = 0;
-        while (j < 4)
+        j = -1;
+        while (++j < 4)
         {
             if (!ft_strcmp(cmds[i], strs[j]))
             {
@@ -27,7 +24,6 @@ int     several_string(char **cmds)
                     k++;
                 }
             }
-            j++;
         }
         i++;
     }

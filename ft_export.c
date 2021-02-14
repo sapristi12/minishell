@@ -25,11 +25,12 @@ int 	export_list(t_list *envs)
 	return (1);
 }
 
-void 	error_identifier(char *str)
+int		error_identifier(char *str)
 {
 	ft_putstr_fd("minishell: export: ", 1);
 	ft_putstr_fd(str, 1);
 	ft_putstr_fd(": not a valid identifier\n", 1);
+	return (1);
 }
 
 int 	ft_export(t_cmd *cmd, t_list *envs)
@@ -42,6 +43,8 @@ int 	ft_export(t_cmd *cmd, t_list *envs)
 		i++;
 	if (i == 1)
 		return (export_list(envs));
+	if (i == 2 && !ft_strcmp(cmd->cmds[1], "%"))
+		return (error_identifier(cmd->cmds[1]));
 	i = 1;
 	while (cmd->cmds[i] && !is_symbol(cmd->cmds[i]))
 	{

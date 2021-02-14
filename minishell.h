@@ -138,7 +138,7 @@ int 		ft_exit(t_cmd *cmd, t_list **envs);
 int			is_token_string(char *str);
 int			is_token_char(char c);
 void		signal_handle(void);
-int			ft_atoi(char *str);
+long long 	ft_llatoi(char *str);
 t_list		*sort_list(t_list *lst, int (*cmp)(char *, char *));
 int			ft_export(t_cmd *cmd, t_list *envs);
 void		ft_affexport(t_list **lst);

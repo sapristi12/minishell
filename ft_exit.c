@@ -25,7 +25,7 @@ int 	ft_exit(t_cmd *cmd, t_list **envs)
 		cmd->exit_status[1] = 0;
 		return (1);
 	}
-	if (!(ft_atoi(cmd->cmds[1])))
+	if (!(ft_llatoi(cmd->cmds[1])))
 	{
 		if (only_zeros(cmd->cmds[1]))
 		{
@@ -44,6 +44,6 @@ int 	ft_exit(t_cmd *cmd, t_list **envs)
 		cmd->exit_status[1] = 1;
 		return (1);
 	}
-	cmd->exit_status[1] = ft_atoi(cmd->cmds[1]) % 256;
+	cmd->exit_status[1] = ft_llatoi(cmd->cmds[1]) % 256;
 	return (1);
 }

@@ -44,8 +44,9 @@ int		cd_basic(char **words, t_list **envs)
 	char	*pwd;
 	char	buffer[PATH_MAX];
 
-	if (!(pwd = ft_strdup(get_env(*envs, "PWD"))))
+	if (!(get_env(*envs, "PWD")))
 		return (-1);
+	pwd = ft_strdup(get_env(*envs, "PWD"));
 	ret = chdir(words[1]);
 	if (ret != -1)
 	{
@@ -92,7 +93,7 @@ int 	ft_cd(t_cmd *cmd, t_list **envs)
 		ret = cd_basic(cmd->cmds, envs);
 	if (ret == -1)
 	{
-		fprintf(stderr, "error : %s\n", strerror(errno));
+		perror("cd");
 		return (1);
 	}
 	return (1);
