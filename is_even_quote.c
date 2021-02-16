@@ -10,8 +10,11 @@ static int 	is_first_condition(char tmp, char now, char bef, char bef2)
 {
 	if ((now == tmp && tmp == S_QUOTE))
 		return (1);
-	if (((bef != SLASH) || (bef2 == SLASH)) && (tmp == D_QUOTE && now == tmp))
-		return (1);
+	if (tmp == D_QUOTE && now == tmp)
+	{
+		if ((bef != SLASH) || (bef2 == SLASH && bef == SLASH))
+			return (1);
+	}
 	return (0);
 }
 
@@ -36,7 +39,7 @@ int 		is_even_quote(char *str)
 	{
 		if (str[i] == SLASH && (str[i + 1] == SLASH || str[i + 1] == S_QUOTE || str[i + 1] == D_QUOTE))
 			i++;
-		if (in_quote == 1)
+		else if (in_quote == 1)
 		{
 			if (is_first_condition(tmp, str[i], str[i - 1], str[i - 2]))
 				in_quote = -in_quote;

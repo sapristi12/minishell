@@ -1,23 +1,5 @@
 #include "minishell.h"
 
-int		cd_home(t_list **envs)
-{
-	char	*home;
-	int		ret;
-
-	ret = 0;
-	if (!(home = ft_strdup(get_env(*envs, "HOME"))))
-		return (-1);
-	ret = chdir(home);
-	if (ret != -1)
-	{
-		set_env(envs, "OLDPWD", get_env(*envs, "PWD"));
-		set_env(envs, "PWD", home);
-		free(home);
-	}
-	return (ret);
-}
-
 int		cd_old(t_list **envs)
 {
 	char	*old = NULL;
@@ -65,12 +47,16 @@ int		cd_back(t_list **envs)
 	char	buffer[PATH_MAX];
 
 	pwd = get_env(*envs, "PWD");
-	ret = chdir("..");
-	if (ret != -1)
+	ret = 0;
+	if (pwd != NULL)
 	{
-		getcwd(buffer, PATH_MAX);
-		set_env(envs, "OLDPWD", pwd);
-		set_env(envs, "PWD", buffer);
+		ret = chdir("..");
+		if (ret != -1)
+		{
+			getcwd(buffer, PATH_MAX);
+			set_env(envs, "OLDPWD", pwd);
+			set_env(envs, "PWD", buffer);
+		}
 	}
 	return (ret);
 }
