@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-int				is_symbol(char *str)
+int		is_symbol(char *str)
 {
 	int		i;
 	char	**symbols;
@@ -16,29 +16,31 @@ int				is_symbol(char *str)
 	return (0);
 }
 
-char			**create_package(char **cmds, t_list **envs, int option)
+char	**free_return(char **dest)
+{
+	free(dest);
+	return (NULL);
+}
+
+char	**create_package(char **cmds, t_list **envs, int option)
 {
 	char	**dest;
-	int		size;
 	int		i;
 
 	i = 0;
-	size = 0;
-	while (cmds[size] && !is_symbol(cmds[size]))
-		size++;
-	dest = malloc(sizeof(char *) * (size + 1));
+	while (cmds[i] && !is_symbol(cmds[i]))
+		i++;
+	dest = malloc(sizeof(char *) * (i + 1));
 	if (!dest)
 		return (NULL);
-	dest[size] = NULL;
-	while (i < size)
+	dest[i] = NULL;
+	i = 0;
+	while (cmds[i] && !is_symbol(cmds[i]))
 	{
 		if (i == 0 && cmds[i][0] != '/' && !is_builtin(cmds[i]))
 		{
 			if (!(dest[i] = get_path_command(cmds[i], envs, 1)) && option != 0)
-			{
-				free(dest);
-				return (NULL);
-			}
+				return (free_return(dest));
 		}
 		else
 			dest[i] = ft_strdup(cmds[i]);

@@ -11,40 +11,41 @@ static int		is_escaped(char c)
 	return (0);
 }
 
+int 	double_dollar(char *str, char **new, t_list **envs)
+{
+	int		i;
+	char 	*copy;
+
+	i = 0;
+	copy = get_var_dollar(str, envs);
+	*new = ft_strjoin(*new, copy);
+	free(copy);
+	i = 0;
+	while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE && str[i] != ' ')
+		i++;
+	return (i);
+}
+
 char 	*double_quote(char *str, t_list **envs)
 {
 	char 	*new;
-	char 	*tmp;
 	int 	i;
 	int 	max;
 
 	max = ft_strlen(str) - 1;
 	i = 0;
-	new = malloc(1);
+	new = ft_strdup("");
 	if (!new)
 		return (NULL);
-	new[0] = '\0';
 	while (str[i] && str[i] != D_QUOTE)
 	{
 		if (i < max && str[i] == SLASH && is_escaped(str[i + 1]))
-		{
-			new = char_strjoin(new, str[i + 1]);
-			i += 2;
-		}
+			i += normal_slash(&new, str[i + 1]);
 		else if (str[i] == '$' && max > 0)
-		{
-			tmp = get_var_dollar(&str[i + 1], envs);
-			new = ft_strjoin(new, tmp);
-			free(tmp);
-			while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE)
-				i++;
-			return (new);
-		}
+			i += double_dollar(&str[i + 1], &new, envs);
 		else
-		{
 			new = char_strjoin(new, str[i]);
-			i++;
-		}
+		i++;
 	}
 	return (new);
 }

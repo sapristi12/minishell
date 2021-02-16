@@ -13,6 +13,9 @@ CMakeFiles/new_shell.dir/count_string.c.o: ../minishell.h
 CMakeFiles/new_shell.dir/create_args.c.o: ../create_args.c
 CMakeFiles/new_shell.dir/create_args.c.o: ../minishell.h
 
+CMakeFiles/new_shell.dir/create_new_str.c.o: ../create_new_str.c
+CMakeFiles/new_shell.dir/create_new_str.c.o: ../minishell.h
+
 CMakeFiles/new_shell.dir/create_space_around.c.o: ../create_space_around.c
 CMakeFiles/new_shell.dir/create_space_around.c.o: ../minishell.h
 
@@ -100,8 +103,14 @@ CMakeFiles/new_shell.dir/get_next_line_utils.c.o: ../get_next_line_utils.c
 CMakeFiles/new_shell.dir/get_path_command.c.o: ../get_path_command.c
 CMakeFiles/new_shell.dir/get_path_command.c.o: ../minishell.h
 
+CMakeFiles/new_shell.dir/get_size_spaces.c.o: ../get_size_spaces.c
+CMakeFiles/new_shell.dir/get_size_spaces.c.o: ../minishell.h
+
 CMakeFiles/new_shell.dir/get_tilde_path.c.o: ../get_tilde_path.c
 CMakeFiles/new_shell.dir/get_tilde_path.c.o: ../minishell.h
+
+CMakeFiles/new_shell.dir/get_var_dollar.c.o: ../get_var_dollar.c
+CMakeFiles/new_shell.dir/get_var_dollar.c.o: ../minishell.h
 
 CMakeFiles/new_shell.dir/init_list_env.c.o: ../init_list_env.c
 CMakeFiles/new_shell.dir/init_list_env.c.o: ../minishell.h
@@ -115,6 +124,9 @@ CMakeFiles/new_shell.dir/init_struct.c.o: ../minishell.h
 CMakeFiles/new_shell.dir/is_builtin.c.o: ../is_builtin.c
 CMakeFiles/new_shell.dir/is_builtin.c.o: ../minishell.h
 
+CMakeFiles/new_shell.dir/is_even_quote.c.o: ../is_even_quote.c
+CMakeFiles/new_shell.dir/is_even_quote.c.o: ../minishell.h
+
 CMakeFiles/new_shell.dir/is_there_char.c.o: ../is_there_char.c
 CMakeFiles/new_shell.dir/is_there_char.c.o: ../minishell.h
 
@@ -124,8 +136,14 @@ CMakeFiles/new_shell.dir/is_token.c.o: ../minishell.h
 CMakeFiles/new_shell.dir/list_to_array.c.o: ../list_to_array.c
 CMakeFiles/new_shell.dir/list_to_array.c.o: ../minishell.h
 
+CMakeFiles/new_shell.dir/loop_command_pipe.c.o: ../loop_command_pipe.c
+CMakeFiles/new_shell.dir/loop_command_pipe.c.o: ../minishell.h
+
 CMakeFiles/new_shell.dir/main.c.o: ../main.c
 CMakeFiles/new_shell.dir/main.c.o: ../minishell.h
+
+CMakeFiles/new_shell.dir/move_pointer.c.o: ../minishell.h
+CMakeFiles/new_shell.dir/move_pointer.c.o: ../move_pointer.c
 
 CMakeFiles/new_shell.dir/new_split.c.o: ../minishell.h
 CMakeFiles/new_shell.dir/new_split.c.o: ../new_split.c
@@ -153,6 +171,9 @@ CMakeFiles/new_shell.dir/quotes.c.o: ../quotes.c
 
 CMakeFiles/new_shell.dir/redir_save.c.o: ../minishell.h
 CMakeFiles/new_shell.dir/redir_save.c.o: ../redir_save.c
+
+CMakeFiles/new_shell.dir/remove_escape_token.c.o: ../minishell.h
+CMakeFiles/new_shell.dir/remove_escape_token.c.o: ../remove_escape_token.c
 
 CMakeFiles/new_shell.dir/several_string.c.o: ../minishell.h
 CMakeFiles/new_shell.dir/several_string.c.o: ../several_string.c

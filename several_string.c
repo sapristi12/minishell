@@ -16,12 +16,11 @@ int     several_string(char **cmds)
         {
             if (!ft_strcmp(cmds[i], strs[j]))
             {
-                k = 0;
-                while (k < 4)
+                k = -1;
+                while (++k < 4)
                 {
                     if (!ft_strcmp(cmds[i + 1], strs[k]))
                         return (0);
-                    k++;
                 }
             }
         }

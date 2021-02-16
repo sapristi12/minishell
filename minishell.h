@@ -67,6 +67,13 @@ struct 					s_space
 };
 typedef struct s_space	t_space;
 
+struct 					s_quo
+{
+	int		in_quote;
+	char 	tmp;
+};
+typedef struct s_quo	t_quo;
+
 int     	get_next_line(int fd, char **line, int option);
 int     	ft_strlen(char *str);
 int     	parsing_line(char *prompt, t_list **envs, t_cmd *cmd);
@@ -116,7 +123,6 @@ char		*ft_strjoin(char const *s1, char const *s2);
 char		*char_strjoin(char *str, char c);
 char 		*double_quote(char *str, t_list **envs);
 char 		*simple_quote(char *str);
-char	 	*get_var_dollar(char *str, t_list **envs);
 int			init_space(t_space *space, char *str);
 int			get_size(char *str);
 void		free_package(t_cmd *cmd);
@@ -150,5 +156,13 @@ int			free_quote(t_cmd *cmd, char *prompt, int index);
 char		*remove_escaped_token(char *str);
 int 		loop_command_pipe(t_cmd *cmd, t_list **envs);
 int 		transform_token(t_cmd *cmd);
+int 		is_even_quote(char *str);
+char	 	*create_new_str(char *str, t_list **envs);
+int 		move_normal_pointer(char *str);
+int 		move_pointer(char *str, char tmp);
+char	 	*get_var_dollar(char *str, t_list **envs);
+void		apply_tmp(char *tmp, char c, int *in_quote);
+int			get_size(char *str);
+int 		normal_slash(char **new, char c);
 
 #endif

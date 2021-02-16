@@ -90,6 +90,9 @@
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/create_args.c">
 			<Option target="new_shell"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/create_new_str.c">
+			<Option target="new_shell"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/create_space_around.c">
 			<Option target="new_shell"/>
 		</Unit>
@@ -180,7 +183,13 @@
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/get_path_command.c">
 			<Option target="new_shell"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/get_size_spaces.c">
+			<Option target="new_shell"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/get_tilde_path.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/get_var_dollar.c">
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/init_list_env.c">
@@ -193,6 +202,9 @@
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/is_builtin.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/is_even_quote.c">
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/is_there_char.c">
@@ -211,6 +223,9 @@
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/move_pointer.c">
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/new_split.c">

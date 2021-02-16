@@ -13,6 +13,9 @@ CMakeFiles/new_shell.dir/count_string.c.o
 CMakeFiles/new_shell.dir/create_args.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/create_args.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/create_new_str.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/create_new_str.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/create_space_around.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/create_space_around.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
@@ -100,8 +103,14 @@ CMakeFiles/new_shell.dir/get_next_line_utils.c.o
 CMakeFiles/new_shell.dir/get_path_command.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/get_path_command.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/get_size_spaces.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/get_size_spaces.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/get_tilde_path.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/get_tilde_path.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/get_var_dollar.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/get_var_dollar.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/init_list_env.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/init_list_env.c
@@ -115,6 +124,9 @@ CMakeFiles/new_shell.dir/init_struct.c.o
 CMakeFiles/new_shell.dir/is_builtin.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/is_builtin.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/is_even_quote.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/is_even_quote.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/is_there_char.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/is_there_char.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
@@ -124,9 +136,15 @@ CMakeFiles/new_shell.dir/is_token.c.o
 CMakeFiles/new_shell.dir/list_to_array.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/list_to_array.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/loop_command_pipe.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/loop_command_pipe.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/main.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/main.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/move_pointer.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+ /mnt/c/Users/33652/Documents/Coding/new_shell/move_pointer.c
 CMakeFiles/new_shell.dir/new_split.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
  /mnt/c/Users/33652/Documents/Coding/new_shell/new_split.c
@@ -154,6 +172,9 @@ CMakeFiles/new_shell.dir/quotes.c.o
 CMakeFiles/new_shell.dir/redir_save.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
  /mnt/c/Users/33652/Documents/Coding/new_shell/redir_save.c
+CMakeFiles/new_shell.dir/remove_escape_token.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+ /mnt/c/Users/33652/Documents/Coding/new_shell/remove_escape_token.c
 CMakeFiles/new_shell.dir/several_string.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
  /mnt/c/Users/33652/Documents/Coding/new_shell/several_string.c

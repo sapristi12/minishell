@@ -12,41 +12,49 @@ void    show_packages(t_cmd *cmd)
     }
 }
 
-int     parsing_command(t_cmd *cmd, t_list **envs)
+int 	single_command(t_cmd *cmd, t_list **envs)
 {
 	int ret;
 
-	ret = 0;
+	if (!(parsing_redir(cmd, 0)))
+		return (free_error_redir(cmd, envs, 0));
+	transform_token(cmd); //sécu si NULL
+	ret = exec_cmd(cmd, envs, 0);
+	free_package(cmd);
+	dup2(cmd->mystdout, STDOUT_FILENO);
+	dup2(cmd->mystdin, STDIN_FILENO);
+	if (ret == -1)
+		return (-2);
+	return (1);
+}
+
+int 	several_commands(t_cmd *cmd, t_list **envs)
+{
+	int ret;
+
+	cmd->mystdout = dup(STDOUT_FILENO);
+	cmd->mystdin = dup(STDIN_FILENO);
+	if (init_pipe(cmd) == -1)
+		return (0);
+	transform_token(cmd);
+	ret = loop_command_pipe(cmd, envs);
+	dup2(cmd->mystdout, STDOUT_FILENO);
+	dup2(cmd->mystdin, STDIN_FILENO);
+	if (ret == -1)
+		return (free_end_pipe(cmd, -2));
+	pipe_first_command(cmd, envs);
+	return (free_end_pipe(cmd, 1));
+}
+
+int     parsing_command(t_cmd *cmd, t_list **envs)
+{
 	if (!(check_first_command(cmd, envs)))
 		return (0);
 	init_all_package(cmd, envs);
 	if (cmd->pipe.nb_pipe == 0)
-	{
-		if (!(parsing_redir(cmd, 0)))
-			return (free_error_redir(cmd, envs, 0));
-		transform_token(cmd); //sécu si NULL
-		ret = exec_cmd(cmd, envs, 0);
-		free_package(cmd);
-		dup2(cmd->mystdout, STDOUT_FILENO);
-		dup2(cmd->mystdin, STDIN_FILENO);
-		if (ret == -1)
-			return (-2);
-		return (1);
-	}
+		return (single_command(cmd, envs));
     else if (cmd->pipe.nb_pipe > 0)
-	{
-		cmd->mystdout = dup(STDOUT_FILENO);
-		cmd->mystdin = dup(STDIN_FILENO);
-		if (init_pipe(cmd) == -1)
-    		return (0);
-    	ret = loop_command_pipe(cmd, envs);
-		dup2(cmd->mystdout, STDOUT_FILENO);
-		dup2(cmd->mystdin, STDIN_FILENO);
-		if (ret == -1)
-			return (free_end_pipe(cmd, -2));
-		pipe_first_command(cmd, envs);
-		return (free_end_pipe(cmd, 1));
-	}
+    	return (several_commands(cmd, envs));
 }
 
 int     parsing_line(char *prompt, t_list **envs, t_cmd *cmd)

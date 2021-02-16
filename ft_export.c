@@ -64,6 +64,14 @@ int 	is_notidentifier(char *str)
 	return (0);
 }
 
+static int 	manage_export(t_cmd *cmd, t_list *envs, int i)
+{
+	if (i == 1)
+		return (export_list(envs));
+	if (i == 2 && is_notidentifier(cmd->cmds[1]))
+		return (error_identifier(cmd->cmds[1]));
+}
+
 int 	ft_export(t_cmd *cmd, t_list *envs)
 {
 	char 	*tmp;
@@ -72,10 +80,8 @@ int 	ft_export(t_cmd *cmd, t_list *envs)
 	i = 0;
 	while (cmd->cmds[i] && !is_symbol(cmd->cmds[i]))
 		i++;
-	if (i == 1)
-		return (export_list(envs));
-	if (i == 2 && is_notidentifier(cmd->cmds[1]))
-		return (error_identifier(cmd->cmds[1]));
+	if (i == 1 || i == 2)
+		return (manage_export(cmd, envs, i));
 	i = 1;
 	while (cmd->cmds[i] && !is_symbol(cmd->cmds[i]))
 	{

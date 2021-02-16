@@ -5,28 +5,25 @@ void	set_env(t_list **envs, char *env, char *value)
 	t_list	**begin;
 	char	*tmp;
 	char 	*new;
-	t_list 	*used;
 
 	begin = envs;
-	used = (t_list *)*envs;
-	tmp = malloc(1);
+	tmp = ft_strdup("");
 	if (!tmp)
 		return ;
-	tmp[0] = '\0';
-	while (used && ft_strncmp(used->content, env, ft_strlen(env)))
-		used = used->next;
+	while ((*envs) && ft_strncmp((*envs)->content, env, ft_strlen(env)))
+		*envs = (*envs)->next;
 	new = ft_strjoin(tmp, env);
 	new = char_strjoin(new, '=');
 	if (value != NULL)
 		new = ft_strjoin(new, value);
-	if (used == NULL)
+	if (*envs == NULL)
 	{
 		ft_lstadd_back(begin, ft_lstnew(new));
 		free(new);
 	}
 	else
 	{
-		free(used->content);
-		used->content = new;
+		free((*envs)->content);
+		(*envs)->content = new;
 	}
 }

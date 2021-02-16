@@ -231,6 +231,33 @@ create_args.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/create_args.c.s
 .PHONY : create_args.c.s
 
+create_new_str.o: create_new_str.c.o
+
+.PHONY : create_new_str.o
+
+# target to build an object file
+create_new_str.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/create_new_str.c.o
+.PHONY : create_new_str.c.o
+
+create_new_str.i: create_new_str.c.i
+
+.PHONY : create_new_str.i
+
+# target to preprocess a source file
+create_new_str.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/create_new_str.c.i
+.PHONY : create_new_str.c.i
+
+create_new_str.s: create_new_str.c.s
+
+.PHONY : create_new_str.s
+
+# target to generate assembly for a file
+create_new_str.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/create_new_str.c.s
+.PHONY : create_new_str.c.s
+
 create_space_around.o: create_space_around.c.o
 
 .PHONY : create_space_around.o
@@ -1014,6 +1041,33 @@ get_path_command.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_path_command.c.s
 .PHONY : get_path_command.c.s
 
+get_size_spaces.o: get_size_spaces.c.o
+
+.PHONY : get_size_spaces.o
+
+# target to build an object file
+get_size_spaces.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_size_spaces.c.o
+.PHONY : get_size_spaces.c.o
+
+get_size_spaces.i: get_size_spaces.c.i
+
+.PHONY : get_size_spaces.i
+
+# target to preprocess a source file
+get_size_spaces.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_size_spaces.c.i
+.PHONY : get_size_spaces.c.i
+
+get_size_spaces.s: get_size_spaces.c.s
+
+.PHONY : get_size_spaces.s
+
+# target to generate assembly for a file
+get_size_spaces.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_size_spaces.c.s
+.PHONY : get_size_spaces.c.s
+
 get_tilde_path.o: get_tilde_path.c.o
 
 .PHONY : get_tilde_path.o
@@ -1040,6 +1094,33 @@ get_tilde_path.s: get_tilde_path.c.s
 get_tilde_path.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_tilde_path.c.s
 .PHONY : get_tilde_path.c.s
+
+get_var_dollar.o: get_var_dollar.c.o
+
+.PHONY : get_var_dollar.o
+
+# target to build an object file
+get_var_dollar.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_var_dollar.c.o
+.PHONY : get_var_dollar.c.o
+
+get_var_dollar.i: get_var_dollar.c.i
+
+.PHONY : get_var_dollar.i
+
+# target to preprocess a source file
+get_var_dollar.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_var_dollar.c.i
+.PHONY : get_var_dollar.c.i
+
+get_var_dollar.s: get_var_dollar.c.s
+
+.PHONY : get_var_dollar.s
+
+# target to generate assembly for a file
+get_var_dollar.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_var_dollar.c.s
+.PHONY : get_var_dollar.c.s
 
 init_list_env.o: init_list_env.c.o
 
@@ -1148,6 +1229,33 @@ is_builtin.s: is_builtin.c.s
 is_builtin.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_builtin.c.s
 .PHONY : is_builtin.c.s
+
+is_even_quote.o: is_even_quote.c.o
+
+.PHONY : is_even_quote.o
+
+# target to build an object file
+is_even_quote.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_even_quote.c.o
+.PHONY : is_even_quote.c.o
+
+is_even_quote.i: is_even_quote.c.i
+
+.PHONY : is_even_quote.i
+
+# target to preprocess a source file
+is_even_quote.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_even_quote.c.i
+.PHONY : is_even_quote.c.i
+
+is_even_quote.s: is_even_quote.c.s
+
+.PHONY : is_even_quote.s
+
+# target to generate assembly for a file
+is_even_quote.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_even_quote.c.s
+.PHONY : is_even_quote.c.s
 
 is_there_char.o: is_there_char.c.o
 
@@ -1283,6 +1391,33 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/main.c.s
 .PHONY : main.c.s
+
+move_pointer.o: move_pointer.c.o
+
+.PHONY : move_pointer.o
+
+# target to build an object file
+move_pointer.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/move_pointer.c.o
+.PHONY : move_pointer.c.o
+
+move_pointer.i: move_pointer.c.i
+
+.PHONY : move_pointer.i
+
+# target to preprocess a source file
+move_pointer.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/move_pointer.c.i
+.PHONY : move_pointer.c.i
+
+move_pointer.s: move_pointer.c.s
+
+.PHONY : move_pointer.s
+
+# target to generate assembly for a file
+move_pointer.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/move_pointer.c.s
+.PHONY : move_pointer.c.s
 
 new_split.o: new_split.c.o
 
@@ -1683,6 +1818,9 @@ help:
 	@echo "... create_args.o"
 	@echo "... create_args.i"
 	@echo "... create_args.s"
+	@echo "... create_new_str.o"
+	@echo "... create_new_str.i"
+	@echo "... create_new_str.s"
 	@echo "... create_space_around.o"
 	@echo "... create_space_around.i"
 	@echo "... create_space_around.s"
@@ -1770,9 +1908,15 @@ help:
 	@echo "... get_path_command.o"
 	@echo "... get_path_command.i"
 	@echo "... get_path_command.s"
+	@echo "... get_size_spaces.o"
+	@echo "... get_size_spaces.i"
+	@echo "... get_size_spaces.s"
 	@echo "... get_tilde_path.o"
 	@echo "... get_tilde_path.i"
 	@echo "... get_tilde_path.s"
+	@echo "... get_var_dollar.o"
+	@echo "... get_var_dollar.i"
+	@echo "... get_var_dollar.s"
 	@echo "... init_list_env.o"
 	@echo "... init_list_env.i"
 	@echo "... init_list_env.s"
@@ -1785,6 +1929,9 @@ help:
 	@echo "... is_builtin.o"
 	@echo "... is_builtin.i"
 	@echo "... is_builtin.s"
+	@echo "... is_even_quote.o"
+	@echo "... is_even_quote.i"
+	@echo "... is_even_quote.s"
 	@echo "... is_there_char.o"
 	@echo "... is_there_char.i"
 	@echo "... is_there_char.s"
@@ -1800,6 +1947,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... move_pointer.o"
+	@echo "... move_pointer.i"
+	@echo "... move_pointer.s"
 	@echo "... new_split.o"
 	@echo "... new_split.i"
 	@echo "... new_split.s"
