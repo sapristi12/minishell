@@ -474,6 +474,33 @@ free_parsing_line.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_parsing_line.c.s
 .PHONY : free_parsing_line.c.s
 
+free_parsing_quote.o: free_parsing_quote.c.o
+
+.PHONY : free_parsing_quote.o
+
+# target to build an object file
+free_parsing_quote.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_parsing_quote.c.o
+.PHONY : free_parsing_quote.c.o
+
+free_parsing_quote.i: free_parsing_quote.c.i
+
+.PHONY : free_parsing_quote.i
+
+# target to preprocess a source file
+free_parsing_quote.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_parsing_quote.c.i
+.PHONY : free_parsing_quote.c.i
+
+free_parsing_quote.s: free_parsing_quote.c.s
+
+.PHONY : free_parsing_quote.s
+
+# target to generate assembly for a file
+free_parsing_quote.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_parsing_quote.c.s
+.PHONY : free_parsing_quote.c.s
+
 free_return.o: free_return.c.o
 
 .PHONY : free_return.o
@@ -1203,6 +1230,33 @@ list_to_array.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/list_to_array.c.s
 .PHONY : list_to_array.c.s
 
+loop_command_pipe.o: loop_command_pipe.c.o
+
+.PHONY : loop_command_pipe.o
+
+# target to build an object file
+loop_command_pipe.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/loop_command_pipe.c.o
+.PHONY : loop_command_pipe.c.o
+
+loop_command_pipe.i: loop_command_pipe.c.i
+
+.PHONY : loop_command_pipe.i
+
+# target to preprocess a source file
+loop_command_pipe.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/loop_command_pipe.c.i
+.PHONY : loop_command_pipe.c.i
+
+loop_command_pipe.s: loop_command_pipe.c.s
+
+.PHONY : loop_command_pipe.s
+
+# target to generate assembly for a file
+loop_command_pipe.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/loop_command_pipe.c.s
+.PHONY : loop_command_pipe.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -1473,6 +1527,33 @@ redir_save.c.s:
 	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/redir_save.c.s
 .PHONY : redir_save.c.s
 
+remove_escape_token.o: remove_escape_token.c.o
+
+.PHONY : remove_escape_token.o
+
+# target to build an object file
+remove_escape_token.c.o:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/remove_escape_token.c.o
+.PHONY : remove_escape_token.c.o
+
+remove_escape_token.i: remove_escape_token.c.i
+
+.PHONY : remove_escape_token.i
+
+# target to preprocess a source file
+remove_escape_token.c.i:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/remove_escape_token.c.i
+.PHONY : remove_escape_token.c.i
+
+remove_escape_token.s: remove_escape_token.c.s
+
+.PHONY : remove_escape_token.s
+
+# target to generate assembly for a file
+remove_escape_token.c.s:
+	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/remove_escape_token.c.s
+.PHONY : remove_escape_token.c.s
+
 several_string.o: several_string.c.o
 
 .PHONY : several_string.o
@@ -1629,6 +1710,9 @@ help:
 	@echo "... free_parsing_line.o"
 	@echo "... free_parsing_line.i"
 	@echo "... free_parsing_line.s"
+	@echo "... free_parsing_quote.o"
+	@echo "... free_parsing_quote.i"
+	@echo "... free_parsing_quote.s"
 	@echo "... free_return.o"
 	@echo "... free_return.i"
 	@echo "... free_return.s"
@@ -1710,6 +1794,9 @@ help:
 	@echo "... list_to_array.o"
 	@echo "... list_to_array.i"
 	@echo "... list_to_array.s"
+	@echo "... loop_command_pipe.o"
+	@echo "... loop_command_pipe.i"
+	@echo "... loop_command_pipe.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -1740,6 +1827,9 @@ help:
 	@echo "... redir_save.o"
 	@echo "... redir_save.i"
 	@echo "... redir_save.s"
+	@echo "... remove_escape_token.o"
+	@echo "... remove_escape_token.i"
+	@echo "... remove_escape_token.s"
 	@echo "... several_string.o"
 	@echo "... several_string.i"
 	@echo "... several_string.s"

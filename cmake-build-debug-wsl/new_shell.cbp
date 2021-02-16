@@ -117,6 +117,9 @@
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/free_parsing_line.c">
 			<Option target="new_shell"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/free_parsing_quote.c">
+			<Option target="new_shell"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/free_return.c">
 			<Option target="new_shell"/>
 		</Unit>
@@ -201,6 +204,9 @@
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/list_to_array.c">
 			<Option target="new_shell"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/loop_command_pipe.c">
+			<Option target="new_shell"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/main.c">
 			<Option target="new_shell"/>
 		</Unit>
@@ -232,6 +238,9 @@
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/redir_save.c">
+			<Option target="new_shell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/remove_escape_token.c">
 			<Option target="new_shell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/new_shell/several_string.c">

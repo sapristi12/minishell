@@ -40,6 +40,9 @@ CMakeFiles/new_shell.dir/free_error.c.o
 CMakeFiles/new_shell.dir/free_parsing_line.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/free_parsing_line.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
+CMakeFiles/new_shell.dir/free_parsing_quote.c.o
+ /mnt/c/Users/33652/Documents/Coding/new_shell/free_parsing_quote.c
+ /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h
 CMakeFiles/new_shell.dir/free_return.c.o
  /mnt/c/Users/33652/Documents/Coding/new_shell/free_return.c
  /mnt/c/Users/33652/Documents/Coding/new_shell/minishell.h

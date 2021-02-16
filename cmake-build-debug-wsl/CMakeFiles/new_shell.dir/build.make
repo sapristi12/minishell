@@ -759,6 +759,45 @@ CMakeFiles/new_shell.dir/is_there_char.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_shell.dir/is_there_char.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/new_shell/is_there_char.c -o CMakeFiles/new_shell.dir/is_there_char.c.s
 
+CMakeFiles/new_shell.dir/free_parsing_quote.c.o: CMakeFiles/new_shell.dir/flags.make
+CMakeFiles/new_shell.dir/free_parsing_quote.c.o: ../free_parsing_quote.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/new_shell.dir/free_parsing_quote.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/free_parsing_quote.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/free_parsing_quote.c
+
+CMakeFiles/new_shell.dir/free_parsing_quote.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_shell.dir/free_parsing_quote.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/33652/Documents/Coding/new_shell/free_parsing_quote.c > CMakeFiles/new_shell.dir/free_parsing_quote.c.i
+
+CMakeFiles/new_shell.dir/free_parsing_quote.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_shell.dir/free_parsing_quote.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/new_shell/free_parsing_quote.c -o CMakeFiles/new_shell.dir/free_parsing_quote.c.s
+
+CMakeFiles/new_shell.dir/remove_escape_token.c.o: CMakeFiles/new_shell.dir/flags.make
+CMakeFiles/new_shell.dir/remove_escape_token.c.o: ../remove_escape_token.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/new_shell.dir/remove_escape_token.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/remove_escape_token.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/remove_escape_token.c
+
+CMakeFiles/new_shell.dir/remove_escape_token.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_shell.dir/remove_escape_token.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/33652/Documents/Coding/new_shell/remove_escape_token.c > CMakeFiles/new_shell.dir/remove_escape_token.c.i
+
+CMakeFiles/new_shell.dir/remove_escape_token.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_shell.dir/remove_escape_token.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/new_shell/remove_escape_token.c -o CMakeFiles/new_shell.dir/remove_escape_token.c.s
+
+CMakeFiles/new_shell.dir/loop_command_pipe.c.o: CMakeFiles/new_shell.dir/flags.make
+CMakeFiles/new_shell.dir/loop_command_pipe.c.o: ../loop_command_pipe.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/new_shell.dir/loop_command_pipe.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_shell.dir/loop_command_pipe.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/loop_command_pipe.c
+
+CMakeFiles/new_shell.dir/loop_command_pipe.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_shell.dir/loop_command_pipe.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/33652/Documents/Coding/new_shell/loop_command_pipe.c > CMakeFiles/new_shell.dir/loop_command_pipe.c.i
+
+CMakeFiles/new_shell.dir/loop_command_pipe.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_shell.dir/loop_command_pipe.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/new_shell/loop_command_pipe.c -o CMakeFiles/new_shell.dir/loop_command_pipe.c.s
+
 # Object files for target new_shell
 new_shell_OBJECTS = \
 "CMakeFiles/new_shell.dir/check_first_command.c.o" \
@@ -814,7 +853,10 @@ new_shell_OBJECTS = \
 "CMakeFiles/new_shell.dir/sort_list.c.o" \
 "CMakeFiles/new_shell.dir/ft_export.c.o" \
 "CMakeFiles/new_shell.dir/export_create_env.c.o" \
-"CMakeFiles/new_shell.dir/is_there_char.c.o"
+"CMakeFiles/new_shell.dir/is_there_char.c.o" \
+"CMakeFiles/new_shell.dir/free_parsing_quote.c.o" \
+"CMakeFiles/new_shell.dir/remove_escape_token.c.o" \
+"CMakeFiles/new_shell.dir/loop_command_pipe.c.o"
 
 # External object files for target new_shell
 new_shell_EXTERNAL_OBJECTS =
@@ -873,9 +915,12 @@ new_shell: CMakeFiles/new_shell.dir/sort_list.c.o
 new_shell: CMakeFiles/new_shell.dir/ft_export.c.o
 new_shell: CMakeFiles/new_shell.dir/export_create_env.c.o
 new_shell: CMakeFiles/new_shell.dir/is_there_char.c.o
+new_shell: CMakeFiles/new_shell.dir/free_parsing_quote.c.o
+new_shell: CMakeFiles/new_shell.dir/remove_escape_token.c.o
+new_shell: CMakeFiles/new_shell.dir/loop_command_pipe.c.o
 new_shell: CMakeFiles/new_shell.dir/build.make
 new_shell: CMakeFiles/new_shell.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Linking C executable new_shell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Linking C executable new_shell"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/new_shell.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

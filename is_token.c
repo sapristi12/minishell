@@ -4,8 +4,6 @@ int 	is_token_char(char c)
 {
 	if (c == '|')
 		return (1);
-	//if (c == SLASH)
-	//	return (1);
 	if (c == '>')
 		return (1);
 	if (c == '<')

@@ -13,7 +13,7 @@ static int		errno_index(int index)
 	if (index == -5)
 		ft_putstr_fd("Error: parsing line error pipes\n", 1);
 	if (index == -6)
-		ft_putstr_fd("Error: parsing line error redirections\n", 1);
+		ft_putstr_fd("Error: parsing caracters\n", 1);
 	if (index == -7)
 		ft_putstr_fd("Error: parsing line malloc envs failed\n", 1);
 	return (-1);

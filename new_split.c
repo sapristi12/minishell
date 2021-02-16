@@ -17,6 +17,8 @@ char	*ft_strcpyt(char *str, char c, int in_quote, char tmp)
 			in_quote = -in_quote;
 			tmp = str[i];
 		}
+		if (str[i] == SLASH && str[i + 1] && in_quote == -1)
+			i++;
 		i++;
 	}
 	size += i;
@@ -43,7 +45,7 @@ int		cw(char *str, char c)
     i = 0;
     while (*str)
     {
-        while (*str && (*str == c && in_quote == -1))
+		while (*str && (*str == c && in_quote == -1))
             str++;
 		if (in_quote == -1 && (*str == D_QUOTE || *str == S_QUOTE))
 		{
@@ -55,6 +57,8 @@ int		cw(char *str, char c)
             i++;
             while (*str && ((*str != c && in_quote == -1) || in_quote == 1))
             {
+            	if (*str == SLASH && *(str + 1) && in_quote == -1)
+            		str++;
                 str++;
                 if (in_quote == 1 && *str == tmp)
                     in_quote = -in_quote;
@@ -95,6 +99,8 @@ char    **new_split(char *str, char c)
 			i++;
 			while (*str && ((*str != c && in_quote == -1) || in_quote == 1))
 			{
+				if (*str == SLASH && *(str + 1) && in_quote == -1)
+						str++;
 				str++;
 				if (in_quote == 1 && *str == tmp)
 					in_quote = -in_quote;

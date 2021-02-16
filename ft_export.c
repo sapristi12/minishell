@@ -33,6 +33,37 @@ int		error_identifier(char *str)
 	return (1);
 }
 
+void 	add_new_export(t_list *envs, char *str)
+{
+	int		i;
+	char 	*tmp;
+
+	tmp = malloc(1);
+	if (!tmp)
+		return ;
+	tmp[0] = '\0';
+	i = 0;
+	while (str[i] && str[i] != '=')
+	{
+		tmp = char_strjoin(tmp, str[i]);
+		i++;
+	}
+	if (!(get_env(envs, tmp)))
+		ft_lstadd_back(&envs, ft_lstnew(str));
+	else
+		set_env(&envs, tmp, &str[i + 1]);
+}
+
+int 	is_notidentifier(char *str)
+{
+	if (is_there_char(str, '=') == 0)
+	{
+		if (!is_alpha(str[0]))
+			return (1);
+	}
+	return (0);
+}
+
 int 	ft_export(t_cmd *cmd, t_list *envs)
 {
 	char 	*tmp;
@@ -43,7 +74,7 @@ int 	ft_export(t_cmd *cmd, t_list *envs)
 		i++;
 	if (i == 1)
 		return (export_list(envs));
-	if (i == 2 && !ft_strcmp(cmd->cmds[1], "%"))
+	if (i == 2 && is_notidentifier(cmd->cmds[1]))
 		return (error_identifier(cmd->cmds[1]));
 	i = 1;
 	while (cmd->cmds[i] && !is_symbol(cmd->cmds[i]))
@@ -54,7 +85,7 @@ int 	ft_export(t_cmd *cmd, t_list *envs)
 				error_identifier(cmd->cmds[i]);
 			else
 			{
-				ft_lstadd_back(&envs, ft_lstnew(tmp));
+				add_new_export(envs, tmp);
 				free(tmp);
 			}
 		}

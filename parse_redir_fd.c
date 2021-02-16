@@ -42,26 +42,28 @@ int     rightright_redir(char **cmds)
 	return (1);
 }
 
-int 	parse_redir_fd(t_cmd *cmd)
+int 	parse_redir_fd(t_cmd *cmd, int index)
 {
-	int i;
+	int		i;
+	char	**strs;
 
 	i = 0;
-	while (cmd->cmds[i + 1] && ft_strcmp(cmd->cmds[i + 1], "|"))
+	strs = pointer_package(cmd->cmds, index);
+	while (strs[i + 1] && ft_strcmp(strs[i + 1], "|"))
 	{
-		if (!ft_strcmp(cmd->cmds[i], "<"))
+		if (!ft_strcmp(strs[i], "<"))
 		{
-			if (!(left_redir(&cmd->cmds[i])))
+			if (!(left_redir(&strs[i])))
 				return (0);
 		}
-		else if (!ft_strcmp(cmd->cmds[i], ">"))
+		else if (!ft_strcmp(strs[i], ">"))
 		{
-			if (!(right_redir(&cmd->cmds[i])))
+			if (!(right_redir(&strs[i])))
 				return (0);
 		}
-		else if (!ft_strcmp(cmd->cmds[i], ">>"))
+		else if (!ft_strcmp(strs[i], ">>"))
 		{
-			if (!(rightright_redir(&cmd->cmds[i])))
+			if (!(rightright_redir(&strs[i])))
 				return (0);
 		}
 		i++;

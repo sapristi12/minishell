@@ -37,9 +37,7 @@ int 	is_even_quote(char *str)
 	while (str[i])
 	{
 		if (str[i] == SLASH && (str[i + 1] == SLASH || str[i + 1] == S_QUOTE))
-		{
-			i += 2;
-		}
+			i++;
 		if (in_quote == 1)
 		{
 			if ((str[i] == tmp && tmp == S_QUOTE) || (((str[i - 1] != SLASH) || (str[i - 1] == SLASH && str[i - 2] == SLASH)) && (tmp == D_QUOTE && str[i] == tmp)))
@@ -87,7 +85,7 @@ static int 	move_normal_pointer(char *str)
 			break;
 		else if (str[i] == D_QUOTE && (i > 1 && (str[i - 1] == SLASH && str[i - 2] == SLASH)))
 			break;
-		else if (str[i] == D_QUOTE && (i == 0 || (i > 0 && str[i - 1] != SLASH)))
+		else if (str[i] == D_QUOTE && (i > 0 && str[i - 1] != SLASH))
 			break;
 		i++;
 	}
@@ -96,21 +94,17 @@ static int 	move_normal_pointer(char *str)
 
 static int 	move_pointer(char *str, char tmp)
 {
-	int len;
 	int i;
 
 	i = 0;
-	len = 0;
 	while (str[i])
 	{
-		if (i > 0 && (str[i - 1] != SLASH && str[i] == D_QUOTE))
+		if ((i > 0 && (str[i - 1] != SLASH && str[i] == D_QUOTE)) || (str[i] == D_QUOTE && str[i - 1] == SLASH && str[i - 2] == SLASH))
 			break;
 		if (str[i] == tmp && tmp == S_QUOTE)
 			break;
 		i++;
 	}
-	if (tmp == 'E')
-		return (i);
 	return (i + 1);
 }
 
