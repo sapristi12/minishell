@@ -61,6 +61,24 @@ int		cd_back(t_list **envs)
 	return (ret);
 }
 
+int		cd_home(t_list **envs)
+{
+	char	**words;
+	int		ret;
+
+	words = malloc(sizeof(char *) * 2);
+	if (!(words))
+		return (-1);
+	words[0] = ft_strdup("cd");
+	words[1] = ft_strdup("~");
+	words[1] = create_new_str(words[1], envs);
+	ret = cd_basic(words, envs);
+	free(words[0]);
+	free(words[1]);
+	free(words);
+	return (ret);
+}
+
 int 	ft_cd(t_cmd *cmd, t_list **envs)
 {
 	int		ret;
@@ -69,8 +87,8 @@ int 	ft_cd(t_cmd *cmd, t_list **envs)
 	i = 0;
 	while (cmd->cmds[i] && !is_symbol(cmd->cmds[i]))
 		i++;
-	if (i != 2)
-		return (0);
+	if (i == 1)
+		ret = cd_home(envs);
 	else if (!ft_strcmp(cmd->cmds[1], "-"))
 		ret = cd_old(envs);
 	else if (!ft_strcmp(cmd->cmds[1], ".."))
