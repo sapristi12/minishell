@@ -52,13 +52,8 @@ int		main(int i, char **av, char **envp)
 	free(prompt);
 	ft_lstclear(&envs, free);
 	if (g_sig != 0)
-	{
-		printf("passage ici\n");
 		return (g_sig);
-	}
 	if (cmd.exit_status[0] == 1)
-	{
 		return (cmd.exit_status[1]);
-	}
 	return (0);
 }
