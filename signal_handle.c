@@ -7,6 +7,7 @@ void 	signal_int(int signo)
 		ft_putstr_fd("\n", 1);
 		display_prompt();
 	}
+	g_sig = 128 + signo;
 }
 
 
@@ -18,6 +19,7 @@ void 	signal_quit(int signo)
 		printf("%d\n", signo); //putnbr et \n
 		display_prompt();
 	}
+	g_sig = 128 + signo;
 }
 
 void 	signal_handle(void)

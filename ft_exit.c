@@ -42,6 +42,16 @@ static int 	first_case(t_cmd *cmd)
 	return (1);
 }
 
+static int	fourth_case(t_cmd *cmd)
+{
+	ft_putstr_fd("minishell: exit: ", 1);
+	ft_putstr_fd(cmd->cmds[1], 1);
+	ft_putstr_fd(": numeric argument required\n", 1);
+	ft_putstr_fd("exit\n", 1);
+	cmd->exit_status[1] = 2;
+	return (1);
+}
+
 int 	ft_exit(t_cmd *cmd, t_list **envs)
 {
 	int i;
@@ -52,6 +62,8 @@ int 	ft_exit(t_cmd *cmd, t_list **envs)
 		i++;
 	if (i == 1)
 		return (first_case(cmd));
+	if (ft_strlen(cmd->cmds[1]) > 20)
+		return (fourth_case(cmd));
 	if (!(ft_llatoi(cmd->cmds[1])))
 		return (second_case(cmd));
 	if (i > 2)
