@@ -14,6 +14,7 @@ int 		only_zeros(char *str)
 
 static int 	third_case(t_cmd *cmd)
 {
+	cmd->exit_status[0] = 0;
 	ft_putstr_fd("minishell: exit: too many arguments\n", 1);
 	cmd->exit_status[1] = 1;
 	return (1);
@@ -29,6 +30,7 @@ static int 	second_case(t_cmd *cmd)
 	ft_putstr_fd("minishell: exit: ", 1);
 	ft_putstr_fd(cmd->cmds[1], 1);
 	ft_putstr_fd(": numeric argument required\n", 1);
+	ft_putstr_fd("exit\n", 1);
 	cmd->exit_status[1] = 2;
 	return (1);
 }
@@ -36,6 +38,7 @@ static int 	second_case(t_cmd *cmd)
 static int 	first_case(t_cmd *cmd)
 {
 	cmd->exit_status[1] = 0;
+	ft_putstr_fd("exit\n", 1);
 	return (1);
 }
 
