@@ -57,6 +57,38 @@ int     parsing_command(t_cmd *cmd, t_list **envs)
     	return (several_commands(cmd, envs));
 }
 
+int		init_tab(t_cmd *cmd)
+{
+	int i;
+	int size;
+
+	size = 0;
+	i = 0;
+	while (cmd->cmds[i])
+	{
+		if (ft_strcmp(cmd->cmds[i], "|"))
+			size++;
+		i++;
+	}
+	cmd->tab = malloc(sizeof(int) * size);
+	if (!cmd->tab)
+		return (0);
+	i = 0;
+	size = 0;
+	while (cmd->cmds[i])
+	{
+		if (!ft_strcmp(cmd->cmds[i], ">"))
+			cmd->tab[size++] = 1;
+		else if (ft_strcmp(cmd->cmds[i], "|"))
+			cmd->tab[size++] = 0;
+		i++;
+	}
+	printf("size : %d\n", i);
+	for (int k = 0; cmd->tab[k]; k++)
+		printf("%d\n", cmd->tab[k]);
+	return (1);
+}
+
 int     parsing_line(char *prompt, t_list **envs, t_cmd *cmd)
 {
     int 	ret;
@@ -66,6 +98,7 @@ int     parsing_line(char *prompt, t_list **envs, t_cmd *cmd)
         return (errno_parsing_line(-2));
     if (!(cmd->cmds = new_split(prompt, ' ')))
         return (errno_parsing_line(-3));
+	init_tab(cmd);
     if (!several_string(cmd->cmds))
         return (errno_parsing_line(free_i(cmd, -4)));
 	if (!parsing_pipe(cmd))

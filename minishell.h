@@ -54,6 +54,7 @@ struct                  s_cmd
     int 	mystdout;
     int 	mystdin;
     int 	exit_status[2];
+	int		*tab;
 };
 typedef struct s_cmd    t_cmd;
 
