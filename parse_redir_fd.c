@@ -42,7 +42,7 @@ int     rightright_redir(char **cmds)
 	return (1);
 }
 
-int 	parse_redir_fd(t_cmd *cmd, int index)
+int 	parse_redir_fd(t_cmd *cmd, int index, int *tab)
 {
 	int		i;
 	char	**strs;
@@ -51,17 +51,17 @@ int 	parse_redir_fd(t_cmd *cmd, int index)
 	strs = pointer_package(cmd->cmds, index);
 	while (strs[i + 1] && ft_strcmp(strs[i + 1], "|"))
 	{
-		if (!ft_strcmp(strs[i], "<"))
+		if (!ft_strcmp(strs[i], "<") && tab[i] == 1)
 		{
 			if (!(left_redir(&strs[i])))
 				return (0);
 		}
-		else if (!ft_strcmp(strs[i], ">"))
+		else if (!ft_strcmp(strs[i], ">") && tab[i] == 1)
 		{
 			if (!(right_redir(&strs[i])))
 				return (0);
 		}
-		else if (!ft_strcmp(strs[i], ">>"))
+		else if (!ft_strcmp(strs[i], ">>") && tab[i] == 1)
 		{
 			if (!(rightright_redir(&strs[i])))
 				return (0);

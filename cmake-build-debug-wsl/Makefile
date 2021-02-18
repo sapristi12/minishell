@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/33652/Documents/Coding/new_shell
+CMAKE_SOURCE_DIR = /mnt/c/Users/33652/Documents/Coding/minishell
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl
+CMAKE_BINARY_DIR = /mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug-wsl
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles /mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug-wsl/CMakeFiles /mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug-wsl/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug-wsl/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named new_shell
+# Target rules for targets named minishell
 
 # Build rule for target.
-new_shell: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 new_shell
-.PHONY : new_shell
+minishell: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 minishell
+.PHONY : minishell
 
 # fast build rule for target.
-new_shell/fast:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/build
-.PHONY : new_shell/fast
+minishell/fast:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/build
+.PHONY : minishell/fast
 
 check_first_command.o: check_first_command.c.o
 
@@ -129,7 +129,7 @@ check_first_command.o: check_first_command.c.o
 
 # target to build an object file
 check_first_command.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/check_first_command.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/check_first_command.c.o
 .PHONY : check_first_command.c.o
 
 check_first_command.i: check_first_command.c.i
@@ -138,7 +138,7 @@ check_first_command.i: check_first_command.c.i
 
 # target to preprocess a source file
 check_first_command.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/check_first_command.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/check_first_command.c.i
 .PHONY : check_first_command.c.i
 
 check_first_command.s: check_first_command.c.s
@@ -147,7 +147,7 @@ check_first_command.s: check_first_command.c.s
 
 # target to generate assembly for a file
 check_first_command.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/check_first_command.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/check_first_command.c.s
 .PHONY : check_first_command.c.s
 
 close.o: close.c.o
@@ -156,7 +156,7 @@ close.o: close.c.o
 
 # target to build an object file
 close.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/close.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/close.c.o
 .PHONY : close.c.o
 
 close.i: close.c.i
@@ -165,7 +165,7 @@ close.i: close.c.i
 
 # target to preprocess a source file
 close.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/close.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/close.c.i
 .PHONY : close.c.i
 
 close.s: close.c.s
@@ -174,7 +174,7 @@ close.s: close.c.s
 
 # target to generate assembly for a file
 close.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/close.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/close.c.s
 .PHONY : close.c.s
 
 count_string.o: count_string.c.o
@@ -183,7 +183,7 @@ count_string.o: count_string.c.o
 
 # target to build an object file
 count_string.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/count_string.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/count_string.c.o
 .PHONY : count_string.c.o
 
 count_string.i: count_string.c.i
@@ -192,7 +192,7 @@ count_string.i: count_string.c.i
 
 # target to preprocess a source file
 count_string.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/count_string.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/count_string.c.i
 .PHONY : count_string.c.i
 
 count_string.s: count_string.c.s
@@ -201,7 +201,7 @@ count_string.s: count_string.c.s
 
 # target to generate assembly for a file
 count_string.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/count_string.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/count_string.c.s
 .PHONY : count_string.c.s
 
 create_args.o: create_args.c.o
@@ -210,7 +210,7 @@ create_args.o: create_args.c.o
 
 # target to build an object file
 create_args.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/create_args.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/create_args.c.o
 .PHONY : create_args.c.o
 
 create_args.i: create_args.c.i
@@ -219,7 +219,7 @@ create_args.i: create_args.c.i
 
 # target to preprocess a source file
 create_args.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/create_args.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/create_args.c.i
 .PHONY : create_args.c.i
 
 create_args.s: create_args.c.s
@@ -228,7 +228,7 @@ create_args.s: create_args.c.s
 
 # target to generate assembly for a file
 create_args.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/create_args.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/create_args.c.s
 .PHONY : create_args.c.s
 
 create_new_str.o: create_new_str.c.o
@@ -237,7 +237,7 @@ create_new_str.o: create_new_str.c.o
 
 # target to build an object file
 create_new_str.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/create_new_str.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/create_new_str.c.o
 .PHONY : create_new_str.c.o
 
 create_new_str.i: create_new_str.c.i
@@ -246,7 +246,7 @@ create_new_str.i: create_new_str.c.i
 
 # target to preprocess a source file
 create_new_str.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/create_new_str.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/create_new_str.c.i
 .PHONY : create_new_str.c.i
 
 create_new_str.s: create_new_str.c.s
@@ -255,7 +255,7 @@ create_new_str.s: create_new_str.c.s
 
 # target to generate assembly for a file
 create_new_str.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/create_new_str.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/create_new_str.c.s
 .PHONY : create_new_str.c.s
 
 create_space_around.o: create_space_around.c.o
@@ -264,7 +264,7 @@ create_space_around.o: create_space_around.c.o
 
 # target to build an object file
 create_space_around.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/create_space_around.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/create_space_around.c.o
 .PHONY : create_space_around.c.o
 
 create_space_around.i: create_space_around.c.i
@@ -273,7 +273,7 @@ create_space_around.i: create_space_around.c.i
 
 # target to preprocess a source file
 create_space_around.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/create_space_around.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/create_space_around.c.i
 .PHONY : create_space_around.c.i
 
 create_space_around.s: create_space_around.c.s
@@ -282,7 +282,7 @@ create_space_around.s: create_space_around.c.s
 
 # target to generate assembly for a file
 create_space_around.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/create_space_around.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/create_space_around.c.s
 .PHONY : create_space_around.c.s
 
 display.o: display.c.o
@@ -291,7 +291,7 @@ display.o: display.c.o
 
 # target to build an object file
 display.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/display.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/display.c.o
 .PHONY : display.c.o
 
 display.i: display.c.i
@@ -300,7 +300,7 @@ display.i: display.c.i
 
 # target to preprocess a source file
 display.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/display.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/display.c.i
 .PHONY : display.c.i
 
 display.s: display.c.s
@@ -309,7 +309,7 @@ display.s: display.c.s
 
 # target to generate assembly for a file
 display.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/display.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/display.c.s
 .PHONY : display.c.s
 
 double_quote.o: double_quote.c.o
@@ -318,7 +318,7 @@ double_quote.o: double_quote.c.o
 
 # target to build an object file
 double_quote.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/double_quote.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/double_quote.c.o
 .PHONY : double_quote.c.o
 
 double_quote.i: double_quote.c.i
@@ -327,7 +327,7 @@ double_quote.i: double_quote.c.i
 
 # target to preprocess a source file
 double_quote.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/double_quote.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/double_quote.c.i
 .PHONY : double_quote.c.i
 
 double_quote.s: double_quote.c.s
@@ -336,7 +336,7 @@ double_quote.s: double_quote.c.s
 
 # target to generate assembly for a file
 double_quote.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/double_quote.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/double_quote.c.s
 .PHONY : double_quote.c.s
 
 env.o: env.c.o
@@ -345,7 +345,7 @@ env.o: env.c.o
 
 # target to build an object file
 env.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/env.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/env.c.o
 .PHONY : env.c.o
 
 env.i: env.c.i
@@ -354,7 +354,7 @@ env.i: env.c.i
 
 # target to preprocess a source file
 env.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/env.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/env.c.i
 .PHONY : env.c.i
 
 env.s: env.c.s
@@ -363,7 +363,7 @@ env.s: env.c.s
 
 # target to generate assembly for a file
 env.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/env.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/env.c.s
 .PHONY : env.c.s
 
 exec_cmd.o: exec_cmd.c.o
@@ -372,7 +372,7 @@ exec_cmd.o: exec_cmd.c.o
 
 # target to build an object file
 exec_cmd.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/exec_cmd.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/exec_cmd.c.o
 .PHONY : exec_cmd.c.o
 
 exec_cmd.i: exec_cmd.c.i
@@ -381,7 +381,7 @@ exec_cmd.i: exec_cmd.c.i
 
 # target to preprocess a source file
 exec_cmd.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/exec_cmd.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/exec_cmd.c.i
 .PHONY : exec_cmd.c.i
 
 exec_cmd.s: exec_cmd.c.s
@@ -390,7 +390,7 @@ exec_cmd.s: exec_cmd.c.s
 
 # target to generate assembly for a file
 exec_cmd.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/exec_cmd.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/exec_cmd.c.s
 .PHONY : exec_cmd.c.s
 
 export_create_env.o: export_create_env.c.o
@@ -399,7 +399,7 @@ export_create_env.o: export_create_env.c.o
 
 # target to build an object file
 export_create_env.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/export_create_env.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_create_env.c.o
 .PHONY : export_create_env.c.o
 
 export_create_env.i: export_create_env.c.i
@@ -408,7 +408,7 @@ export_create_env.i: export_create_env.c.i
 
 # target to preprocess a source file
 export_create_env.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/export_create_env.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_create_env.c.i
 .PHONY : export_create_env.c.i
 
 export_create_env.s: export_create_env.c.s
@@ -417,7 +417,7 @@ export_create_env.s: export_create_env.c.s
 
 # target to generate assembly for a file
 export_create_env.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/export_create_env.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_create_env.c.s
 .PHONY : export_create_env.c.s
 
 forking.o: forking.c.o
@@ -426,7 +426,7 @@ forking.o: forking.c.o
 
 # target to build an object file
 forking.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/forking.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/forking.c.o
 .PHONY : forking.c.o
 
 forking.i: forking.c.i
@@ -435,7 +435,7 @@ forking.i: forking.c.i
 
 # target to preprocess a source file
 forking.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/forking.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/forking.c.i
 .PHONY : forking.c.i
 
 forking.s: forking.c.s
@@ -444,7 +444,7 @@ forking.s: forking.c.s
 
 # target to generate assembly for a file
 forking.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/forking.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/forking.c.s
 .PHONY : forking.c.s
 
 free_error.o: free_error.c.o
@@ -453,7 +453,7 @@ free_error.o: free_error.c.o
 
 # target to build an object file
 free_error.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_error.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/free_error.c.o
 .PHONY : free_error.c.o
 
 free_error.i: free_error.c.i
@@ -462,7 +462,7 @@ free_error.i: free_error.c.i
 
 # target to preprocess a source file
 free_error.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_error.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/free_error.c.i
 .PHONY : free_error.c.i
 
 free_error.s: free_error.c.s
@@ -471,7 +471,7 @@ free_error.s: free_error.c.s
 
 # target to generate assembly for a file
 free_error.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_error.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/free_error.c.s
 .PHONY : free_error.c.s
 
 free_parsing_line.o: free_parsing_line.c.o
@@ -480,7 +480,7 @@ free_parsing_line.o: free_parsing_line.c.o
 
 # target to build an object file
 free_parsing_line.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_parsing_line.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/free_parsing_line.c.o
 .PHONY : free_parsing_line.c.o
 
 free_parsing_line.i: free_parsing_line.c.i
@@ -489,7 +489,7 @@ free_parsing_line.i: free_parsing_line.c.i
 
 # target to preprocess a source file
 free_parsing_line.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_parsing_line.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/free_parsing_line.c.i
 .PHONY : free_parsing_line.c.i
 
 free_parsing_line.s: free_parsing_line.c.s
@@ -498,7 +498,7 @@ free_parsing_line.s: free_parsing_line.c.s
 
 # target to generate assembly for a file
 free_parsing_line.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_parsing_line.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/free_parsing_line.c.s
 .PHONY : free_parsing_line.c.s
 
 free_parsing_quote.o: free_parsing_quote.c.o
@@ -507,7 +507,7 @@ free_parsing_quote.o: free_parsing_quote.c.o
 
 # target to build an object file
 free_parsing_quote.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_parsing_quote.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/free_parsing_quote.c.o
 .PHONY : free_parsing_quote.c.o
 
 free_parsing_quote.i: free_parsing_quote.c.i
@@ -516,7 +516,7 @@ free_parsing_quote.i: free_parsing_quote.c.i
 
 # target to preprocess a source file
 free_parsing_quote.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_parsing_quote.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/free_parsing_quote.c.i
 .PHONY : free_parsing_quote.c.i
 
 free_parsing_quote.s: free_parsing_quote.c.s
@@ -525,7 +525,7 @@ free_parsing_quote.s: free_parsing_quote.c.s
 
 # target to generate assembly for a file
 free_parsing_quote.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_parsing_quote.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/free_parsing_quote.c.s
 .PHONY : free_parsing_quote.c.s
 
 free_return.o: free_return.c.o
@@ -534,7 +534,7 @@ free_return.o: free_return.c.o
 
 # target to build an object file
 free_return.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_return.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/free_return.c.o
 .PHONY : free_return.c.o
 
 free_return.i: free_return.c.i
@@ -543,7 +543,7 @@ free_return.i: free_return.c.i
 
 # target to preprocess a source file
 free_return.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_return.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/free_return.c.i
 .PHONY : free_return.c.i
 
 free_return.s: free_return.c.s
@@ -552,7 +552,7 @@ free_return.s: free_return.c.s
 
 # target to generate assembly for a file
 free_return.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/free_return.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/free_return.c.s
 .PHONY : free_return.c.s
 
 ft_atoi.o: ft_atoi.c.o
@@ -561,7 +561,7 @@ ft_atoi.o: ft_atoi.c.o
 
 # target to build an object file
 ft_atoi.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_atoi.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_atoi.c.o
 .PHONY : ft_atoi.c.o
 
 ft_atoi.i: ft_atoi.c.i
@@ -570,7 +570,7 @@ ft_atoi.i: ft_atoi.c.i
 
 # target to preprocess a source file
 ft_atoi.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_atoi.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_atoi.c.i
 .PHONY : ft_atoi.c.i
 
 ft_atoi.s: ft_atoi.c.s
@@ -579,7 +579,7 @@ ft_atoi.s: ft_atoi.c.s
 
 # target to generate assembly for a file
 ft_atoi.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_atoi.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_atoi.c.s
 .PHONY : ft_atoi.c.s
 
 ft_cd.o: ft_cd.c.o
@@ -588,7 +588,7 @@ ft_cd.o: ft_cd.c.o
 
 # target to build an object file
 ft_cd.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_cd.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_cd.c.o
 .PHONY : ft_cd.c.o
 
 ft_cd.i: ft_cd.c.i
@@ -597,7 +597,7 @@ ft_cd.i: ft_cd.c.i
 
 # target to preprocess a source file
 ft_cd.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_cd.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_cd.c.i
 .PHONY : ft_cd.c.i
 
 ft_cd.s: ft_cd.c.s
@@ -606,7 +606,7 @@ ft_cd.s: ft_cd.c.s
 
 # target to generate assembly for a file
 ft_cd.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_cd.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_cd.c.s
 .PHONY : ft_cd.c.s
 
 ft_echo.o: ft_echo.c.o
@@ -615,7 +615,7 @@ ft_echo.o: ft_echo.c.o
 
 # target to build an object file
 ft_echo.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_echo.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_echo.c.o
 .PHONY : ft_echo.c.o
 
 ft_echo.i: ft_echo.c.i
@@ -624,7 +624,7 @@ ft_echo.i: ft_echo.c.i
 
 # target to preprocess a source file
 ft_echo.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_echo.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_echo.c.i
 .PHONY : ft_echo.c.i
 
 ft_echo.s: ft_echo.c.s
@@ -633,7 +633,7 @@ ft_echo.s: ft_echo.c.s
 
 # target to generate assembly for a file
 ft_echo.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_echo.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_echo.c.s
 .PHONY : ft_echo.c.s
 
 ft_env.o: ft_env.c.o
@@ -642,7 +642,7 @@ ft_env.o: ft_env.c.o
 
 # target to build an object file
 ft_env.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_env.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_env.c.o
 .PHONY : ft_env.c.o
 
 ft_env.i: ft_env.c.i
@@ -651,7 +651,7 @@ ft_env.i: ft_env.c.i
 
 # target to preprocess a source file
 ft_env.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_env.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_env.c.i
 .PHONY : ft_env.c.i
 
 ft_env.s: ft_env.c.s
@@ -660,7 +660,7 @@ ft_env.s: ft_env.c.s
 
 # target to generate assembly for a file
 ft_env.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_env.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_env.c.s
 .PHONY : ft_env.c.s
 
 ft_errno.o: ft_errno.c.o
@@ -669,7 +669,7 @@ ft_errno.o: ft_errno.c.o
 
 # target to build an object file
 ft_errno.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_errno.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_errno.c.o
 .PHONY : ft_errno.c.o
 
 ft_errno.i: ft_errno.c.i
@@ -678,7 +678,7 @@ ft_errno.i: ft_errno.c.i
 
 # target to preprocess a source file
 ft_errno.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_errno.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_errno.c.i
 .PHONY : ft_errno.c.i
 
 ft_errno.s: ft_errno.c.s
@@ -687,7 +687,7 @@ ft_errno.s: ft_errno.c.s
 
 # target to generate assembly for a file
 ft_errno.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_errno.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_errno.c.s
 .PHONY : ft_errno.c.s
 
 ft_exit.o: ft_exit.c.o
@@ -696,7 +696,7 @@ ft_exit.o: ft_exit.c.o
 
 # target to build an object file
 ft_exit.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_exit.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_exit.c.o
 .PHONY : ft_exit.c.o
 
 ft_exit.i: ft_exit.c.i
@@ -705,7 +705,7 @@ ft_exit.i: ft_exit.c.i
 
 # target to preprocess a source file
 ft_exit.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_exit.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_exit.c.i
 .PHONY : ft_exit.c.i
 
 ft_exit.s: ft_exit.c.s
@@ -714,7 +714,7 @@ ft_exit.s: ft_exit.c.s
 
 # target to generate assembly for a file
 ft_exit.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_exit.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_exit.c.s
 .PHONY : ft_exit.c.s
 
 ft_export.o: ft_export.c.o
@@ -723,7 +723,7 @@ ft_export.o: ft_export.c.o
 
 # target to build an object file
 ft_export.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_export.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_export.c.o
 .PHONY : ft_export.c.o
 
 ft_export.i: ft_export.c.i
@@ -732,7 +732,7 @@ ft_export.i: ft_export.c.i
 
 # target to preprocess a source file
 ft_export.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_export.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_export.c.i
 .PHONY : ft_export.c.i
 
 ft_export.s: ft_export.c.s
@@ -741,7 +741,7 @@ ft_export.s: ft_export.c.s
 
 # target to generate assembly for a file
 ft_export.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_export.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_export.c.s
 .PHONY : ft_export.c.s
 
 ft_list.o: ft_list.c.o
@@ -750,7 +750,7 @@ ft_list.o: ft_list.c.o
 
 # target to build an object file
 ft_list.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_list.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_list.c.o
 .PHONY : ft_list.c.o
 
 ft_list.i: ft_list.c.i
@@ -759,7 +759,7 @@ ft_list.i: ft_list.c.i
 
 # target to preprocess a source file
 ft_list.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_list.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_list.c.i
 .PHONY : ft_list.c.i
 
 ft_list.s: ft_list.c.s
@@ -768,7 +768,7 @@ ft_list.s: ft_list.c.s
 
 # target to generate assembly for a file
 ft_list.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_list.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_list.c.s
 .PHONY : ft_list.c.s
 
 ft_stradd.o: ft_stradd.c.o
@@ -777,7 +777,7 @@ ft_stradd.o: ft_stradd.c.o
 
 # target to build an object file
 ft_stradd.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_stradd.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_stradd.c.o
 .PHONY : ft_stradd.c.o
 
 ft_stradd.i: ft_stradd.c.i
@@ -786,7 +786,7 @@ ft_stradd.i: ft_stradd.c.i
 
 # target to preprocess a source file
 ft_stradd.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_stradd.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_stradd.c.i
 .PHONY : ft_stradd.c.i
 
 ft_stradd.s: ft_stradd.c.s
@@ -795,7 +795,7 @@ ft_stradd.s: ft_stradd.c.s
 
 # target to generate assembly for a file
 ft_stradd.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_stradd.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_stradd.c.s
 .PHONY : ft_stradd.c.s
 
 ft_strcat.o: ft_strcat.c.o
@@ -804,7 +804,7 @@ ft_strcat.o: ft_strcat.c.o
 
 # target to build an object file
 ft_strcat.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strcat.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_strcat.c.o
 .PHONY : ft_strcat.c.o
 
 ft_strcat.i: ft_strcat.c.i
@@ -813,7 +813,7 @@ ft_strcat.i: ft_strcat.c.i
 
 # target to preprocess a source file
 ft_strcat.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strcat.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_strcat.c.i
 .PHONY : ft_strcat.c.i
 
 ft_strcat.s: ft_strcat.c.s
@@ -822,7 +822,7 @@ ft_strcat.s: ft_strcat.c.s
 
 # target to generate assembly for a file
 ft_strcat.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strcat.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_strcat.c.s
 .PHONY : ft_strcat.c.s
 
 ft_strcmp.o: ft_strcmp.c.o
@@ -831,7 +831,7 @@ ft_strcmp.o: ft_strcmp.c.o
 
 # target to build an object file
 ft_strcmp.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strcmp.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_strcmp.c.o
 .PHONY : ft_strcmp.c.o
 
 ft_strcmp.i: ft_strcmp.c.i
@@ -840,7 +840,7 @@ ft_strcmp.i: ft_strcmp.c.i
 
 # target to preprocess a source file
 ft_strcmp.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strcmp.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_strcmp.c.i
 .PHONY : ft_strcmp.c.i
 
 ft_strcmp.s: ft_strcmp.c.s
@@ -849,7 +849,7 @@ ft_strcmp.s: ft_strcmp.c.s
 
 # target to generate assembly for a file
 ft_strcmp.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strcmp.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_strcmp.c.s
 .PHONY : ft_strcmp.c.s
 
 ft_strdup.o: ft_strdup.c.o
@@ -858,7 +858,7 @@ ft_strdup.o: ft_strdup.c.o
 
 # target to build an object file
 ft_strdup.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strdup.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_strdup.c.o
 .PHONY : ft_strdup.c.o
 
 ft_strdup.i: ft_strdup.c.i
@@ -867,7 +867,7 @@ ft_strdup.i: ft_strdup.c.i
 
 # target to preprocess a source file
 ft_strdup.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strdup.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_strdup.c.i
 .PHONY : ft_strdup.c.i
 
 ft_strdup.s: ft_strdup.c.s
@@ -876,7 +876,7 @@ ft_strdup.s: ft_strdup.c.s
 
 # target to generate assembly for a file
 ft_strdup.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strdup.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_strdup.c.s
 .PHONY : ft_strdup.c.s
 
 ft_strjoin.o: ft_strjoin.c.o
@@ -885,7 +885,7 @@ ft_strjoin.o: ft_strjoin.c.o
 
 # target to build an object file
 ft_strjoin.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strjoin.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_strjoin.c.o
 .PHONY : ft_strjoin.c.o
 
 ft_strjoin.i: ft_strjoin.c.i
@@ -894,7 +894,7 @@ ft_strjoin.i: ft_strjoin.c.i
 
 # target to preprocess a source file
 ft_strjoin.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strjoin.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_strjoin.c.i
 .PHONY : ft_strjoin.c.i
 
 ft_strjoin.s: ft_strjoin.c.s
@@ -903,7 +903,7 @@ ft_strjoin.s: ft_strjoin.c.s
 
 # target to generate assembly for a file
 ft_strjoin.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_strjoin.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_strjoin.c.s
 .PHONY : ft_strjoin.c.s
 
 ft_unset.o: ft_unset.c.o
@@ -912,7 +912,7 @@ ft_unset.o: ft_unset.c.o
 
 # target to build an object file
 ft_unset.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_unset.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_unset.c.o
 .PHONY : ft_unset.c.o
 
 ft_unset.i: ft_unset.c.i
@@ -921,7 +921,7 @@ ft_unset.i: ft_unset.c.i
 
 # target to preprocess a source file
 ft_unset.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_unset.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_unset.c.i
 .PHONY : ft_unset.c.i
 
 ft_unset.s: ft_unset.c.s
@@ -930,7 +930,7 @@ ft_unset.s: ft_unset.c.s
 
 # target to generate assembly for a file
 ft_unset.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/ft_unset.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_unset.c.s
 .PHONY : ft_unset.c.s
 
 get_env.o: get_env.c.o
@@ -939,7 +939,7 @@ get_env.o: get_env.c.o
 
 # target to build an object file
 get_env.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_env.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_env.c.o
 .PHONY : get_env.c.o
 
 get_env.i: get_env.c.i
@@ -948,7 +948,7 @@ get_env.i: get_env.c.i
 
 # target to preprocess a source file
 get_env.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_env.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_env.c.i
 .PHONY : get_env.c.i
 
 get_env.s: get_env.c.s
@@ -957,7 +957,7 @@ get_env.s: get_env.c.s
 
 # target to generate assembly for a file
 get_env.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_env.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_env.c.s
 .PHONY : get_env.c.s
 
 get_next_line.o: get_next_line.c.o
@@ -966,7 +966,7 @@ get_next_line.o: get_next_line.c.o
 
 # target to build an object file
 get_next_line.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_next_line.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_next_line.c.o
 .PHONY : get_next_line.c.o
 
 get_next_line.i: get_next_line.c.i
@@ -975,7 +975,7 @@ get_next_line.i: get_next_line.c.i
 
 # target to preprocess a source file
 get_next_line.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_next_line.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_next_line.c.i
 .PHONY : get_next_line.c.i
 
 get_next_line.s: get_next_line.c.s
@@ -984,7 +984,7 @@ get_next_line.s: get_next_line.c.s
 
 # target to generate assembly for a file
 get_next_line.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_next_line.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_next_line.c.s
 .PHONY : get_next_line.c.s
 
 get_next_line_utils.o: get_next_line_utils.c.o
@@ -993,7 +993,7 @@ get_next_line_utils.o: get_next_line_utils.c.o
 
 # target to build an object file
 get_next_line_utils.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_next_line_utils.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_next_line_utils.c.o
 .PHONY : get_next_line_utils.c.o
 
 get_next_line_utils.i: get_next_line_utils.c.i
@@ -1002,7 +1002,7 @@ get_next_line_utils.i: get_next_line_utils.c.i
 
 # target to preprocess a source file
 get_next_line_utils.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_next_line_utils.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_next_line_utils.c.i
 .PHONY : get_next_line_utils.c.i
 
 get_next_line_utils.s: get_next_line_utils.c.s
@@ -1011,7 +1011,7 @@ get_next_line_utils.s: get_next_line_utils.c.s
 
 # target to generate assembly for a file
 get_next_line_utils.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_next_line_utils.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_next_line_utils.c.s
 .PHONY : get_next_line_utils.c.s
 
 get_path_command.o: get_path_command.c.o
@@ -1020,7 +1020,7 @@ get_path_command.o: get_path_command.c.o
 
 # target to build an object file
 get_path_command.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_path_command.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_path_command.c.o
 .PHONY : get_path_command.c.o
 
 get_path_command.i: get_path_command.c.i
@@ -1029,7 +1029,7 @@ get_path_command.i: get_path_command.c.i
 
 # target to preprocess a source file
 get_path_command.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_path_command.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_path_command.c.i
 .PHONY : get_path_command.c.i
 
 get_path_command.s: get_path_command.c.s
@@ -1038,7 +1038,7 @@ get_path_command.s: get_path_command.c.s
 
 # target to generate assembly for a file
 get_path_command.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_path_command.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_path_command.c.s
 .PHONY : get_path_command.c.s
 
 get_size_spaces.o: get_size_spaces.c.o
@@ -1047,7 +1047,7 @@ get_size_spaces.o: get_size_spaces.c.o
 
 # target to build an object file
 get_size_spaces.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_size_spaces.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_size_spaces.c.o
 .PHONY : get_size_spaces.c.o
 
 get_size_spaces.i: get_size_spaces.c.i
@@ -1056,7 +1056,7 @@ get_size_spaces.i: get_size_spaces.c.i
 
 # target to preprocess a source file
 get_size_spaces.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_size_spaces.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_size_spaces.c.i
 .PHONY : get_size_spaces.c.i
 
 get_size_spaces.s: get_size_spaces.c.s
@@ -1065,7 +1065,7 @@ get_size_spaces.s: get_size_spaces.c.s
 
 # target to generate assembly for a file
 get_size_spaces.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_size_spaces.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_size_spaces.c.s
 .PHONY : get_size_spaces.c.s
 
 get_tilde_path.o: get_tilde_path.c.o
@@ -1074,7 +1074,7 @@ get_tilde_path.o: get_tilde_path.c.o
 
 # target to build an object file
 get_tilde_path.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_tilde_path.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_tilde_path.c.o
 .PHONY : get_tilde_path.c.o
 
 get_tilde_path.i: get_tilde_path.c.i
@@ -1083,7 +1083,7 @@ get_tilde_path.i: get_tilde_path.c.i
 
 # target to preprocess a source file
 get_tilde_path.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_tilde_path.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_tilde_path.c.i
 .PHONY : get_tilde_path.c.i
 
 get_tilde_path.s: get_tilde_path.c.s
@@ -1092,7 +1092,7 @@ get_tilde_path.s: get_tilde_path.c.s
 
 # target to generate assembly for a file
 get_tilde_path.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_tilde_path.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_tilde_path.c.s
 .PHONY : get_tilde_path.c.s
 
 get_var_dollar.o: get_var_dollar.c.o
@@ -1101,7 +1101,7 @@ get_var_dollar.o: get_var_dollar.c.o
 
 # target to build an object file
 get_var_dollar.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_var_dollar.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_var_dollar.c.o
 .PHONY : get_var_dollar.c.o
 
 get_var_dollar.i: get_var_dollar.c.i
@@ -1110,7 +1110,7 @@ get_var_dollar.i: get_var_dollar.c.i
 
 # target to preprocess a source file
 get_var_dollar.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_var_dollar.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_var_dollar.c.i
 .PHONY : get_var_dollar.c.i
 
 get_var_dollar.s: get_var_dollar.c.s
@@ -1119,7 +1119,7 @@ get_var_dollar.s: get_var_dollar.c.s
 
 # target to generate assembly for a file
 get_var_dollar.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/get_var_dollar.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_var_dollar.c.s
 .PHONY : get_var_dollar.c.s
 
 init_list_env.o: init_list_env.c.o
@@ -1128,7 +1128,7 @@ init_list_env.o: init_list_env.c.o
 
 # target to build an object file
 init_list_env.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/init_list_env.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/init_list_env.c.o
 .PHONY : init_list_env.c.o
 
 init_list_env.i: init_list_env.c.i
@@ -1137,7 +1137,7 @@ init_list_env.i: init_list_env.c.i
 
 # target to preprocess a source file
 init_list_env.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/init_list_env.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/init_list_env.c.i
 .PHONY : init_list_env.c.i
 
 init_list_env.s: init_list_env.c.s
@@ -1146,7 +1146,7 @@ init_list_env.s: init_list_env.c.s
 
 # target to generate assembly for a file
 init_list_env.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/init_list_env.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/init_list_env.c.s
 .PHONY : init_list_env.c.s
 
 init_pipe.o: init_pipe.c.o
@@ -1155,7 +1155,7 @@ init_pipe.o: init_pipe.c.o
 
 # target to build an object file
 init_pipe.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/init_pipe.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/init_pipe.c.o
 .PHONY : init_pipe.c.o
 
 init_pipe.i: init_pipe.c.i
@@ -1164,7 +1164,7 @@ init_pipe.i: init_pipe.c.i
 
 # target to preprocess a source file
 init_pipe.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/init_pipe.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/init_pipe.c.i
 .PHONY : init_pipe.c.i
 
 init_pipe.s: init_pipe.c.s
@@ -1173,7 +1173,7 @@ init_pipe.s: init_pipe.c.s
 
 # target to generate assembly for a file
 init_pipe.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/init_pipe.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/init_pipe.c.s
 .PHONY : init_pipe.c.s
 
 init_struct.o: init_struct.c.o
@@ -1182,7 +1182,7 @@ init_struct.o: init_struct.c.o
 
 # target to build an object file
 init_struct.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/init_struct.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/init_struct.c.o
 .PHONY : init_struct.c.o
 
 init_struct.i: init_struct.c.i
@@ -1191,7 +1191,7 @@ init_struct.i: init_struct.c.i
 
 # target to preprocess a source file
 init_struct.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/init_struct.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/init_struct.c.i
 .PHONY : init_struct.c.i
 
 init_struct.s: init_struct.c.s
@@ -1200,7 +1200,7 @@ init_struct.s: init_struct.c.s
 
 # target to generate assembly for a file
 init_struct.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/init_struct.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/init_struct.c.s
 .PHONY : init_struct.c.s
 
 is_builtin.o: is_builtin.c.o
@@ -1209,7 +1209,7 @@ is_builtin.o: is_builtin.c.o
 
 # target to build an object file
 is_builtin.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_builtin.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_builtin.c.o
 .PHONY : is_builtin.c.o
 
 is_builtin.i: is_builtin.c.i
@@ -1218,7 +1218,7 @@ is_builtin.i: is_builtin.c.i
 
 # target to preprocess a source file
 is_builtin.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_builtin.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_builtin.c.i
 .PHONY : is_builtin.c.i
 
 is_builtin.s: is_builtin.c.s
@@ -1227,7 +1227,7 @@ is_builtin.s: is_builtin.c.s
 
 # target to generate assembly for a file
 is_builtin.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_builtin.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_builtin.c.s
 .PHONY : is_builtin.c.s
 
 is_even_quote.o: is_even_quote.c.o
@@ -1236,7 +1236,7 @@ is_even_quote.o: is_even_quote.c.o
 
 # target to build an object file
 is_even_quote.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_even_quote.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_even_quote.c.o
 .PHONY : is_even_quote.c.o
 
 is_even_quote.i: is_even_quote.c.i
@@ -1245,7 +1245,7 @@ is_even_quote.i: is_even_quote.c.i
 
 # target to preprocess a source file
 is_even_quote.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_even_quote.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_even_quote.c.i
 .PHONY : is_even_quote.c.i
 
 is_even_quote.s: is_even_quote.c.s
@@ -1254,7 +1254,7 @@ is_even_quote.s: is_even_quote.c.s
 
 # target to generate assembly for a file
 is_even_quote.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_even_quote.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_even_quote.c.s
 .PHONY : is_even_quote.c.s
 
 is_there_char.o: is_there_char.c.o
@@ -1263,7 +1263,7 @@ is_there_char.o: is_there_char.c.o
 
 # target to build an object file
 is_there_char.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_there_char.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_there_char.c.o
 .PHONY : is_there_char.c.o
 
 is_there_char.i: is_there_char.c.i
@@ -1272,7 +1272,7 @@ is_there_char.i: is_there_char.c.i
 
 # target to preprocess a source file
 is_there_char.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_there_char.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_there_char.c.i
 .PHONY : is_there_char.c.i
 
 is_there_char.s: is_there_char.c.s
@@ -1281,7 +1281,7 @@ is_there_char.s: is_there_char.c.s
 
 # target to generate assembly for a file
 is_there_char.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_there_char.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_there_char.c.s
 .PHONY : is_there_char.c.s
 
 is_token.o: is_token.c.o
@@ -1290,7 +1290,7 @@ is_token.o: is_token.c.o
 
 # target to build an object file
 is_token.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_token.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_token.c.o
 .PHONY : is_token.c.o
 
 is_token.i: is_token.c.i
@@ -1299,7 +1299,7 @@ is_token.i: is_token.c.i
 
 # target to preprocess a source file
 is_token.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_token.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_token.c.i
 .PHONY : is_token.c.i
 
 is_token.s: is_token.c.s
@@ -1308,7 +1308,7 @@ is_token.s: is_token.c.s
 
 # target to generate assembly for a file
 is_token.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/is_token.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_token.c.s
 .PHONY : is_token.c.s
 
 list_to_array.o: list_to_array.c.o
@@ -1317,7 +1317,7 @@ list_to_array.o: list_to_array.c.o
 
 # target to build an object file
 list_to_array.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/list_to_array.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/list_to_array.c.o
 .PHONY : list_to_array.c.o
 
 list_to_array.i: list_to_array.c.i
@@ -1326,7 +1326,7 @@ list_to_array.i: list_to_array.c.i
 
 # target to preprocess a source file
 list_to_array.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/list_to_array.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/list_to_array.c.i
 .PHONY : list_to_array.c.i
 
 list_to_array.s: list_to_array.c.s
@@ -1335,7 +1335,7 @@ list_to_array.s: list_to_array.c.s
 
 # target to generate assembly for a file
 list_to_array.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/list_to_array.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/list_to_array.c.s
 .PHONY : list_to_array.c.s
 
 loop_command_pipe.o: loop_command_pipe.c.o
@@ -1344,7 +1344,7 @@ loop_command_pipe.o: loop_command_pipe.c.o
 
 # target to build an object file
 loop_command_pipe.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/loop_command_pipe.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/loop_command_pipe.c.o
 .PHONY : loop_command_pipe.c.o
 
 loop_command_pipe.i: loop_command_pipe.c.i
@@ -1353,7 +1353,7 @@ loop_command_pipe.i: loop_command_pipe.c.i
 
 # target to preprocess a source file
 loop_command_pipe.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/loop_command_pipe.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/loop_command_pipe.c.i
 .PHONY : loop_command_pipe.c.i
 
 loop_command_pipe.s: loop_command_pipe.c.s
@@ -1362,7 +1362,7 @@ loop_command_pipe.s: loop_command_pipe.c.s
 
 # target to generate assembly for a file
 loop_command_pipe.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/loop_command_pipe.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/loop_command_pipe.c.s
 .PHONY : loop_command_pipe.c.s
 
 main.o: main.c.o
@@ -1371,7 +1371,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/main.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -1380,7 +1380,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/main.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -1389,7 +1389,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/main.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/main.c.s
 .PHONY : main.c.s
 
 move_pointer.o: move_pointer.c.o
@@ -1398,7 +1398,7 @@ move_pointer.o: move_pointer.c.o
 
 # target to build an object file
 move_pointer.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/move_pointer.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/move_pointer.c.o
 .PHONY : move_pointer.c.o
 
 move_pointer.i: move_pointer.c.i
@@ -1407,7 +1407,7 @@ move_pointer.i: move_pointer.c.i
 
 # target to preprocess a source file
 move_pointer.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/move_pointer.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/move_pointer.c.i
 .PHONY : move_pointer.c.i
 
 move_pointer.s: move_pointer.c.s
@@ -1416,7 +1416,7 @@ move_pointer.s: move_pointer.c.s
 
 # target to generate assembly for a file
 move_pointer.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/move_pointer.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/move_pointer.c.s
 .PHONY : move_pointer.c.s
 
 new_split.o: new_split.c.o
@@ -1425,7 +1425,7 @@ new_split.o: new_split.c.o
 
 # target to build an object file
 new_split.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/new_split.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/new_split.c.o
 .PHONY : new_split.c.o
 
 new_split.i: new_split.c.i
@@ -1434,7 +1434,7 @@ new_split.i: new_split.c.i
 
 # target to preprocess a source file
 new_split.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/new_split.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/new_split.c.i
 .PHONY : new_split.c.i
 
 new_split.s: new_split.c.s
@@ -1443,7 +1443,7 @@ new_split.s: new_split.c.s
 
 # target to generate assembly for a file
 new_split.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/new_split.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/new_split.c.s
 .PHONY : new_split.c.s
 
 parse_redir_fd.o: parse_redir_fd.c.o
@@ -1452,7 +1452,7 @@ parse_redir_fd.o: parse_redir_fd.c.o
 
 # target to build an object file
 parse_redir_fd.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parse_redir_fd.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse_redir_fd.c.o
 .PHONY : parse_redir_fd.c.o
 
 parse_redir_fd.i: parse_redir_fd.c.i
@@ -1461,7 +1461,7 @@ parse_redir_fd.i: parse_redir_fd.c.i
 
 # target to preprocess a source file
 parse_redir_fd.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parse_redir_fd.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse_redir_fd.c.i
 .PHONY : parse_redir_fd.c.i
 
 parse_redir_fd.s: parse_redir_fd.c.s
@@ -1470,7 +1470,7 @@ parse_redir_fd.s: parse_redir_fd.c.s
 
 # target to generate assembly for a file
 parse_redir_fd.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parse_redir_fd.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse_redir_fd.c.s
 .PHONY : parse_redir_fd.c.s
 
 parsing.o: parsing.c.o
@@ -1479,7 +1479,7 @@ parsing.o: parsing.c.o
 
 # target to build an object file
 parsing.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parsing.c.o
 .PHONY : parsing.c.o
 
 parsing.i: parsing.c.i
@@ -1488,7 +1488,7 @@ parsing.i: parsing.c.i
 
 # target to preprocess a source file
 parsing.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parsing.c.i
 .PHONY : parsing.c.i
 
 parsing.s: parsing.c.s
@@ -1497,7 +1497,7 @@ parsing.s: parsing.c.s
 
 # target to generate assembly for a file
 parsing.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parsing.c.s
 .PHONY : parsing.c.s
 
 parsing_pipe.o: parsing_pipe.c.o
@@ -1506,7 +1506,7 @@ parsing_pipe.o: parsing_pipe.c.o
 
 # target to build an object file
 parsing_pipe.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_pipe.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parsing_pipe.c.o
 .PHONY : parsing_pipe.c.o
 
 parsing_pipe.i: parsing_pipe.c.i
@@ -1515,7 +1515,7 @@ parsing_pipe.i: parsing_pipe.c.i
 
 # target to preprocess a source file
 parsing_pipe.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_pipe.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parsing_pipe.c.i
 .PHONY : parsing_pipe.c.i
 
 parsing_pipe.s: parsing_pipe.c.s
@@ -1524,7 +1524,7 @@ parsing_pipe.s: parsing_pipe.c.s
 
 # target to generate assembly for a file
 parsing_pipe.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_pipe.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parsing_pipe.c.s
 .PHONY : parsing_pipe.c.s
 
 parsing_quotes.o: parsing_quotes.c.o
@@ -1533,7 +1533,7 @@ parsing_quotes.o: parsing_quotes.c.o
 
 # target to build an object file
 parsing_quotes.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_quotes.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parsing_quotes.c.o
 .PHONY : parsing_quotes.c.o
 
 parsing_quotes.i: parsing_quotes.c.i
@@ -1542,7 +1542,7 @@ parsing_quotes.i: parsing_quotes.c.i
 
 # target to preprocess a source file
 parsing_quotes.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_quotes.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parsing_quotes.c.i
 .PHONY : parsing_quotes.c.i
 
 parsing_quotes.s: parsing_quotes.c.s
@@ -1551,7 +1551,7 @@ parsing_quotes.s: parsing_quotes.c.s
 
 # target to generate assembly for a file
 parsing_quotes.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_quotes.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parsing_quotes.c.s
 .PHONY : parsing_quotes.c.s
 
 parsing_redir.o: parsing_redir.c.o
@@ -1560,7 +1560,7 @@ parsing_redir.o: parsing_redir.c.o
 
 # target to build an object file
 parsing_redir.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_redir.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parsing_redir.c.o
 .PHONY : parsing_redir.c.o
 
 parsing_redir.i: parsing_redir.c.i
@@ -1569,7 +1569,7 @@ parsing_redir.i: parsing_redir.c.i
 
 # target to preprocess a source file
 parsing_redir.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_redir.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parsing_redir.c.i
 .PHONY : parsing_redir.c.i
 
 parsing_redir.s: parsing_redir.c.s
@@ -1578,7 +1578,7 @@ parsing_redir.s: parsing_redir.c.s
 
 # target to generate assembly for a file
 parsing_redir.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/parsing_redir.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parsing_redir.c.s
 .PHONY : parsing_redir.c.s
 
 pwd.o: pwd.c.o
@@ -1587,7 +1587,7 @@ pwd.o: pwd.c.o
 
 # target to build an object file
 pwd.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/pwd.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/pwd.c.o
 .PHONY : pwd.c.o
 
 pwd.i: pwd.c.i
@@ -1596,7 +1596,7 @@ pwd.i: pwd.c.i
 
 # target to preprocess a source file
 pwd.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/pwd.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/pwd.c.i
 .PHONY : pwd.c.i
 
 pwd.s: pwd.c.s
@@ -1605,7 +1605,7 @@ pwd.s: pwd.c.s
 
 # target to generate assembly for a file
 pwd.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/pwd.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/pwd.c.s
 .PHONY : pwd.c.s
 
 quotes.o: quotes.c.o
@@ -1614,7 +1614,7 @@ quotes.o: quotes.c.o
 
 # target to build an object file
 quotes.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/quotes.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/quotes.c.o
 .PHONY : quotes.c.o
 
 quotes.i: quotes.c.i
@@ -1623,7 +1623,7 @@ quotes.i: quotes.c.i
 
 # target to preprocess a source file
 quotes.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/quotes.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/quotes.c.i
 .PHONY : quotes.c.i
 
 quotes.s: quotes.c.s
@@ -1632,7 +1632,7 @@ quotes.s: quotes.c.s
 
 # target to generate assembly for a file
 quotes.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/quotes.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/quotes.c.s
 .PHONY : quotes.c.s
 
 redir_save.o: redir_save.c.o
@@ -1641,7 +1641,7 @@ redir_save.o: redir_save.c.o
 
 # target to build an object file
 redir_save.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/redir_save.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/redir_save.c.o
 .PHONY : redir_save.c.o
 
 redir_save.i: redir_save.c.i
@@ -1650,7 +1650,7 @@ redir_save.i: redir_save.c.i
 
 # target to preprocess a source file
 redir_save.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/redir_save.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/redir_save.c.i
 .PHONY : redir_save.c.i
 
 redir_save.s: redir_save.c.s
@@ -1659,7 +1659,7 @@ redir_save.s: redir_save.c.s
 
 # target to generate assembly for a file
 redir_save.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/redir_save.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/redir_save.c.s
 .PHONY : redir_save.c.s
 
 remove_escape_token.o: remove_escape_token.c.o
@@ -1668,7 +1668,7 @@ remove_escape_token.o: remove_escape_token.c.o
 
 # target to build an object file
 remove_escape_token.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/remove_escape_token.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/remove_escape_token.c.o
 .PHONY : remove_escape_token.c.o
 
 remove_escape_token.i: remove_escape_token.c.i
@@ -1677,7 +1677,7 @@ remove_escape_token.i: remove_escape_token.c.i
 
 # target to preprocess a source file
 remove_escape_token.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/remove_escape_token.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/remove_escape_token.c.i
 .PHONY : remove_escape_token.c.i
 
 remove_escape_token.s: remove_escape_token.c.s
@@ -1686,7 +1686,7 @@ remove_escape_token.s: remove_escape_token.c.s
 
 # target to generate assembly for a file
 remove_escape_token.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/remove_escape_token.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/remove_escape_token.c.s
 .PHONY : remove_escape_token.c.s
 
 several_string.o: several_string.c.o
@@ -1695,7 +1695,7 @@ several_string.o: several_string.c.o
 
 # target to build an object file
 several_string.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/several_string.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/several_string.c.o
 .PHONY : several_string.c.o
 
 several_string.i: several_string.c.i
@@ -1704,7 +1704,7 @@ several_string.i: several_string.c.i
 
 # target to preprocess a source file
 several_string.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/several_string.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/several_string.c.i
 .PHONY : several_string.c.i
 
 several_string.s: several_string.c.s
@@ -1713,7 +1713,7 @@ several_string.s: several_string.c.s
 
 # target to generate assembly for a file
 several_string.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/several_string.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/several_string.c.s
 .PHONY : several_string.c.s
 
 signal_handle.o: signal_handle.c.o
@@ -1722,7 +1722,7 @@ signal_handle.o: signal_handle.c.o
 
 # target to build an object file
 signal_handle.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/signal_handle.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/signal_handle.c.o
 .PHONY : signal_handle.c.o
 
 signal_handle.i: signal_handle.c.i
@@ -1731,7 +1731,7 @@ signal_handle.i: signal_handle.c.i
 
 # target to preprocess a source file
 signal_handle.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/signal_handle.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/signal_handle.c.i
 .PHONY : signal_handle.c.i
 
 signal_handle.s: signal_handle.c.s
@@ -1740,7 +1740,7 @@ signal_handle.s: signal_handle.c.s
 
 # target to generate assembly for a file
 signal_handle.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/signal_handle.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/signal_handle.c.s
 .PHONY : signal_handle.c.s
 
 sort_builtin.o: sort_builtin.c.o
@@ -1749,7 +1749,7 @@ sort_builtin.o: sort_builtin.c.o
 
 # target to build an object file
 sort_builtin.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/sort_builtin.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/sort_builtin.c.o
 .PHONY : sort_builtin.c.o
 
 sort_builtin.i: sort_builtin.c.i
@@ -1758,7 +1758,7 @@ sort_builtin.i: sort_builtin.c.i
 
 # target to preprocess a source file
 sort_builtin.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/sort_builtin.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/sort_builtin.c.i
 .PHONY : sort_builtin.c.i
 
 sort_builtin.s: sort_builtin.c.s
@@ -1767,7 +1767,7 @@ sort_builtin.s: sort_builtin.c.s
 
 # target to generate assembly for a file
 sort_builtin.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/sort_builtin.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/sort_builtin.c.s
 .PHONY : sort_builtin.c.s
 
 sort_list.o: sort_list.c.o
@@ -1776,7 +1776,7 @@ sort_list.o: sort_list.c.o
 
 # target to build an object file
 sort_list.c.o:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/sort_list.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/sort_list.c.o
 .PHONY : sort_list.c.o
 
 sort_list.i: sort_list.c.i
@@ -1785,7 +1785,7 @@ sort_list.i: sort_list.c.i
 
 # target to preprocess a source file
 sort_list.c.i:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/sort_list.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/sort_list.c.i
 .PHONY : sort_list.c.i
 
 sort_list.s: sort_list.c.s
@@ -1794,7 +1794,7 @@ sort_list.s: sort_list.c.s
 
 # target to generate assembly for a file
 sort_list.c.s:
-	$(MAKE) -f CMakeFiles/new_shell.dir/build.make CMakeFiles/new_shell.dir/sort_list.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/sort_list.c.s
 .PHONY : sort_list.c.s
 
 # Help Target
@@ -1805,7 +1805,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... new_shell"
+	@echo "... minishell"
 	@echo "... check_first_command.o"
 	@echo "... check_first_command.i"
 	@echo "... check_first_command.s"

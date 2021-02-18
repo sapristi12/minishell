@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-static int			move_pointer_i(char **cmds)
+int			move_pointer_i(char **cmds)
 {
 	int i;
 
@@ -13,8 +13,8 @@ static int			move_pointer_i(char **cmds)
 int					init_all_package(t_cmd *cmd, t_list **envs)
 {
 	int len;
-	int pointer;
 	int i;
+	int pointer;
 
 	i = 0;
 	pointer = 0;
@@ -25,7 +25,7 @@ int					init_all_package(t_cmd *cmd, t_list **envs)
 	cmd->pipe.all[len + 1] = NULL;
 	while (i < len + 1)
 	{
-		cmd->pipe.all[i] = create_package(&(cmd->cmds[pointer]), envs, 0);
+		cmd->pipe.all[i] = create_package(&(cmd->cmds[pointer]), envs, 0, cmd->tab[i]);
 		pointer += move_pointer_i(&(cmd->cmds[pointer]));
 		i++;
 	}

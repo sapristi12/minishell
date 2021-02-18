@@ -10,7 +10,7 @@ int 	transform_token(t_cmd *cmd)
 	while (cmd->pipe.all[i])
 	{
 		j = 0;
-		while (cmd->pipe.all[i][j])
+		while (cmd->pipe.all[i][j] && cmd->tab[i + j] == 0)
 		{
 			tmp = remove_escaped_token(cmd->pipe.all[i][j]);
 			free(cmd->pipe.all[i][j]);
@@ -63,6 +63,8 @@ int 	loop_command_pipe(t_cmd *cmd, t_list **envs)
 		hub_close(cmd, i);
 		if (ret == 1)
 			return (-1);
+		dup2(cmd->mystdout, STDOUT_FILENO);
+		dup2(cmd->mystdin, STDIN_FILENO);
 		i++;
 	}
 	while (cmd->pipe.save-- >= 0)

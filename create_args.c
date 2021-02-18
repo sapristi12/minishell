@@ -22,20 +22,20 @@ char	**free_return(char **dest)
 	return (NULL);
 }
 
-char	**create_package(char **cmds, t_list **envs, int option)
+char	**create_package(char **cmds, t_list **envs, int option, int *tab)
 {
 	char	**dest;
 	int		i;
 
 	i = 0;
-	while (cmds[i] && !is_symbol(cmds[i]))
+	while (cmds[i] && (!is_symbol(cmds[i]) || (is_symbol(cmds[i]) && tab[i] == 0)) && ft_strcmp(cmds[i], "|"))
 		i++;
 	dest = malloc(sizeof(char *) * (i + 1));
 	if (!dest)
 		return (NULL);
 	dest[i] = NULL;
 	i = 0;
-	while (cmds[i] && !is_symbol(cmds[i]))
+	while (cmds[i] && (!is_symbol(cmds[i]) || (is_symbol(cmds[i]) && tab[i] == 0)) && ft_strcmp(cmds[i], "|"))
 	{
 		if (i == 0 && cmds[i][0] != '/' && !is_builtin(cmds[i]))
 		{

@@ -11,7 +11,7 @@ char    *get_left(t_cmd *cmd, int index)
 	i = 0;
 	while (strs[i + 1] && ft_strcmp(strs[i + 1], "|"))
 	{
-		if (!ft_strcmp(strs[i], "<"))
+		if (!ft_strcmp(strs[i], "<") && cmd->tab[index][i] == 1)
 		{
 			j++;
 			if (j == cmd->redir.left)
@@ -33,7 +33,7 @@ char    *get_right(t_cmd *cmd, int index)
 	i = 0;
 	while (strs[i + 1] && ft_strcmp(strs[i + 1], "|"))
 	{
-		if (!ft_strcmp(strs[i], ">>") || !ft_strcmp(strs[i], ">"))
+		if ((!ft_strcmp(strs[i], ">>") || (!ft_strcmp(strs[i], ">")) && cmd->tab[index][i] == 1))
 		{
 			j++;
 			if (j == cmd->redir.right)

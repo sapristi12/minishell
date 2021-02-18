@@ -54,7 +54,9 @@ struct                  s_cmd
     int 	mystdout;
     int 	mystdin;
     int 	exit_status[2];
-	int		*tab;
+	int		**tab;
+	int		tabsize;
+	int		i;
 };
 typedef struct s_cmd    t_cmd;
 
@@ -104,13 +106,13 @@ char		*ft_stradd(char const *s1, char const *s2);
 char	 	*get_path_command(char *command, t_list **envs, int option);
 char	 	*get_env(t_list *list, char *str);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
-char 		**create_package(char **cmds, t_list **envs, int option);
+char 		**create_package(char **cmds, t_list **envs, int option, int *tab);
 void		ft_lstclear(t_list **lst, void (*del)(void *));
 int 		free_8(char *str, t_list **envs, t_cmd *cmd, int ret);
 int		 	free_i(t_cmd *cmd, int index);
 char		*get_left(t_cmd *cmd, int index);
 char		*get_right(t_cmd *cmd, int index);
-int 		parse_redir_fd(t_cmd *cmd, int index);
+int 		parse_redir_fd(t_cmd *cmd, int index, int *tab);
 int 		exec_cmd(t_cmd *cmd, t_list **envs, int i);
 int			mid_fork(t_cmd *cmd, t_list **envs, int i);
 int			last_fork(t_cmd *cmd, t_list **envs, int i);
@@ -167,5 +169,7 @@ char	 	*get_var_dollar(char *str, t_list **envs);
 void		apply_tmp(char *tmp, char c, int *in_quote);
 int			get_size(char *str);
 int 		normal_slash(char **new, char c);
+int			count_string2(char **cmds, char *str, int *tab);
+int			move_pointer_i(char **cmds);
 
 #endif

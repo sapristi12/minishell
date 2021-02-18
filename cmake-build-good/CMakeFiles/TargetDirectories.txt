@@ -1,3 +1,0 @@
-/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/edit_cache.dir
-/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-good/CMakeFiles/new_shell.dir

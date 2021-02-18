@@ -28,6 +28,8 @@ void    init_struct_cmd(t_cmd *cmd)
     cmd->mystdin = dup(STDIN_FILENO);
     cmd->mystdout = dup(STDOUT_FILENO);
     cmd->exit_status[0] = 0;
+    cmd->tabsize = 0;
+    cmd->tab = NULL;
 	cmd->exit_status[0] = -99;
 	init_struct_pipe(&cmd->pipe);
 }

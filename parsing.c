@@ -18,7 +18,7 @@ int 	single_command(t_cmd *cmd, t_list **envs)
 
 	if (!(parsing_redir(cmd, 0)))
 		return (free_error_redir(cmd, envs, 0));
-	transform_token(cmd); //sécu si NULL
+	//transform_token(cmd); //sécu si NULL
 	ret = exec_cmd(cmd, envs, 0);
 	free_package(cmd);
 	dup2(cmd->mystdout, STDOUT_FILENO);
@@ -36,7 +36,7 @@ int 	several_commands(t_cmd *cmd, t_list **envs)
 	cmd->mystdin = dup(STDIN_FILENO);
 	if (init_pipe(cmd) == -1)
 		return (0);
-	transform_token(cmd);
+	//transform_token(cmd);
 	ret = loop_command_pipe(cmd, envs);
 	dup2(cmd->mystdout, STDOUT_FILENO);
 	dup2(cmd->mystdin, STDIN_FILENO);
@@ -57,35 +57,43 @@ int     parsing_command(t_cmd *cmd, t_list **envs)
     	return (several_commands(cmd, envs));
 }
 
+int 	*create_tab_index(char **cmds)
+{
+	int		i;
+	int		*tab;
+
+	i = 0;
+	while (cmds[i] && ft_strcmp(cmds[i], "|"))
+		i++;
+	tab = malloc(sizeof(int) * i);
+	if (!tab)
+		return (NULL);
+	i = 0;
+	while (cmds[i] && ft_strcmp(cmds[i], "|"))
+	{
+		if (!ft_strcmp(cmds[i], ">") || !ft_strcmp(cmds[i], ">>") || !ft_strcmp(cmds[i], "<"))
+			tab[i] = 1;
+		else
+			tab[i] = 0;
+		i++;
+	}
+	return (tab);
+}
+
 int		init_tab(t_cmd *cmd)
 {
-	int i;
-	int size;
+	int j;
+	int pointer;
 
-	size = 0;
-	i = 0;
-	while (cmd->cmds[i])
+	pointer = 0;
+	j = 0;
+	cmd->tab = malloc(sizeof(int *) * (cmd->pipe.nb_pipe + 1));
+	while (j < cmd->pipe.nb_pipe + 1)
 	{
-		if (ft_strcmp(cmd->cmds[i], "|"))
-			size++;
-		i++;
+		cmd->tab[j] = create_tab_index(&(cmd->cmds[pointer]));
+		pointer += move_pointer_i(&(cmd->cmds[pointer]));
+		j++;
 	}
-	cmd->tab = malloc(sizeof(int) * size);
-	if (!cmd->tab)
-		return (0);
-	i = 0;
-	size = 0;
-	while (cmd->cmds[i])
-	{
-		if (!ft_strcmp(cmd->cmds[i], ">"))
-			cmd->tab[size++] = 1;
-		else if (ft_strcmp(cmd->cmds[i], "|"))
-			cmd->tab[size++] = 0;
-		i++;
-	}
-	printf("size : %d\n", i);
-	for (int k = 0; cmd->tab[k]; k++)
-		printf("%d\n", cmd->tab[k]);
 	return (1);
 }
 
@@ -98,11 +106,11 @@ int     parsing_line(char *prompt, t_list **envs, t_cmd *cmd)
         return (errno_parsing_line(-2));
     if (!(cmd->cmds = new_split(prompt, ' ')))
         return (errno_parsing_line(-3));
-	init_tab(cmd);
     if (!several_string(cmd->cmds))
         return (errno_parsing_line(free_i(cmd, -4)));
 	if (!parsing_pipe(cmd))
         return (errno_parsing_line(free_i(cmd, -5)));
+	init_tab(cmd);
 	if (!(parsing_quotes(cmd, envs)))
 		return (errno_parsing_line(free_quote(cmd, prompt, -6)));
 	if ((ret = parsing_command(cmd, envs)) <= 0)

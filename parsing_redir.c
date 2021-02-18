@@ -50,9 +50,13 @@ int     parsing_redir(t_cmd *cmd, int index)
 	dup2(cmd->mystdout, STDOUT_FILENO);
 	dup2(cmd->mystdin, STDIN_FILENO);
 	strs = pointer_package(cmd->cmds, index);
-    cmd->redir.left = count_string(strs, "<");
-    cmd->redir.right = count_string(strs, ">") + count_string(strs, ">>");
-	if (!(parse_redir_fd(cmd, index)))
+	cmd->redir.right = 0;
+	cmd->redir.left = 0;
+	cmd->redir.save_right = NULL;
+	cmd->redir.save_left = NULL;
+    cmd->redir.left = count_string2(strs, "<", cmd->tab[index]);
+    cmd->redir.right = count_string2(strs, ">", cmd->tab[index]) + count_string2(strs, ">>", cmd->tab[index]);
+	if (!(parse_redir_fd(cmd, index, cmd->tab[index])))
         return (0);
     if (!(change_dup(cmd, index, 0, 0)))
         return (0);

@@ -10,19 +10,47 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/3.16.3/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug-wsl/CMakeFiles/3.16.3/CompilerIdC/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+Change Dir: /mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_bd350/fast && /usr/bin/make -f CMakeFiles/cmTC_bd350.dir/build.make CMakeFiles/cmTC_bd350.dir/build
-make[1]: Entering directory '/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_bd350.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_bd350.dir/testCCompiler.c.o   -c /mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_bd350
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bd350.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_bd350.dir/testCCompiler.c.o  -o cmTC_bd350 
-make[1]: Leaving directory '/mnt/c/Users/33652/Documents/Coding/new_shell/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/make cmTC_97ba7/fast && /usr/bin/make -f CMakeFiles/cmTC_97ba7.dir/build.make CMakeFiles/cmTC_97ba7.dir/build
+make[1]: Entering directory '/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_97ba7.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_97ba7.dir/testCCompiler.c.o   -c /mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_97ba7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_97ba7.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_97ba7.dir/testCCompiler.c.o  -o cmTC_97ba7 
+make[1]: Leaving directory '/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+
+
+
+The system is: Linux - 5.4.72-microsoft-standard-WSL2 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug-wsl/CMakeFiles/3.16.3/CompilerIdC/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5d752/fast && /usr/bin/make -f CMakeFiles/cmTC_5d752.dir/build.make CMakeFiles/cmTC_5d752.dir/build
+make[1]: Entering directory '/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5d752.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_5d752.dir/testCCompiler.c.o   -c /mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_5d752
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d752.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_5d752.dir/testCCompiler.c.o  -o cmTC_5d752 
+make[1]: Leaving directory '/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
 
 
 

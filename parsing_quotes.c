@@ -21,7 +21,7 @@ int 	parsing_quotes(t_cmd *cmd, t_list **envs)
 	i = 0;
 	while (cmd->cmds[i + 1])
 		i++;
-	if (is_token_string(cmd->cmds[i]))
+	if (cmd->tab[cmd->tabsize - 1] == 1 && is_token_string(cmd->cmds[i]))
 	{
 		ft_putstr_fd("ERROR PARSING TOKEN\n", 1);
 		return (0);

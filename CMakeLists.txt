@@ -1,29 +1,72 @@
-cmake_minimum_required(VERSION 3.10)
-project(new_shell C)
+cmake_minimum_required(VERSION 3.16)
+project(minishell C)
 
 set(CMAKE_C_STANDARD 11)
 
 include_directories(.)
 
-add_executable(new_shell
+add_executable(minishell
         check_first_command.c
-    count_string.c
-    create_space_around.c
-    display.c
-    free_parsing_line.c
-    ft_errno.c
-    ft_list.c
-    ft_strcmp.c
-    ft_strdup.c
-    get_next_line.h
-    get_next_line_utils.c
-    init_list_env.c
-    init_pipe.c
-    init_struct.c
-    main.c
-    minishell.h
-    new_split.c
-    parsing.c
-    parsing_pipe.c
+        close.c
+        count_string.c
+        create_args.c
+        create_new_str.c
+        create_space_around.c
+        display.c
+        double_quote.c
+        env.c
+        exec_cmd.c
+        export_create_env.c
+        forking.c
+        free_error.c
+        free_parsing_line.c
+        free_parsing_quote.c
+        free_return.c
+        ft_atoi.c
+        ft_cd.c
+        ft_echo.c
+        ft_env.c
+        ft_errno.c
+        ft_exit.c
+        ft_export.c
+        ft_list.c
+        ft_stradd.c
+        ft_strcat.c
+        ft_strcmp.c
+        ft_strdup.c
+        ft_strjoin.c
+        ft_unset.c
+        get_env.c
+        get_next_line.c
+        get_next_line.h
+        get_next_line_utils.c
+        get_path_command.c
+        get_size_spaces.c
+        get_tilde_path.c
+        get_var_dollar.c
+        init_list_env.c
+        init_pipe.c
+        init_struct.c
+        is_builtin.c
+        is_even_quote.c
+        is_there_char.c
+        is_token.c
+        list_to_array.c
+        loop_command_pipe.c
+        main.c
+        minishell.h
+        move_pointer.c
+        new_split.c
+        parse_redir_fd.c
+        parsing.c
+        parsing_pipe.c
+        parsing_quotes.c
         parsing_redir.c
-    several_string.c get_next_line.c is_builtin.c get_path_command.c ft_stradd.c get_env.c create_args.c redir_save.c parse_redir_fd.c exec_cmd.c forking.c close.c parsing_quotes.c ft_strcat.c ft_strjoin.c quotes.c free_return.c sort_builtin.c pwd.c ft_cd.c env.c ft_env.c ft_unset.c list_to_array.c free_error.c double_quote.c get_tilde_path.c ft_echo.c ft_exit.c is_token.c signal_handle.c ft_atoi.c sort_list.c ft_export.c export_create_env.c is_there_char.c free_parsing_quote.c remove_escape_token.c loop_command_pipe.c is_even_quote.c create_new_str.c move_pointer.c get_var_dollar.c get_size_spaces.c)
+        pwd.c
+        quotes.c
+        redir_save.c
+        remove_escape_token.c
+        several_string.c
+        signal_handle.c
+        sort_builtin.c
+        sort_list.c)
