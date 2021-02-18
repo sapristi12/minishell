@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/33652/Documents/Coding/minishell/is_token.c
+/mnt/c/Users/33652/Documents/Coding/minishell/init_pipe.c
 minishell.h
 /mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
 
@@ -35,4 +35,12 @@ signal.h
 -
 dirent.h
 -
+
+/mnt/c/Users/33652/Documents/Coding/minishell/parsing.c
+minishell.h
+/mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
+
+/mnt/c/Users/33652/Documents/Coding/minishell/quotes.c
+minishell.h
+/mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
 

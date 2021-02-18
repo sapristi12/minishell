@@ -24,9 +24,6 @@ static int  alloc_pipe(t_cmd *cmd)
 
 int     init_pipe(t_cmd *cmd)
 {
-    int i;
-
-    i = 0;
     if (alloc_pipe(cmd) == -1)
         return (-1);
     if (create_pipe(cmd) == -1)

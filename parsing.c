@@ -18,7 +18,6 @@ int 	single_command(t_cmd *cmd, t_list **envs)
 
 	if (!(parsing_redir(cmd, 0)))
 		return (free_error_redir(cmd, envs, 0));
-	//transform_token(cmd); //sécu si NULL
 	ret = exec_cmd(cmd, envs, 0);
 	free_package(cmd);
 	dup2(cmd->mystdout, STDOUT_FILENO);
@@ -36,7 +35,6 @@ int 	several_commands(t_cmd *cmd, t_list **envs)
 	cmd->mystdin = dup(STDIN_FILENO);
 	if (init_pipe(cmd) == -1)
 		return (0);
-	//transform_token(cmd);
 	ret = loop_command_pipe(cmd, envs);
 	dup2(cmd->mystdout, STDOUT_FILENO);
 	dup2(cmd->mystdin, STDIN_FILENO);
@@ -53,7 +51,7 @@ int     parsing_command(t_cmd *cmd, t_list **envs)
 	init_all_package(cmd, envs);
 	if (cmd->pipe.nb_pipe == 0)
 		return (single_command(cmd, envs));
-    else if (cmd->pipe.nb_pipe > 0)
+    if (cmd->pipe.nb_pipe > 0)
     	return (several_commands(cmd, envs));
 }
 
