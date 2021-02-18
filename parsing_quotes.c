@@ -17,9 +17,6 @@ int 	parsing_quotes(t_cmd *cmd, t_list **envs)
 	while (cmd->cmds[i + 1])
 		i++;
 	if (!is_token_last(cmd))
-	{
-		ft_putstr_fd("ERROR PARSING TOKEN\n", 1);
 		return (0);
-	}
 	return (1);
 }

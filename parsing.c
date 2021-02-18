@@ -88,9 +88,12 @@ int		init_tab(t_cmd *cmd)
 	pointer = 0;
 	j = 0;
 	cmd->tab = malloc(sizeof(int *) * (cmd->pipe.nb_pipe + 1));
+	if (!cmd->tab)
+		return (0);
 	while (j < cmd->pipe.nb_pipe + 1)
 	{
-		cmd->tab[j] = create_tab_index(&(cmd->cmds[pointer]));
+		if (!(cmd->tab[j] = create_tab_index(&(cmd->cmds[pointer]))))
+			return (0);
 		pointer += move_pointer_i(&(cmd->cmds[pointer]));
 		j++;
 	}
@@ -110,7 +113,8 @@ int     parsing_line(char *prompt, t_list **envs, t_cmd *cmd)
         return (errno_parsing_line(free_i(cmd, -4)));
 	if (!parsing_pipe(cmd))
         return (errno_parsing_line(free_i(cmd, -5)));
-	init_tab(cmd);
+	if (!(init_tab(cmd)))
+		return (0);
 	if (!(parsing_quotes(cmd, envs)))
 		return (errno_parsing_line(free_quote(cmd, prompt, -6)));
 	if ((ret = parsing_command(cmd, envs)) <= 0)

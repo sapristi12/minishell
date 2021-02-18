@@ -9,11 +9,11 @@ static int		errno_index(int index)
 	if (index == -3)
 		ft_putstr_fd("Error: parsing line malloc split failed\n", 1);
 	if (index == -4)
-		ft_putstr_fd("Error: tokens invalid\n", 1);
+		ft_putstr_fd("minishell: syntax error near unexpected 'newline'\n", 1);
 	if (index == -5)
-		ft_putstr_fd("Error: parsing line error pipes\n", 1);
+		ft_putstr_fd("minishell: parsing line error pipes\n", 1);
 	if (index == -6)
-		ft_putstr_fd("Error: parsing caracters\n", 1);
+		ft_putstr_fd("minishell: syntax error near unexpected 'newline'\n", 1);
 	if (index == -7)
 		ft_putstr_fd("Error: parsing line malloc envs failed\n", 1);
 	return (-1);
