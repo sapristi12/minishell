@@ -53,6 +53,7 @@ int     parsing_command(t_cmd *cmd, t_list **envs)
 		return (single_command(cmd, envs));
     if (cmd->pipe.nb_pipe > 0)
     	return (several_commands(cmd, envs));
+    return (1);
 }
 
 int 	*create_tab_index(char **cmds)
