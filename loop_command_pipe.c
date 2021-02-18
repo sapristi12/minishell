@@ -1,26 +1,5 @@
 #include "minishell.h"
 
-int 	transform_token(t_cmd *cmd)
-{
-	int		i;
-	int 	j;
-	char 	*tmp;
-
-	i = 0;
-	while (cmd->pipe.all[i])
-	{
-		j = 0;
-		while (cmd->pipe.all[i][j] && cmd->tab[i + j] == 0)
-		{
-			tmp = remove_escaped_token(cmd->pipe.all[i][j]);
-			free(cmd->pipe.all[i][j]);
-			cmd->pipe.all[i][j] = tmp;
-			j++;
-		}
-		i++;
-	}
-}
-
 int		hub_fork(t_cmd *cmd, t_list **envs, int i)
 {
 	int ret;

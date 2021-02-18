@@ -38,4 +38,5 @@ int 	ft_unset(t_cmd *cmd, t_list **envs)
 		ft_delone(envs, cmd->cmds[i]);
 		i++;
 	}
+	return (1);
 }

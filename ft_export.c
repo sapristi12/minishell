@@ -70,6 +70,7 @@ static int 	manage_export(t_cmd *cmd, t_list *envs, int i)
 		return (export_list(envs));
 	if (i == 2)
 		return (error_identifier(cmd->cmds[1]));
+	return (1);
 }
 
 int 	ft_export(t_cmd *cmd, t_list *envs)
