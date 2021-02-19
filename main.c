@@ -1,5 +1,21 @@
 #include "minishell.h"
 
+int 	multiple_semicolon(char *str)
+{
+	int i;
+
+	i = 0;
+	if (str[0] == ';')
+		return (0);
+	while (str[i + 1])
+	{
+		if (str[i] == ';' && str[i + 1] == ';')
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
 int		main_loop(char *prompt, t_cmd *cmd, t_list **envs)
 {
 	int		i;
@@ -9,6 +25,11 @@ int		main_loop(char *prompt, t_cmd *cmd, t_list **envs)
 	i = 0;
 	if (only_spaces(prompt))
 		return (0);
+	if (!multiple_semicolon(prompt))
+	{
+		ft_putstr_fd("minishell: syntax error near unexpected ';'\n", 1);
+		return (0);
+	}
 	cmds = new_split(prompt, ';');
 	if (cmds == NULL || cmds[i] == NULL)
 	{
