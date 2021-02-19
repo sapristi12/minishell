@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/mnt/c/Users/33652/Documents/Coding/minishell/ft_echo.c
+minishell.h
+/mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
+
 /mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
 stdio.h
 -
@@ -31,8 +35,4 @@ signal.h
 -
 dirent.h
 -
-
-/mnt/c/Users/33652/Documents/Coding/minishell/move_pointer.c
-minishell.h
-/mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
 

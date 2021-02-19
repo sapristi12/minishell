@@ -11,7 +11,7 @@ int 	ft_echo(t_cmd *cmd)
 	i = 1;
 	while (cmd->cmds[size] && !is_symbol(cmd->cmds[size]))
 		size++;
-	if (!ft_strcmp(cmd->cmds[1], "-n"))
+	while (cmd->cmds[i] && !ft_strcmp(cmd->cmds[i], "-n"))
 	{
 		flag = 1;
 		i++;
