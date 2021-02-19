@@ -8,7 +8,7 @@ int		main_loop(char *prompt, t_cmd *cmd, t_list **envs)
 
 	i = 0;
 	cmds = new_split(prompt, ';');
-	if (!cmds)
+	if (cmds == NULL || cmds[i] == NULL)
 		return (-1);
 	while (cmds[i])
 	{
@@ -32,6 +32,7 @@ int		main(int i, char **av, char **envp)
 	char	*prompt;
 	t_list	*envs;
 	t_cmd	cmd;
+	int 	ret;
 
 	(void)av;
 	i = 0;
@@ -40,7 +41,7 @@ int		main(int i, char **av, char **envp)
 		return (-1);
 	signal_handle();
 	display_prompt();
-	while (get_next_line(0, &prompt, 0))
+	while ((ret = get_next_line(0, &prompt, 0)) > 0)
 	{
 		if (prompt[0] != '\0' && main_loop(prompt, &cmd, &envs) == -1)
 		{
