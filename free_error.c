@@ -23,7 +23,6 @@ int 	free_error_redir(t_cmd *cmd, t_list **envs, int ret)
 		free_char_double_array(cmd->pipe.all[i]);
 		i++;
 	}
-	ft_lstclear(envs, free);
 	free(cmd->pipe.all);
 	return (ret);
 }
