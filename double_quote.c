@@ -16,14 +16,22 @@ int 	double_dollar(char *str, char **new, t_list **envs)
 	int		i;
 	char 	*copy;
 
-	i = 0;
 	copy = get_var_dollar(str, envs);
 	*new = ft_strjoin(*new, copy);
 	free(copy);
 	i = 0;
-	while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE && str[i] != ' ')
+	while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE && str[i] != ' ' && str[i] != SLASH)
 		i++;
 	return (i);
+}
+
+int 	next_dollar(char c)
+{
+	if (c == SLASH)
+		return (1);
+	if (c == '%')
+		return (1);
+	return (0);
 }
 
 char 	*double_quote(char *str, t_list **envs)
@@ -41,6 +49,8 @@ char 	*double_quote(char *str, t_list **envs)
 	{
 		if (i < max && str[i] == SLASH && is_escaped(str[i + 1]))
 			i += normal_slash(&new, str[i + 1]);
+		else if (str[i] == '$' && next_dollar(str[i + 1]))
+			i += normal_slash(&new, str[i]) - 1;
 		else if (str[i] == '$' && max > 0)
 			i += double_dollar(&str[i + 1], &new, envs);
 		else
