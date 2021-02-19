@@ -122,5 +122,6 @@ int     parsing_line(char *prompt, t_list **envs, t_cmd *cmd)
 		return (-2);
 	free(prompt);
     free_char_double_array(cmd->cmds);
+    free_int_double_array(cmd);
     return (0);
 }
