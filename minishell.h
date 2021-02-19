@@ -172,5 +172,6 @@ int			count_string2(char **cmds, char *str, int *tab);
 int			move_pointer_i(char **cmds);
 int 		only_spaces(char *str);
 void		free_int_double_array(t_cmd *cmd);
+int 		next_dollar(char c);
 
 #endif

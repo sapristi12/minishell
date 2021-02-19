@@ -51,6 +51,8 @@ char 	*normal_quote(char *str, t_list **envs)
 			i += normal_tilde(&str[i], &new, envs);
 		else if (str[i] == SLASH)
 			i += normal_slash(&new, str[i + 1]);
+		else if (str[i] == '$' && next_dollar(str[i + 1]))
+			i += normal_slash(&new, str[i]) - 1;
 		else if ((str[i] == '$' && max > 0) && (i < max && (str[i + 1])))
 			i += normal_dollar(&str[i + 1], &new, envs);
 		else
