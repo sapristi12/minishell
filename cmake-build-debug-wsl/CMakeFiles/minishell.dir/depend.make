@@ -127,6 +127,9 @@ CMakeFiles/minishell.dir/is_builtin.c.o: ../minishell.h
 CMakeFiles/minishell.dir/is_even_quote.c.o: ../is_even_quote.c
 CMakeFiles/minishell.dir/is_even_quote.c.o: ../minishell.h
 
+CMakeFiles/minishell.dir/is_only_spaces.c.o: ../is_only_spaces.c
+CMakeFiles/minishell.dir/is_only_spaces.c.o: ../minishell.h
+
 CMakeFiles/minishell.dir/is_there_char.c.o: ../is_there_char.c
 CMakeFiles/minishell.dir/is_there_char.c.o: ../minishell.h
 

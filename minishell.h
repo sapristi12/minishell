@@ -170,5 +170,6 @@ int			get_size(char *str);
 int 		normal_slash(char **new, char c);
 int			count_string2(char **cmds, char *str, int *tab);
 int			move_pointer_i(char **cmds);
+int 		only_spaces(char *str);
 
 #endif

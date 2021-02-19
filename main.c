@@ -7,18 +7,31 @@ int		main_loop(char *prompt, t_cmd *cmd, t_list **envs)
 	char	**cmds;
 
 	i = 0;
+	if (only_spaces(prompt))
+		return (0);
 	cmds = new_split(prompt, ';');
 	if (cmds == NULL || cmds[i] == NULL)
-		return (-1);
+	{
+		ft_putstr_fd("minishell: syntax error near unexpected ';'\n", 1);
+		return (0);
+	}
 	while (cmds[i])
 	{
-		status = parsing_line(cmds[i], envs, cmd);
-		if (status == -1)
-			free_parsing_line(cmds, prompt, status);
-		if (status == -2)
+		if (!only_spaces(cmds[i]))
 		{
-			free_char_double_array(cmds);
-			return (-1);
+			status = parsing_line(cmds[i], envs, cmd);
+			if (status == -1)
+				free_parsing_line(cmds, prompt, status);
+			if (status == -2)
+			{
+				free_char_double_array(cmds);
+				return (-1);
+			}
+		}
+		else
+		{
+			ft_putstr_fd("minishell: syntax error near unexpected ';'\n", 1);
+			break ;
 		}
 		i++;
 	}

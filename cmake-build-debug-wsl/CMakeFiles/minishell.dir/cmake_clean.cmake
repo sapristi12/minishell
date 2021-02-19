@@ -41,6 +41,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/minishell.dir/init_struct.c.o"
   "CMakeFiles/minishell.dir/is_builtin.c.o"
   "CMakeFiles/minishell.dir/is_even_quote.c.o"
+  "CMakeFiles/minishell.dir/is_only_spaces.c.o"
   "CMakeFiles/minishell.dir/is_there_char.c.o"
   "CMakeFiles/minishell.dir/is_token.c.o"
   "CMakeFiles/minishell.dir/list_to_array.c.o"
