@@ -76,19 +76,20 @@ int		main(int i, char **av, char **envp)
 
 	(void)av;
 	i = 0;
-	g_sig = 0;
 	if (!(envs = init_list_env(envp)))
 		return (-1);
 	signal_handle();
 	display_prompt();
 	while ((ret = get_next_line(0, &prompt, 0)) > 0)
 	{
+		g_sig = 0;
 		if (prompt[0] != '\0' && main_loop(prompt, &cmd, &envs) == -1)
 		{
 			get_next_line(666, NULL, 1);
 			break;
 		}
-		display_prompt();
+		if (g_sig == 0)
+			display_prompt();
 	}
 	free(prompt);
 	ft_lstclear(&envs, free);
