@@ -81,10 +81,13 @@ int		main(int i, char **av, char **envp)
 		return (-1);
 	signal_handle();
 	display_prompt();
-	while ((ret = get_next_line(0, &prompt)) > 0)
+	while ((ret = get_next_line(0, &prompt, 0)) > 0)
 	{
 		if (prompt[0] != '\0' && main_loop(prompt, &cmd, &envs) == -1)
+		{
+			get_next_line(666, NULL, 1);
 			break;
+		}
 		if (g_sig <= 2)
 			display_prompt();
 		if (ret == 0)

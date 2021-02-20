@@ -22,8 +22,20 @@
 
 # define BUFFER_SIZE 78978987
 
-int						get_next_line(int fd, char **line);
+struct					s_gnl
+{
+	char	*rest;
+	int		nb_bytes;
+	int		option;
+};
+typedef struct s_gnl	t_gnl;
+
+int						get_next_line(int fd, char **line, int option);
 int						ft_strlen(char *str);
+char					*ft_strcpy(char *dest, char *src);
 char					*ft_strjoin(char const *s1, char const *s2);
+void					ft_bzero(void *s, size_t n);
+char					*ft_getrest(char *str, int *empty_rest);
+char					*ft_getline(char *str);
 
 #endif

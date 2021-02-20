@@ -55,6 +55,7 @@ struct                  s_cmd
     int 	mystdin;
     int 	exit_status[2];
 	int		**tab;
+	int		tabsize;
 	int		i;
 };
 typedef struct s_cmd    t_cmd;
@@ -78,7 +79,7 @@ typedef struct s_quo	t_quo;
 
 int	g_sig;
 
-int     	get_next_line(int fd, char **line);
+int     	get_next_line(int fd, char **line, int option);
 int     	ft_strlen(char *str);
 int     	parsing_line(char *prompt, t_list **envs, t_cmd *cmd);
 char    	**new_split(char *str, char c);

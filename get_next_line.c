@@ -13,135 +13,123 @@
 
 #include "get_next_line.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+char			*ft_getrest(char *str, int *empty_rest)
 {
-	size_t	dstlen;
-	size_t	srclen;
-	size_t	i;
+	char *rest;
 
-	dstlen = 0;
-	srclen = 0;
-	i = 0;
-	while (dst[dstlen])
-		dstlen++;
-	while (src[srclen])
-		srclen++;
-	if (dstsize == 0 || dstsize <= dstlen)
-		return (srclen + dstsize);
-	while (i < srclen && i < dstsize - dstlen - 1)
+	*empty_rest = 0;
+	while (*str != '\0')
 	{
-		dst[dstlen + i] = src[i];
-		i++;
+		if (*str == '\n')
+		{
+			str++;
+			if (!(rest = (char*)malloc(sizeof(char) * ft_strlen(str) + 1)))
+				return (NULL);
+			rest = ft_strcpy(rest, str);
+			return (rest);
+		}
+		str++;
 	}
-	dst[dstlen + i] = '\0';
-	return (dstlen + srclen);
+	*empty_rest = 1;
+	return (NULL);
 }
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+static int		ft_manage_rest(t_gnl *s, char **line, char **buffer)
 {
-	size_t	i;
-	size_t	src_len;
+	char	*rest;
+	char	*subline;
+	int		empty_rest;
 
-	i = 0;
-	src_len = 0;
-	if (src)
+	empty_rest = 0;
+	rest = ft_getrest(*buffer, &empty_rest);
+	if (rest == NULL && empty_rest == 0)
+		return (-1);
+	if (empty_rest == 1)
 	{
-		src_len = ft_strlen(src);
-		if (dstsize > 0)
+		if ((*line = ft_strjoin(*line, *buffer)) == NULL)
+			return (-1);
+		ft_bzero(*buffer, BUFFER_SIZE + 1);
+		return (1);
+	}
+	else
+	{
+		if ((subline = ft_getline(*buffer)) == NULL)
+			return (-1);
+		if ((*line = ft_strjoin(*line, subline)) == NULL)
+			return (-1);
+		s->rest = rest;
+		free(subline);
+		return (0);
+	}
+}
+
+static int		ft_rest(t_gnl *s, char **buffer, int fd, char **line)
+{
+	int ret;
+
+	if (s->rest != NULL)
+	{
+		*buffer = ft_strcpy(*buffer, s->rest);
+		free(s->rest);
+		s->rest = NULL;
+	}
+	else
+	{
+		s->nb_bytes = read(fd, *buffer, BUFFER_SIZE);
+		if (s->nb_bytes <= 0)
 		{
-			while (src[i] && (i < (dstsize - 1)))
-			{
-				dst[i] = src[i];
-				i++;
-			}
-			dst[i] = '\0';
+			if (s->nb_bytes == 0)
+				return (0);
+			if (s->nb_bytes < 0)
+				return (-1);
 		}
 	}
-	return (src_len);
-}
-
-static int	get_len(char *str)
-{
-	if (str)
-		return (ft_strlen(str));
-	else
-		return (0);
-}
-
-int			fill_line(char **line, char *buffer, int *offset)
-{
-	int		to_endl;
-	char	*new_line;
-	int		line_len;
-
-	line_len = get_len(*line);
-	to_endl = 0;
-	while (buffer[to_endl] && buffer[to_endl] != '\n')
-		to_endl++;
-	new_line = (char*)calloc(line_len + to_endl + 1, sizeof(char));
-	if (!new_line)
+	ret = ft_manage_rest(s, line, buffer);
+	if (ret == 0)
+		return (2);
+	if (ret == -1)
 		return (-1);
-	if (*line != NULL)
-	{
-		ft_strlcpy(new_line, *line, line_len + 1);
-		free(*line);
-	}
-	ft_strlcat(new_line, buffer, line_len + to_endl + 1);
-	*line = new_line;
-	if (buffer[to_endl] == '\n')
-	{
-		*offset += to_endl + 1;
-		return (1);
-	}
-	*offset = 0;
-	return (0);
+	return (1);
 }
 
-#include <string.h>
-
-int			begin_line(char **line, char *buffer, int *offset)
+static int		ft_read(int fd, t_gnl *s, char **line)
 {
-	int	to_endl;
+	char	*buffer;
+	int		ret;
 
-	to_endl = 0;
-	while (buffer[*offset + to_endl] && buffer[*offset + to_endl] != '\n')
-		to_endl++;
-	*line = (char*)calloc(to_endl + 1, sizeof(char)); //ft_calloc
-	if (!*line)
+	ret = 0;
+	if (!(buffer = malloc(BUFFER_SIZE + 1)))
 		return (-1);
-	ft_strlcpy(*line, buffer + *offset, to_endl + 1); //ft_strclpy
-	if (buffer[*offset + to_endl] == '\n')
+	ft_bzero(buffer, BUFFER_SIZE + 1);
+	if (!(*line = malloc(1)))
 	{
-		*offset += to_endl + 1;
-		return (1);
+		free(buffer);
+		return (-1);
 	}
-	*offset = 0;
-	return (0);
+	*line[0] = '\0';
+	while (ret != 2)
+	{
+		ret = ft_rest(s, &buffer, fd, line);
+		if (ret <= 0)
+		{
+			free(buffer);
+			return (ret);
+		}
+	}
+	free(buffer);
+	return (s->nb_bytes > 0 || s->rest) ? 1 : 0;
 }
 
-int			get_next_line(int fd, char **line)
+int				get_next_line(int fd, char **line, int option)
 {
-	static char	buffer[BUFFER_SIZE + 1] = "";
-	static int	offset = 0;
-	int			end_file;
-	int			read_return;
-	int			end_line;
+	static t_gnl	s;
+	int				ret;
 
-	if (fd < 0 || !line || BUFFER_SIZE <= 0)
+	if (option == 1)
+		free(s.rest);
+	if (read(fd, 0, 0) < 0 || fd < 0 || BUFFER_SIZE <= 0 || !line)
 		return (-1);
-	end_file = 0;
-	end_line = 0;
-	if (offset)
-		end_line = begin_line(line, buffer, &offset);
-	while (end_line != 1 && !end_file)
-	{
-		read_return = read(fd, buffer, BUFFER_SIZE);
-		if (read_return == -1 || end_line == -1)
-			return (-1);
-		buffer[read_return] = '\0';
-		end_line = fill_line(line, buffer, &offset);
-		end_file = read_return < BUFFER_SIZE;
-	}
-	return (!end_file || offset != 0);
+	ret = ft_read(fd, &s, line);
+	return (ret);
 }
 
