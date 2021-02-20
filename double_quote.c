@@ -20,7 +20,7 @@ int 	double_dollar(char *str, char **new, t_list **envs)
 	*new = ft_strjoin(*new, copy);
 	free(copy);
 	i = 0;
-	while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE && str[i] != ' ' && str[i] != SLASH)
+	while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE && str[i] != ' ' && str[i] != SLASH && str[i] != '@' && str[i] != '=')
 		i++;
 	return (i);
 }

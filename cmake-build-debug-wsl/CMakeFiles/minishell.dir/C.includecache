@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/33652/Documents/Coding/minishell/ft_echo.c
+/mnt/c/Users/33652/Documents/Coding/minishell/double_quote.c
+minishell.h
+/mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
+
+/mnt/c/Users/33652/Documents/Coding/minishell/get_var_dollar.c
 minishell.h
 /mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
 
@@ -35,4 +39,8 @@ signal.h
 -
 dirent.h
 -
+
+/mnt/c/Users/33652/Documents/Coding/minishell/quotes.c
+minishell.h
+/mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
 
