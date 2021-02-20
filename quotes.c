@@ -23,7 +23,7 @@ int 	normal_dollar(char *str, char **new, t_list **envs)
 	copy = get_var_dollar(str, envs);
 	*new = ft_strjoin(*new, copy);
 	free(copy);
-	while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE && str[i] != SLASH && str[i] != '$' && str[i] != ' ' && str[i] != '=' && str[i] != '@')
+	while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE && str[i] != SLASH && str[i] != '$' && str[i] != ' ' && str[i] != '=' && str[i] != '@' && str[i] != '?')
 		i++;
 	return (i);
 }

@@ -10,7 +10,7 @@ static int		basic_first_command(char **cmds, t_list **envs, int *tab)
 	{
 		ft_putstr_fd(cmds[0], STDOUT_FILENO);
 		ft_putstr_fd(": command not found\n", STDOUT_FILENO);
-		return (1);
+		return (0);
 	}
 	free_char_double_array(args);
 	return (1);

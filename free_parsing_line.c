@@ -15,6 +15,7 @@ void		free_package(t_cmd *cmd)
 
 int			free_8(char *str, t_list **envs, t_cmd *cmd, int ret)
 {
+	g_sig = 2;
 	free_int_double_array(cmd);
 	free(str);
 	free_char_double_array(cmd->cmds);

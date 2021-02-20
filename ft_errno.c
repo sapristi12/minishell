@@ -26,6 +26,7 @@ static int		errno_parsing_command(int index)
 
 int				errno_parsing_line(int index)
 {
+	g_sig = 2;
 	if (index >= -9 && index <= -1)
 		return (errno_index(index));
 	if (index >= -19 && index <= -11)

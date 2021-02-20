@@ -74,6 +74,7 @@ int		main(int i, char **av, char **envp)
 	t_cmd	cmd;
 	int 	ret;
 
+	g_sig = 0;
 	(void)av;
 	i = 0;
 	if (!(envs = init_list_env(envp)))
@@ -82,18 +83,17 @@ int		main(int i, char **av, char **envp)
 	display_prompt();
 	while ((ret = get_next_line(0, &prompt, 0)) > 0)
 	{
-		g_sig = 0;
 		if (prompt[0] != '\0' && main_loop(prompt, &cmd, &envs) == -1)
 		{
 			get_next_line(666, NULL, 1);
 			break;
 		}
-		if (g_sig == 0)
+		if (g_sig <= 2)
 			display_prompt();
 	}
 	free(prompt);
 	ft_lstclear(&envs, free);
-	if (g_sig != 0)
+	if (g_sig > 2)
 		return (g_sig);
 	if (cmd.exit_status[0] == 1)
 		return (cmd.exit_status[1]);

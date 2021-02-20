@@ -120,6 +120,7 @@ int     parsing_line(char *prompt, t_list **envs, t_cmd *cmd)
 		return (free_8(prompt, envs, cmd, ret));
 	if (cmd->exit_status[0] == 1)
 		return (-2);
+	g_sig = 0;
 	free(prompt);
     free_char_double_array(cmd->cmds);
     free_int_double_array(cmd);
