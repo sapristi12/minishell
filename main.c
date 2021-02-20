@@ -90,6 +90,8 @@ int		main(int i, char **av, char **envp)
 		}
 		if (g_sig <= 2)
 			display_prompt();
+		if (ret == 0)
+			printf("ret == 0\n");
 	}
 	free(prompt);
 	ft_lstclear(&envs, free);
