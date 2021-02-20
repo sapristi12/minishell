@@ -116,11 +116,11 @@ int     parsing_line(char *prompt, t_list **envs, t_cmd *cmd)
 		return (0);
 	if (!(parsing_quotes(cmd, envs)))
 		return (errno_parsing_line(free_quote(cmd, prompt, -6)));
+	g_sig = 0;
 	if ((ret = parsing_command(cmd, envs)) <= 0)
 		return (free_8(prompt, envs, cmd, ret));
 	if (cmd->exit_status[0] == 1)
 		return (-2);
-	g_sig = 0;
 	free(prompt);
     free_char_double_array(cmd->cmds);
     free_int_double_array(cmd);
