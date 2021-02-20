@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="minishell"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="minishell">
+				<Option output="/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/minishell" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/33652/Documents/Coding/minishell/."/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 minishell"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="minishell/fast">
+				<Option output="/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/minishell" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/33652/Documents/Coding/minishell/."/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 minishell/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/check_first_command.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/close.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/count_string.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/create_args.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/create_new_str.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/create_space_around.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/display.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/double_quote.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/env.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/exec_cmd.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/export_create_env.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/forking.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/free_error.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/free_parsing_line.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/free_parsing_quote.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/free_return.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/ft_atoi.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/ft_cd.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/ft_echo.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/ft_env.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/ft_errno.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/ft_exit.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/ft_export.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/ft_list.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/ft_stradd.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/ft_strcat.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/ft_strcmp.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/ft_strdup.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/ft_strjoin.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/ft_unset.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/get_env.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/get_next_line.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/get_next_line.h">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/get_next_line_utils.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/get_path_command.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/get_size_spaces.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/get_tilde_path.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/get_var_dollar.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/init_list_env.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/init_pipe.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/init_struct.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/is_builtin.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/is_even_quote.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/is_there_char.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/is_token.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/list_to_array.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/loop_command_pipe.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/main.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/minishell.h">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/move_pointer.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/new_split.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/parse_redir_fd.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/parsing.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/parsing_pipe.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/parsing_quotes.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/parsing_redir.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/pwd.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/quotes.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/redir_save.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/remove_escape_token.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/several_string.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/signal_handle.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/sort_builtin.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/sort_list.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
