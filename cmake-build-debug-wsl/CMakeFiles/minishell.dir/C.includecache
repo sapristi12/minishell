@@ -6,33 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/33652/Documents/Coding/minishell/main.c
-minishell.h
-/mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
+/mnt/c/Users/33652/Documents/Coding/minishell/get_next_line.c
+get_next_line.h
+/mnt/c/Users/33652/Documents/Coding/minishell/get_next_line.h
 
-/mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
-stdio.h
--
+/mnt/c/Users/33652/Documents/Coding/minishell/get_next_line.h
 stdlib.h
 -
 unistd.h
 -
-string.h
+stdio.h
 -
 sys/types.h
 -
 sys/stat.h
 -
-sys/wait.h
--
 fcntl.h
--
-errno.h
--
-limits.h
--
-signal.h
--
-dirent.h
 -
 
