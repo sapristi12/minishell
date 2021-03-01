@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:06:25 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 20:12:52 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/01 20:59:58 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		sort_builtin(t_cmd *cmd, t_list **envs)
 {
 	if (!ft_strcmp(cmd->cmds[0], "pwd"))
-		ft_pwd(cmd);
+		ft_pwd();
 	if (!ft_strcmp(cmd->cmds[0], "cd"))
 		ft_cd(cmd, envs);
 	if (!ft_strcmp(cmd->cmds[0], "env"))

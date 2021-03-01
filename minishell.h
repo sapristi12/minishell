@@ -177,6 +177,7 @@ int			only_zeros(char *str);
 int			export_list(t_list *envs);
 int 		check_prompt(int index, char *prompt);
 int			init_tab(t_cmd *cmd);
+int			*create_tab_index(char **cmds);
 	
 #	endif
  	
