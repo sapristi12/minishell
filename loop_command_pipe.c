@@ -24,6 +24,16 @@ void 	hub_close(t_cmd *cmd, int i)
 		close_after(cmd, i);
 }
 
+void 	hub_wait(t_cmd *cmd)
+{
+	int status;
+
+	status = 0;
+	waitpid(cmd->pid, &status, 0);
+	if (WIFEXITED(status))
+		g_sig = WEXITSTATUS(status);
+}
+
 int 	loop_command_pipe(t_cmd *cmd, t_list **envs)
 {
 	int i;
@@ -44,9 +54,8 @@ int 	loop_command_pipe(t_cmd *cmd, t_list **envs)
 			return (-1);
 		dup2(cmd->mystdout, STDOUT_FILENO);
 		dup2(cmd->mystdin, STDIN_FILENO);
+		hub_wait(cmd);
 		i++;
 	}
-	while (cmd->pipe.save-- >= 0)
-		wait(&(cmd->pid));
 	return (1);
 }

@@ -24,13 +24,17 @@ int			pipe_first_command(t_cmd *cmd, t_list **envs)
 	j = 1;
 	i = 1;
 	if (!(basic_first_command(cmd->cmds, envs, cmd->tab[0])))
-		return (0);
+		g_sig = 127;
+	else
+		g_sig = 0;
 	while (cmd->cmds[i + 1])
 	{
 		if (!ft_strcmp(cmd->cmds[i], "|"))
 		{
 			if (!(basic_first_command(&(cmd->cmds[i + 1]), envs, cmd->tab[j])))
-				return (0);
+				g_sig = 127;
+			else
+				g_sig = 0;
 			j++;
 		}
 		i++;
@@ -43,7 +47,9 @@ int				check_first_command(t_cmd *cmd, t_list **envs)
 	if (cmd->pipe.nb_pipe == 0)
 	{
 		if (!(basic_first_command(cmd->cmds, envs, cmd->tab[0])))
-			return (0);
+			g_sig = 127;
+		else
+			g_sig = 0;
 	}
 	return (1);
 }

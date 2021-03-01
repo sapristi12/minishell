@@ -46,6 +46,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/mnt/c/Users/33652/Documents/Coding/minishell/init_struct.c" "/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles/minishell.dir/init_struct.c.o"
   "/mnt/c/Users/33652/Documents/Coding/minishell/is_builtin.c" "/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles/minishell.dir/is_builtin.c.o"
   "/mnt/c/Users/33652/Documents/Coding/minishell/is_even_quote.c" "/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles/minishell.dir/is_even_quote.c.o"
+  "/mnt/c/Users/33652/Documents/Coding/minishell/is_only_spaces.c" "/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles/minishell.dir/is_only_spaces.c.o"
   "/mnt/c/Users/33652/Documents/Coding/minishell/is_there_char.c" "/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles/minishell.dir/is_there_char.c.o"
   "/mnt/c/Users/33652/Documents/Coding/minishell/is_token.c" "/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles/minishell.dir/is_token.c.o"
   "/mnt/c/Users/33652/Documents/Coding/minishell/list_to_array.c" "/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles/minishell.dir/list_to_array.c.o"

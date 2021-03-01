@@ -79,7 +79,7 @@ int		main(int i, char **av, char **envp)
 	i = 0;
 	if (!(envs = init_list_env(envp)))
 		return (-1);
-	signal_handle();
+	//signal_handle();
 	display_prompt();
 	while ((ret = get_next_line(0, &prompt, 0)) > 0)
 	{
@@ -88,7 +88,7 @@ int		main(int i, char **av, char **envp)
 			get_next_line(666, NULL, 1);
 			break;
 		}
-		if (g_sig <= 2)
+		if (g_sig <= 2 || g_sig == 127)
 			display_prompt();
 		if (ret == 0)
 			printf("ret == 0\n");

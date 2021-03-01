@@ -27,6 +27,7 @@ struct					s_gnl
 	char	*rest;
 	int		nb_bytes;
 	int		option;
+	int		flag;
 };
 typedef struct s_gnl	t_gnl;
 

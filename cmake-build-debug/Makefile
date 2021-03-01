@@ -1257,6 +1257,33 @@ is_even_quote.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_even_quote.c.s
 .PHONY : is_even_quote.c.s
 
+is_only_spaces.o: is_only_spaces.c.o
+
+.PHONY : is_only_spaces.o
+
+# target to build an object file
+is_only_spaces.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_only_spaces.c.o
+.PHONY : is_only_spaces.c.o
+
+is_only_spaces.i: is_only_spaces.c.i
+
+.PHONY : is_only_spaces.i
+
+# target to preprocess a source file
+is_only_spaces.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_only_spaces.c.i
+.PHONY : is_only_spaces.c.i
+
+is_only_spaces.s: is_only_spaces.c.s
+
+.PHONY : is_only_spaces.s
+
+# target to generate assembly for a file
+is_only_spaces.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_only_spaces.c.s
+.PHONY : is_only_spaces.c.s
+
 is_there_char.o: is_there_char.c.o
 
 .PHONY : is_there_char.o
@@ -1932,6 +1959,9 @@ help:
 	@echo "... is_even_quote.o"
 	@echo "... is_even_quote.i"
 	@echo "... is_even_quote.s"
+	@echo "... is_only_spaces.o"
+	@echo "... is_only_spaces.i"
+	@echo "... is_only_spaces.s"
 	@echo "... is_there_char.o"
 	@echo "... is_there_char.i"
 	@echo "... is_there_char.s"

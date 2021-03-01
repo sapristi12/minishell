@@ -78,11 +78,13 @@ static int		ft_rest(t_gnl *s, char **buffer, int fd, char **line)
 		s->nb_bytes = read(fd, *buffer, BUFFER_SIZE);
 		if (s->nb_bytes <= 0)
 		{
-			if (s->nb_bytes == 0)
+			if (s->nb_bytes == 0 && s->flag == 0)
 				return (0);
 			if (s->nb_bytes < 0)
 				return (-1);
 		}
+		else
+			s->flag = 1;
 	}
 	ret = ft_manage_rest(s, line, buffer);
 	if (ret == 0)
@@ -129,6 +131,7 @@ int				get_next_line(int fd, char **line, int option)
 		free(s.rest);
 	if (read(fd, 0, 0) < 0 || fd < 0 || BUFFER_SIZE <= 0 || !line)
 		return (-1);
+	s.flag = 0;
 	ret = ft_read(fd, &s, line);
 	return (ret);
 }
