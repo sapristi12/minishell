@@ -176,6 +176,7 @@ int 		next_dollar(char c);
 int			only_zeros(char *str);
 int			export_list(t_list *envs);
 int 		check_prompt(int index, char *prompt);
+int			init_tab(t_cmd *cmd);
 	
 #	endif
  	
