@@ -38,7 +38,7 @@ int 	check_prompt(int index, char *prompt)
 	{
 		if (!multiple_semicolon(prompt))
 		{
-			ft_putstr_fd("minishell: syntax error near unexpected ';'\n", 1);
+			ft_putstr_fd("minishell: syntax error near unexpected ';'\n", STDERR_FILENO);
 			free(prompt);
 			return (0);
 		}
@@ -63,7 +63,7 @@ int 	free_split_null(char *prompt, char **cmds)
 
 	free(prompt);
 	free_char_double_array(cmds);
-	ft_putstr_fd("minishell: syntax error near unexpected ';'\n", 1);
+	ft_putstr_fd("minishell: syntax error near unexpected ';'\n", STDERR_FILENO);
 	return (0);
 }
 
@@ -90,7 +90,7 @@ int		main_loop(char *prompt, t_cmd *cmd, t_list **envs)
 		i++;
 	}
 	if (cmds[i] && !only_spaces(cmds[i]))
-		ft_putstr_fd("minishell: syntax error near unexpected ';'\n", 1);
+		ft_putstr_fd("minishell: syntax error near unexpected ';'\n", STDERR_FILENO);
 	free(prompt);
 	free_char_double_array(cmds);
 	return (0);
@@ -110,6 +110,7 @@ int		main(int i, char **av, char **envp)
 	char	*prompt;
 	t_list	*envs;
 	t_cmd	cmd;
+	int	ret;
 
 	g_sig = 0;
 	(void)av;
@@ -118,7 +119,7 @@ int		main(int i, char **av, char **envp)
 		return (-1);
 	signal_handle();
 	display_prompt();
-	while (get_next_line(0, &prompt, 0) > 0)
+	while ((ret = get_next_line(0, &prompt, 0)) > 0)
 	{
 		if (prompt[0] != '\0' && main_loop(prompt, &cmd, &envs) == -1)
 		{
@@ -130,5 +131,7 @@ int		main(int i, char **av, char **envp)
 	}
 	free(prompt);
 	ft_lstclear(&envs, free);
+	if (ret == 0)
+		ft_putstr_fd("exit\n", STDERR_FILENO);
 	return (main_ret(&cmd));
 }
