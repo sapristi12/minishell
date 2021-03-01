@@ -1,18 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_exit.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 15:15:39 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 20:10:19 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-int 		only_zeros(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i] && str[i] == '0')
-		i++;
-	if (str[i] == '\0')
-		return (1);
-	return (0);
-}
-
-static int 	third_case(t_cmd *cmd)
+static int		third_case(t_cmd *cmd)
 {
 	cmd->exit_status[0] = 0;
 	ft_putstr_fd("minishell: exit: too many arguments\n", 1);
@@ -20,7 +20,7 @@ static int 	third_case(t_cmd *cmd)
 	return (1);
 }
 
-static int 	second_case(t_cmd *cmd)
+static int		second_case(t_cmd *cmd)
 {
 	if (only_zeros(cmd->cmds[1]))
 	{
@@ -35,14 +35,14 @@ static int 	second_case(t_cmd *cmd)
 	return (1);
 }
 
-static int 	first_case(t_cmd *cmd)
+static int		first_case(t_cmd *cmd)
 {
 	cmd->exit_status[1] = 0;
 	ft_putstr_fd("exit\n", 1);
 	return (1);
 }
 
-static int	fourth_case(t_cmd *cmd)
+static int		fourth_case(t_cmd *cmd)
 {
 	ft_putstr_fd("minishell: exit: ", 1);
 	ft_putstr_fd(cmd->cmds[1], 1);
@@ -52,7 +52,7 @@ static int	fourth_case(t_cmd *cmd)
 	return (1);
 }
 
-int 	ft_exit(t_cmd *cmd, t_list **envs)
+int				ft_exit(t_cmd *cmd)
 {
 	int i;
 

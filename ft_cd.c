@@ -1,11 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_cd.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 17:47:12 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 17:48:17 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 int		cd_old(t_list **envs)
 {
-	char	*old = NULL;
+	char	*old;
 	char	buffer[PATH_MAX];
 	int		ret;
 
+	old = NULL;
 	ret = 0;
 	if (!(old = ft_strdup(get_env(*envs, "OLDPWD"))))
 		return (-1);
@@ -79,10 +92,10 @@ int		cd_home(t_list **envs)
 	return (ret);
 }
 
-int 	ft_cd(t_cmd *cmd, t_list **envs)
+int		ft_cd(t_cmd *cmd, t_list **envs)
 {
 	int		ret;
-	int 	i;
+	int		i;
 
 	i = 0;
 	while (cmd->cmds[i] && !is_symbol(cmd->cmds[i]))

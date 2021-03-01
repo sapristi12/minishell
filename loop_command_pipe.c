@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   loop_command_pipe.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 20:16:19 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 20:16:34 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 int		hub_fork(t_cmd *cmd, t_list **envs, int i)
@@ -14,7 +26,7 @@ int		hub_fork(t_cmd *cmd, t_list **envs, int i)
 	return (ret);
 }
 
-void 	hub_close(t_cmd *cmd, int i)
+void	hub_close(t_cmd *cmd, int i)
 {
 	if (i == 0)
 		close(cmd->pipe.fd[0][1]);
@@ -24,7 +36,7 @@ void 	hub_close(t_cmd *cmd, int i)
 		close_after(cmd, i);
 }
 
-void 	hub_wait(t_cmd *cmd)
+void	hub_wait(t_cmd *cmd)
 {
 	int status;
 
@@ -34,7 +46,7 @@ void 	hub_wait(t_cmd *cmd)
 		g_sig = WEXITSTATUS(status);
 }
 
-int 	loop_command_pipe(t_cmd *cmd, t_list **envs)
+int		loop_command_pipe(t_cmd *cmd, t_list **envs)
 {
 	int i;
 	int ret;

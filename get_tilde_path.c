@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_tilde_path.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 19:05:32 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 19:06:27 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-char 	*get_tilde_path(char *str, t_list **envs)
+char	*get_tilde_path(char *str, t_list **envs)
 {
 	int		i;
-	char 	*dest;
+	char	*dest;
 
 	i = 0;
 	dest = ft_strdup(get_env(*envs, "HOME"));

@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   env.c                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 18:59:48 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 19:00:20 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 void	set_env(t_list **envs, char *env, char *value)
 {
-	t_list	**begin;
-	char	*tmp;
-	char 	*new;
-	t_list 	*used;
+	t_list		**begin;
+	char		*tmp;
+	char		*new;
+	t_list		*used;
 
 	begin = envs;
 	used = (t_list *)*envs;

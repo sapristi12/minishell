@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   create_new_str.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 18:16:52 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 18:17:16 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-void	quote_manage(char **str, char **new, t_quo *q, t_list **envs)
+void			quote_manage(char **str, char **new, t_quo *q, t_list **envs)
 {
-	char 	*copy;
+	char	*copy;
 
 	if (q->tmp == D_QUOTE)
 		copy = double_quote(str[0], envs);
@@ -14,7 +26,7 @@ void	quote_manage(char **str, char **new, t_quo *q, t_list **envs)
 	free(copy);
 }
 
-void 	normal_manage(char **str, char **new, t_list **envs)
+void			normal_manage(char **str, char **new, t_list **envs)
 {
 	char	*copy;
 
@@ -24,20 +36,20 @@ void 	normal_manage(char **str, char **new, t_list **envs)
 	free(copy);
 }
 
-static void 	first_condition(char **str, t_quo *q, char c)
+static void		first_condition(char **str, t_quo *q, char c)
 {
 	q->tmp = c;
 	q->in_quote = -(q->in_quote);
 	str[0]++;
 }
 
-static void 	second_condition(char **str, t_quo *q)
+static void		second_condition(char **str, t_quo *q)
 {
 	q->in_quote = -(q->in_quote);
 	str[0]++;
 }
 
-char 	*create_new_str(char *str, t_list **envs)
+char			*create_new_str(char *str, t_list **envs)
 {
 	t_quo	q;
 	char	*new;

@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 17:48:29 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 17:48:51 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-long long 	ft_llatoi(char *str)
+long long	ft_llatoi(char *str)
 {
-	long long 	i;
-	long long 	ret;
+	long long	i;
+	long long	ret;
 	long long	sign;
 
 	sign = 1;

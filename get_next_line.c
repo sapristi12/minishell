@@ -1,4 +1,3 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -7,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 13:50:31 by erlajoua          #+#    #+#             */
-/*   Updated: 2020/11/25 13:53:56 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/01 19:12:47 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,13 +75,10 @@ static int		ft_rest(t_gnl *s, char **buffer, int fd, char **line)
 	else
 	{
 		s->nb_bytes = read(fd, *buffer, BUFFER_SIZE);
-		if (s->nb_bytes <= 0)
-		{
-			if (s->nb_bytes == 0 && s->flag == 0)
-				return (0);
-			if (s->nb_bytes < 0)
-				return (-1);
-		}
+		if (s->nb_bytes == 0 && s->flag == 0)
+			return (0);
+		else if (s->nb_bytes < 0)
+			return (-1);
 		else
 			s->flag = 1;
 	}
@@ -135,4 +131,3 @@ int				get_next_line(int fd, char **line, int option)
 	ret = ft_read(fd, &s, line);
 	return (ret);
 }
-

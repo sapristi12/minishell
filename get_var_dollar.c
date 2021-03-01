@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_var_dollar.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 20:34:22 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 20:37:35 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-char 	*exit_package(char *name)
+char	*exit_package(char *name)
 {
 	int		size;
 	int		nb;
-	char 	*str;
+	char	*str;
 
 	nb = g_sig;
 	size = 0;
@@ -29,21 +41,36 @@ char 	*exit_package(char *name)
 	return (str);
 }
 
-char 	*get_var_dollar(char *str, t_list **envs)
+int		condition_dollar(char c)
+{
+	if (!c)
+		return (0);
+	if (c == S_QUOTE || c == D_QUOTE)
+		return (0);
+	if (c == SLASH || c == '$')
+		return (0);
+	if (c == ' ' || c == '@')
+		return (0);
+	if (c == '=' || c == '?')
+		return (0);
+	return (1);
+}
+
+char	*get_var_dollar(char *str, t_list **envs)
 {
 	int		i;
 	char	*name;
-	char 	*tmp;
+	char	*tmp;
 
 	i = 0;
-	while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE && str[i] != SLASH && str[i] != '$' && str[i] != ' ' && str[i] != '@' && str[i] != '=' && str[i] != '?')
+	while (condition_dollar(str[i]))
 		i++;
 	name = malloc(i + 1);
 	if (!name)
 		return (NULL);
 	name[i] = '\0';
 	i = 0;
-	while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE && str[i] != SLASH && str[i] != '$' && str[i] != ' ' && str[i] != '@' && str[i] != '=' && str[i] != '?')
+	while (condition_dollar(str[i]))
 	{
 		name[i] = str[i];
 		i++;

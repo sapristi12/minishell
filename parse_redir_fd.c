@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parse_redir_fd.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 17:59:43 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 17:59:59 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-int     left_redir(char **cmds)
+int		left_redir(char **cmds)
 {
 	int fd;
 
@@ -14,7 +26,7 @@ int     left_redir(char **cmds)
 	return (1);
 }
 
-int     right_redir(char **cmds)
+int		right_redir(char **cmds)
 {
 	int fd;
 
@@ -28,7 +40,7 @@ int     right_redir(char **cmds)
 	return (1);
 }
 
-int     rightright_redir(char **cmds)
+int		rightright_redir(char **cmds)
 {
 	int fd;
 
@@ -42,7 +54,7 @@ int     rightright_redir(char **cmds)
 	return (1);
 }
 
-int 	parse_redir_fd(t_cmd *cmd, int index, int *tab)
+int		parse_redir_fd(t_cmd *cmd, int index, int *tab)
 {
 	int		i;
 	char	**strs;

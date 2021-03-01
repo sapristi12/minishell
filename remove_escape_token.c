@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   remove_escape_token.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 18:09:37 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 18:09:48 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-char 	*remove_escaped_token(char *str)
+char		*remove_escaped_token(char *str)
 {
 	int		i;
-	char 	*tmp;
+	char	*tmp;
 
 	i = 0;
 	while (str[i] && !is_token_char(str[i]))

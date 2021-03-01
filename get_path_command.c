@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_path_command.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 19:04:41 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 19:05:24 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 int		ft_dir(char *path, char *exec)
 {
-	DIR *dir;
-	struct dirent *my_dir;
+	DIR				*dir;
+	struct dirent	*my_dir;
 
 	dir = opendir(path);
 	if (!dir)
@@ -31,7 +43,7 @@ char 	*get_path_command(char *command, t_list **envs, int option)
 	if (!(whole_path = get_env(*envs, "PATH")))
 		return (NULL);
 	if (!(path = new_split(whole_path, ':')))
-		return (NULL); //need to free the path
+		return (NULL);
 	while (path[i] && !ft_dir(path[i], command))
 		i++;
 	if (path[i] != NULL && ft_dir(path[i], command) != -1)

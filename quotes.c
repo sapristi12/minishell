@@ -1,46 +1,61 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   quotes.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 18:12:48 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 18:12:49 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-int 	normal_tilde(char *str, char **new, t_list **envs)
+int		normal_tilde(char *str, char **new, t_list **envs)
 {
-	char 	*copy;
+	char	*copy;
 	int		i;
 
 	i = 1;
 	copy = get_tilde_path(str, envs);
 	*new = ft_strjoin(*new, copy);
 	free(copy);
-	while (str[i] && str[i] != D_QUOTE && str[i] != S_QUOTE && str[i] != '~')
+	while (str[i] && str[i] != D_QUOTE && str[i]
+	!= S_QUOTE && str[i] != '~')
 		i++;
 	return (i - 1);
 }
 
-int 	normal_dollar(char *str, char **new, t_list **envs)
+int		normal_dollar(char *str, char **new, t_list **envs)
 {
 	char	*copy;
-	int 	i;
+	int		i;
 
 	i = 0;
 	copy = get_var_dollar(str, envs);
 	*new = ft_strjoin(*new, copy);
 	free(copy);
-	while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE && str[i] != SLASH && str[i] != '$' && str[i] != ' ' && str[i] != '=' && str[i] != '@' && str[i] != '?')
+	while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE
+	&& str[i] != SLASH && str[i] != '$' && str[i] != ' '
+	&& str[i] != '=' && str[i] != '@' && str[i] != '?')
 		i++;
 	if (i == 0 && str[i] == '?')
 		return (1);
 	return (i);
 }
 
-int 	normal_slash(char **new, char c)
+int		normal_slash(char **new, char c)
 {
 	*new = char_strjoin(*new, c);
 	return (1);
 }
 
-char 	*normal_quote(char *str, t_list **envs)
+char	*normal_quote(char *str, t_list **envs)
 {
-	char 	*new;
-	int 	i;
-	int 	max;
+	char	*new;
+	int		i;
+	int		max;
 
 	max = ft_strlen(str) - 1;
 	i = 0;
@@ -64,10 +79,10 @@ char 	*normal_quote(char *str, t_list **envs)
 	return (new);
 }
 
-char 	*simple_quote(char *str)
+char	*simple_quote(char *str)
 {
 	char	*new;
-	int 	i;
+	int		i;
 
 	i = 0;
 	while (str[i] && str[i] != S_QUOTE)

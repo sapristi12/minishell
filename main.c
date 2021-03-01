@@ -1,55 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 20:19:29 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 20:32:39 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-int 	multiple_semicolon(char *str)
-{
-	int i;
-
-	i = 0;
-	if (str[0] == ';')
-		return (0);
-	while (str[i + 1])
-	{
-		if (str[i] == ';' && str[i + 1] == ';')
-			return (0);
-		if (str[i] == ';')
-		{
-			i++;
-			while (str[i] && str[i] == ' ')
-				i++;
-			if (str[i] == ';')
-				return (0);
-		}
-		i++;
-	}
-	return (1);
-}
-
-int 	check_prompt(int index, char *prompt)
-{
-	if (index == 1)
-	{
-		if (only_spaces(prompt))
-		{
-			free(prompt);
-			return (0);
-		}
-	}
-	else if (index == 2)
-	{
-		if (!multiple_semicolon(prompt))
-		{
-			ft_putstr_fd("minishell: syntax error near unexpected ';'\n", STDERR_FILENO);
-			free(prompt);
-			return (0);
-		}
-	}
-	return (1);
-}
-
-int 	check_status(char **cmds, char *prompt, int status)
+int		check_status(char **cmds, int status)
 {
 	if (status == -1)
-		free_parsing_line(cmds, prompt, status);
+		free_parsing_line(cmds, status);
 	if (status == -2)
 	{
 		free_char_double_array(cmds);
@@ -58,12 +24,13 @@ int 	check_status(char **cmds, char *prompt, int status)
 	return (1);
 }
 
-int 	free_split_null(char *prompt, char **cmds)
+int		free_split_null(char *prompt, char **cmds)
 {
-
 	free(prompt);
 	free_char_double_array(cmds);
-	ft_putstr_fd("minishell: syntax error near unexpected ';'\n", STDERR_FILENO);
+	ft_putstr_fd(
+	"minishell: syntax error near unexpected ';'\n"
+	, STDERR_FILENO);
 	return (0);
 }
 
@@ -76,27 +43,27 @@ int		main_loop(char *prompt, t_cmd *cmd, t_list **envs)
 	i = 0;
 	if (!check_prompt(1, prompt) || !check_prompt(2, prompt))
 		return (0);
-	cmds = new_split(prompt, ';');
-	if (cmds == NULL || cmds[i] == NULL)
+	if (!(cmds = new_split(prompt, ';')) || cmds[i] == NULL)
 		return (free_split_null(prompt, cmds));
 	while (cmds[i] && !only_spaces(cmds[i]))
 	{
 		if (!only_spaces(cmds[i]))
 		{
 			status = parsing_line(cmds[i], envs, cmd);
-			if (check_status(cmds, prompt, status) == -1)
+			if (check_status(cmds, status) == -1)
 				return (-1);
 		}
 		i++;
 	}
 	if (cmds[i] && !only_spaces(cmds[i]))
-		ft_putstr_fd("minishell: syntax error near unexpected ';'\n", STDERR_FILENO);
+		ft_putstr_fd(
+		"minishell: syntax error near unexpected ';'\n", STDERR_FILENO);
 	free(prompt);
 	free_char_double_array(cmds);
 	return (0);
 }
 
-int 	main_ret(t_cmd *cmd)
+int		main_ret(t_cmd *cmd)
 {
 	if (g_sig > 2)
 		return (g_sig);
@@ -107,10 +74,10 @@ int 	main_ret(t_cmd *cmd)
 
 int		main(int i, char **av, char **envp)
 {
-	char	*prompt;
-	t_list	*envs;
-	t_cmd	cmd;
-	int	ret;
+	char		*prompt;
+	t_list		*envs;
+	t_cmd		cmd;
+	int			ret;
 
 	g_sig = 0;
 	(void)av;
@@ -124,14 +91,12 @@ int		main(int i, char **av, char **envp)
 		if (prompt[0] != '\0' && main_loop(prompt, &cmd, &envs) == -1)
 		{
 			get_next_line(666, NULL, 1);
-			break;
+			break ;
 		}
-		if (g_sig <= 2 || g_sig == 127)
-			display_prompt();
+		(g_sig <= 2 || g_sig == 127) ? display_prompt() : 0;
 	}
 	free(prompt);
 	ft_lstclear(&envs, free);
-	if (ret == 0)
-		ft_putstr_fd("exit\n", STDERR_FILENO);
+	ret == 0 ? ft_putstr_fd("exit\n", STDERR_FILENO) : 0;
 	return (main_ret(&cmd));
 }

@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   free_error.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 17:51:03 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 20:09:06 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-void 	free_int_double_array(t_cmd *cmd)
+void	free_int_double_array(t_cmd *cmd)
 {
 	int i;
 
@@ -13,7 +25,7 @@ void 	free_int_double_array(t_cmd *cmd)
 	free(cmd->tab);
 }
 
-int 	free_error_redir(t_cmd *cmd, t_list **envs, int ret)
+int		free_error_redir(t_cmd *cmd, int ret)
 {
 	int i;
 

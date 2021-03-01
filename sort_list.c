@@ -1,18 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_list.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 17:52:07 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 17:52:41 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-void    swap(char **a, char **b)
+void		swap(char **a, char **b)
 {
-	char 	*tmp;
+	char	*tmp;
 
 	tmp = *a;
 	*a = *b;
 	*b = tmp;
 }
 
-t_list        *sort_list(t_list *lst, int (*cmp)(char *, char *))
+t_list		*sort_list(t_list *lst, int (*cmp)(char *, char *))
 {
-	t_list    *begin;
-	t_list    *p;
+	t_list	*begin;
+	t_list	*p;
 
 	begin = lst;
 	while (lst)

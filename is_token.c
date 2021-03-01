@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   is_token.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 20:20:15 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 20:20:27 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-int 	is_token_char(char c)
+int		is_token_char(char c)
 {
 	if (c == '|')
 		return (1);
@@ -11,7 +23,7 @@ int 	is_token_char(char c)
 	return (0);
 }
 
-int 	is_token_string(char *str)
+int		is_token_string(char *str)
 {
 	if (!(ft_strcmp(str, "|")))
 		return (1);
@@ -24,7 +36,7 @@ int 	is_token_string(char *str)
 	return (0);
 }
 
-int 	check_last(char **cmds)
+int		check_last(char **cmds)
 {
 	int i;
 

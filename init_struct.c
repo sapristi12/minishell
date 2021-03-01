@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init_struct.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 18:14:55 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 18:15:53 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-int				init_space(t_space *space, char *str)
+int		init_space(t_space *space, char *str)
 {
 	space->j = 0;
 	space->in_quote = -1;
@@ -12,24 +24,24 @@ int				init_space(t_space *space, char *str)
 	return (1);
 }
 
-void    init_struct_pipe(t_pipe *pipe)
+void	init_struct_pipe(t_pipe *pipe)
 {
-    pipe->nb_pipe = 0;
-    pipe->save = 0;
-    pipe->all = NULL;
-    pipe->fd = NULL;
-    pipe->fd_saved = 0;
-    pipe->pid = 0;
+	pipe->nb_pipe = 0;
+	pipe->save = 0;
+	pipe->all = NULL;
+	pipe->fd = NULL;
+	pipe->fd_saved = 0;
+	pipe->pid = 0;
 }
 
-void    init_struct_cmd(t_cmd *cmd)
+void	init_struct_cmd(t_cmd *cmd)
 {
-    cmd->cmds = NULL;
-    cmd->mystdin = dup(STDIN_FILENO);
-    cmd->mystdout = dup(STDOUT_FILENO);
-    cmd->exit_status[0] = 0;
-    cmd->tabsize = 0;
-    cmd->tab = NULL;
+	cmd->cmds = NULL;
+	cmd->mystdin = dup(STDIN_FILENO);
+	cmd->mystdout = dup(STDOUT_FILENO);
+	cmd->exit_status[0] = 0;
+	cmd->tabsize = 0;
+	cmd->tab = NULL;
 	cmd->exit_status[0] = -99;
 	init_struct_pipe(&cmd->pipe);
 }

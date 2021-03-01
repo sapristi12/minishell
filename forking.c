@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   forking.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 17:49:22 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 17:49:58 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-int 	mid_fork(t_cmd *cmd, t_list **envs, int i)
+int		mid_fork(t_cmd *cmd, t_list **envs, int i)
 {
-	char 	**envp;
+	char	**envp;
 
 	dup2(cmd->pipe.fd[i - 1][0], STDIN_FILENO);
 	dup2(cmd->pipe.fd[i][1], STDOUT_FILENO);
@@ -19,9 +31,9 @@ int 	mid_fork(t_cmd *cmd, t_list **envs, int i)
 	return (1);
 }
 
-int 	last_fork(t_cmd *cmd, t_list **envs, int i)
+int		last_fork(t_cmd *cmd, t_list **envs, int i)
 {
-	char 	**envp;
+	char	**envp;
 
 	if (cmd->redir.save_left == NULL)
 	{
@@ -40,9 +52,9 @@ int 	last_fork(t_cmd *cmd, t_list **envs, int i)
 	return (1);
 }
 
-int 	first_fork(t_cmd *cmd, t_list **envs, int i)
+int		first_fork(t_cmd *cmd, t_list **envs, int i)
 {
-	char 	**envp;
+	char	**envp;
 
 	if (cmd->redir.save_right == NULL)
 	{

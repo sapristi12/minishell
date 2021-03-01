@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_unset.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 15:08:26 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 15:10:14 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-void 	ft_delone(t_list **lst, char *str)
+void	ft_delone(t_list **lst, char *str)
 {
 	t_list	*envs;
 	t_list	*tmp;
@@ -28,7 +40,7 @@ void 	ft_delone(t_list **lst, char *str)
 	}
 }
 
-int 	ft_unset(t_cmd *cmd, t_list **envs)
+int		ft_unset(t_cmd *cmd, t_list **envs)
 {
 	int i;
 

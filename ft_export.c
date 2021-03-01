@@ -1,31 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_export.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 15:10:29 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 15:14:16 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-t_list	*copy_list(t_list *envs)
-{
-	t_list *new;
-
-	new = ft_lstnew(envs->content);
-	envs = envs->next;
-	while (envs)
-	{
-		ft_lstadd_back(&new, ft_lstnew((envs->content)));
-		envs = envs->next;
-	}
-	return (new);
-}
-
-int 	export_list(t_list *envs)
-{
-	t_list *new;
-
-	new = copy_list(envs);
-	sort_list(new, ft_strcmp);
-	ft_affexport(&new);
-	ft_lstclear(&new, free);
-	return (1);
-}
-
-int		error_identifier(char *str)
+int			error_identifier(char *str)
 {
 	ft_putstr_fd("minishell: export: ", 1);
 	ft_putstr_fd(str, 1);
@@ -33,10 +20,10 @@ int		error_identifier(char *str)
 	return (1);
 }
 
-void 	add_new_export(t_list *envs, char *str)
+void		add_new_export(t_list *envs, char *str)
 {
 	int		i;
-	char 	*tmp;
+	char	*tmp;
 
 	tmp = malloc(1);
 	if (!tmp)
@@ -54,7 +41,7 @@ void 	add_new_export(t_list *envs, char *str)
 		set_env(&envs, tmp, &str[i + 1]);
 }
 
-int 	is_notidentifier(char *str)
+int			is_notidentifier(char *str)
 {
 	if (is_there_char(str, '=') == 0)
 	{
@@ -64,7 +51,7 @@ int 	is_notidentifier(char *str)
 	return (0);
 }
 
-static int 	manage_export(t_cmd *cmd, t_list *envs, int i)
+static int	manage_export(t_cmd *cmd, t_list *envs, int i)
 {
 	if (i == 1)
 		return (export_list(envs));
@@ -73,9 +60,9 @@ static int 	manage_export(t_cmd *cmd, t_list *envs, int i)
 	return (1);
 }
 
-int 	ft_export(t_cmd *cmd, t_list *envs)
+int			ft_export(t_cmd *cmd, t_list *envs)
 {
-	char 	*tmp;
+	char	*tmp;
 	int		i;
 
 	i = 0;

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   free_parsing_line.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 17:50:09 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 20:14:23 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 void		free_package(t_cmd *cmd)
@@ -13,7 +25,7 @@ void		free_package(t_cmd *cmd)
 	free(cmd->pipe.all);
 }
 
-int			free_8(char *str, t_list **envs, t_cmd *cmd, int ret)
+int			free_8(char *str, t_cmd *cmd, int ret)
 {
 	if (g_sig != 127)
 		g_sig = 2;
@@ -42,7 +54,7 @@ int			free_i(t_cmd *cmd, int index)
 	return (index);
 }
 
-int			free_parsing_line(char **av, char *line, int status)
+int			free_parsing_line(char **av, int status)
 {
 	int i;
 

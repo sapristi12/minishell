@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parsing_quotes.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 17:58:57 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 17:58:57 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-int 	parsing_quotes(t_cmd *cmd, t_list **envs)
+int		parsing_quotes(t_cmd *cmd, t_list **envs)
 {
 	int		i;
 

@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   exec_cmd.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 19:00:43 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 19:03:03 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-int			move_pointer_i(char **cmds)
+int				move_pointer_i(char **cmds)
 {
 	int i;
 
@@ -10,7 +22,7 @@ int			move_pointer_i(char **cmds)
 	return (i + 1);
 }
 
-int					init_all_package(t_cmd *cmd, t_list **envs)
+int				init_all_package(t_cmd *cmd, t_list **envs)
 {
 	int len;
 	int i;
@@ -25,24 +37,25 @@ int					init_all_package(t_cmd *cmd, t_list **envs)
 	cmd->pipe.all[len + 1] = NULL;
 	while (i < len + 1)
 	{
-		cmd->pipe.all[i] = create_package(&(cmd->cmds[pointer]), envs, 0, cmd->tab[i]);
+		cmd->pipe.all[i] = create_package(&(cmd->cmds[pointer]),
+		envs, 0, cmd->tab[i]);
 		pointer += move_pointer_i(&(cmd->cmds[pointer]));
 		i++;
 	}
 	return (1);
 }
 
-static int 		execution_builtin(t_cmd *cmd, t_list **envs)
+static int		execution_builtin(t_cmd *cmd, t_list **envs)
 {
 	if (!(sort_builtin(cmd, envs)))
 		return (0);
 	return (1);
 }
 
-static int 		execution_bin(t_cmd *cmd, t_list **envs, int i)
+static int		execution_bin(t_cmd *cmd, t_list **envs, int i)
 {
-	char 	**envp;
-	int 	status;
+	char	**envp;
+	int		status;
 
 	cmd->pid = fork();
 	status = 1;
@@ -55,7 +68,7 @@ static int 		execution_bin(t_cmd *cmd, t_list **envs, int i)
 			envp = list_to_array(*envs);
 			ft_lstclear(envs, free);
 			execve(cmd->pipe.all[i][0], cmd->pipe.all[i], envp);
-			free_char_double_array(envp); //a rajouter secu du ret == -1 surement
+			free_char_double_array(envp);
 		}
 		return (-1);
 	}
@@ -65,7 +78,7 @@ static int 		execution_bin(t_cmd *cmd, t_list **envs, int i)
 	return (1);
 }
 
-int					exec_cmd(t_cmd *cmd, t_list **envs, int i)
+int				exec_cmd(t_cmd *cmd, t_list **envs, int i)
 {
 	if (is_builtin(cmd->pipe.all[0][0]))
 		return (execution_builtin(cmd, envs));

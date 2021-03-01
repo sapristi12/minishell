@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   create_space_around.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 18:58:02 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 18:58:17 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 static int		get_len(char **str, char c)
@@ -35,7 +47,7 @@ static int		replace(char **line, int j, char c, int len)
 	return (len);
 }
 
-int 			escape_token(char **line, int j, char c, char **str)
+int				escape_token(char **line, int j, char c, char **str)
 {
 	line[0][j] = SLASH;
 	line[0][j + 1] = c;

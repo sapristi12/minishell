@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_size_spaces.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 20:37:46 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 20:37:57 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 static int		move_pointer_g(char **str, char c)
@@ -12,7 +24,7 @@ static int		move_pointer_g(char **str, char c)
 	return (1);
 }
 
-int		get_size(char *str)
+int				get_size(char *str)
 {
 	int j;
 	int in_quote;

@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 13:54:13 by erlajoua          #+#    #+#             */
-/*   Updated: 2020/11/25 13:55:27 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/01 20:38:22 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ char	*ft_strcpy(char *dest, char *src)
 		i++;
 	}
 	dest[i] = src[i];
-	//ou src[i]
 	return (dest);
 }
 
@@ -45,7 +44,7 @@ int		ft_strlen(char *str)
 
 	i = 0;
 	while (str[i])
-			i++;
+		i++;
 	return (i);
 }
 

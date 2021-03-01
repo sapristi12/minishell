@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   double_quote.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 18:58:42 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 18:59:32 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 static int		is_escaped(char c)
@@ -11,23 +23,25 @@ static int		is_escaped(char c)
 	return (0);
 }
 
-int 	double_dollar(char *str, char **new, t_list **envs)
+int				double_dollar(char *str, char **new, t_list **envs)
 {
+	char	*copy;
 	int		i;
-	char 	*copy;
 
 	copy = get_var_dollar(str, envs);
 	*new = ft_strjoin(*new, copy);
 	free(copy);
 	i = 0;
-	while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE && str[i] != ' ' && str[i] != SLASH && str[i] != '@' && str[i] != '=' && str[i] != '?')
+	while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE
+	&& str[i] != ' ' && str[i] != SLASH && str[i] != '@'
+	&& str[i] != '=' && str[i] != '?')
 		i++;
 	if (i == 0 && str[i] == '?')
 		return (1);
 	return (i);
 }
 
-int 	next_dollar(char c)
+int				next_dollar(char c)
 {
 	if (c == SLASH)
 		return (1);
@@ -36,11 +50,11 @@ int 	next_dollar(char c)
 	return (0);
 }
 
-char 	*double_quote(char *str, t_list **envs)
+char			*double_quote(char *str, t_list **envs)
 {
-	char 	*new;
-	int 	i;
-	int 	max;
+	char	*new;
+	int		i;
+	int		max;
 
 	max = ft_strlen(str) - 1;
 	i = 0;

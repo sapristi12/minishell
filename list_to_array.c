@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   list_to_array.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 20:19:37 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 20:19:57 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-int 	list_length(t_list *envs)
+int		list_length(t_list *envs)
 {
 	int i;
 
@@ -15,10 +27,10 @@ int 	list_length(t_list *envs)
 	return (i);
 }
 
-char 	**list_to_array(t_list *envs)
+char	**list_to_array(t_list *envs)
 {
 	int		i;
-	char 	**dest;
+	char	**dest;
 
 	i = list_length(envs);
 	dest = malloc(sizeof(char *) * (i + 1));

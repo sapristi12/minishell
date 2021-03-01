@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_first_command.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/01 17:53:21 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/01 18:16:19 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 static int		basic_first_command(char **cmds, t_list **envs, int *tab)
@@ -16,7 +28,7 @@ static int		basic_first_command(char **cmds, t_list **envs, int *tab)
 	return (1);
 }
 
-int			pipe_first_command(t_cmd *cmd, t_list **envs)
+int				pipe_first_command(t_cmd *cmd, t_list **envs)
 {
 	int i;
 	int j;
