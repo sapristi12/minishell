@@ -1473,6 +1473,33 @@ new_split.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/new_split.c.s
 .PHONY : new_split.c.s
 
+norme.o: norme.c.o
+
+.PHONY : norme.o
+
+# target to build an object file
+norme.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/norme.c.o
+.PHONY : norme.c.o
+
+norme.i: norme.c.i
+
+.PHONY : norme.i
+
+# target to preprocess a source file
+norme.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/norme.c.i
+.PHONY : norme.c.i
+
+norme.s: norme.c.s
+
+.PHONY : norme.s
+
+# target to generate assembly for a file
+norme.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/norme.c.s
+.PHONY : norme.c.s
+
 parse_redir_fd.o: parse_redir_fd.c.o
 
 .PHONY : parse_redir_fd.o
@@ -1983,6 +2010,9 @@ help:
 	@echo "... new_split.o"
 	@echo "... new_split.i"
 	@echo "... new_split.s"
+	@echo "... norme.o"
+	@echo "... norme.i"
+	@echo "... norme.s"
 	@echo "... parse_redir_fd.o"
 	@echo "... parse_redir_fd.i"
 	@echo "... parse_redir_fd.s"

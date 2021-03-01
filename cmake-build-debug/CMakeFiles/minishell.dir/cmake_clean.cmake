@@ -49,6 +49,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/minishell.dir/main.c.o"
   "CMakeFiles/minishell.dir/move_pointer.c.o"
   "CMakeFiles/minishell.dir/new_split.c.o"
+  "CMakeFiles/minishell.dir/norme.c.o"
   "CMakeFiles/minishell.dir/parse_redir_fd.c.o"
   "CMakeFiles/minishell.dir/parsing.c.o"
   "CMakeFiles/minishell.dir/parsing_pipe.c.o"

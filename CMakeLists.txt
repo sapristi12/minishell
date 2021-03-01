@@ -69,4 +69,4 @@ add_executable(minishell
         several_string.c
         signal_handle.c
         sort_builtin.c
-        sort_list.c is_only_spaces.c)
+        sort_list.c is_only_spaces.c norme.c)

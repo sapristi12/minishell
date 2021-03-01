@@ -151,6 +151,9 @@ CMakeFiles/minishell.dir/move_pointer.c.o
 CMakeFiles/minishell.dir/new_split.c.o
  /mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
  /mnt/c/Users/33652/Documents/Coding/minishell/new_split.c
+CMakeFiles/minishell.dir/norme.c.o
+ /mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
+ /mnt/c/Users/33652/Documents/Coding/minishell/norme.c
 CMakeFiles/minishell.dir/parse_redir_fd.c.o
  /mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
  /mnt/c/Users/33652/Documents/Coding/minishell/parse_redir_fd.c

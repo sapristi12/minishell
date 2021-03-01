@@ -54,6 +54,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/mnt/c/Users/33652/Documents/Coding/minishell/main.c" "/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles/minishell.dir/main.c.o"
   "/mnt/c/Users/33652/Documents/Coding/minishell/move_pointer.c" "/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles/minishell.dir/move_pointer.c.o"
   "/mnt/c/Users/33652/Documents/Coding/minishell/new_split.c" "/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles/minishell.dir/new_split.c.o"
+  "/mnt/c/Users/33652/Documents/Coding/minishell/norme.c" "/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles/minishell.dir/norme.c.o"
   "/mnt/c/Users/33652/Documents/Coding/minishell/parse_redir_fd.c" "/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles/minishell.dir/parse_redir_fd.c.o"
   "/mnt/c/Users/33652/Documents/Coding/minishell/parsing.c" "/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles/minishell.dir/parsing.c.o"
   "/mnt/c/Users/33652/Documents/Coding/minishell/parsing_pipe.c" "/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles/minishell.dir/parsing_pipe.c.o"

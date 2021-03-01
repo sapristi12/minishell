@@ -234,6 +234,9 @@
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/new_split.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/norme.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/parse_redir_fd.c">
 			<Option target="minishell"/>
 		</Unit>

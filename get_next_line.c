@@ -129,7 +129,7 @@ int				get_next_line(int fd, char **line, int option)
 
 	if (option == 1)
 		free(s.rest);
-	if (read(fd, 0, 0) < 0 || fd < 0 || BUFFER_SIZE <= 0 || !line)
+	if ((read(fd, 0, 0) < 0 || fd < 0) != 0 || !line)
 		return (-1);
 	s.flag = 0;
 	ret = ft_read(fd, &s, line);
