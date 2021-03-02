@@ -6,11 +6,19 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:14:55 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 20:45:42 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/02 09:35:28 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
+
+void	init_split(t_split *spl)
+{
+	spl->in_quote = -1;
+	spl->i = 0;
+	spl->dest = NULL;
+	spl->tmp = 0;
+}
 
 int		init_tab(t_cmd *cmd)
 {
@@ -19,9 +27,10 @@ int		init_tab(t_cmd *cmd)
 
 	pointer = 0;
 	j = 0;
-	cmd->tab = malloc(sizeof(int *) * (cmd->pipe.nb_pipe + 1));
+	cmd->tab = malloc(sizeof(int *) * (cmd->pipe.nb_pipe + 2));
 	if (!cmd->tab)
 		return (0);
+	cmd->tab[cmd->pipe.nb_pipe + 1] = NULL;
 	while (j < cmd->pipe.nb_pipe + 1)
 	{
 		if (!(cmd->tab[j] = create_tab_index(&(cmd->cmds[pointer]))))

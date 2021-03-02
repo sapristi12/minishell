@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:44:04 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 20:44:39 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/02 09:05:48 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,17 +53,6 @@ char	*ft_strcpyt(char *str, char c, int in_quote, char tmp)
 	}
 	size += i;
 	dest = my_strdup(str, size);
-	// dest = (char *)malloc(sizeof(char) * (size + 1));
-	// if (!dest)
-	// 	return (NULL);
-	// i = 0;
-	// while (i < size)
-	// {
-	// 	dest[i] = str[i];
-	//     i++;
-	// }
-	// dest[i] = '\0';
-	// printf("dest = |%s|\n", dest);
 	return (dest);
 }
 
@@ -105,19 +94,6 @@ int		cw(char *str, char c)
 		{
 			i++;
 			check_quote(&str, c, &in_quote, &tmp);
-			// while (*str && ((*str != c && in_quote == -1) || in_quote == 1))
-			// {
-			// 	if (*str == SLASH && *(str + 1))
-			// 		str++;
-			// 	str++;
-			// 	if (in_quote == 1 && *str == tmp)
-			// 		in_quote = -in_quote;
-			// 	else if (in_quote == -1 && (*str == D_QUOTE || *str == S_QUOTE))
-			// 	{
-			//     	in_quote = -in_quote;
-			//     	tmp = *str;
-			// 	}
-			// }
 		}
 	}
 	return (i);
@@ -125,44 +101,27 @@ int		cw(char *str, char c)
 
 char	**new_split(char *str, char c)
 {
-	char	**dest;
-	int		i;
-	int		in_quote;
-	char	tmp;
+	t_split	s;
 
-	in_quote = -1;
-	i = 0;
-	if (!(dest = (char **)malloc(sizeof(char *) * (cw(str, c) + 1))))
+	init_split(&s);
+	if (!(s.dest = (char **)malloc(sizeof(char *) * (cw(str, c) + 1))))
 		return (NULL);
 	while (*str)
 	{
-		while (*str && (*str == c && in_quote == -1))
+		while (*str && (*str == c && s.in_quote == -1))
 			str++;
-		if (in_quote == -1 && (*str == D_QUOTE || *str == S_QUOTE))
+		if (s.in_quote == -1 && (*str == D_QUOTE || *str == S_QUOTE))
 		{
-			in_quote = -in_quote;
-			tmp = *str;
+			s.in_quote = -(s.in_quote);
+			s.tmp = *str;
 		}
-		if (*str && (*str != c || in_quote == 1))
+		if (*str && (*str != c || s.in_quote == 1))
 		{
-			dest[i] = ft_strcpyt(str, c, in_quote, tmp);
-			i++;
-			check_quote(&str, c, &in_quote, &tmp);
-			// while (*str && ((*str != c && in_quote == -1) || in_quote == 1))
-			// {
-			// 	if (*str == SLASH && *(str + 1))
-			// 			str++;
-			// 	str++;
-			// 	if (in_quote == 1 && *str == tmp)
-			// 		in_quote = -in_quote;
-			// 	else if (in_quote == -1 && (*str == D_QUOTE || *str == S_QUOTE))
-			// 	{
-			// 		in_quote = -in_quote;
-			// 		tmp = *str;
-			// 	}
-			// }
+			s.dest[s.i] = ft_strcpyt(str, c, s.in_quote, s.tmp);
+			s.i++;
+			check_quote(&str, c, &(s.in_quote), &(s.tmp));
 		}
 	}
-	dest[i] = NULL;
-	return (dest);
+	s.dest[s.i] = NULL;
+	return (s.dest);
 }

@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:57:18 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 18:57:19 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/02 09:27:28 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,10 @@
 
 int		condition(char **cmds, int *tab, int i)
 {
-	if (cmds[i])
-	{
-		if (!is_symbol(cmds[i]))
-			return (1);
-		if (is_symbol(cmds[i]) && tab[i] == 0)
-			return (1);
-	}
+	if (!is_symbol(cmds[i]))
+		return (1);
+	if (is_symbol(cmds[i]) && tab[i] == 0)
+		return (1);
 	return (0);
 }
 
@@ -52,14 +49,14 @@ char	**create_package(char **cmds, t_list **envs, int option, int *tab)
 	int		i;
 
 	i = 0;
-	while (condition(cmds, tab, i))
+	while (cmds[i] && condition(cmds, tab, i))
 		i++;
 	dest = malloc(sizeof(char *) * (i + 1));
 	if (!dest)
 		return (NULL);
 	dest[i] = NULL;
 	i = 0;
-	while (condition(cmds, tab, i))
+	while (cmds[i] && condition(cmds, tab, i))
 	{
 		if (i == 0 && cmds[i][0] != '/' && !is_builtin(cmds[i]))
 		{

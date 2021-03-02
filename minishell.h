@@ -77,6 +77,15 @@ struct 					s_quo
 };
 typedef struct s_quo	t_quo;
 
+struct					s_split
+{
+	char	**dest;
+	int		i;
+	int		in_quote;
+	char	tmp;
+};
+typedef struct s_split	t_split;
+
 int	g_sig;
 
 int     	get_next_line(int fd, char **line, int option);
@@ -180,6 +189,7 @@ int			export_list(t_list *envs);
 int 		check_prompt(int index, char *prompt);
 int			init_tab(t_cmd *cmd);
 int			*create_tab_index(char **cmds);
+void		init_split(t_split *spl);
 
 #	endif
  	
