@@ -1,2 +1,0 @@
-RESULT-ECHO
-''miche'' to

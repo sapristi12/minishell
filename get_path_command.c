@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 19:04:41 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 19:05:24 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/01 20:39:27 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ int		ft_dir(char *path, char *exec)
 	return (0);
 }
 
-char 	*get_path_command(char *command, t_list **envs, int option)
+char	*get_path_command(char *command, t_list **envs, int option)
 {
 	char	**path;
 	char	*whole_path;
 	char	*tmp;
-	char 	*tmp2;
+	char	*tmp2;
 	int		i;
 
 	i = 0;
