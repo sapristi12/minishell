@@ -6,20 +6,11 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:57:18 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/02 09:27:28 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/02 10:50:15 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
-
-int		condition(char **cmds, int *tab, int i)
-{
-	if (!is_symbol(cmds[i]))
-		return (1);
-	if (is_symbol(cmds[i]) && tab[i] == 0)
-		return (1);
-	return (0);
-}
 
 int		is_symbol(char *str)
 {
@@ -43,20 +34,27 @@ char	**free_return(char **dest)
 	return (NULL);
 }
 
+int		condition(char *s, int j)
+{
+	if ((!is_symbol(s) || (is_symbol(s) && j == 0)))
+		return (1);
+	return (0);
+}
+
 char	**create_package(char **cmds, t_list **envs, int option, int *tab)
 {
 	char	**dest;
 	int		i;
 
 	i = 0;
-	while (cmds[i] && condition(cmds, tab, i))
+	while (cmds[i] && ft_strcmp(cmds[i], "|") && condition(cmds[i], tab[i]))
 		i++;
 	dest = malloc(sizeof(char *) * (i + 1));
 	if (!dest)
 		return (NULL);
 	dest[i] = NULL;
 	i = 0;
-	while (cmds[i] && condition(cmds, tab, i))
+	while (cmds[i] && ft_strcmp(cmds[i], "|") && condition(cmds[i], tab[i]))
 	{
 		if (i == 0 && cmds[i][0] != '/' && !is_builtin(cmds[i]))
 		{

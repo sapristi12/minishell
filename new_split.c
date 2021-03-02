@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:44:04 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/02 09:05:48 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/02 10:44:25 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*my_strdup(char *str, int size)
 	int		i;
 
 	i = 0;
-	dest = (char *)malloc(sizeof(char) * (size + 1));
+	dest = malloc(size + 2);
 	if (!dest)
 		return (NULL);
 	while (i < size)
@@ -27,6 +27,7 @@ char	*my_strdup(char *str, int size)
 		i++;
 	}
 	dest[i] = '\0';
+	dest[i + 1] = '\0';
 	return (dest);
 }
 
@@ -51,8 +52,9 @@ char	*ft_strcpyt(char *str, char c, int in_quote, char tmp)
 			i++;
 		i++;
 	}
-	size += i;
-	dest = my_strdup(str, size);
+	size = i;
+	if (!(dest = my_strdup(str, size)))
+		return (NULL);
 	return (dest);
 }
 

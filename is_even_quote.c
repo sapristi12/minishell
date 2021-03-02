@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:25:37 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 20:26:19 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/02 11:14:28 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,13 @@ int				is_even_quote(char *str)
 			i++;
 		else if (in_quote == 1)
 		{
-			if (is_first_condition(tmp, str[i], str[i - 1], str[i - 2]))
+			if (i > 1 && (is_first_condition(tmp, str[i], str[i - 1], str[i - 2])))
 				in_quote = -in_quote;
 		}
 		else if (in_quote == -1)
 			if (str[i] == S_QUOTE || str[i] == D_QUOTE)
-				if (is_second_condition(str[i], str[i - 1], i))
+				if ((i > 0 && is_second_condition(str[i], str[i - 1], i))
+				|| (i == 0 && is_second_condition(str[i], 0, i)))
 					apply_tmp(&tmp, str[i], &in_quote);
 		i++;
 	}
