@@ -83,6 +83,7 @@ int     	get_next_line(int fd, char **line, int option);
 int     	ft_strlen(char *str);
 int     	parsing_line(char *prompt, t_list **envs, t_cmd *cmd);
 char    	**new_split(char *str, char c);
+// void		check_quote(char **str, char c, int *in_quote, char *tmp)
 char    	*create_space_around(char *str);
 int	 		ft_strcmp(char *s1, char *s2);
 int     	free_parsing_line(char **av, int status);
@@ -176,6 +177,6 @@ int 		next_dollar(char c);
 int			only_zeros(char *str);
 int			export_list(t_list *envs);
 int 		check_prompt(int index, char *prompt);
-	
+
 #	endif
  	
