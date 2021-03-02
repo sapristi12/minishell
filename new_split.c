@@ -2,19 +2,19 @@
 
 char	*my_strdup(char *str, int size)
 {
-	char *dest;
-	int i;
+	char	*dest;
+	int		i;
 
 	i = 0;
 	dest = (char *)malloc(sizeof(char) * (size + 1));
 	if (!dest)
 		return (NULL);
 	while (i < size)
-    {
+	{
 		dest[i] = str[i];
-        i++;
-    }
-    dest[i] = '\0';
+		i++;
+	}
+	dest[i] = '\0';
 	return (dest);
 }
 
@@ -46,12 +46,12 @@ char	*ft_strcpyt(char *str, char c, int in_quote, char tmp)
 	// 	return (NULL);
 	// i = 0;
 	// while (i < size)
-    // {
+	// {
 	// 	dest[i] = str[i];
-    //     i++;
-    // }
-    // dest[i] = '\0';
-    // printf("dest = |%s|\n", dest);
+	//     i++;
+	// }
+	// dest[i] = '\0';
+	// printf("dest = |%s|\n", dest);
 	return (dest);
 }
 
@@ -94,38 +94,38 @@ int		cw(char *str, char c)
 			i++;
 			check_quote(&str, c, &in_quote, &tmp);
 			// while (*str && ((*str != c && in_quote == -1) || in_quote == 1))
-            // {
-            // 	if (*str == SLASH && *(str + 1))
-            // 		str++;
-            //     str++;
-            //     if (in_quote == 1 && *str == tmp)
-            //         in_quote = -in_quote;
-            //     else if (in_quote == -1 && (*str == D_QUOTE || *str == S_QUOTE))
+			// {
+			// 	if (*str == SLASH && *(str + 1))
+			// 		str++;
+			// 	str++;
+			// 	if (in_quote == 1 && *str == tmp)
+			// 		in_quote = -in_quote;
+			// 	else if (in_quote == -1 && (*str == D_QUOTE || *str == S_QUOTE))
 			// 	{
-            //     	in_quote = -in_quote;
-            //     	tmp = *str;
+			//     	in_quote = -in_quote;
+			//     	tmp = *str;
 			// 	}
-            // }
-        }
-    }
-    return (i);
+			// }
+		}
+	}
+	return (i);
 }
 
-char    **new_split(char *str, char c)
+char	**new_split(char *str, char c)
 {
-    char	**dest;
-    int		i;
-    int     in_quote;
-    char 	tmp;
+	char	**dest;
+	int		i;
+	int		in_quote;
+	char	tmp;
 
-    in_quote = -1;
-    i = 0;
-    if (!(dest = (char **)malloc(sizeof(char *) * (cw(str, c) + 1))))
-        return (NULL);
-    while (*str)
-    {
-        while (*str && (*str == c && in_quote == -1))
-            str++;
+	in_quote = -1;
+	i = 0;
+	if (!(dest = (char **)malloc(sizeof(char *) * (cw(str, c) + 1))))
+		return (NULL);
+	while (*str)
+	{
+		while (*str && (*str == c && in_quote == -1))
+			str++;
 		if (in_quote == -1 && (*str == D_QUOTE || *str == S_QUOTE))
 		{
 			in_quote = -in_quote;
@@ -150,7 +150,7 @@ char    **new_split(char *str, char c)
 			// 	}
 			// }
 		}
-    }
-    dest[i] = NULL;
-    return (dest);
+	}
+	dest[i] = NULL;
+	return (dest);
 }
