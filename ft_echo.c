@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 17:47:02 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 17:47:07 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/03 10:00:50 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ int		ft_echo(t_cmd *cmd)
 	{
 		ft_putstr_fd(cmd->cmds[i], 1);
 		if (i != size - 1)
-			ft_putstr_fd(" ", 1);
+			ft_putstr_fd(" ", STDOUT_FILENO);
 		i++;
 	}
 	if (flag == 0 || size < 2)
-		ft_putstr_fd("\n", 1);
+		ft_putstr_fd("\n", STDOUT_FILENO);
 	return (1);
 }

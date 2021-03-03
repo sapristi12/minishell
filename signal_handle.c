@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 17:52:50 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 18:07:39 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/03 10:04:54 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	signal_int(int signo)
 {
 	if (signo == SIGINT)
 	{
-		ft_putstr_fd("\n", 1);
+		ft_putstr_fd("\n", STDERR_FILENO);
 		display_prompt();
 	}
 	g_sig = 128 + signo;
@@ -26,7 +26,7 @@ void	signal_quit(int signo)
 {
 	if (signo == SIGQUIT)
 	{
-		ft_putstr_fd("Quit : (core dumped)\n", 1);
+		ft_putstr_fd("Quit : (core dumped)\n", STDERR_FILENO);
 		display_prompt();
 	}
 	g_sig = 128 + signo;

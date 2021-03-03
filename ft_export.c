@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 15:10:29 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 15:14:16 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/03 10:03:55 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int			error_identifier(char *str)
 {
-	ft_putstr_fd("minishell: export: ", 1);
-	ft_putstr_fd(str, 1);
-	ft_putstr_fd(": not a valid identifier\n", 1);
+	ft_putstr_fd("minishell: export: ", STDERR_FILENO);
+	ft_putstr_fd(str, STDERR_FILENO);
+	ft_putstr_fd(": not a valid identifier\n", STDERR_FILENO);
 	return (1);
 }
 

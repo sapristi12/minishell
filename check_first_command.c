@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 17:53:21 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/02 09:51:34 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/03 10:00:05 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ static int		basic_first_command(char **cmds, t_list **envs, int *tab)
 		return (1);
 	if (!(args = create_package(cmds, envs, 1, tab)))
 	{
-		ft_putstr_fd(cmds[0], STDOUT_FILENO);
-		ft_putstr_fd(": command not found\n", STDOUT_FILENO);
+		ft_putstr_fd(cmds[0], STDERR_FILENO);
+		ft_putstr_fd(": command not found\n", STDERR_FILENO);
 		return (0);
 	}
 	free_char_double_array(args);

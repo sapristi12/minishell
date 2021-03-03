@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 15:15:05 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 15:15:07 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/03 10:04:14 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void			ft_affexport(t_list **lst)
 	tmp = *lst;
 	while (tmp != NULL)
 	{
-		ft_putstr_fd("declare -x ", 1);
-		ft_putstr_fd(tmp->content, 1);
-		ft_putstr_fd("\n", 1);
+		ft_putstr_fd("declare -x ", STDOUT_FILENO);
+		ft_putstr_fd(tmp->content, STDOUT_FILENO);
+		ft_putstr_fd("\n", STDOUT_FILENO);
 		tmp = tmp->next;
 	}
 }

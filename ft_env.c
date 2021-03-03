@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 17:46:47 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 17:46:53 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/03 10:01:12 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ int		ft_env(t_cmd *cmd, t_list **envs)
 	}
 	if (i > 1 && i != j)
 	{
-		ft_putstr_fd("env: ", 1);
-		ft_putstr_fd(cmd->cmds[1], 1);
-		ft_putstr_fd(": No such file or directory\n", 1);
+		ft_putstr_fd("env: ", STDERR_FILENO);
+		ft_putstr_fd(cmd->cmds[1], STDERR_FILENO);
+		ft_putstr_fd(": No such file or directory\n", STDERR_FILENO);
 		return (1);
 	}
 	ft_afflist(envs);
