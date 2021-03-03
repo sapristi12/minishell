@@ -192,4 +192,3 @@ int			*create_tab_index(char **cmds);
 void		init_split(t_split *spl);
 
 #	endif
- 	

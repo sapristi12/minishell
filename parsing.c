@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:00:16 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 20:45:54 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/03 09:04:23 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ int		parsing_line(char *prompt, t_list **envs, t_cmd *cmd)
 	if ((ret = parsing_command(cmd, envs)) <= 0)
 		return (free_8(prompt, cmd, ret));
 	if (cmd->exit_status[0] == 1)
-		return (-2);
+		return (free_8(prompt, cmd, -2));
 	free(prompt);
 	free_char_double_array(cmd->cmds);
 	free_int_double_array(cmd);
