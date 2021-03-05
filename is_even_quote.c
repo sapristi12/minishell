@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:25:37 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/02 11:14:28 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/05 10:25:22 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,9 @@ int				is_even_quote(char *str)
 		if (str[i] == SLASH && (str[i + 1] == SLASH
 		|| str[i + 1] == D_QUOTE || (in_quote == -1 && str[i + 1] == S_QUOTE)))
 			i++;
-		else if (in_quote == 1)
-		{
-			if (i > 1 && (is_first_condition(tmp, str[i], str[i - 1], str[i - 2])))
-				in_quote = -in_quote;
-		}
+		else if (in_quote == 1 && (i > 1 && (is_first_condition(tmp, str[i],
+		str[i - 1], str[i - 2]))))
+			in_quote = -in_quote;
 		else if (in_quote == -1)
 			if (str[i] == S_QUOTE || str[i] == D_QUOTE)
 				if ((i > 0 && is_second_condition(str[i], str[i - 1], i))

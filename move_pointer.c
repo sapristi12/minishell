@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:16:47 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/02 10:41:58 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/05 10:23:15 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ int		move_pointer(char *str, char tmp)
 	{
 		if (i > 0 && (str[i - 1] != SLASH && str[i] == D_QUOTE))
 			break ;
-		if (i > 1 && (str[i] == D_QUOTE && str[i - 1] == SLASH && str[i - 2] == SLASH))
+		if (i > 1 && (str[i] == D_QUOTE &&
+		str[i - 1] == SLASH && str[i - 2] == SLASH))
 			break ;
 		if (str[i] == tmp && tmp == S_QUOTE)
 			break ;

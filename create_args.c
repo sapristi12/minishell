@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:57:18 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/02 10:50:15 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/05 10:21:22 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,19 @@ int		condition(char *s, int j)
 	return (0);
 }
 
+char	*hub_files(char *cmd, t_list **envs)
+{
+	struct stat		myst;
+	int				ret;
+
+	ret = stat(cmd, &myst);
+	if (cmd[0] != '/' && ret == -1 && !is_builtin(cmd))
+		return (get_path_command(cmd, envs, 1));
+	else if (cmd[0] == '/' && ret == -1)
+		return (NULL);
+	return (ft_strdup(cmd));
+}
+
 char	**create_package(char **cmds, t_list **envs, int option, int *tab)
 {
 	char	**dest;
@@ -56,9 +69,10 @@ char	**create_package(char **cmds, t_list **envs, int option, int *tab)
 	i = 0;
 	while (cmds[i] && ft_strcmp(cmds[i], "|") && condition(cmds[i], tab[i]))
 	{
-		if (i == 0 && cmds[i][0] != '/' && !is_builtin(cmds[i]))
+		if (i == 0)
 		{
-			if (!(dest[i] = get_path_command(cmds[i], envs, 1)) && option != 0)
+			dest[i] = hub_files(cmds[i], envs);
+			if (!(dest[i]) && option != 0)
 				return (free_return(dest));
 		}
 		else
