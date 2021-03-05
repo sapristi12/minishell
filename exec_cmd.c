@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 19:00:43 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/05 10:11:45 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/05 17:06:28 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ int				init_all_package(t_cmd *cmd, t_list **envs)
 		pointer += move_pointer_i(&(cmd->cmds[pointer]));
 		i++;
 	}
+	//for (int z = 0; cmd->pipe.all[z]; z++)
+	//	for (int j = 0; cmd->pipe.all[z][j]; j++)
+	//		printf("%s\n", cmd->pipe.all[z][j]);
 	return (1);
 }
 

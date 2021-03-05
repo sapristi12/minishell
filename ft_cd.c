@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 17:47:12 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 17:48:17 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/05 17:17:55 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,8 +82,8 @@ int		cd_home(t_list **envs)
 	words = malloc(sizeof(char *) * 2);
 	if (!(words))
 		return (-1);
-	words[0] = ft_strdup("cd");
-	words[1] = ft_strdup("~");
+	words[0] = deux_strdup("cd");
+	words[1] = deux_strdup("~");
 	words[1] = create_new_str(words[1], envs);
 	ret = cd_basic(words, envs);
 	free(words[0]);

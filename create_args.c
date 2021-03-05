@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:57:18 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/05 10:21:22 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/05 17:10:52 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,14 @@ char	*hub_files(char *cmd, t_list **envs)
 {
 	struct stat		myst;
 	int				ret;
+	char			*dest;
 
 	ret = stat(cmd, &myst);
 	if (cmd[0] != '/' && ret == -1 && !is_builtin(cmd))
-		return (get_path_command(cmd, envs, 1));
+	{
+		dest = get_path_command(cmd, envs, 1);
+		return (dest);
+	}
 	else if (cmd[0] == '/' && ret == -1)
 		return (NULL);
 	return (ft_strdup(cmd));

@@ -190,5 +190,6 @@ int 		check_prompt(int index, char *prompt);
 int			init_tab(t_cmd *cmd);
 int			*create_tab_index(char **cmds);
 void		init_split(t_split *spl);
+char		*deux_strdup(char *src);
 
 #	endif
