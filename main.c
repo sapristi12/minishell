@@ -92,7 +92,7 @@ int		main(int i, char **av, char **envp)
 			get_next_line(666, NULL, 1);
 			break ;
 		}
-		(g_sig <= 2 || g_sig == 127 || g_sig == 130) ? display_prompt() : 0;
+		(g_sig <= 2 || g_sig == 127 || g_sig == 130 || g_sig == 16) ? display_prompt() : 0;
 		free(prompt);
 	}
 	free(prompt);
