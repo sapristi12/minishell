@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:19:29 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 20:32:39 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/09 17:28:43 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,10 @@ int		main(int ret, char **av, char **envp)
 			get_next_line(666, NULL, 1);
 			break ;
 		}
-		(g_sig <= 2 || g_sig == 127 || (g_sig == 130 && cmd.parent == 1) || g_sig == 16 || prompt[0] == 0) ? display_prompt() : 0;
+		if ((g_sig != 0 && cmd.parent != 1) || prompt[0] == 0)
+		{
+			(g_sig <= 2 || g_sig == 127 || ((g_sig == 130) && cmd.parent == 1) || g_sig == 16 || prompt[0] == 0) ? display_prompt() : 0;
+		}
 		free(prompt);
 	}
 	free(prompt);

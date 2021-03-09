@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 17:52:50 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/03 10:04:54 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/09 17:26:32 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,10 @@ void	signal_int(int signo)
 void	signal_quit(int signo)
 {
 	if (get_pid(GET, 0) == 0)
+	{
+		ft_putstr_fd("\b\b  \b\b", STDOUT_FILENO);
 		return ;
+	}
 	if (signo == SIGQUIT)
 	{
 		ft_putstr_fd("Quit : (core dumped)\n", STDERR_FILENO);
