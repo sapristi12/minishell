@@ -69,7 +69,6 @@ static int		execution_bin(t_cmd *cmd, t_list **envs, int i)
 			ft_lstclear(envs, free);
 			execve(cmd->pipe.all[i][0], cmd->pipe.all[i], envp);
 			free_char_double_array(envp);
-			free_package(cmd);
 		}
 		return (-1);
 	}
