@@ -50,7 +50,7 @@ int		main_loop(char *prompt, t_cmd *cmd, t_list **envs)
 		if (!only_spaces(cmds[i]))
 		{
 			status = parsing_line(cmds[i], envs, cmd);
-			if (check_status(cmds, status) == -1)
+			if (check_status(cmds, status) <= -1)
 				return (-1);
 		}
 		i++;
