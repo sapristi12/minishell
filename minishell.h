@@ -57,6 +57,7 @@ struct                  s_cmd
 	int		**tab;
 	int		tabsize;
 	int		i;
+	int 	parent;
 };
 typedef struct s_cmd    t_cmd;
 

@@ -44,6 +44,8 @@ void	hub_wait(t_cmd *cmd)
 	waitpid(cmd->pid, &status, 0);
 	if (WIFEXITED(status))
 		g_sig = WEXITSTATUS(status);
+	if (cmd->pid != 0)
+		cmd->parent = 1;
 }
 
 int		loop_command_pipe(t_cmd *cmd, t_list **envs)
