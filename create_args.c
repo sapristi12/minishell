@@ -76,11 +76,13 @@ char	**create_package(char **cmds, t_list **envs, int option, int *tab)
 		if (i == 0)
 		{
 			dest[i] = hub_files(cmds[i], envs);
-			free(dest[i]);
 			if (!(dest[i]) && option != 0)
 				return (free_return(dest));
+			else
+				dest[i] = ft_strdup("");
 		}
-		dest[i] = ft_strdup(cmds[i]);
+		else
+			dest[i] = ft_strdup(cmds[i]);
 		i++;
 	}
 	return (dest);
