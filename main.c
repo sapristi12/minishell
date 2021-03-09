@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:19:29 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/09 17:28:43 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/09 19:59:09 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,8 @@ int		main(int ret, char **av, char **envp)
 		{
 			(g_sig <= 2 || g_sig == 127 || ((g_sig == 130) && cmd.parent == 1) || g_sig == 16 || prompt[0] == 0) ? display_prompt() : 0;
 		}
+		else if (g_sig == 0 && cmd.parent == 0)
+			display_prompt();
 		free(prompt);
 	}
 	free(prompt);
