@@ -16,7 +16,6 @@ static int		change_dup(t_cmd *cmd, int index, int fdleft, int fdright)
 {
 	cmd->redir.save_left = get_left(cmd, index);
 	cmd->redir.save_right = get_right(cmd, index);
-	printf("-->%s\n", cmd->redir.save_right);
 	fdright = dup(STDOUT_FILENO);
 	if (cmd->redir.save_left)
 	{
@@ -55,6 +54,8 @@ char			**pointer_package(char **cmds, int index)
 			j++;
 		i++;
 	}
+	if (!ft_strcmp(cmds[i], "|"))
+		return (&cmds[i + 1]);
 	return (&cmds[i]);
 }
 
