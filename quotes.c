@@ -19,6 +19,8 @@ int		normal_tilde(char *str, char **new, t_list **envs)
 
 	i = 1;
 	copy = get_tilde_path(str, envs);
+	if (!copy)
+		copy = ft_strdup("");
 	*new = ft_strjoin(*new, copy);
 	free(copy);
 	while (str[i] && str[i] != D_QUOTE && str[i]

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/33652/Documents/Coding/minishell/is_even_quote.c
+/mnt/c/Users/33652/Documents/Coding/minishell/get_tilde_path.c
 minishell.h
 /mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
 
@@ -35,4 +35,8 @@ signal.h
 -
 dirent.h
 -
+
+/mnt/c/Users/33652/Documents/Coding/minishell/quotes.c
+minishell.h
+/mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
 

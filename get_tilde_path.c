@@ -16,9 +16,13 @@ char	*get_tilde_path(char *str, t_list **envs)
 {
 	int		i;
 	char	*dest;
+	char 	*tmp;
 
 	i = 0;
-	dest = ft_strdup(get_env(*envs, "HOME"));
+	tmp = get_env(*envs, "HOME");
+	if (!tmp)
+		return (NULL);
+	dest = ft_strdup(tmp);
 	if (!dest)
 		return (NULL);
 	while (*str && *str != '~')
