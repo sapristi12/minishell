@@ -12,6 +12,15 @@
 
 #include "minishell.h"
 
+int 	get_pid(int op, int val)
+{
+	static int	pid;
+
+	if (op == 1)
+		pid = val;
+	return (pid);
+}
+
 void	signal_int(int signo)
 {
 	if (signo == SIGINT)
@@ -24,6 +33,8 @@ void	signal_int(int signo)
 
 void	signal_quit(int signo)
 {
+	if (get_pid(0, 0) < 0)
+		return ;
 	if (signo == SIGQUIT)
 	{
 		ft_putstr_fd("Quit : (core dumped)\n", STDERR_FILENO);

@@ -58,6 +58,7 @@ struct                  s_cmd
 	int		tabsize;
 	int		i;
 	int 	parent;
+	int		isforking;
 };
 typedef struct s_cmd    t_cmd;
 

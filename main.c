@@ -82,6 +82,7 @@ int		main(int ret, char **av, char **envp)
 	ret = 0;
 	cmd.exit_status[0] = 0;
 	cmd.parent = 0;
+	cmd.isforking = 0;
 	if (!(envs = init_list_env(envp)))
 		return (-1);
 	signal_handle();
