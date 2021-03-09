@@ -18,6 +18,12 @@
 # include <signal.h>
 # include <dirent.h>
 
+enum e_getpid
+{
+	GET,
+	SET
+};
+
 typedef struct			s_list
 {
     char    			*content;
@@ -193,5 +199,6 @@ int			init_tab(t_cmd *cmd);
 int			*create_tab_index(char **cmds);
 void		init_split(t_split *spl);
 char		*deux_strdup(char *src);
+int			get_pid(int op, int val);
 
 #	endif

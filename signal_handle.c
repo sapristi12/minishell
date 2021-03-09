@@ -33,7 +33,7 @@ void	signal_int(int signo)
 
 void	signal_quit(int signo)
 {
-	if (get_pid(0, 0) < 0)
+	if (get_pid(GET, 0) == 0)
 		return ;
 	if (signo == SIGQUIT)
 	{

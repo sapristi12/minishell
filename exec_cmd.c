@@ -57,6 +57,7 @@ static int		execution_bin(t_cmd *cmd, t_list **envs, int i)
 	char	**envp;
 	int		status;
 
+	get_pid(SET, 1);
 	cmd->pid = fork();
 	status = 1;
 	if (cmd->pid == -1)
@@ -75,6 +76,7 @@ static int		execution_bin(t_cmd *cmd, t_list **envs, int i)
 	waitpid(cmd->pid, &status, 0);
 	if (WIFEXITED(status))
 		g_sig = WEXITSTATUS(status);
+	get_pid(SET, 0);
 	return (1);
 }
 

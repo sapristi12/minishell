@@ -85,6 +85,7 @@ int		parsing_line(char *prompt, t_list **envs, t_cmd *cmd)
 	int		ret;
 
 	init_struct_cmd(cmd);
+	get_pid(SET, 0);
 	if (!(prompt = create_space_around(prompt)))
 		return (errno_parsing_line(-2));
 	if (!(cmd->cmds = new_split(prompt, ' ')))

@@ -59,6 +59,7 @@ int		loop_command_pipe(t_cmd *cmd, t_list **envs)
 		ret = 0;
 		if (!(parsing_redir(cmd, i)))
 			return (-2);
+		get_pid(SET, 1);
 		cmd->pid = fork();
 		if (cmd->pid == -1)
 			return (-1);
@@ -69,6 +70,7 @@ int		loop_command_pipe(t_cmd *cmd, t_list **envs)
 		dup2(cmd->mystdout, STDOUT_FILENO);
 		dup2(cmd->mystdin, STDIN_FILENO);
 		hub_wait(cmd);
+		get_pid(SET, 0);
 		i++;
 	}
 	return (1);
