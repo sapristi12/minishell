@@ -41,10 +41,7 @@ int		check_prompt(int index, char *prompt)
 	if (index == 1)
 	{
 		if (only_spaces(prompt))
-		{
-			free(prompt);
 			return (0);
-		}
 	}
 	else if (index == 2)
 	{
@@ -52,7 +49,6 @@ int		check_prompt(int index, char *prompt)
 		{
 			ft_putstr_fd(
 			"minishell: syntax error near unexpected ';'\n", STDERR_FILENO);
-			free(prompt);
 			return (0);
 		}
 	}
