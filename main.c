@@ -84,7 +84,7 @@ int		main(int i, char **av, char **envp)
 	i = 0;
 	if (!(envs = init_list_env(envp)))
 		return (-1);
-	//signal_handle();
+	signal_handle();
 	display_prompt();
 	while ((ret = get_next_line(0, &prompt, 0)) > 0)
 	{
@@ -93,7 +93,7 @@ int		main(int i, char **av, char **envp)
 			get_next_line(666, NULL, 1);
 			break ;
 		}
-		(g_sig <= 2 || g_sig == 127) ? display_prompt() : 0;
+		(g_sig <= 2 || g_sig == 127 || g_sig == 130) ? display_prompt() : 0;
 	}
 	free(prompt);
 	ft_lstclear(&envs, free);
