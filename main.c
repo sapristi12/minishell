@@ -58,7 +58,6 @@ int		main_loop(char *prompt, t_cmd *cmd, t_list **envs)
 	if (cmds[i] && !only_spaces(cmds[i]))
 		ft_putstr_fd(
 		"minishell: syntax error near unexpected ';'\n", STDERR_FILENO);
-	free(prompt);
 	free_char_double_array(cmds);
 	return (0);
 }
