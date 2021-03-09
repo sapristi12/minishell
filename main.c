@@ -71,17 +71,17 @@ int		main_ret(t_cmd *cmd)
 	return (0);
 }
 
-int		main(int i, char **av, char **envp)
+int		main(int ret, char **av, char **envp)
 {
 	char		*prompt;
 	t_list		*envs;
 	t_cmd		cmd;
-	int			ret;
 
 	g_sig = 0;
 	(void)av;
-	i = 0;
+	ret = 0;
 	cmd.exit_status[0] = 0;
+	cmd.parent = 0;
 	if (!(envs = init_list_env(envp)))
 		return (-1);
 	signal_handle();
