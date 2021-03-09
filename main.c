@@ -85,7 +85,7 @@ int		main(int ret, char **av, char **envp)
 	cmd.isforking = 0;
 	if (!(envs = init_list_env(envp)))
 		return (-1);
-	signal_handle();
+	//signal_handle();
 	display_prompt();
 	while ((ret = get_next_line(0, &prompt, 0)) > 0)
 	{

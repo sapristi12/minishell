@@ -58,25 +58,40 @@ int		multiple_semicolon(char *str)
 	flag = 0;
 	in_quote = -1;
 	i = 0;
-	if (str[0] == ';')
-		return (0);
+	if (str[i] == ' ')
+	{
+		while (str[i] == ' ')
+			i++;
+		if (str[i] == ';')
+			return (0);
+	}
 	while (str[i + 1])
 	{
-		if (str[i] == SLASH && (str[i + 1] == SLASH
-		|| str[i + 1] == D_QUOTE || (in_quote == -1 && str[i + 1] == S_QUOTE)))
+		if (str[i] == SLASH && (str[i + 1] == SLASH || str[i + 1] == D_QUOTE || (in_quote == -1 && str[i + 1] == S_QUOTE)))
 			i++;
-		else if (in_quote == 1 && ((i > 1 && is_first_condition(tmp, str[i],
-		str[i - 1], str[i - 2])) || (i > 0 && is_first_condition(tmp, str[i],
-		str[i - 1], SLASH))))
+		else if (in_quote == 1 && ((i > 1 && is_first_condition(tmp, str[i], str[i - 1], str[i - 2])) || (i > 0 && is_first_condition(tmp, str[i], str[i - 1], SLASH))))
 			in_quote = -in_quote;
 		else if (in_quote == -1)
 		{
-			if (str[i] == ';' && flag == 0)
-				flag = 1;
-			else if (str[i] == ';' && flag == 1)
-				return (0);
-			while (str[i] && str[i] == ' ')
-				i++;
+			if (str[i] == S_QUOTE || str[i] == D_QUOTE)
+			{
+				if ((i > 0 && is_second_condition(str[i], str[i - 1], i))
+					|| (i == 0 && is_second_condition(str[i], 0, i)))
+					apply_tmp(&tmp, str[i], &in_quote);
+			}
+			else
+			{
+				if (str[i] == ';' && flag == 0)
+					flag = 1;
+				else if (str[i] == ';' && flag == 1)
+					return (0);
+				if (str[i] == ' ')
+				{
+					while (str[i] && str[i] == ' ')
+						i++;
+					i--;
+				}
+			}
 		}
 		i++;
 	}
