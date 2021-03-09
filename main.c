@@ -81,6 +81,7 @@ int		main(int i, char **av, char **envp)
 	g_sig = 0;
 	(void)av;
 	i = 0;
+	cmd.exit_status[0] = 0;
 	if (!(envs = init_list_env(envp)))
 		return (-1);
 	signal_handle();
