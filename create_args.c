@@ -78,7 +78,7 @@ char	**create_package(char **cmds, t_list **envs, int option, int *tab)
 			dest[i] = hub_files(cmds[i], envs);
 			if (!(dest[i]) && option != 0)
 				return (free_return(dest));
-			else
+			else if (!(dest[i]))
 				dest[i] = ft_strdup("");
 		}
 		else
