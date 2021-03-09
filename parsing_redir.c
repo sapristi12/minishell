@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 17:54:00 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 17:58:23 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/09 10:14:46 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ static int		change_dup(t_cmd *cmd, int index, int fdleft, int fdright)
 {
 	cmd->redir.save_left = get_left(cmd, index);
 	cmd->redir.save_right = get_right(cmd, index);
+	printf("-->%s\n", cmd->redir.save_right);
 	fdright = dup(STDOUT_FILENO);
 	if (cmd->redir.save_left)
 	{
