@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/33652/Documents/Coding/minishell/get_tilde_path.c
+/mnt/c/Users/33652/Documents/Coding/minishell/ft_cd.c
 minishell.h
 /mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
 
@@ -35,8 +35,4 @@ signal.h
 -
 dirent.h
 -
-
-/mnt/c/Users/33652/Documents/Coding/minishell/quotes.c
-minishell.h
-/mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
 

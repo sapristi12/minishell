@@ -79,6 +79,8 @@ int		cd_home(t_list **envs)
 	char	**words;
 	int		ret;
 
+	if (!get_env(*envs, "HOME"))
+		return (-2);
 	words = malloc(sizeof(char *) * 2);
 	if (!(words))
 		return (-1);
@@ -109,9 +111,8 @@ int		ft_cd(t_cmd *cmd, t_list **envs)
 	else
 		ret = cd_basic(cmd->cmds, envs);
 	if (ret == -1)
-	{
 		perror("cd");
-		return (1);
-	}
+	if (ret == -2)
+		ft_putstr_fd("minishell: cd: HOME not set\n", STDERR_FILENO);
 	return (1);
 }
