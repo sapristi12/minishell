@@ -58,14 +58,14 @@ int		multiple_semicolon(char *str)
 	flag = 0;
 	in_quote = -1;
 	i = 0;
-	if (str[i] == ' ')
+	if (str[i] == ' ' || str[i] == ';')
 	{
-		while (str[i] == ' ')
+		while (str[i] && str[i] == ' ')
 			i++;
 		if (str[i] == ';')
 			return (0);
 	}
-	while (str[i + 1])
+	while (str[i])
 	{
 		if (str[i] == SLASH && (str[i + 1] == SLASH || str[i + 1] == D_QUOTE || (in_quote == -1 && str[i + 1] == S_QUOTE)))
 			i++;
@@ -85,8 +85,11 @@ int		multiple_semicolon(char *str)
 					flag = 1;
 				else if (str[i] == ';' && flag == 1)
 					return (0);
-				if (str[i] == ' ')
+				else if (str[i + 1] != ' ' && str[i] != ';')
+					flag = 0;
+				if (str[i] == ';' && str[i + 1] == ' ')
 				{
+					i++;
 					while (str[i] && str[i] == ' ')
 						i++;
 					i--;
