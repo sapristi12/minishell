@@ -94,6 +94,7 @@ int		main(int i, char **av, char **envp)
 			break ;
 		}
 		(g_sig <= 2 || g_sig == 127 || g_sig == 130) ? display_prompt() : 0;
+		free(prompt);
 	}
 	free(prompt);
 	ft_lstclear(&envs, free);
