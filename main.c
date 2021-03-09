@@ -93,7 +93,7 @@ int		main(int i, char **av, char **envp)
 			get_next_line(666, NULL, 1);
 			break ;
 		}
-		(g_sig <= 2 || g_sig == 127 || (g_sig == 130 && cmd.parent == 1) || g_sig == 16) ? display_prompt() : 0;
+		(g_sig <= 2 || g_sig == 127 || (g_sig == 130 && cmd.parent == 1) || g_sig == 16 || prompt[0] == 0) ? display_prompt() : 0;
 		free(prompt);
 	}
 	free(prompt);
