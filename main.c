@@ -94,7 +94,7 @@ int		main(int ret, char **av, char **envp)
 			get_next_line(666, NULL, 1);
 			break ;
 		}
-		if ((g_sig != 0 && cmd.parent != 1) || prompt[0] == 0)
+		if ((g_sig != 0 && cmd.parent != 1) || prompt[0] == 0 || (g_sig == 0 && cmd.parent == 1))
 		{
 			(g_sig <= 2 || g_sig == 127 || ((g_sig == 130) && cmd.parent == 1) || g_sig == 16 || prompt[0] == 0) ? display_prompt() : 0;
 		}

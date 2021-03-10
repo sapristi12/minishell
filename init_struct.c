@@ -43,13 +43,20 @@ int		init_tab(t_cmd *cmd)
 
 int		init_space(t_space *space, char *str)
 {
+	int		i;
+
+	i = 0;
 	space->j = 0;
 	space->in_quote = -1;
 	space->size = get_size(str) + ft_strlen(str);
-	space->dest = malloc(space->size + 1);
+	space->dest = malloc(space->size * space->size);
 	if (!space->dest)
 		return (0);
-	space->dest[space->size] = '\0';
+	while (i < space->size * space->size)
+	{
+		space->dest[i] = '\0';
+		i++;
+	}
 	return (1);
 }
 
