@@ -47,7 +47,7 @@ int				init_all_package(t_cmd *cmd, t_list **envs)
 
 static int		execution_builtin(t_cmd *cmd, t_list **envs, int index)
 {
-	if (!(sort_builtin(cmd, envs, 0)))
+	if (!(sort_builtin(cmd, envs, index)))
 		return (0);
 	return (1);
 }
@@ -83,7 +83,7 @@ static int		execution_bin(t_cmd *cmd, t_list **envs, int i)
 int				exec_cmd(t_cmd *cmd, t_list **envs, int i)
 {
 	if (is_builtin(cmd->pipe.all[0][0]))
-		return (execution_builtin(cmd, envs, 0));
+		return (execution_builtin(cmd, envs, i));
 	else
 		return (execution_bin(cmd, envs, i));
 }

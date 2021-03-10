@@ -43,19 +43,18 @@ int		condition(char *s, int j)
 
 char	*hub_files(char *cmd, t_list **envs)
 {
-	struct stat		myst;
-	int				ret;
 	char			*dest;
 
-	ret = stat(cmd, &myst);
-	if (cmd[0] != '/' && ret == -1 && !is_builtin(cmd))
+	if (is_builtin(cmd))
+		return (ft_strdup(cmd));
+	if (!is_builtin(cmd))
 	{
 		dest = get_path_command(cmd, envs, 1);
-		return (dest);
+		if (!dest)
+			return (ft_strdup(cmd));
+		else
+			return (dest);
 	}
-	else if (cmd[0] == '/' && ret == -1)
-		return (NULL);
-	return (ft_strdup(cmd));
 }
 
 char	**create_package(char **cmds, t_list **envs, int option, int *tab)

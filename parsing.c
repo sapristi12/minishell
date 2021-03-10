@@ -46,8 +46,8 @@ int		several_commands(t_cmd *cmd, t_list **envs)
 
 int		parsing_command(t_cmd *cmd, t_list **envs)
 {
-	if (!(check_first_command(cmd, envs)))
-		return (0);
+	//if (!(check_first_command(cmd, envs)))
+	//	return (0);
 	init_all_package(cmd, envs);
 	if (cmd->pipe.nb_pipe == 0)
 		return (single_command(cmd, envs));
