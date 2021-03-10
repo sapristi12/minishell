@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:12:48 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/10 14:32:17 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/10 19:12:48 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,13 @@ int		normal_tilde(char *str, char **new, t_list **envs)
 	return (i - 1);
 }
 
+int		is_num(char c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
+}
+
 int		normal_dollar(char *str, char **new, t_list **envs)
 {
 	char	*copy;
@@ -38,10 +45,15 @@ int		normal_dollar(char *str, char **new, t_list **envs)
 	copy = get_var_dollar(str, envs);
 	*new = ft_strjoin(*new, copy);
 	free(copy);
-	while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE
-	&& str[i] != SLASH && str[i] != '$' && str[i] != ' '
-	&& str[i] != '=' && str[i] != '@' && str[i] != '?')
+	if (is_num(str[i]))
 		i++;
+	else
+	{
+		while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE
+		&& str[i] != SLASH && str[i] != '$' && str[i] != ' '
+		&& str[i] != '=' && str[i] != '@' && str[i] != '?')
+			i++;
+	}
 	if (i == 0 && str[i] == '?')
 		return (1);
 	return (i);

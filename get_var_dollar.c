@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:34:22 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 20:37:35 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/10 19:19:25 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,17 +63,32 @@ char	*get_var_dollar(char *str, t_list **envs)
 	char	*tmp;
 
 	i = 0;
-	while (condition_dollar(str[i]))
-		i++;
-	name = malloc(i + 1);
+	name = deux_strdup("");
 	if (!name)
 		return (NULL);
-	name[i] = '\0';
-	i = 0;
-	while (condition_dollar(str[i]))
+	if (is_num(str[i]))
 	{
-		name[i] = str[i];
+		name = char_strjoin(name, str[i]);
 		i++;
+	}
+	else
+	{
+		while (condition_dollar(str[i]))
+			i++;
+	}
+	i = 0;
+	if (is_num(str[i]))
+	{
+		name = char_strjoin(name, str[i]);
+		i++;
+	}
+	else
+	{
+		while (condition_dollar(str[i]))
+		{
+			name[i] = str[i];
+			i++;
+		}
 	}
 	if (i == 0 && str[i] == '?')
 		return (exit_package(name));

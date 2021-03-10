@@ -203,5 +203,6 @@ int			get_pid(int op, int val);
 int			error_identifier(char *str);
 void		condition_display(int parent, char *prompt);
 void		is_command_nf(t_cmd *cmd, t_list **envs);
+int			is_num(char c);
 
 #	endif

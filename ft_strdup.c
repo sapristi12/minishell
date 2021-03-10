@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 15:15:18 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/05 17:17:45 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/10 19:35:36 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@ char	*deux_strdup(char *src)
 {
 	int		i;
 	char	*dest;
+	int		len;
 
-	i = 0;
-	while (src[i])
-		i++;
-	if (!(dest = (char *)malloc(sizeof(char) * i + 2)))
+	len = ft_strlen(src);
+	if (!(dest = (char *)malloc(len + 5)))
 		return (NULL);
+	for (int j = 0; j < len + 5; j++)
+		dest[j] = '\0';
 	i = 0;
 	while (src[i])
 	{
