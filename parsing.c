@@ -40,7 +40,7 @@ int		several_commands(t_cmd *cmd, t_list **envs)
 	dup2(cmd->mystdin, STDIN_FILENO);
 	if (ret == -1)
 		return (free_end_pipe(cmd, -2));
-	pipe_first_command(cmd, envs);
+	//pipe_first_command(cmd, envs);
 	return (free_end_pipe(cmd, 1));
 }
 

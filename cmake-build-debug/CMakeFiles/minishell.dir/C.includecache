@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/33652/Documents/Coding/minishell/exec_cmd.c
+/mnt/c/Users/33652/Documents/Coding/minishell/forking.c
 minishell.h
 /mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
 
