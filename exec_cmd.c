@@ -68,7 +68,8 @@ static int		execution_bin(t_cmd *cmd, t_list **envs, int i)
 		{
 			envp = list_to_array(*envs);
 			ft_lstclear(envs, free);
-			execve(cmd->pipe.all[i][0], cmd->pipe.all[i], envp);
+			if (execve(cmd->pipe.all[i][0], cmd->pipe.all[i], envp) == -1)
+				perror("minishell");
 			free_char_double_array(envp);
 		}
 		return (-1);

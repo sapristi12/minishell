@@ -55,6 +55,7 @@ char	*hub_files(char *cmd, t_list **envs)
 		else
 			return (dest);
 	}
+	return (ft_strdup(cmd));
 }
 
 char	**create_package(char **cmds, t_list **envs, int option, int *tab)
