@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:34:22 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/10 19:19:25 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/10 20:05:01 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ int		condition_dollar(char c)
 	if (c == ' ' || c == '@')
 		return (0);
 	if (c == '=' || c == '?')
+		return (0);
+	if (c == '/')
 		return (0);
 	return (1);
 }

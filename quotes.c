@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:12:48 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/10 19:12:48 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/10 20:05:21 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int		normal_dollar(char *str, char **new, t_list **envs)
 	{
 		while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE
 		&& str[i] != SLASH && str[i] != '$' && str[i] != ' '
-		&& str[i] != '=' && str[i] != '@' && str[i] != '?')
+		&& str[i] != '=' && str[i] != '@' && str[i] != '?' && str[i] != '/')
 			i++;
 	}
 	if (i == 0 && str[i] == '?')
