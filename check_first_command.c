@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 15:50:10 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/10 16:31:56 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/10 17:02:15 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,13 @@ void	is_command_nf(t_cmd *cmd, t_list **envs)
 	command = strs[0];
 	path = get_path_command(command, envs, 1);
 	if (is_builtin(command))
+	{
+		free(path);
 		return ;
+	}
 	if (path && !is_builtin(command))
 	{
+		free(path);
 		return ;
 	}
 	else if (!is_builtin(command) && !path)
