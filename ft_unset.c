@@ -18,7 +18,7 @@ void	ft_delone(t_list **lst, char *str)
 	t_list	*tmp;
 
 	envs = *lst;
-	if (!ft_strncmp(envs->content, str, ft_strlen(str)))
+	if (!ft_strncmp(envs->content, str, ft_strlen(str)) && envs->content[ft_strlen(str)] == '=')
 	{
 		tmp = envs->next;
 		free(envs->content);
@@ -28,7 +28,7 @@ void	ft_delone(t_list **lst, char *str)
 	}
 	while (envs)
 	{
-		if (!ft_strncmp(envs->content, str, ft_strlen(str)))
+		if (!ft_strncmp(envs->content, str, ft_strlen(str)) && envs->content[ft_strlen(str)] == '=')
 		{
 			tmp->next = envs->next;
 			free(envs->content);
