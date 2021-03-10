@@ -45,7 +45,7 @@ int		check_last(char **cmds, int *tab)
 		return (0);
 	while (cmds[i] && ft_strcmp(cmds[i], "|"))
 		i++;
-	if (i > 0 && is_token_string(cmds[i - 1]) && tab[i - 1] == 1)
+	if (i > 0 && (is_token_string(cmds[i - 1]) && tab[i - 1] == 1))
 		return (0);
 	return (1);
 }
