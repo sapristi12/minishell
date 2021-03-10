@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:14:55 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/10 16:47:04 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/10 18:36:36 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,10 @@ int		init_space(t_space *space, char *str)
 	space->j = 0;
 	space->in_quote = -1;
 	space->size = get_size(str) + ft_strlen(str);
-	space->dest = malloc(space->size * space->size);
+	space->dest = malloc(space->size * space->size * 50);
 	if (!space->dest)
 		return (0);
-	while (i < space->size * space->size)
+	while (i < space->size * space->size * 50)
 	{
 		space->dest[i] = '\0';
 		i++;
