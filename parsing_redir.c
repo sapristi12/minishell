@@ -48,9 +48,9 @@ char			**pointer_package(char **cmds, int index)
 
 	j = 0;
 	i = 0;
-	while (cmds[i] && ft_strcmp(cmds[i], "|") && j != index)
+	while (cmds[i] && j != index)
 	{
-		if (!ft_strcmp(cmds[i], "|"))
+		if (!ft_strcmp(cmds[i], "|")) //si c'est pareil
 			j++;
 		i++;
 	}
