@@ -47,7 +47,10 @@ int		ft_unset(t_cmd *cmd, t_list **envs)
 	i = 1;
 	while (cmd->cmds[i] && !is_symbol(cmd->cmds[i]))
 	{
-		ft_delone(envs, cmd->cmds[i]);
+		if (cmd->cmds[i][0] == '/')
+			error_identifier(cmd->cmds[i]);
+		else
+			ft_delone(envs, cmd->cmds[i]);
 		i++;
 	}
 	return (1);

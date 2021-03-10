@@ -200,5 +200,6 @@ int			*create_tab_index(char **cmds);
 void		init_split(t_split *spl);
 char		*deux_strdup(char *src);
 int			get_pid(int op, int val);
+int			error_identifier(char *str);
 
 #	endif
