@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/33652/Documents/Coding/minishell/init_struct.c
-minishell.h
-/mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
-
 /mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
 stdio.h
 -
@@ -35,4 +31,8 @@ signal.h
 -
 dirent.h
 -
+
+/mnt/c/Users/33652/Documents/Coding/minishell/parsing.c
+minishell.h
+/mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
 

@@ -114,7 +114,7 @@ int     	several_string(char **cmds);
 int     	parsing_redir(t_cmd *cmd, int index);
 int     	count_string(char **cmds, char *str);
 void    	ft_putstr_fd(char *str, int fd);
-int     	errno_parsing_line();
+int     	errno_parsing_line(int index);
 int     	check_first_command(t_cmd *cmd, t_list **envs);
 t_list		*ft_lstnew(void *content);
 void		ft_lstadd_back(t_list **alst, t_list *new);

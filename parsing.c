@@ -90,6 +90,7 @@ int		parsing_line(char *prompt, t_list **envs, t_cmd *cmd)
 		return (errno_parsing_line(-2));
 	if (!(cmd->cmds = new_split(prompt, ' ')))
 		return (errno_parsing_line(-3));
+	free(prompt);
 	if (!several_string(cmd->cmds))
 		return (errno_parsing_line(free_i(cmd, -4)));
 	if (!parsing_pipe(cmd))
@@ -97,13 +98,12 @@ int		parsing_line(char *prompt, t_list **envs, t_cmd *cmd)
 	if (!(init_tab(cmd)))
 		return (0);
 	if (!(parsing_quotes(cmd, envs)))
-		return (errno_parsing_line(free_quote(cmd, prompt, -6)));
+		return (errno_parsing_line(free_quote(cmd, NULL, -6)));
 	g_sig = 0;
 	if ((ret = parsing_command(cmd, envs)) <= 0)
-		return (free_8(prompt, cmd, ret));
+		return (free_8(NULL, cmd, ret));
 	if (cmd->exit_status[0] == 1)
-		return (free_8(prompt, cmd, -2));
-	free(prompt);
+		return (free_8(NULL, cmd, -2));
 	free_char_double_array(cmd->cmds);
 	free_int_double_array(cmd);
 	return (0);
