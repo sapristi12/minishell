@@ -12,7 +12,7 @@
 
 #include "minishell.h"
 
-int		sort_builtin(t_cmd *cmd, t_list **envs)
+int		sort_builtin(t_cmd *cmd, t_list **envs, int index)
 {
 	if (!ft_strcmp(cmd->cmds[0], "pwd"))
 		ft_pwd();
@@ -23,7 +23,7 @@ int		sort_builtin(t_cmd *cmd, t_list **envs)
 	if (!(ft_strcmp(cmd->cmds[0], "unset")))
 		ft_unset(cmd, envs);
 	if (!(ft_strcmp(cmd->cmds[0], "echo")))
-		ft_echo(cmd);
+		ft_echo(cmd, index);
 	if (!(ft_strcmp(cmd->cmds[0], "exit")))
 		ft_exit(cmd);
 	if (!(ft_strcmp(cmd->cmds[0], "export")))

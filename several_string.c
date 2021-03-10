@@ -38,5 +38,7 @@ int		several_string(char **cmds)
 		}
 		i++;
 	}
+	if (!ft_strcmp(cmds[i], "|"))
+		return (0);
 	return (1);
 }

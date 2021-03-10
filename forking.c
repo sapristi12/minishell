@@ -20,7 +20,7 @@ int		mid_fork(t_cmd *cmd, t_list **envs, int i)
 	dup2(cmd->pipe.fd[i][1], STDOUT_FILENO);
 	close_all(i - 1, cmd->pipe.nb_pipe, cmd->pipe.fd);
 	if (is_builtin(cmd->pipe.all[i][0]))
-		return (sort_builtin(cmd, envs));
+		return (sort_builtin(cmd, envs, i));
 	if (cmd->pipe.all[i][0] != NULL)
 	{
 		envp = list_to_array(*envs);
@@ -41,7 +41,7 @@ int		last_fork(t_cmd *cmd, t_list **envs, int i)
 		close_last(i - 1, cmd->pipe.nb_pipe, cmd->pipe.fd);
 	}
 	if (is_builtin(cmd->pipe.all[i][0]))
-		return (sort_builtin(cmd, envs));
+		return (sort_builtin(cmd, envs, i));
 	if (cmd->pipe.all[i][0] != NULL)
 	{
 		envp = list_to_array(*envs);
@@ -62,7 +62,7 @@ int		first_fork(t_cmd *cmd, t_list **envs, int i)
 		close_first(i + 1, cmd->pipe.nb_pipe, cmd->pipe.fd);
 	}
 	if (is_builtin(cmd->pipe.all[i][0]))
-		return (sort_builtin(cmd, envs));
+		return (sort_builtin(cmd, envs, i));
 	if (cmd->pipe.all[i][0] != NULL)
 	{
 		envp = list_to_array(*envs);

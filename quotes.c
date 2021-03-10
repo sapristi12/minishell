@@ -85,11 +85,17 @@ char	*simple_quote(char *str)
 {
 	char	*new;
 	int		i;
+	int 	token;
 
+	token = 0;
 	i = 0;
 	while (str[i] && str[i] != S_QUOTE)
+	{
+		if (str[i] == '|')
+			token++;
 		i++;
-	new = malloc(i + 1);
+	}
+	new = malloc(i + token + 1);
 	if (!new)
 		return (NULL);
 	i = 0;

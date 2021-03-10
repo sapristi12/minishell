@@ -50,7 +50,7 @@ char			**pointer_package(char **cmds, int index)
 	i = 0;
 	while (cmds[i] && j != index)
 	{
-		if (!ft_strcmp(cmds[i], "|")) //si c'est pareil
+		if (!ft_strcmp(cmds[i], "|"))
 			j++;
 		i++;
 	}

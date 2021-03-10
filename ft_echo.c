@@ -12,7 +12,7 @@
 
 #include "minishell.h"
 
-int		ft_echo(t_cmd *cmd)
+int		ft_echo(t_cmd *cmd, int index)
 {
 	int i;
 	int size;
@@ -21,7 +21,7 @@ int		ft_echo(t_cmd *cmd)
 	size = 1;
 	flag = 0;
 	i = 1;
-	while (cmd->cmds[size] && !is_symbol(cmd->cmds[size]))
+	while (cmd->cmds[size] && !is_symbol(cmd->cmds[size]) || (is_symbol(cmd->cmds[size]) && cmd->tab[index][size] == 0))
 		size++;
 	while (cmd->cmds[i] && !ft_strcmp(cmd->cmds[i], "-n"))
 	{
