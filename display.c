@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:58:35 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/10 16:51:59 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/10 16:58:50 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 void	condition_display(int parent, char *prompt)
 {
+	printf("panret : %d g_sig : %d\n",parent, g_sig);
 	if (prompt[0] == 0 || parent == 1)
 	{
 		if (g_sig <= 2 || g_sig == 127 || g_sig == 16 || prompt[0] == 0)
 			display_prompt();
 	}
-	else if (g_sig == 0 && parent == 0)
+	else if ((g_sig == 0 || g_sig == 127) && parent == 0)
 		display_prompt();
 }
 

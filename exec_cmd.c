@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 19:00:43 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/10 16:50:21 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/10 16:59:22 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,9 @@ static int		execution_bin(t_cmd *cmd, t_list **envs, int i)
 				perror("minishell");
 			free_char_double_array(envp);
 		}
-		return (0);
+		return (-1);
 	}
+	cmd->parent = 1;
 	waitpid(cmd->pid, &status, 0);
 	if (WIFEXITED(status))
 		g_sig = WEXITSTATUS(status);
