@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:19:29 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/09 20:12:57 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/10 10:25:20 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int		main_loop(char *prompt, t_cmd *cmd, t_list **envs)
 	int		i;
 	int		status;
 	char	**cmds;
+	int		ret;
 
 	i = 0;
 	if (!check_prompt(1, prompt) || !check_prompt(2, prompt))
@@ -50,8 +51,12 @@ int		main_loop(char *prompt, t_cmd *cmd, t_list **envs)
 		if (!only_spaces(cmds[i]))
 		{
 			status = parsing_line(cmds[i], envs, cmd);
-			if (check_status(cmds, status) <= -1)
+			if ((ret = check_status(cmds, status)) <= -1)
+			{
+				if (ret == -2)
+					free(prompt);
 				return (-1);
+			}
 		}
 		i++;
 	}
