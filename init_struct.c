@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:14:55 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/02 09:35:28 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/10 16:47:04 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,6 @@ void	init_struct_cmd(t_cmd *cmd)
 	cmd->exit_status[0] = 0;
 	cmd->tabsize = 0;
 	cmd->tab = NULL;
-	cmd->parent = 0;
 	cmd->exit_status[0] = -99;
 	init_struct_pipe(&cmd->pipe);
 }

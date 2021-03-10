@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:19:29 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/10 14:37:00 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/10 16:47:37 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ int		main(int ret, char **av, char **envp)
 	(void)av;
 	ret = 0;
 	cmd.exit_status[0] = 0;
-	cmd.parent = 0;
+	cmd.parent = 1;
 	cmd.isforking = 0;
 	if (!(envs = init_list_env(envp)))
 		return (-1);
