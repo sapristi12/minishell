@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:12:48 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 18:12:49 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/10 14:32:17 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ char	*simple_quote(char *str)
 {
 	char	*new;
 	int		i;
-	int 	token;
+	int		token;
 
 	token = 0;
 	i = 0;

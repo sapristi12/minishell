@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 17:47:02 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/03 10:00:50 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/10 15:38:00 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ int		ft_echo(t_cmd *cmd, int index)
 	size = 1;
 	flag = 0;
 	i = 1;
-	while (cmd->cmds[size] && (!is_symbol(cmd->cmds[size]) || (is_symbol(cmd->cmds[size]) && cmd->tab[index][size] == 0)))
+	while (cmd->cmds[size] && (!is_symbol(cmd->cmds[size])
+	|| (is_symbol(cmd->cmds[size]) && cmd->tab[index][size] == 0)))
 		size++;
 	while (cmd->cmds[i] && !ft_strcmp(cmd->cmds[i], "-n"))
 	{

@@ -6,13 +6,13 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 17:52:50 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/09 17:26:32 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/10 14:31:33 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-int 	get_pid(int op, int val)
+int		get_pid(int op, int val)
 {
 	static int	pid;
 

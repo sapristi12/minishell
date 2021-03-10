@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:07:43 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 18:09:31 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/10 14:39:01 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,5 @@ int		several_string(char **cmds)
 		}
 		i++;
 	}
-	if (!ft_strcmp(cmds[i], "|"))
-		return (0);
-	return (1);
+	return (!ft_strcmp(cmds[i], "|")) ? 0 : 1;
 }

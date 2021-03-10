@@ -6,19 +6,11 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 17:49:22 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 17:49:58 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/10 14:46:12 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
-
-/*void 	show_error(char *str, int my_errno)
-{
-	ft_putstr_fd(str, 2);
-	ft_putstr_fd(" : ", 2);
-	ft_putstr_fd(strerror(my_errno), 2);
-	ft_putstr_fd("\n", 2);
-}*/
 
 int		mid_fork(t_cmd *cmd, t_list **envs, int i)
 {

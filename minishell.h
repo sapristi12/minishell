@@ -201,5 +201,7 @@ void		init_split(t_split *spl);
 char		*deux_strdup(char *src);
 int			get_pid(int op, int val);
 int			error_identifier(char *str);
+void		condition_display(int parent, char *prompt);
+void		is_command_nf(t_cmd *cmd, t_list **envs);
 
 #	endif

@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 17:50:09 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 20:14:23 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/10 16:30:48 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,10 @@ void		free_package(t_cmd *cmd)
 
 int			free_8(char *str, t_cmd *cmd, int ret)
 {
-	if (g_sig != 127)
-		g_sig = 2;
+//	printf("SIG : %d\n", g_sig);
+//	if (g_sig != 127)
+//		g_sig = 2;
+//	printf("SIG : %d\n", g_sig);
 	free_int_double_array(cmd);
 	free(str);
 	free_char_double_array(cmd->cmds);

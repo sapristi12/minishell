@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:00:16 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/05 10:53:53 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/10 16:15:32 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int		single_command(t_cmd *cmd, t_list **envs)
 	if (!(parsing_redir(cmd, 0)))
 		return (free_error_redir(cmd, 0));
 	ret = exec_cmd(cmd, envs, 0);
+	is_command_nf(cmd, envs);
 	free_package(cmd);
 	dup2(cmd->mystdout, STDOUT_FILENO);
 	dup2(cmd->mystdin, STDIN_FILENO);
@@ -38,22 +39,23 @@ int		several_commands(t_cmd *cmd, t_list **envs)
 	ret = loop_command_pipe(cmd, envs);
 	dup2(cmd->mystdout, STDOUT_FILENO);
 	dup2(cmd->mystdin, STDIN_FILENO);
+	is_command_nf(cmd, envs);
 	if (ret == -1)
 		return (free_end_pipe(cmd, -2));
-	//pipe_first_command(cmd, envs);
 	return (free_end_pipe(cmd, 1));
 }
 
 int		parsing_command(t_cmd *cmd, t_list **envs)
 {
-	//if (!(check_first_command(cmd, envs)))
-	//	return (0);
+	int ret;
+
+	ret = 0;
 	init_all_package(cmd, envs);
 	if (cmd->pipe.nb_pipe == 0)
-		return (single_command(cmd, envs));
+		ret = single_command(cmd, envs);
 	if (cmd->pipe.nb_pipe > 0)
-		return (several_commands(cmd, envs));
-	return (1);
+		ret = several_commands(cmd, envs);
+	return (ret);
 }
 
 int		*create_tab_index(char **cmds)
