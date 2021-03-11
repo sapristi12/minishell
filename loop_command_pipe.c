@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:16:19 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 15:44:48 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 17:40:18 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,11 @@ void	hub_wait(t_cmd *cmd)
 
 int		loop_command_pipe(t_cmd *cmd, t_list **envs)
 {
-	int i;
-	int ret;
+	int		i;
+	int		ret;
+	int		save;
 
+	save = cmd->pipe.nb_pipe + 1;
 	i = 0;
 	while (i < cmd->pipe.nb_pipe + 1)
 	{
@@ -69,9 +71,10 @@ int		loop_command_pipe(t_cmd *cmd, t_list **envs)
 			return (-1);
 		dup2(cmd->mystdout, STDOUT_FILENO);
 		dup2(cmd->mystdin, STDIN_FILENO);
-		hub_wait(cmd);
 		get_pid(SET, 0);
 		i++;
 	}
+	while (save--)
+		hub_wait(cmd);
 	return (1);
 }
