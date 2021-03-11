@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:57:18 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 10:51:55 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 12:10:27 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,13 +74,7 @@ char	**create_package(char **cmds, t_list **envs, int option, int *tab)
 	while (cmds[i] && ft_strcmp(cmds[i], "|") && condition(cmds[i], tab[i]))
 	{
 		if (i == 0)
-		{
 			dest[i] = hub_files(cmds[i], envs);
-			if (!(dest[i]) && option != 0)
-				return (free_return(dest));
-			else if (!(dest[i]))
-				dest[i] = ft_strdup("");
-		}
 		else
 			dest[i] = ft_strdup(cmds[i]);
 		i++;

@@ -1,12 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   is_not_found.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erlajoua <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/11 12:07:09 by erlajoua          #+#    #+#             */
+/*   Updated: 2021/03/11 12:08:24 by erlajoua         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-void 	command_not_found(char *cmd)
-{
-	ft_putstr_fd(cmd, STDERR_FILENO);
-	ft_putstr_fd(" : command not found\n", STDERR_FILENO);
-}
-
-static int 	is_slash(char *str)
+static int	is_slash(char *str)
 {
 	int i;
 
@@ -20,7 +26,7 @@ static int 	is_slash(char *str)
 	return (0);
 }
 
-int		ft_dir(char *path, char *exec)
+int			ft_dir(char *path, char *exec)
 {
 	DIR				*dir;
 	struct dirent	*my_dir;
@@ -39,7 +45,7 @@ int		ft_dir(char *path, char *exec)
 	return (0);
 }
 
-int 	get_path_command(char *command, t_list **envs)
+int			get_path_command(char *command, t_list **envs)
 {
 	char	**path;
 	char	*whole_path;
@@ -61,7 +67,7 @@ int 	get_path_command(char *command, t_list **envs)
 	return (0);
 }
 
-int 	is_dir(char *cmd)
+int			is_dir(char *cmd)
 {
 	DIR		*dir;
 
@@ -74,7 +80,7 @@ int 	is_dir(char *cmd)
 	return (1);
 }
 
-void 	is_not_found(char *cmd, char **envp)
+void		is_not_found(char *cmd, char **envp)
 {
 	t_list	*envs;
 
@@ -83,7 +89,10 @@ void 	is_not_found(char *cmd, char **envp)
 	if (!get_env(envs, "PATH"))
 		perror("minishell");
 	else if (!ft_strcmp(cmd, ".."))
-		command_not_found(cmd);
+	{
+		ft_putstr_fd(cmd, STDERR_FILENO);
+		ft_putstr_fd(" : command not found\n", STDERR_FILENO);
+	}
 	else if (is_slash(cmd))
 	{
 		if (!is_dir(cmd))
@@ -92,7 +101,10 @@ void 	is_not_found(char *cmd, char **envp)
 	else
 	{
 		if (!(get_path_command(cmd, &envs)))
-			command_not_found(cmd);
+		{
+			ft_putstr_fd(cmd, STDERR_FILENO);
+			ft_putstr_fd(" : command not found\n", STDERR_FILENO);
+		}
 	}
 	ft_lstclear(&envs, free);
 }

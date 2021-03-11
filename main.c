@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:19:29 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/10 16:47:37 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 12:06:59 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ int		main(int ret, char **av, char **envp)
 	cmd.isforking = 0;
 	if (!(envs = init_list_env(envp)))
 		return (-1);
-	//signal_handle();
+	signal_handle();
 	display_prompt();
 	while ((ret = get_next_line(0, &prompt, 0)) > 0)
 	{

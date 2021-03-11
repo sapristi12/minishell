@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 15:50:10 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/10 17:02:15 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 12:08:44 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	is_command_nf(t_cmd *cmd, t_list **envs)
 {
 	char	**strs;
 	char	*command;
-	int 	path;
+	int		path;
 
 	strs = pointer_package(cmd->cmds, cmd->pipe.nb_pipe);
 	command = NULL;
