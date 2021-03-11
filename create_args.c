@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:57:18 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/05 17:10:52 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 10:51:55 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	*hub_files(char *cmd, t_list **envs)
 		if (!dest)
 			return (ft_strdup(cmd));
 		else
-			return (ft_strdup(dest));
+			return (dest);
 	}
 	return (ft_strdup(cmd));
 }

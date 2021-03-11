@@ -94,4 +94,5 @@ void 	is_not_found(char *cmd, char **envp)
 		if (!(get_path_command(cmd, &envs)))
 			command_not_found(cmd);
 	}
+	ft_lstclear(&envs, free);
 }
