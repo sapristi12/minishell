@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:25:37 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/10 15:26:48 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 13:01:19 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void			apply_tmp(char *tmp, char c, int *in_quote)
 	*in_quote = *(in_quote) * -1;
 }
 
-static int		is_first_condition(char tmp, char now, char bef, char bef2)
+static int		is_first_condition_q(char tmp, char now, char bef, char bef2)
 {
 	if ((now == tmp && tmp == S_QUOTE))
 		return (1);
@@ -53,8 +53,8 @@ int				is_even_quote(char *str)
 		if (str[i] == SLASH && (str[i + 1] == SLASH
 		|| str[i + 1] == D_QUOTE || (in_quote == -1 && str[i + 1] == S_QUOTE)))
 			i++;
-		else if (in_quote == 1 && ((i > 1 && is_first_condition(tmp, str[i],
-		str[i - 1], str[i - 2])) || (i > 0 && is_first_condition(tmp, str[i],
+		else if (in_quote == 1 && ((i > 1 && is_first_condition_q(tmp, str[i],
+		str[i - 1], str[i - 2])) || (i > 0 && is_first_condition_q(tmp, str[i],
 		str[i - 1], SLASH))))
 			in_quote = -in_quote;
 		else if (in_quote == -1)

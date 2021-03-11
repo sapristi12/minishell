@@ -216,5 +216,9 @@ void		condition_display(int parent, char *prompt);
 void		is_command_nf(t_cmd *cmd, t_list **envs);
 int			is_num(char c);
 void		is_not_found(char *cmd, char **envp);
+int			is_first_condition(char tmp, char now, char bef, char bef2);
+int			multiple_semi1(char *str, int *flag, int *j);
+int			multiple_semi2(char *str, int *j);
+void		multiple_semi3(char *str, int i, char *tmp, int *in_quote);
 
 #	endif

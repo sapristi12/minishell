@@ -69,4 +69,4 @@ add_executable(minishell
         several_string.c
         signal_handle.c
         sort_builtin.c
-        sort_list.c is_only_spaces.c check_prompt.c only_zeros.c ft_export2.c is_not_found.c)
+        sort_list.c is_only.c check_prompt.c only_zeros.c ft_export2.c is_not_found.c init_all_package.c prompt_condition.c)

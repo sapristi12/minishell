@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:12:48 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/10 20:05:21 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 13:10:34 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,6 @@ int		normal_tilde(char *str, char **new, t_list **envs)
 	!= S_QUOTE && str[i] != '~')
 		i++;
 	return (i - 1);
-}
-
-int		is_num(char c)
-{
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
 }
 
 int		normal_dollar(char *str, char **new, t_list **envs)

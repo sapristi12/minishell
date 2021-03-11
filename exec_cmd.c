@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 19:00:43 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 12:17:50 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 13:09:35 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,29 +22,6 @@ int				move_pointer_i(char **cmds)
 	return (i + 1);
 }
 
-int				init_all_package(t_cmd *cmd, t_list **envs)
-{
-	int len;
-	int i;
-	int pointer;
-
-	i = 0;
-	pointer = 0;
-	len = cmd->pipe.nb_pipe;
-	cmd->pipe.all = malloc(sizeof(char **) * (len + 2));
-	if (!cmd->pipe.all)
-		return (-1);
-	cmd->pipe.all[len + 1] = NULL;
-	while (i < len + 1)
-	{
-		cmd->pipe.all[i] = create_package(&(cmd->cmds[pointer]),
-		envs, cmd->tab[i]);
-		pointer += move_pointer_i(&(cmd->cmds[pointer]));
-		i++;
-	}
-	return (1);
-}
-
 static int		execution_builtin(t_cmd *cmd, t_list **envs, int index)
 {
 	if (!(sort_builtin(cmd, envs, index)))
@@ -52,9 +29,25 @@ static int		execution_builtin(t_cmd *cmd, t_list **envs, int index)
 	return (1);
 }
 
-static int		execution_bin(t_cmd *cmd, t_list **envs, int i)
+int				exec_child_pid(t_cmd *cmd, t_list **envs, int i)
 {
 	char	**envp;
+
+	cmd->parent = 0;
+	if (cmd->pipe.all[0][0] != NULL)
+	{
+		envp = list_to_array(*envs);
+		ft_lstclear(envs, free);
+		if (execve(cmd->pipe.all[i][0], cmd->pipe.all[i], envp) == -1)
+			(errno == 2 || errno == 13) ? is_not_found(cmd->pipe.all[i][0],
+			envp) : perror("minishell");
+		free_char_double_array(envp);
+	}
+	return (-1);
+}
+
+static int		execution_bin(t_cmd *cmd, t_list **envs, int i)
+{
 	int		status;
 
 	get_pid(SET, 1);
@@ -63,18 +56,7 @@ static int		execution_bin(t_cmd *cmd, t_list **envs, int i)
 	if (cmd->pid == -1)
 		perror("Fork");
 	if (cmd->pid == 0)
-	{
-		cmd->parent = 0;
-		if (cmd->pipe.all[0][0] != NULL)
-		{
-			envp = list_to_array(*envs);
-			ft_lstclear(envs, free);
-			if (execve(cmd->pipe.all[i][0], cmd->pipe.all[i], envp) == -1)
-				(errno == 2 || errno == 13) ? is_not_found(cmd->pipe.all[i][0], envp) : perror("minishell");
-			free_char_double_array(envp);
-		}
-		return (-1);
-	}
+		return (exec_child_pid(cmd, envs, i));
 	cmd->parent = 1;
 	waitpid(cmd->pid, &status, 0);
 	if (WIFEXITED(status))
