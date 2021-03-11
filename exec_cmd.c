@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 19:00:43 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 20:09:04 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 22:33:06 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ static int		execution_bin(t_cmd *cmd, t_list **envs, int i)
 	if (WIFEXITED(status))
 		g_sig = WEXITSTATUS(status);
 	get_flag(SET, 0);
-	//printf("HEREEE\n");
 	if (g_sig == 126 && !ft_strcmp(cmd->pipe.all[i][0], ".."))
 		g_sig = 127;
 	if (cmd->pipe.all[i][0] && is_dir(cmd->pipe.all[i][0], 0)
