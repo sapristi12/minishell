@@ -34,16 +34,11 @@ static int		is_second_condition(char now, char bef, int i)
 	return (0);
 }
 
-int				multiple_semicolon(char *str)
+int 			multiple_semi2(char *str, int *j)
 {
-	int		i;
-	int		in_quote;
-	int		flag;
-	char	tmp;
+	int i;
 
-	flag = 0;
-	in_quote = -1;
-	i = 0;
+	i = *j;
 	if (str[i] == ' ' || str[i] == ';')
 	{
 		while (str[i] && str[i] == ' ')
@@ -51,39 +46,65 @@ int				multiple_semicolon(char *str)
 		if (str[i] == ';')
 			return (0);
 	}
-	while (str[i])
+	*j = i;
+	return (1);
+}
+
+int				multiple_semi1(char *str, int *flag, int *j)
+{
+	int i;
+
+	i = *j;
+	if (str[i] == ';' && *flag == 0)
+		*flag = 1;
+	else if (str[i] == ';' && *flag == 1)
+		return (0);
+	else if (str[i + 1] != ' ' && str[i] != ';')
+		*flag = 0;
+	if (str[i] == ';' && str[i + 1] == ' ')
 	{
-		if (str[i] == SLASH && (str[i + 1] == SLASH || str[i + 1] == D_QUOTE ||
-		(in_quote == -1 && str[i + 1] == S_QUOTE)))
+		i++;
+		while (str[i] && str[i] == ' ')
 			i++;
-		else if (in_quote == 1 && ((i > 1 && is_first_condition(tmp,
-		str[i], str[i - 1], str[i - 2])) || (i > 0 && is_first_condition(tmp,
-		str[i], str[i - 1], SLASH))))
-			in_quote = -in_quote;
-		else if (in_quote == -1)
+		i--;
+	}
+	*j = i;
+	return (1);
+}
+
+void 			multiple_semi3(char *str, int i, char *tmp, int *in_quote)
+{
+	if ((i > 0 && is_second_condition(str[i], str[i - 1], i))
+		|| (i == 0 && is_second_condition(str[i], 0, i)))
+		apply_tmp(tmp, str[i], in_quote);
+}
+
+void 	init_prompt(t_prompt *p)
+{
+	p->i = 0;
+	p->flag = 0;
+	p->in_quote = -1;
+}
+
+int				multiple_semicolon(char *str)
+{
+	t_prompt	p;
+
+	init_prompt(&p);
+	if (!multiple_semi2(str, &(p.i)))
+		return (0);
+	while (str[p.i])
+	{
+		if (str[p.i] == SLASH && (str[p.i + 1] == SLASH || str[p.i + 1] == D_QUOTE || (p.in_quote == -1 && str[p.i + 1] == S_QUOTE)))
+			p.i++;
+		else if (p.in_quote == 1 && ((p.i > 1 && is_first_condition(p.tmp, str[p.i], str[p.i - 1],str[p.i - 2])) || (p.i > 0 && is_first_condition(p.tmp, str[p.i], str[p.i - 1], SLASH))))
+			p.in_quote = -(p.in_quote);
+		else if (p.in_quote == -1)
 		{
-			if (str[i] == S_QUOTE || str[i] == D_QUOTE)
-			{
-				if ((i > 0 && is_second_condition(str[i], str[i - 1], i))
-					|| (i == 0 && is_second_condition(str[i], 0, i)))
-					apply_tmp(&tmp, str[i], &in_quote);
-			}
-			else
-			{
-				if (str[i] == ';' && flag == 0)
-					flag = 1;
-				else if (str[i] == ';' && flag == 1)
+			if (str[p.i] == S_QUOTE || str[p.i] == D_QUOTE)
+				multiple_semi3(str, p.i, &(p.tmp), &(p.in_quote));
+			else if (!multiple_semi1(str, &(p.flag), &(p.i)))
 					return (0);
-				else if (str[i + 1] != ' ' && str[i] != ';')
-					flag = 0;
-				if (str[i] == ';' && str[i + 1] == ' ')
-				{
-					i++;
-					while (str[i] && str[i] == ' ')
-						i++;
-					i--;
-				}
-			}
 		}
 		i++;
 	}

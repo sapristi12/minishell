@@ -85,6 +85,15 @@ struct 					s_quo
 };
 typedef struct s_quo	t_quo;
 
+struct 					c_prompt
+{
+	int 	i;
+	int 	in_quote;
+	int 	flag;
+	char 	tmp;
+};
+typedef struct c_prompt	t_prompt;
+
 struct					s_split
 {
 	char	**dest;
