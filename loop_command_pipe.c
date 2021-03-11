@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:16:19 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 21:57:42 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 22:07:20 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,15 @@ void	hub_wait(t_cmd *cmd)
 
 void	main_wait(int save, t_cmd *cmd)
 {
+	long long int i;
+	long long int timer;
+
+	timer = 500000000;
+	i = 0;
 	while (save-- != 1)
 		hub_wait(cmd);
-	sleep(1);
+	while (i < timer)
+		i++;
 	if (save == 0)
 		hub_wait(cmd);
 }
