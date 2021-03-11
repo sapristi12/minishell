@@ -6,7 +6,7 @@
 /*   By: erlajoua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 12:07:09 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 16:01:09 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 20:34:11 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ int			is_dir(char *cmd, int option)
 void		is_not_found(char *cmd, char **envp)
 {
 	t_list	*envs;
+	char	*dest;
 
 	if (!(envs = init_list_env(envp)))
 		return ;
@@ -93,8 +94,12 @@ void		is_not_found(char *cmd, char **envp)
 		perror("minishell");
 	else if (!ft_strcmp(cmd, ".."))
 	{
-		ft_putstr_fd(cmd, STDERR_FILENO);
-		ft_putstr_fd(" : command not found\n", STDERR_FILENO);
+		dest = ft_strdup("");
+		if (!dest)
+			return ;
+		dest = ft_strjoin(dest, cmd);
+		dest = ft_strjoin(dest, " : command not found\n");
+		ft_putstr_fd(dest, STDERR_FILENO);
 	}
 	else if (is_slash(cmd))
 	{
@@ -105,8 +110,12 @@ void		is_not_found(char *cmd, char **envp)
 	{
 		if (!(get_path_command(cmd, &envs)))
 		{
-			ft_putstr_fd(cmd, STDERR_FILENO);
-			ft_putstr_fd(" : command not found\n", STDERR_FILENO);
+			dest = ft_strdup("");
+			if (!dest)
+				return ;
+			dest = ft_strjoin(dest, cmd);
+			dest = ft_strjoin(dest, " : command not found\n");
+			ft_putstr_fd(dest, STDERR_FILENO);
 		}
 	}
 	ft_lstclear(&envs, free);

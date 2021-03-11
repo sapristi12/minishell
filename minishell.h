@@ -6,7 +6,7 @@
 /*   By: erlajoua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 15:07:04 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 15:38:39 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 20:38:29 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,6 @@ struct						s_cmd
 	int			**tab;
 	int			tabsize;
 	int			i;
-	int			parent;
-	int			isforking;
 };
 typedef struct s_cmd		t_cmd;
 
@@ -221,7 +219,7 @@ int							only_spaces(char *str);
 void						free_int_double_array(t_cmd *cmd);
 void						init_split(t_split *spl);
 char						*deux_strdup(char *src);
-void						condition_display(int parent, char *prompt);
+void						condition_display(t_cmd *cmd, char *prompt);
 void						is_command_nf(t_cmd *cmd, t_list **envs);
 void						is_not_found(char *cmd, char **envp);
 void						multiple_semi3(char *str, int i,
@@ -232,7 +230,8 @@ int							export_list(t_list *envs);
 int							check_prompt(int index, char *prompt);
 int							init_tab(t_cmd *cmd);
 int							*create_tab_index(char **cmds);
-int							get_pid(int op, int val);
+int							get_flag(int op, int val);
+int							get_dup(int op, int val);
 int							error_identifier(char *str);
 int							is_num(char c);
 int							multiple_semi1(char *str, int *flag, int *j);

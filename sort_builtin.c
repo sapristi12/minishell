@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:06:25 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 17:49:25 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 17:50:58 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		sort_builtin(t_cmd *cmd, t_list **envs, int index)
 		ft_echo(cmd, index);
 	if (!(ft_strcmp(cmd->cmds[0], "exit")))
 		ft_exit(cmd);
-	if (!(ft_strcmp(strs[0], "export")))
+	if (!(ft_strcmp(cmd->cmds[0], "export")))
 		ft_export(cmd, *envs);
 	return (1);
 }

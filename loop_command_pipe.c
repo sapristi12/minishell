@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:16:19 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 17:40:18 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 20:20:12 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,24 +44,28 @@ void	hub_wait(t_cmd *cmd)
 	waitpid(cmd->pid, &status, 0);
 	if (WIFEXITED(status))
 		g_sig = WEXITSTATUS(status);
-	if (cmd->pid != 0)
-		cmd->parent = 1;
+}
+
+void	main_wait(int save, t_cmd *cmd)
+{
+	while (save-- != 1)
+		hub_wait(cmd);
+	if (save == 0)
+		hub_wait(cmd);
 }
 
 int		loop_command_pipe(t_cmd *cmd, t_list **envs)
 {
 	int		i;
 	int		ret;
-	int		save;
 
-	save = cmd->pipe.nb_pipe + 1;
 	i = 0;
+	get_flag(SET, 1);
 	while (i < cmd->pipe.nb_pipe + 1)
 	{
 		ret = 0;
 		if (!(parsing_redir(cmd, i)))
 			return (-2);
-		get_pid(SET, 1);
 		cmd->pid = fork();
 		if (cmd->pid == -1)
 			return (-1);
@@ -71,10 +75,8 @@ int		loop_command_pipe(t_cmd *cmd, t_list **envs)
 			return (-1);
 		dup2(cmd->mystdout, STDOUT_FILENO);
 		dup2(cmd->mystdin, STDIN_FILENO);
-		get_pid(SET, 0);
 		i++;
 	}
-	while (save--)
-		hub_wait(cmd);
+	main_wait(cmd->pipe.nb_pipe + 1, cmd);
 	return (1);
 }

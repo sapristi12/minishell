@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 19:00:43 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 16:10:20 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 20:09:04 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int				exec_child_pid(t_cmd *cmd, t_list **envs, int i)
 {
 	char	**envp;
 
-	cmd->parent = 0;
 	if (cmd->pipe.all[0][0] != NULL)
 	{
 		envp = list_to_array(*envs);
@@ -50,23 +49,23 @@ static int		execution_bin(t_cmd *cmd, t_list **envs, int i)
 {
 	int		status;
 
-	get_pid(SET, 1);
 	status = 1;
+	get_flag(SET, 1);
 	cmd->pid = fork();
 	if (cmd->pid == -1)
 		perror("Fork");
 	if (cmd->pid == 0)
 		return (exec_child_pid(cmd, envs, i));
-	cmd->parent = 1;
 	waitpid(cmd->pid, &status, 0);
 	if (WIFEXITED(status))
 		g_sig = WEXITSTATUS(status);
+	get_flag(SET, 0);
+	//printf("HEREEE\n");
 	if (g_sig == 126 && !ft_strcmp(cmd->pipe.all[i][0], ".."))
 		g_sig = 127;
 	if (cmd->pipe.all[i][0] && is_dir(cmd->pipe.all[i][0], 0)
 	&& ft_strcmp(cmd->pipe.all[i][0], ".."))
 		g_sig = 126;
-	get_pid(SET, 0);
 	return (1);
 }
 

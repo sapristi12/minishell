@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:00:16 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/10 16:59:14 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 20:00:16 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,6 @@ int		parsing_line(char *prompt, t_list **envs, t_cmd *cmd)
 	int		ret;
 
 	init_struct_cmd(cmd);
-	get_pid(SET, 0);
 	if (!(prompt = create_space_around(prompt)))
 		return (errno_parsing_line(-2));
 	if (!(cmd->cmds = new_split(prompt, ' ')))
