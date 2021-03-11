@@ -68,6 +68,7 @@ SRCS =	close.c \
 		is_not_found.c \
 		prompt_condition.c \
 		init_all_package.c \
+		main_loop.c \
 		is_only.c
 
 INCL =	minishell.h get_next_line.h

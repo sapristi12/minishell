@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:34:22 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/10 20:05:01 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 13:19:23 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int		condition_dollar(char c)
 	return (1);
 }
 
-void 	first_case(char *str, int *j, char **name)
+void	first_case(char *str, int *j, char **name)
 {
 	int i;
 

@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:07:43 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/10 14:39:01 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 13:20:41 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,9 @@ int		several_string(char **cmds)
 	int		k;
 	char	**strs;
 
-	if (!ft_strcmp(cmds[0], "|"))
-		return (0);
 	strs = (char *[5]){">", ">>", "<", "|", NULL};
 	i = 0;
-	while (cmds[i + 1])
+	while (cmds[i + 1] && ft_strcmp(cmds[0], "|"))
 	{
 		j = -1;
 		while (++j < 4)
