@@ -70,7 +70,10 @@ static int		execution_bin(t_cmd *cmd, t_list **envs, int i)
 			envp = list_to_array(*envs);
 			ft_lstclear(envs, free);
 			if (execve(cmd->pipe.all[i][0], cmd->pipe.all[i], envp) == -1)
-				perror("minishell");
+			{
+				printf("%d", errno);
+				(errno == 2 || errno == 13) ? is_not_found(cmd->pipe.all[i][0], envp) : perror("minishell");
+			}
 			free_char_double_array(envp);
 		}
 		return (-1);

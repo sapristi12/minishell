@@ -122,7 +122,7 @@ void		ft_afflist(t_list **lst);
 t_list      *init_list_env(char **envp);
 int     	is_builtin(char *str);
 char		*ft_stradd(char const *s1, char const *s2);
-char	 	*get_path_command(char *command, t_list **envs, int option);
+int 		get_path_command(char *command, t_list **envs);
 char	 	*get_env(t_list *list, char *str);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 char 		**create_package(char **cmds, t_list **envs, int option, int *tab);
@@ -204,5 +204,6 @@ int			error_identifier(char *str);
 void		condition_display(int parent, char *prompt);
 void		is_command_nf(t_cmd *cmd, t_list **envs);
 int			is_num(char c);
+void		is_not_found(char *cmd, char **envp);
 
 #	endif

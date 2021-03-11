@@ -43,17 +43,17 @@ int		condition(char *s, int j)
 
 char	*hub_files(char *cmd, t_list **envs)
 {
-	char			*dest;
+	int 	dest;
 
 	if (is_builtin(cmd))
 		return (ft_strdup(cmd));
 	if (!is_builtin(cmd))
 	{
-		dest = get_path_command(cmd, envs, 1);
+		dest = get_path_command(cmd, envs);
 		if (!dest)
 			return (ft_strdup(cmd));
 		else
-			return (dest);
+			return (ft_strdup(cmd));
 	}
 	return (ft_strdup(cmd));
 }
