@@ -47,7 +47,7 @@ char	*hub_files(char *cmd, t_list **envs)
 
 	if (is_builtin(cmd))
 		return (ft_strdup(cmd));
-	if (!is_builtin(cmd))
+	if (!is_builtin(cmd) && ft_strcmp(cmd, ".."))
 	{
 		dest = t_get_path_command(cmd, envs, 1);
 		if (!dest)

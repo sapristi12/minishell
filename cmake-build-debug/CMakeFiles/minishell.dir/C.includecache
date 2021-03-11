@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/33652/Documents/Coding/minishell/create_args.c
-minishell.h
-/mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
-
 /mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
 stdio.h
 -
@@ -35,4 +31,12 @@ signal.h
 -
 dirent.h
 -
+
+/mnt/c/Users/33652/Documents/Coding/minishell/parsing_quotes.c
+minishell.h
+/mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
+
+/mnt/c/Users/33652/Documents/Coding/minishell/several_string.c
+minishell.h
+/mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
 

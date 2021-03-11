@@ -19,6 +19,8 @@ int		several_string(char **cmds)
 	int		k;
 	char	**strs;
 
+	if (!ft_strcmp(cmds[0], "|"))
+		return (0);
 	strs = (char *[5]){">", ">>", "<", "|", NULL};
 	i = 0;
 	while (cmds[i + 1])

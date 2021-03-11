@@ -29,6 +29,8 @@ int		parsing_quotes(t_cmd *cmd, t_list **envs)
 	while (cmd->cmds[i + 1])
 		i++;
 	if (!is_token_last(cmd))
+	{
 		return (0);
+	}
 	return (1);
 }
