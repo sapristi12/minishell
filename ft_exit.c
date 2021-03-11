@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 15:15:39 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/03 10:03:17 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 15:41:12 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 static int		third_case(t_cmd *cmd)
 {
 	cmd->exit_status[0] = 0;
+	ft_putstr_fd("exit\n", STDERR_FILENO);
 	ft_putstr_fd("minishell: exit: too many arguments\n", STDERR_FILENO);
 	cmd->exit_status[1] = 1;
 	return (1);

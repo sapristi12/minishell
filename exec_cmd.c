@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 19:00:43 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 13:09:35 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 15:50:19 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ static int		execution_bin(t_cmd *cmd, t_list **envs, int i)
 	waitpid(cmd->pid, &status, 0);
 	if (WIFEXITED(status))
 		g_sig = WEXITSTATUS(status);
+	if (cmd->pipe.all[i][0] && is_dir(cmd->pipe.all[i][0], 0))
+		g_sig--;
 	get_pid(SET, 0);
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:58:12 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 13:34:35 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 15:49:17 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,12 @@ void	condition_display(int parent, char *prompt)
 {
 	if (prompt[0] == 0 || parent == 1)
 	{
-		if (g_sig <= 2 || g_sig == 127 || g_sig == 16 || prompt[0] == 0)
+		if (g_sig <= 2 || g_sig == 127 || g_sig == 16
+		|| prompt[0] == 0 || g_sig == 126)
 			display_prompt();
 	}
-	else if ((g_sig == 0 || g_sig == 127) && parent == 0)
+	else if ((g_sig == 0 || g_sig == 127 || g_sig == 126)
+	&& parent == 0)
 		display_prompt();
 }
 

@@ -6,7 +6,7 @@
 /*   By: erlajoua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 12:07:09 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 12:08:24 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 15:46:26 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,16 +67,19 @@ int			get_path_command(char *command, t_list **envs)
 	return (0);
 }
 
-int			is_dir(char *cmd)
+int			is_dir(char *cmd, int option)
 {
 	DIR		*dir;
 
 	dir = opendir(cmd);
 	if (!dir)
 		return (0);
-	ft_putstr_fd(cmd, STDERR_FILENO);
-	ft_putstr_fd(" : is a directory\n", STDERR_FILENO);
-	closedir(dir);
+	if (option == 1)
+	{
+		ft_putstr_fd(cmd, STDERR_FILENO);
+		ft_putstr_fd(" : is a directory\n", STDERR_FILENO);
+		closedir(dir);
+	}
 	return (1);
 }
 
@@ -95,7 +98,7 @@ void		is_not_found(char *cmd, char **envp)
 	}
 	else if (is_slash(cmd))
 	{
-		if (!is_dir(cmd))
+		if (!is_dir(cmd, 1))
 			perror("minishell");
 	}
 	else
