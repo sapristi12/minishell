@@ -14,24 +14,28 @@
 
 int		ft_echo(t_cmd *cmd, int index)
 {
-	int i;
-	int size;
-	int flag;
+	int		i;
+	int		size;
+	int		flag;
+	char 	**strs;
 
+	strs = pointer_package(cmd->cmds, index);
 	size = 1;
 	flag = 0;
 	i = 1;
-	while (cmd->cmds[size] && (!is_symbol(cmd->cmds[size])
-	|| (is_symbol(cmd->cmds[size]) && cmd->tab[index][size] == 0)))
+	while (strs[size] && (!is_symbol(strs[size])
+	|| (ft_strcmp(strs[size], "|") && (is_symbol(strs[size]) && cmd->tab[index][size] == 0))))
+	{
 		size++;
-	while (cmd->cmds[i] && !ft_strcmp(cmd->cmds[i], "-n"))
+	}
+	while (strs[i] && !ft_strcmp(strs[i], "-n"))
 	{
 		flag = 1;
 		i++;
 	}
 	while (i < size)
 	{
-		ft_putstr_fd(cmd->cmds[i], 1);
+		ft_putstr_fd(strs[i], 1);
 		if (i != size - 1)
 			ft_putstr_fd(" ", STDOUT_FILENO);
 		i++;

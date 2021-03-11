@@ -1,0 +1,15 @@
+SHELL=/bin/bash
+PWD=/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug
+LOGNAME=erlajoua
+MOTD_SHOWN=pam
+HOME=/home/erlajoua
+LANG=C.UTF-8
+SSH_CONNECTION=127.0.0.1 55588 127.0.0.1 2222
+TERM=vt100
+USER=erlajoua
+SHLVL=0
+SSH_CLIENT=127.0.0.1 55588 2222
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+SSH_TTY=/dev/pts/2
+OLDPWD=/home/erlajoua
+JETBRAINS_REMOTE_RUN=1

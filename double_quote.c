@@ -32,10 +32,15 @@ int				double_dollar(char *str, char **new, t_list **envs)
 	*new = ft_strjoin(*new, copy);
 	free(copy);
 	i = 0;
-	while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE
-	&& str[i] != ' ' && str[i] != SLASH && str[i] != '@'
-	&& str[i] != '=' && str[i] != '?')
+	if (is_num(str[i]))
 		i++;
+	else
+	{
+		while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE
+			   && str[i] != ' ' && str[i] != SLASH && str[i] != '@'
+			   && str[i] != '=' && str[i] != '?' && str[i] != '/')
+			i++;
+	}
 	if (i == 0 && str[i] == '?')
 		return (1);
 	return (i);

@@ -14,15 +14,18 @@
 
 int		sort_builtin(t_cmd *cmd, t_list **envs, int index)
 {
-	if (!ft_strcmp(cmd->cmds[0], "pwd"))
+	char **strs;
+
+	strs = pointer_package(cmd->cmds, index);
+	if (!ft_strcmp(strs[0], "pwd"))
 		ft_pwd();
 	if (!ft_strcmp(cmd->cmds[0], "cd"))
 		ft_cd(cmd, envs);
-	if (!ft_strcmp(cmd->cmds[0], "env"))
+	if (!ft_strcmp(strs[0], "env"))
 		ft_env(cmd, envs);
 	if (!(ft_strcmp(cmd->cmds[0], "unset")))
 		ft_unset(cmd, envs);
-	if (!(ft_strcmp(cmd->cmds[0], "echo")))
+	if (!(ft_strcmp(strs[0], "echo")))
 		ft_echo(cmd, index);
 	if (!(ft_strcmp(cmd->cmds[0], "exit")))
 		ft_exit(cmd);
