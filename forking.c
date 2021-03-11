@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 17:49:22 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 13:04:18 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 22:19:51 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ int		first_fork(t_cmd *cmd, t_list **envs, int i)
 {
 	char	**envp;
 
+	printf("string : %s\n",cmd->pipe.all[i][0]);
 	if (cmd->redir.save_right == NULL)
 	{
 		dup2(cmd->pipe.fd[0][1], STDOUT_FILENO);
