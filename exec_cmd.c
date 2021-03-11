@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 19:00:43 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 12:13:02 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 12:17:50 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,8 @@ static int		execution_bin(t_cmd *cmd, t_list **envs, int i)
 	int		status;
 
 	get_pid(SET, 1);
-	cmd->pid = fork();
 	status = 1;
+	cmd->pid = fork();
 	if (cmd->pid == -1)
 		perror("Fork");
 	if (cmd->pid == 0)
