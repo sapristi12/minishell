@@ -43,8 +43,6 @@ int 	get_path_command(char *command, t_list **envs)
 {
 	char	**path;
 	char	*whole_path;
-	char	*tmp;
-	char	*tmp2;
 	int		i;
 
 	i = 0;
@@ -56,9 +54,6 @@ int 	get_path_command(char *command, t_list **envs)
 		i++;
 	if (path[i] != NULL && ft_dir(path[i], command) != -1)
 	{
-		//tmp = ft_stradd(path[i], "/");
-		//tmp2 = ft_stradd(tmp, command);
-		//free(tmp);
 		free_char_double_array(path);
 		return (1);
 	}

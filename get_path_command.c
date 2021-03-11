@@ -12,7 +12,7 @@
 
 #include "minishell.h"
 
-/*int		ft_dir(char *path, char *exec)
+int		t_ft_dir(char *path, char *exec)
 {
 	DIR				*dir;
 	struct dirent	*my_dir;
@@ -29,9 +29,9 @@
 	}
 	closedir(dir);
 	return (0);
-}*/
+}
 
-/*char	*get_path_command(char *command, t_list **envs, int option)
+char	*t_get_path_command(char *command, t_list **envs, int option)
 {
 	char	**path;
 	char	*whole_path;
@@ -44,9 +44,9 @@
 		return (NULL);
 	if (!(path = new_split(whole_path, ':')))
 		return (NULL);
-	while (path[i] && !ft_dir(path[i], command))
+	while (path[i] && !t_ft_dir(path[i], command))
 		i++;
-	if (path[i] != NULL && ft_dir(path[i], command) != -1)
+	if (path[i] != NULL && t_ft_dir(path[i], command) != -1)
 	{
 		tmp = ft_stradd(path[i], "/");
 		tmp2 = ft_stradd(tmp, command);
@@ -58,4 +58,4 @@
 	if (option == 0)
 		return (ft_strdup(command));
 	return (NULL);
-}*/
+}
