@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:58:42 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 12:11:00 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 16:19:34 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ int				next_dollar(char c)
 	if (c == SLASH)
 		return (1);
 	if (c == '%')
+		return (1);
+	if (c == '$')
 		return (1);
 	return (0);
 }
