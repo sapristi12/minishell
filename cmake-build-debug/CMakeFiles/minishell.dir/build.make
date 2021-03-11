@@ -863,18 +863,18 @@ CMakeFiles/minishell.dir/sort_list.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/sort_list.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/minishell/sort_list.c -o CMakeFiles/minishell.dir/sort_list.c.s
 
-CMakeFiles/minishell.dir/is_only_spaces.c.o: CMakeFiles/minishell.dir/flags.make
-CMakeFiles/minishell.dir/is_only_spaces.c.o: ../is_only_spaces.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/minishell.dir/is_only_spaces.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/is_only_spaces.c.o   -c /mnt/c/Users/33652/Documents/Coding/minishell/is_only_spaces.c
+CMakeFiles/minishell.dir/is_only.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/is_only.c.o: ../is_only.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/minishell.dir/is_only.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/is_only.c.o   -c /mnt/c/Users/33652/Documents/Coding/minishell/is_only.c
 
-CMakeFiles/minishell.dir/is_only_spaces.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell.dir/is_only_spaces.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/33652/Documents/Coding/minishell/is_only_spaces.c > CMakeFiles/minishell.dir/is_only_spaces.c.i
+CMakeFiles/minishell.dir/is_only.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell.dir/is_only.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/33652/Documents/Coding/minishell/is_only.c > CMakeFiles/minishell.dir/is_only.c.i
 
-CMakeFiles/minishell.dir/is_only_spaces.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/is_only_spaces.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/minishell/is_only_spaces.c -o CMakeFiles/minishell.dir/is_only_spaces.c.s
+CMakeFiles/minishell.dir/is_only.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/is_only.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/minishell/is_only.c -o CMakeFiles/minishell.dir/is_only.c.s
 
 CMakeFiles/minishell.dir/check_prompt.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/check_prompt.c.o: ../check_prompt.c
@@ -927,6 +927,32 @@ CMakeFiles/minishell.dir/is_not_found.c.i: cmake_force
 CMakeFiles/minishell.dir/is_not_found.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/is_not_found.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/minishell/is_not_found.c -o CMakeFiles/minishell.dir/is_not_found.c.s
+
+CMakeFiles/minishell.dir/init_all_package.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/init_all_package.c.o: ../init_all_package.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/minishell.dir/init_all_package.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/init_all_package.c.o   -c /mnt/c/Users/33652/Documents/Coding/minishell/init_all_package.c
+
+CMakeFiles/minishell.dir/init_all_package.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell.dir/init_all_package.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/33652/Documents/Coding/minishell/init_all_package.c > CMakeFiles/minishell.dir/init_all_package.c.i
+
+CMakeFiles/minishell.dir/init_all_package.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/init_all_package.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/minishell/init_all_package.c -o CMakeFiles/minishell.dir/init_all_package.c.s
+
+CMakeFiles/minishell.dir/prompt_condition.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/prompt_condition.c.o: ../prompt_condition.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/minishell.dir/prompt_condition.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/prompt_condition.c.o   -c /mnt/c/Users/33652/Documents/Coding/minishell/prompt_condition.c
+
+CMakeFiles/minishell.dir/prompt_condition.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell.dir/prompt_condition.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/33652/Documents/Coding/minishell/prompt_condition.c > CMakeFiles/minishell.dir/prompt_condition.c.i
+
+CMakeFiles/minishell.dir/prompt_condition.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/prompt_condition.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/33652/Documents/Coding/minishell/prompt_condition.c -o CMakeFiles/minishell.dir/prompt_condition.c.s
 
 # Object files for target minishell
 minishell_OBJECTS = \
@@ -992,11 +1018,13 @@ minishell_OBJECTS = \
 "CMakeFiles/minishell.dir/signal_handle.c.o" \
 "CMakeFiles/minishell.dir/sort_builtin.c.o" \
 "CMakeFiles/minishell.dir/sort_list.c.o" \
-"CMakeFiles/minishell.dir/is_only_spaces.c.o" \
+"CMakeFiles/minishell.dir/is_only.c.o" \
 "CMakeFiles/minishell.dir/check_prompt.c.o" \
 "CMakeFiles/minishell.dir/only_zeros.c.o" \
 "CMakeFiles/minishell.dir/ft_export2.c.o" \
-"CMakeFiles/minishell.dir/is_not_found.c.o"
+"CMakeFiles/minishell.dir/is_not_found.c.o" \
+"CMakeFiles/minishell.dir/init_all_package.c.o" \
+"CMakeFiles/minishell.dir/prompt_condition.c.o"
 
 # External object files for target minishell
 minishell_EXTERNAL_OBJECTS =
@@ -1063,14 +1091,16 @@ minishell: CMakeFiles/minishell.dir/several_string.c.o
 minishell: CMakeFiles/minishell.dir/signal_handle.c.o
 minishell: CMakeFiles/minishell.dir/sort_builtin.c.o
 minishell: CMakeFiles/minishell.dir/sort_list.c.o
-minishell: CMakeFiles/minishell.dir/is_only_spaces.c.o
+minishell: CMakeFiles/minishell.dir/is_only.c.o
 minishell: CMakeFiles/minishell.dir/check_prompt.c.o
 minishell: CMakeFiles/minishell.dir/only_zeros.c.o
 minishell: CMakeFiles/minishell.dir/ft_export2.c.o
 minishell: CMakeFiles/minishell.dir/is_not_found.c.o
+minishell: CMakeFiles/minishell.dir/init_all_package.c.o
+minishell: CMakeFiles/minishell.dir/prompt_condition.c.o
 minishell: CMakeFiles/minishell.dir/build.make
 minishell: CMakeFiles/minishell.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Linking C executable minishell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/33652/Documents/Coding/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Linking C executable minishell"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/minishell.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

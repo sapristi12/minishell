@@ -118,6 +118,9 @@ CMakeFiles/minishell.dir/get_tilde_path.c.o: ../minishell.h
 CMakeFiles/minishell.dir/get_var_dollar.c.o: ../get_var_dollar.c
 CMakeFiles/minishell.dir/get_var_dollar.c.o: ../minishell.h
 
+CMakeFiles/minishell.dir/init_all_package.c.o: ../init_all_package.c
+CMakeFiles/minishell.dir/init_all_package.c.o: ../minishell.h
+
 CMakeFiles/minishell.dir/init_list_env.c.o: ../init_list_env.c
 CMakeFiles/minishell.dir/init_list_env.c.o: ../minishell.h
 
@@ -136,8 +139,8 @@ CMakeFiles/minishell.dir/is_even_quote.c.o: ../minishell.h
 CMakeFiles/minishell.dir/is_not_found.c.o: ../is_not_found.c
 CMakeFiles/minishell.dir/is_not_found.c.o: ../minishell.h
 
-CMakeFiles/minishell.dir/is_only_spaces.c.o: ../is_only_spaces.c
-CMakeFiles/minishell.dir/is_only_spaces.c.o: ../minishell.h
+CMakeFiles/minishell.dir/is_only.c.o: ../is_only.c
+CMakeFiles/minishell.dir/is_only.c.o: ../minishell.h
 
 CMakeFiles/minishell.dir/is_there_char.c.o: ../is_there_char.c
 CMakeFiles/minishell.dir/is_there_char.c.o: ../minishell.h
@@ -177,6 +180,9 @@ CMakeFiles/minishell.dir/parsing_quotes.c.o: ../parsing_quotes.c
 
 CMakeFiles/minishell.dir/parsing_redir.c.o: ../minishell.h
 CMakeFiles/minishell.dir/parsing_redir.c.o: ../parsing_redir.c
+
+CMakeFiles/minishell.dir/prompt_condition.c.o: ../minishell.h
+CMakeFiles/minishell.dir/prompt_condition.c.o: ../prompt_condition.c
 
 CMakeFiles/minishell.dir/pwd.c.o: ../minishell.h
 CMakeFiles/minishell.dir/pwd.c.o: ../pwd.c

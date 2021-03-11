@@ -58,40 +58,38 @@ int		condition_dollar(char c)
 	return (1);
 }
 
-char	*get_var_dollar(char *str, t_list **envs)
+void 	first_case(char *str, int *j, char **name)
 {
-	int		i;
-	char	*name;
-	char	*tmp;
+	int i;
 
 	i = 0;
-	name = deux_strdup("");
-	if (!name)
-		return (NULL);
 	if (is_num(str[i]))
 	{
-		name = char_strjoin(name, str[i]);
-		i++;
-	}
-	else
-	{
-		while (condition_dollar(str[i]))
-			i++;
-	}
-	i = 0;
-	if (is_num(str[i]))
-	{
-		name = char_strjoin(name, str[i]);
+		*name = char_strjoin(*name, str[i]);
 		i++;
 	}
 	else
 	{
 		while (condition_dollar(str[i]))
 		{
-			name[i] = str[i];
+			*name = char_strjoin(*name, str[i]);
 			i++;
 		}
 	}
+	*j = i;
+}
+
+char	*get_var_dollar(char *str, t_list **envs)
+{
+	int		i;
+	char	*name;
+	char	*tmp;
+
+	name = deux_strdup("");
+	if (!name)
+		return (NULL);
+	i = 0;
+	first_case(str, &i, &name);
 	if (i == 0 && str[i] == '?')
 		return (exit_package(name));
 	tmp = get_env(*envs, name);

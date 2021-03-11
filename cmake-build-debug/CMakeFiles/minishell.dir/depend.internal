@@ -118,6 +118,9 @@ CMakeFiles/minishell.dir/get_tilde_path.c.o
 CMakeFiles/minishell.dir/get_var_dollar.c.o
  /mnt/c/Users/33652/Documents/Coding/minishell/get_var_dollar.c
  /mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
+CMakeFiles/minishell.dir/init_all_package.c.o
+ /mnt/c/Users/33652/Documents/Coding/minishell/init_all_package.c
+ /mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
 CMakeFiles/minishell.dir/init_list_env.c.o
  /mnt/c/Users/33652/Documents/Coding/minishell/init_list_env.c
  /mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
@@ -136,8 +139,8 @@ CMakeFiles/minishell.dir/is_even_quote.c.o
 CMakeFiles/minishell.dir/is_not_found.c.o
  /mnt/c/Users/33652/Documents/Coding/minishell/is_not_found.c
  /mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
-CMakeFiles/minishell.dir/is_only_spaces.c.o
- /mnt/c/Users/33652/Documents/Coding/minishell/is_only_spaces.c
+CMakeFiles/minishell.dir/is_only.c.o
+ /mnt/c/Users/33652/Documents/Coding/minishell/is_only.c
  /mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
 CMakeFiles/minishell.dir/is_there_char.c.o
  /mnt/c/Users/33652/Documents/Coding/minishell/is_there_char.c
@@ -178,6 +181,9 @@ CMakeFiles/minishell.dir/parsing_quotes.c.o
 CMakeFiles/minishell.dir/parsing_redir.c.o
  /mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
  /mnt/c/Users/33652/Documents/Coding/minishell/parsing_redir.c
+CMakeFiles/minishell.dir/prompt_condition.c.o
+ /mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
+ /mnt/c/Users/33652/Documents/Coding/minishell/prompt_condition.c
 CMakeFiles/minishell.dir/pwd.c.o
  /mnt/c/Users/33652/Documents/Coding/minishell/minishell.h
  /mnt/c/Users/33652/Documents/Coding/minishell/pwd.c

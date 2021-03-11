@@ -198,6 +198,9 @@
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/get_var_dollar.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/init_all_package.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/init_list_env.c">
 			<Option target="minishell"/>
 		</Unit>
@@ -216,7 +219,7 @@
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/is_not_found.c">
 			<Option target="minishell"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/is_only_spaces.c">
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/is_only.c">
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/is_there_char.c">
@@ -259,6 +262,9 @@
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/parsing_redir.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/prompt_condition.c">
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/33652/Documents/Coding/minishell/pwd.c">

@@ -1176,6 +1176,33 @@ get_var_dollar.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/get_var_dollar.c.s
 .PHONY : get_var_dollar.c.s
 
+init_all_package.o: init_all_package.c.o
+
+.PHONY : init_all_package.o
+
+# target to build an object file
+init_all_package.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/init_all_package.c.o
+.PHONY : init_all_package.c.o
+
+init_all_package.i: init_all_package.c.i
+
+.PHONY : init_all_package.i
+
+# target to preprocess a source file
+init_all_package.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/init_all_package.c.i
+.PHONY : init_all_package.c.i
+
+init_all_package.s: init_all_package.c.s
+
+.PHONY : init_all_package.s
+
+# target to generate assembly for a file
+init_all_package.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/init_all_package.c.s
+.PHONY : init_all_package.c.s
+
 init_list_env.o: init_list_env.c.o
 
 .PHONY : init_list_env.o
@@ -1338,32 +1365,32 @@ is_not_found.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_not_found.c.s
 .PHONY : is_not_found.c.s
 
-is_only_spaces.o: is_only_spaces.c.o
+is_only.o: is_only.c.o
 
-.PHONY : is_only_spaces.o
+.PHONY : is_only.o
 
 # target to build an object file
-is_only_spaces.c.o:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_only_spaces.c.o
-.PHONY : is_only_spaces.c.o
+is_only.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_only.c.o
+.PHONY : is_only.c.o
 
-is_only_spaces.i: is_only_spaces.c.i
+is_only.i: is_only.c.i
 
-.PHONY : is_only_spaces.i
+.PHONY : is_only.i
 
 # target to preprocess a source file
-is_only_spaces.c.i:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_only_spaces.c.i
-.PHONY : is_only_spaces.c.i
+is_only.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_only.c.i
+.PHONY : is_only.c.i
 
-is_only_spaces.s: is_only_spaces.c.s
+is_only.s: is_only.c.s
 
-.PHONY : is_only_spaces.s
+.PHONY : is_only.s
 
 # target to generate assembly for a file
-is_only_spaces.c.s:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_only_spaces.c.s
-.PHONY : is_only_spaces.c.s
+is_only.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/is_only.c.s
+.PHONY : is_only.c.s
 
 is_there_char.o: is_there_char.c.o
 
@@ -1716,6 +1743,33 @@ parsing_redir.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parsing_redir.c.s
 .PHONY : parsing_redir.c.s
 
+prompt_condition.o: prompt_condition.c.o
+
+.PHONY : prompt_condition.o
+
+# target to build an object file
+prompt_condition.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/prompt_condition.c.o
+.PHONY : prompt_condition.c.o
+
+prompt_condition.i: prompt_condition.c.i
+
+.PHONY : prompt_condition.i
+
+# target to preprocess a source file
+prompt_condition.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/prompt_condition.c.i
+.PHONY : prompt_condition.c.i
+
+prompt_condition.s: prompt_condition.c.s
+
+.PHONY : prompt_condition.s
+
+# target to generate assembly for a file
+prompt_condition.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/prompt_condition.c.s
+.PHONY : prompt_condition.c.s
+
 pwd.o: pwd.c.o
 
 .PHONY : pwd.o
@@ -2058,6 +2112,9 @@ help:
 	@echo "... get_var_dollar.o"
 	@echo "... get_var_dollar.i"
 	@echo "... get_var_dollar.s"
+	@echo "... init_all_package.o"
+	@echo "... init_all_package.i"
+	@echo "... init_all_package.s"
 	@echo "... init_list_env.o"
 	@echo "... init_list_env.i"
 	@echo "... init_list_env.s"
@@ -2076,9 +2133,9 @@ help:
 	@echo "... is_not_found.o"
 	@echo "... is_not_found.i"
 	@echo "... is_not_found.s"
-	@echo "... is_only_spaces.o"
-	@echo "... is_only_spaces.i"
-	@echo "... is_only_spaces.s"
+	@echo "... is_only.o"
+	@echo "... is_only.i"
+	@echo "... is_only.s"
 	@echo "... is_there_char.o"
 	@echo "... is_there_char.i"
 	@echo "... is_there_char.s"
@@ -2118,6 +2175,9 @@ help:
 	@echo "... parsing_redir.o"
 	@echo "... parsing_redir.i"
 	@echo "... parsing_redir.s"
+	@echo "... prompt_condition.o"
+	@echo "... prompt_condition.i"
+	@echo "... prompt_condition.s"
 	@echo "... pwd.o"
 	@echo "... pwd.i"
 	@echo "... pwd.s"
