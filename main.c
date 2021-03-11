@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:19:29 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 20:39:03 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 21:52:53 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	init_main(t_cmd *cmd, int *ret)
 	cmd->exit_status[0] = 0;
 	cmd->mystdout = dup(STDOUT_FILENO);
 	cmd->mystdin = dup(STDIN_FILENO);
-	get_flag(SET, 0);
+	get_flag(SET, 2);
 	*ret = 0;
 }
 
@@ -46,6 +46,7 @@ int		main(int ret, char **av, char **envp)
 	get_dup(SET, cmd.mystdout);
 	while ((ret = get_next_line(0, &prompt, 0)) > 0)
 	{
+		get_flag(SET, 2);
 		if (prompt[0] != '\0' && main_loop(prompt, &cmd, &envs) == -1)
 		{
 			get_next_line(666, NULL, 1);

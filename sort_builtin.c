@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:06:25 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 17:50:58 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 21:52:30 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int		sort_builtin(t_cmd *cmd, t_list **envs, int index)
 {
 	char **strs;
 
+	get_flag(SET, 0);
 	strs = pointer_package(cmd->cmds, index);
 	if (!ft_strcmp(strs[0], "pwd"))
 		ft_pwd();

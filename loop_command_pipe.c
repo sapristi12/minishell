@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:16:19 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 20:20:12 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 21:57:42 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void	main_wait(int save, t_cmd *cmd)
 {
 	while (save-- != 1)
 		hub_wait(cmd);
+	sleep(1);
 	if (save == 0)
 		hub_wait(cmd);
 }
@@ -78,5 +79,6 @@ int		loop_command_pipe(t_cmd *cmd, t_list **envs)
 		i++;
 	}
 	main_wait(cmd->pipe.nb_pipe + 1, cmd);
+	get_flag(SET, 0);
 	return (1);
 }
