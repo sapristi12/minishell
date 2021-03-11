@@ -6,7 +6,7 @@
 /*   By: erlajoua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 12:07:09 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 15:46:26 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 16:01:09 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,8 @@ int			is_dir(char *cmd, int option)
 	{
 		ft_putstr_fd(cmd, STDERR_FILENO);
 		ft_putstr_fd(" : is a directory\n", STDERR_FILENO);
-		closedir(dir);
 	}
+	closedir(dir);
 	return (1);
 }
 
