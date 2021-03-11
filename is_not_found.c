@@ -6,7 +6,7 @@
 /*   By: erlajoua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 12:07:09 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 22:19:23 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 22:27:38 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,7 @@ void		is_not_found(char *cmd, char **envp)
 		dest = ft_strjoin(dest, cmd);
 		dest = ft_strjoin(dest, " : command not found\n");
 		ft_putstr_fd(dest, STDERR_FILENO);
+		free(dest);
 	}
 	else if (is_slash(cmd))
 	{
@@ -116,6 +117,7 @@ void		is_not_found(char *cmd, char **envp)
 			dest = ft_strjoin(dest, cmd);
 			dest = ft_strjoin(dest, " : command not found\n");
 			ft_putstr_fd(dest, STDERR_FILENO);
+			free(dest);
 		}
 	}
 	ft_lstclear(&envs, free);

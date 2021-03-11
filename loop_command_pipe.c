@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:16:19 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 22:21:04 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 22:29:33 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,6 @@ void	hub_wait(t_cmd *cmd)
 
 void	main_wait(int save, t_cmd *cmd, int *tab)
 {
-	/*long long int i;
-	long long int timer;
-
-	timer = 500000000;*/
 	int i;
 	int status;
 
@@ -55,7 +51,7 @@ void	main_wait(int save, t_cmd *cmd, int *tab)
 	status = 0;
 	while (save > 0)
 	{
-		waitpid(tab[save], &status, 0);
+		waitpid(tab[save - 1], &status, 0);
 		if (WIFEXITED(status))
 			g_sig = WEXITSTATUS(status);
 		save--;
@@ -66,8 +62,11 @@ int		loop_command_pipe(t_cmd *cmd, t_list **envs)
 {
 	int		i;
 	int		ret;
-	int		tab[3];
+	int		*tab;
 
+	tab = malloc(sizeof(int) * (cmd->pipe.nb_pipe + 1));
+	if (!tab)
+		return (0);
 	i = 0;
 	get_flag(SET, 1);
 	while (i < cmd->pipe.nb_pipe + 1)
@@ -82,7 +81,7 @@ int		loop_command_pipe(t_cmd *cmd, t_list **envs)
 		hub_close(cmd, i);
 		if (ret == 1)
 		{
-			exit(0);
+			free(tab);
 			return (-1);
 		}
 		dup2(cmd->mystdout, STDOUT_FILENO);
@@ -90,6 +89,7 @@ int		loop_command_pipe(t_cmd *cmd, t_list **envs)
 		i++;
 	}
 	main_wait(cmd->pipe.nb_pipe + 1, cmd, tab);
+	free(tab);
 	get_flag(SET, 0);
 	return (1);
 }
