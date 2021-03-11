@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:58:42 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 18:59:32 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/11 12:11:00 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ int				double_dollar(char *str, char **new, t_list **envs)
 	else
 	{
 		while (str[i] && str[i] != S_QUOTE && str[i] != D_QUOTE
-			   && str[i] != ' ' && str[i] != SLASH && str[i] != '@'
-			   && str[i] != '=' && str[i] != '?' && str[i] != '/')
+		&& str[i] != ' ' && str[i] != SLASH && str[i] != '@'
+		&& str[i] != '=' && str[i] != '?' && str[i] != '/')
 			i++;
 	}
 	if (i == 0 && str[i] == '?')

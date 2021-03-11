@@ -127,7 +127,7 @@ char		*t_get_path_command(char *command, t_list **envs, int option);
 int			t_ft_dir(char *path, char *exec);
 char	 	*get_env(t_list *list, char *str);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
-char 		**create_package(char **cmds, t_list **envs, int option, int *tab);
+char 		**create_package(char **cmds, t_list **envs, int *tab);
 void		ft_lstclear(t_list **lst, void (*del)(void *));
 int 		free_8(char *str, t_cmd *cmd, int ret);
 int		 	free_i(t_cmd *cmd, int index);
