@@ -6,7 +6,7 @@
 /*   By: erlajoua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 15:07:04 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/12 11:16:48 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 12:03:07 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -247,5 +247,7 @@ void						exported_list(t_cmd *cmd, int i);
 t_list						*init_none(void);
 int							condition_u(char *content, char *str, int index);
 void						ft_delone(t_list **lst, char *str, int index);
+char						*get_env2(t_list **envs, char *str);
+int							is_notidentifier(char *str);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 15:10:29 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/12 11:20:12 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 12:00:48 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,12 @@ void		add_new_export(t_list *envs, char *str, t_list **exported)
 		tmp = char_strjoin(tmp, str[i]);
 		i++;
 	}
-	ft_delone(exported, tmp, 0);
-	if (!(get_env(envs, tmp)))
+	if (!(get_env(envs, tmp)) && !(get_env2(exported, tmp)))
 		ft_lstadd_back(&envs, ft_lstnew(str));
 	else
+	{
 		set_env(&envs, tmp, &str[i + 1]);
+	}
 	free(tmp);
 }
 

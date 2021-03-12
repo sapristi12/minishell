@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 15:08:26 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/12 11:22:07 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 12:06:15 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ void			ft_delone(t_list **lst, char *str, int index)
 	t_list	*tmp;
 
 	envs = *lst;
+	if (!envs)
+		return ;
 	if (condition_u(envs->content, str, index))
 	{
 		tmp = envs->next;
@@ -58,6 +60,18 @@ void			ft_delone(t_list **lst, char *str, int index)
 	}
 }
 
+int				is_notidentifier_u(char *str)
+{
+	if (is_there_char(str, '='))
+		return (1);
+	else
+	{
+		if (!is_alpha(str[0]))
+			return (1);
+	}
+	return (0);
+}
+
 int				ft_unset(t_cmd *cmd, t_list **envs)
 {
 	int i;
@@ -65,7 +79,7 @@ int				ft_unset(t_cmd *cmd, t_list **envs)
 	i = 1;
 	while (cmd->cmds[i] && !is_symbol(cmd->cmds[i]))
 	{
-		if (cmd->cmds[i][0] == '/')
+		if (cmd->cmds[i][0] == '/' || is_notidentifier_u(cmd->cmds[i]))
 			error_identifier(cmd->cmds[i]);
 		else
 		{
