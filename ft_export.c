@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 15:10:29 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/12 11:00:15 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 11:20:12 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int			error_identifier(char *str)
 	return (1);
 }
 
-void		add_new_export(t_list *envs, char *str)
+void		add_new_export(t_list *envs, char *str, t_list **exported)
 {
 	int		i;
 	char	*tmp;
@@ -35,6 +35,7 @@ void		add_new_export(t_list *envs, char *str)
 		tmp = char_strjoin(tmp, str[i]);
 		i++;
 	}
+	ft_delone(exported, tmp, 0);
 	if (!(get_env(envs, tmp)))
 		ft_lstadd_back(&envs, ft_lstnew(str));
 	else
@@ -92,7 +93,7 @@ int			ft_export(t_cmd *cmd, t_list *envs)
 				error_identifier(cmd->cmds[i]);
 			else
 			{
-				add_new_export(envs, tmp);
+				add_new_export(envs, tmp, &(cmd->exported));
 				free(tmp);
 			}
 		}

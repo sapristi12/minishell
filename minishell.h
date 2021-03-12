@@ -6,7 +6,7 @@
 /*   By: erlajoua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 15:07:04 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/12 10:45:35 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 11:16:48 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -245,5 +245,7 @@ int							is_space(char *str);
 int							only_equal(char *str);
 void						exported_list(t_cmd *cmd, int i);
 t_list						*init_none(void);
+int							condition_u(char *content, char *str, int index);
+void						ft_delone(t_list **lst, char *str, int index);
 
 #endif

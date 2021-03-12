@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 19:00:43 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/12 09:50:14 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 11:34:54 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int				exec_child_pid(t_cmd *cmd, t_list **envs, int i)
 	{
 		envp = list_to_array(*envs);
 		ft_lstclear(envs, free);
+		ft_lstclear(&(cmd->exported), free);
 		if (execve(cmd->pipe.all[i][0], cmd->pipe.all[i], envp) == -1)
 		{
 			(errno == 2 || errno == 13) ? is_not_found(cmd->pipe.all[i][0],

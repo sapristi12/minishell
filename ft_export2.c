@@ -6,11 +6,30 @@
 /*   By: erlajoua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 15:11:49 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/12 10:21:54 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 11:50:10 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
+
+char	*get_env2(t_list **envs, char *str)
+{
+	t_list	*new_lst;
+	t_list	*begin;
+
+	begin = *envs;
+	new_lst = *envs;
+	if (!str || !ft_strlen(str))
+		return (NULL);
+	while (new_lst)
+	{
+		if (!ft_strncmp(new_lst->content, str, ft_strlen(str)))
+			return (&new_lst->content[ft_strlen(str) + 1]);
+		new_lst = new_lst->next;
+	}
+	*envs = begin;
+	return (NULL);
+}
 
 void	exported_list(t_cmd *cmd, int i)
 {
@@ -23,7 +42,13 @@ void	exported_list(t_cmd *cmd, int i)
 		cmd->exported = tmp;
 		return ;
 	}
-	ft_lstadd_back(&(cmd->exported), tmp);
+	if (!(get_env2(&(cmd->exported), cmd->cmds[i])))
+		ft_lstadd_back(&(cmd->exported), tmp);
+	else
+	{
+		free(tmp->content);
+		free(tmp);
+	}
 }
 
 t_list	*copy_list(t_list *envs)
