@@ -6,7 +6,7 @@
 /*   By: erlajoua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 15:07:04 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 20:38:29 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 09:36:20 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -240,5 +240,6 @@ int							main_loop(char *prompt, t_cmd *cmd, t_list **envs);
 int							is_first_condition(char tmp, char now,
 							char bef, char bef2);
 int							is_dir(char *cmd, int option);
+int							is_space(char *str);
 
 #endif
