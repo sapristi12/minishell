@@ -6,7 +6,7 @@
 /*   By: erlajoua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 12:07:09 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/12 10:23:03 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 13:10:50 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,22 +86,13 @@ int			is_dir(char *cmd, int option)
 void		is_not_found(char *cmd, char **envp)
 {
 	t_list	*envs;
-	char	*dest;
 
 	if (!(envs = init_list_env(envp)))
 		return ;
 	if (!get_env(envs, "PATH"))
 		perror("minishell");
 	else if (!ft_strcmp(cmd, ".."))
-	{
-		dest = ft_strdup("");
-		if (!dest)
-			return ;
-		dest = ft_strjoin(dest, cmd);
-		dest = ft_strjoin(dest, " : command not found\n");
-		ft_putstr_fd(dest, STDERR_FILENO);
-		free(dest);
-	}
+		hub_join_not_found(cmd);
 	else if (is_slash(cmd))
 	{
 		if (!is_dir(cmd, 1))
@@ -110,15 +101,7 @@ void		is_not_found(char *cmd, char **envp)
 	else
 	{
 		if (!(get_path_command(cmd, &envs)))
-		{
-			dest = ft_strdup("");
-			if (!dest)
-				return ;
-			dest = ft_strjoin(dest, cmd);
-			dest = ft_strjoin(dest, " : command not found\n");
-			ft_putstr_fd(dest, STDERR_FILENO);
-			free(dest);
-		}
+			hub_join_not_found(cmd);
 	}
 	ft_lstclear(&envs, free);
 }

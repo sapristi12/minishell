@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:16:19 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 22:29:33 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 13:01:16 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,6 @@ void	hub_close(t_cmd *cmd, int i)
 		close_after(cmd, i);
 }
 
-void	hub_wait(t_cmd *cmd)
-{
-	(void)cmd;
-}
-
 void	main_wait(int save, t_cmd *cmd, int *tab)
 {
 	int i;
@@ -62,11 +57,7 @@ int		loop_command_pipe(t_cmd *cmd, t_list **envs)
 {
 	int		i;
 	int		ret;
-	int		*tab;
 
-	tab = malloc(sizeof(int) * (cmd->pipe.nb_pipe + 1));
-	if (!tab)
-		return (0);
 	i = 0;
 	get_flag(SET, 1);
 	while (i < cmd->pipe.nb_pipe + 1)
@@ -74,22 +65,18 @@ int		loop_command_pipe(t_cmd *cmd, t_list **envs)
 		ret = 0;
 		if (!(parsing_redir(cmd, i)))
 			return (-2);
-		tab[i] = fork();
-		if (tab[i] == -1)
+		cmd->tabpid[i] = fork();
+		if (cmd->tabpid[i] == -1)
 			return (-1);
-		ret += hub_fork(cmd, envs, i, tab[i]);
+		ret += hub_fork(cmd, envs, i, cmd->tabpid[i]);
 		hub_close(cmd, i);
 		if (ret == 1)
-		{
-			free(tab);
 			return (-1);
-		}
 		dup2(cmd->mystdout, STDOUT_FILENO);
 		dup2(cmd->mystdin, STDIN_FILENO);
 		i++;
 	}
-	main_wait(cmd->pipe.nb_pipe + 1, cmd, tab);
-	free(tab);
+	main_wait(cmd->pipe.nb_pipe + 1, cmd, cmd->tabpid);
 	get_flag(SET, 0);
 	return (1);
 }

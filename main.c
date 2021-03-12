@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:19:29 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/12 11:50:29 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 13:04:52 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,16 @@ void	init_main(t_cmd *cmd, int *ret)
 	cmd->exported = NULL;
 	get_flag(SET, 2);
 	*ret = 0;
+	signal_handle();
+	display_prompt();
+	get_dup(SET, cmd->mystdout);
+}
+
+void	final_free_main(char *prompt, t_list *envs, t_list *exported)
+{
+	free(prompt);
+	ft_lstclear(&envs, free);
+	ft_lstclear(&exported, free);
 }
 
 int		main(int ret, char **av, char **envp)
@@ -44,9 +54,6 @@ int		main(int ret, char **av, char **envp)
 		return (0);
 	if (!(envs = init_list_env(envp)))
 		return (-1);
-	signal_handle();
-	display_prompt();
-	get_dup(SET, cmd.mystdout);
 	while ((ret = get_next_line(0, &prompt, 0)) > 0)
 	{
 		get_flag(SET, 2);
@@ -58,9 +65,7 @@ int		main(int ret, char **av, char **envp)
 		condition_display(&cmd, prompt);
 		free(prompt);
 	}
-	free(prompt);
-	ft_lstclear(&envs, free);
-	ft_lstclear(&(cmd.exported), free);
+	final_free_main(prompt, envs, cmd.exported);
 	ret == 0 ? ft_putstr_fd("exit\n", STDERR_FILENO) : 0;
 	return (main_ret(&cmd));
 }

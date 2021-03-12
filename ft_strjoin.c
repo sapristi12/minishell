@@ -6,11 +6,23 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 15:15:12 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/01 15:15:13 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 13:11:42 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
+
+void			hub_join_not_found(char *cmd)
+{
+	char	*dest;
+
+	if (!(dest = ft_strdup("")))
+		return ;
+	dest = ft_strjoin(dest, cmd);
+	dest = ft_strjoin(dest, " : command not found\n");
+	ft_putstr_fd(dest, STDERR_FILENO);
+	free(dest);
+}
 
 char			*char_strjoin(char *str, char c)
 {

@@ -6,7 +6,7 @@
 /*   By: erlajoua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 15:07:04 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/12 12:03:07 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 13:11:03 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ struct						s_cmd
 	int			mystdin;
 	int			exit_status[2];
 	int			**tab;
+	int			*tabpid;
 	int			tabsize;
 	int			i;
 };
@@ -249,5 +250,6 @@ int							condition_u(char *content, char *str, int index);
 void						ft_delone(t_list **lst, char *str, int index);
 char						*get_env2(t_list **envs, char *str);
 int							is_notidentifier(char *str);
+void						hub_join_not_found(char *str);
 
 #endif

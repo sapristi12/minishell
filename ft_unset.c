@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 15:08:26 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/12 12:06:15 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 12:49:30 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int				condition_u(char *content, char *str, int index)
 		}
 	}
 	else if (index == 0)
-	{	
+	{
 		if (!ft_strncmp(content, str, ft_strlen(str)))
 			return (1);
 	}
@@ -35,8 +35,7 @@ void			ft_delone(t_list **lst, char *str, int index)
 	t_list	*envs;
 	t_list	*tmp;
 
-	envs = *lst;
-	if (!envs)
+	if (!(envs = *lst))
 		return ;
 	if (condition_u(envs->content, str, index))
 	{
