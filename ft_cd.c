@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 17:47:12 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/05 17:17:55 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 09:19:46 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,12 @@ int		ft_cd(t_cmd *cmd, t_list **envs)
 	i = 0;
 	while (cmd->cmds[i] && !is_symbol(cmd->cmds[i]))
 		i++;
-	if (i == 1)
+	if (i > 2)
+	{
+		ft_putstr_fd("minishell: cd: too many arguments\n", STDERR_FILENO);
+		return (-1);
+	}
+	if (i == 1 || !ft_strcmp(cmd->cmds[1], ""))
 		ret = cd_home(envs);
 	else if (!ft_strcmp(cmd->cmds[1], "-"))
 		ret = cd_old(envs);

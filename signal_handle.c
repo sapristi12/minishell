@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 17:52:50 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 22:32:51 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 09:13:29 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	signal_int(int signo)
 
 void	signal_quit(int signo)
 {
-	if (get_flag(GET, 0) == 0)
+	if (get_flag(GET, 0) != 1)
 	{
 		ft_putstr_fd("\b\b  \b\b", STDOUT_FILENO);
 		return ;
