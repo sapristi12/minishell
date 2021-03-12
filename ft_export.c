@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 15:10:29 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/12 10:07:29 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 10:10:08 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int			ft_export(t_cmd *cmd, t_list *envs)
 	{
 		if (is_there_char(cmd->cmds[i], '='))
 		{
-			if (!(tmp = create_env(cmd->cmds[i])) || !ft_strcmp(cmd->cmds[i], "="))
+			if (!(tmp = create_env(cmd->cmds[i])) || only_equal(cmd->cmds[i]))
 				error_identifier(cmd->cmds[i]);
 			else
 			{
@@ -84,6 +84,8 @@ int			ft_export(t_cmd *cmd, t_list *envs)
 				free(tmp);
 			}
 		}
+		else
+			init_
 		i++;
 	}
 	return (1);
