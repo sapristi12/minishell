@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 15:10:29 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/05 17:24:28 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 10:03:44 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int			ft_export(t_cmd *cmd, t_list *envs)
 	i = 1;
 	while (cmd->cmds[i] && !is_symbol(cmd->cmds[i]))
 	{
-		if (is_there_char(cmd->cmds[i], '='))
+		if (is_there_char(cmd->cmds[i], '=') && ft_strcmp(cmd->cmds[i], "="))
 		{
 			if (!(tmp = create_env(cmd->cmds[i])))
 				error_identifier(cmd->cmds[i]);
