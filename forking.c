@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 17:49:22 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 22:25:44 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 10:23:36 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int		mid_fork(t_cmd *cmd, t_list **envs, int i)
 	{
 		envp = list_to_array(*envs);
 		ft_lstclear(envs, free);
+		ft_lstclear(&(cmd->exported), free);
 		if (execve(cmd->pipe.all[i][0], cmd->pipe.all[i], envp) == -1)
 			(errno == 2 || errno == 13) ?
 			is_not_found(cmd->pipe.all[i][0], envp) : perror("minishell");
@@ -48,6 +49,7 @@ int		last_fork(t_cmd *cmd, t_list **envs, int i)
 	{
 		envp = list_to_array(*envs);
 		ft_lstclear(envs, free);
+		ft_lstclear(&(cmd->exported), free);
 		if (execve(cmd->pipe.all[i][0], cmd->pipe.all[i], envp) == -1)
 			(errno == 2 || errno == 13) ?
 			is_not_found(cmd->pipe.all[i][0], envp) : perror("minishell");
@@ -71,6 +73,7 @@ int		first_fork(t_cmd *cmd, t_list **envs, int i)
 	{
 		envp = list_to_array(*envs);
 		ft_lstclear(envs, free);
+		ft_lstclear(&(cmd->exported), free);
 		if (execve(cmd->pipe.all[i][0], cmd->pipe.all[i], envp) == -1)
 			(errno == 2 || errno == 13) ?
 			is_not_found(cmd->pipe.all[i][0], envp) : perror("minishell");

@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:19:29 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 21:52:53 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 10:22:23 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	init_main(t_cmd *cmd, int *ret)
 	cmd->exit_status[0] = 0;
 	cmd->mystdout = dup(STDOUT_FILENO);
 	cmd->mystdin = dup(STDIN_FILENO);
+	cmd->exported = NULL;
 	get_flag(SET, 2);
 	*ret = 0;
 }
@@ -57,6 +58,7 @@ int		main(int ret, char **av, char **envp)
 	}
 	free(prompt);
 	ft_lstclear(&envs, free);
+	ft_lstclear(&(cmd->exported), free);
 	ret == 0 ? ft_putstr_fd("exit\n", STDERR_FILENO) : 0;
 	return (main_ret(&cmd));
 }

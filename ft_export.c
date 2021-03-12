@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 15:10:29 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/12 10:10:49 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 10:20:41 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int			is_notidentifier(char *str)
 static int	manage_export(t_cmd *cmd, t_list *envs, int i)
 {
 	if (i == 1)
-		return (export_list(envs));
+		return (export_list(envs, cmd->exported));
 	if (i == 2)
 		return (error_identifier(cmd->cmds[1]));
 	return (1);
@@ -84,8 +84,8 @@ int			ft_export(t_cmd *cmd, t_list *envs)
 				free(tmp);
 			}
 		}
-		//else
-		//	init_
+		else
+			exported_list(cmd, i);
 		i++;
 	}
 	return (1);

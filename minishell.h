@@ -6,7 +6,7 @@
 /*   By: erlajoua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 15:07:04 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/12 10:09:55 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 10:21:06 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ struct						s_cmd
 	t_pipe		pipe;
 	t_redir		redir;
 	pid_t		pid;
-	t_list		**exported;
+	t_list		*exported;
 	char		**cmds;
 	int			mystdout;
 	int			mystdin;
@@ -227,7 +227,7 @@ void						multiple_semi3(char *str, int i,
 							char *tmp, int *in_quote);
 int							next_dollar(char c);
 int							only_zeros(char *str);
-int							export_list(t_list *envs);
+int							export_list(t_list *envs, t_list *exported);
 int							check_prompt(int index, char *prompt);
 int							init_tab(t_cmd *cmd);
 int							*create_tab_index(char **cmds);
@@ -243,5 +243,6 @@ int							is_first_condition(char tmp, char now,
 int							is_dir(char *cmd, int option);
 int							is_space(char *str);
 int							only_equal(char *str);
+void						exported_list(t_cmd *cmd, int i);
 
 #endif
