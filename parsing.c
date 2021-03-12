@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:00:16 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/11 20:00:16 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 09:56:21 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		single_command(t_cmd *cmd, t_list **envs)
 {
 	int ret;
 
-	if (!(parsing_redir(cmd, 0)))
+	if (!(parsing_redir(cmd, 0)))	
 		return (free_error_redir(cmd, 0));
 	ret = exec_cmd(cmd, envs, 0);
 	is_command_nf(cmd, envs);
