@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 15:10:29 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/12 10:10:08 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 10:10:49 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,8 +84,8 @@ int			ft_export(t_cmd *cmd, t_list *envs)
 				free(tmp);
 			}
 		}
-		else
-			init_
+		//else
+		//	init_
 		i++;
 	}
 	return (1);
