@@ -6,7 +6,7 @@
 /*   By: erlajoua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 15:07:04 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/12 10:21:06 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 10:45:35 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -244,5 +244,6 @@ int							is_dir(char *cmd, int option);
 int							is_space(char *str);
 int							only_equal(char *str);
 void						exported_list(t_cmd *cmd, int i);
+t_list						*init_none(void);
 
 #endif

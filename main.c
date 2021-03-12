@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:19:29 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/12 10:22:23 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 10:46:22 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ int		main(int ret, char **av, char **envp)
 
 	(void)av;
 	init_main(&cmd, &ret);
+	if (!envp || !envp[0])
+		return (0);
 	if (!(envs = init_list_env(envp)))
 		return (-1);
 	signal_handle();
@@ -58,7 +60,7 @@ int		main(int ret, char **av, char **envp)
 	}
 	free(prompt);
 	ft_lstclear(&envs, free);
-	ft_lstclear(&(cmd->exported), free);
+	ft_lstclear(&(cmd.exported), free);
 	ret == 0 ? ft_putstr_fd("exit\n", STDERR_FILENO) : 0;
 	return (main_ret(&cmd));
 }

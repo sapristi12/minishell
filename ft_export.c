@@ -6,7 +6,7 @@
 /*   By: erlajoua <erlajoua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 15:10:29 by erlajoua          #+#    #+#             */
-/*   Updated: 2021/03/12 10:20:41 by erlajoua         ###   ########.fr       */
+/*   Updated: 2021/03/12 11:00:15 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int			error_identifier(char *str)
 {
 	ft_putstr_fd("minishell: export: ", STDERR_FILENO);
 	ft_putstr_fd(str, STDERR_FILENO);
-	ft_putstr_fd(": not a valid identifier\n", STDERR_FILENO);
+	ft_putstr_fd(" : not a valid identifier\n", STDERR_FILENO);
 	return (1);
 }
 
@@ -44,7 +44,12 @@ void		add_new_export(t_list *envs, char *str)
 
 int			is_notidentifier(char *str)
 {
-	if (is_there_char(str, '=') == 0)
+	if (!is_there_char(str, '='))
+	{
+		if (!is_alpha(str[0]))
+			return (1);
+	}
+	else
 	{
 		if (!is_alpha(str[0]))
 			return (1);
@@ -54,10 +59,17 @@ int			is_notidentifier(char *str)
 
 static int	manage_export(t_cmd *cmd, t_list *envs, int i)
 {
+	int j;
+
+	j = 1;
 	if (i == 1)
 		return (export_list(envs, cmd->exported));
-	if (i == 2)
-		return (error_identifier(cmd->cmds[1]));
+	while (cmd->cmds[j] && !is_symbol(cmd->cmds[j]))
+	{
+		if (is_notidentifier(cmd->cmds[j]))
+			error_identifier(cmd->cmds[j]);
+		j++;
+	}
 	return (1);
 }
 
@@ -69,7 +81,7 @@ int			ft_export(t_cmd *cmd, t_list *envs)
 	i = 0;
 	while (cmd->cmds[i] && !is_symbol(cmd->cmds[i]))
 		i++;
-	if (i == 1 || (i == 2 && is_notidentifier(cmd->cmds[1])))
+	if (i == 1 || (i >= 2 && is_notidentifier(cmd->cmds[1])))
 		return (manage_export(cmd, envs, i));
 	i = 1;
 	while (cmd->cmds[i] && !is_symbol(cmd->cmds[i]))
